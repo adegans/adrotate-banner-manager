@@ -1,5 +1,5 @@
 # AdRotate Banner Manager - The only ad manager you'll need
-## Advertising made easy. Manage all your ads including Google Ads, Amazon banners and many more from your dashboard.
+## Advertising made easy. Manage all your ads and campaigns from your dashboard.
 
 View on: [ajdg.solutions](https://ajdg.solutions/product/adrotate-banner-manager/) ~ [WordPres.org](https://wordpress.org/plugins/adrotate/) \
 Also consider AdRotate Professional: [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
@@ -72,7 +72,7 @@ As a result **AdRotate Banner Manager** is trusted by tens of thousands of indiv
 * Same day ticket support accessible from your dashboard
 
 Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website! \
-Available AdRotate Pro licenses[1 site license](https://ajdg.solutions/product/adrotate-pro-single/) [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
+Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
 
 ## Translations
 
