@@ -1,0 +1,8 @@
+- name: WordPress Plugin Deploy
+	uses: 10up/action-wordpress-plugin-deploy@2.2.2
+ 	with:
+  		# Generate package zip file?
+		generate-zip: false # optional
+		# Run the deployment process without committing.
+		dry-run: true # optional
+        
