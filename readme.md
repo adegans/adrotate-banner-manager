@@ -7,7 +7,7 @@ Also consider AdRotate Professional: [1 site license](https://ajdg.solutions/pro
 ## Description
 Easily manage all your ads in WordPress and ClassicPress with **AdRotate Banner Manager**!
 
-**AdRotate Banner Manager** supports every kind of ad including Google AdSense, Google Ad Manager (DFP – DoubleClick for publishers), Amazon Native Shopping Ads, Amazon Affiliate tags, Media.net and banners you create yourself or get from your local businesses and sponsors.
+**AdRotate Banner Manager** works with every kind of ad and banner including Google AdSense, Google Ad Manager (DFP – DoubleClick for publishers), Amazon Native Shopping Ads, Amazon Affiliate tags, Media.net and banners you create yourself or get from your local businesses and sponsors.
 
 **AdRotate Banner Manager** is the most intuitive ad management plugin available and is created for newcomers and professionals alike. The plugin offers all the features you need to easily manage your adverts from the dashboard which is packed with easy to use yet powerfull features.
 

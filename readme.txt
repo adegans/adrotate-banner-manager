@@ -14,21 +14,18 @@ Advertising made easy. Manage all your ads including Google Ads, Amazon banners 
 
 Easily manage all your ads with **AdRotate Banner Manager**!
 
-**AdRotate Banner Manager** supports every kind of ad including Google AdSense, Google Ad Manager (DFP – DoubleClick for publishers), Amazon Native Shopping Ads, Amazon Affiliate tags, Media.net and banners you create yourself or get from your local businesses and sponsors.
+**AdRotate Banner Manager** works with every kind of ad and banner including Google AdSense, Google Ad Manager (DFP – DoubleClick for publishers), Amazon Native Shopping Ads, Amazon Affiliate tags, Media.net and banners you create yourself or get from your local businesses and sponsors.
 
-**AdRotate Banner Manager** is the most intuitive ad management plugin available and is created for newcomers and professionals alike. The plugin offers all the features you need to easily manage your adverts from the dashboard which is packed with easy to use yet powerfull features.
+Using **AdRotate Banner Manager** is very easy with the intuitive dashboard because it's created for newcomers and professionals alike. The plugin offers all the features you need to easily manage your adverts and campaigns from your dashboard and it's packed with easy to use yet powerfull features.
 
-As a result **AdRotate Banner Manager** is trusted by tens of thousands of individuals and businesses.
+As a result **AdRotate Banner Manager** is trusted by tens of thousands of businesses, bloggers and site owners.
 
-Some design queues;
-* Easy to use dashboards that match the style of WordPress dashboards so that they instantly feel familiar.
-* Functional features that are easy to use and understand. And even if you get stuck, there are dozens of guides and a support forum to point you in the right direction.
-* Compatible with every ad network while offering multiple ways to place adverts anywhere on your website.
+= Practical design choices in AdRotate =
+* Easy to use dashboards that match the style of WordPress and ClassicPress so that everything feels familiar.
+* Functional features that are easy to use and understand.
+* Compatible with every ad network and affiliate server while offering multiple ways to easily place adverts anywhere on your website.
 
-So if you are looking for the easiest way to manage and run your ad campaigns? Look no further!
-
-Here are a few things **AdRotate Banner Manager** can do for you:
-
+= Here are a few of the features AdRotate Banner Manager has =
 * Works with every ad including; self made ads, banners from your local business, Google Adsense, Amazon ads and any kind of personals or affiliate ad
 * There is no limit on how many ads you make
 * Includes an advert block and group block for the WordPress block editor
@@ -41,7 +38,6 @@ Here are a few things **AdRotate Banner Manager** can do for you:
 * **AdRotate Banner Manager** has been in constant development since 2008
 
 = advert management with AdRotate Banner Manager =
-
 * Create and display unlimited ad units
 * Automatically rotate ads per page load or every few seconds
 * Plan ahead and schedule your ad campaigns
@@ -82,7 +78,8 @@ Here are a few things **AdRotate Banner Manager** can do for you:
 * Option to either track clicks or impressions, or both
 * Same day ticket support accessible from your dashboard
 
-Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website!
+Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website! \
+Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
 
 = Translations =
 
