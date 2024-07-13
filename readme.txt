@@ -1,11 +1,13 @@
 === AdRotate Banner Manager - The only ad manager you'll need ===
 Contributors: adegans
 Donate link: https://www.arnan.me/donate.html
-Tags: ads, banner manager, adsense, advert, banners
+Tags: ads, banner manager, adsense, affiliate, banners
 Requires at least: 4.9
-Requires PHP: 7.4
 Tested up to: 6.6
-Stable tag: 5.13.1
+CP requires at least: 1.0
+CP tested up to: 2.1.1
+Requires PHP: 7.4
+Stable tag: 5.13.2
 License: GPLv3
 
 Advertising made easy. Manage all your ads including Google Ads, Amazon banners and many more from your dashboard.
@@ -94,15 +96,20 @@ Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/
 
 == Installation ==
 
-Installing AdRotate is super easy. Simply search for "AdRotate Arnan" or "AdRotate" in your plugin dashboard and click on the "Install" button for **AdRotate Banner Manager**.
-Once activated, a new menu called "AdRotate" appears in the WordPress navigation.
-From this menu you'll handle everything related to **AdRotate Banner Manager**.
+Installing AdRotate is super easy. 
+- Search for "AdRotate Arnan" or "AdRotate" in your plugin dashboard and click on the "Install" button for **AdRotate Banner Manager**.
+- A new menu called "AdRotate" appears in the WordPress navigation.
+- From this menu you'll handle everything related to **AdRotate Banner Manager**.
 
 For more detailed instructions check out the [installation steps](https://ajdg.solutions/support/adrotate-manuals/installing-adrotate-on-your-website/?mtm_campaign=adrotate&mtm_kwd=readme) on the AdRotate website.
 
 == Changelog ==
 
 For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/?mtm_campaign=adrotate&mtm_kwd=readme).
+
+= AdRotate 5.13.2 =
+* [fix] Missing mimetype when uploading banner images
+* [update] Rollback to v1.1 for clicktracker Javascript
 
 = AdRotate 5.13.1 =
 * [fix] Unfiltered HTML indicator reversed in Maintenance

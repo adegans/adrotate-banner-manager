@@ -258,11 +258,12 @@ function adrotate_ad_is_in_groups($id) {
  Purpose:   Clean up file names of files that are being uploaded.
 -------------------------------------------------------------*/
 function adrotate_sanitize_file_name($filename) {
-    $filename_raw = $filename;
     $special_chars = array('?', '[', ']', '/', '\\', '=', '<', '>', ':', ';', ',', '"', '\'', '&', '$', '#', '*', '(', ')', '|', '~', '`', '!', '{', '}');
+
     $filename = str_replace($special_chars, '', $filename);
     $filename = preg_replace('/[\s-]+/', '-', $filename);
     $filename = strtolower(trim($filename, '.-_'));
+
     return $filename;
 }
 
@@ -365,8 +366,9 @@ function adrotate_dashboard_scripts() {
 function adrotate_notifications_dashboard() {
 	global $current_user;
 
+	$displayname = (strlen($current_user->user_firstname) > 0) ? $current_user->user_firstname : $current_user->display_name;
+
 	if(current_user_can('adrotate_ad_manage')) {
-		$displayname = (strlen($current_user->user_firstname) > 0) ? $current_user->user_firstname : $current_user->display_name;
 		$page = (isset($_GET['page'])) ? $_GET['page'] : '';
 
 		// These only show on AdRotate pages
@@ -432,19 +434,20 @@ function adrotate_notifications_dashboard() {
 
 	if(current_user_can('update_plugins')) {
 		// Finish update
-		// Keep for manual updates
-		$adrotate_db_version = get_option("adrotate_db_version");
-		$adrotate_version = get_option("adrotate_version");
+		$adrotate_db_version = get_option('adrotate_db_version');
+		$adrotate_version = get_option('adrotate_version');
+	
 		if($adrotate_db_version['current'] < ADROTATE_DB_VERSION OR $adrotate_version['current'] < ADROTATE_VERSION) {
-			$plugins = get_plugins();
-			$plugin_version = $plugins['adrotate/adrotate.php']['Version'];
-
+			$plugin_version = get_plugins();
+			$plugin_version = $plugin_version['adrotate/adrotate.php']['Version'];
+	
+			// Do the update
+			adrotate_finish_upgrade();
+	
+			// Thank user for updating
 			echo "<div class=\"ajdg-notification notice\">";
-			echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
-			echo "	<div class=\"ajdg-notification-message\">Thanks for updating <strong>".$displayname."</strong>! You have almost completed updating <strong>AdRotate</strong> to version <strong>".$plugin_version."</strong>!<br />To complete the update <strong>click the button on the right</strong>. This may take a few seconds to complete!<br />For an overview of what has changed take a look at the <a href=\"https://ajdg.solutions/support/adrotate-development/?mtm_campaign=adrotate&mtm_keyword=finish_update_notification\" target=\"_blank\">development page</a> and usually there is an article on <a href=\"https://ajdg.solutions/blog/\" target=\"_blank\">the blog</a> with more information as well.</div>";
-			echo "	<div class=\"ajdg-notification-cta\">";
-			echo "		<a href=\"".wp_nonce_url('admin.php?page=adrotate-settings&tab=maintenance&action=update-db', 'nonce', 'adrotate-nonce')."\" class=\"ajdg-notification-act button-primary update-button\">Finish update</a>";
-			echo "	</div>";
+			echo "	<div class=\"ajdg-notification-logo\" style=\"background-image:url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
+			echo "	<div class=\"ajdg-notification-message\">Hi there <strong>".$displayname."</strong>! You have just updated <strong>AdRotate Professional</strong> to version <strong>".$plugin_version."</strong>!<br />Thanks for staying up-to-date! Your <strong>Database and settings</strong> have been updated to the latest version.<br />For an overview of what has changed take a look at the <a href=\"https://ajdg.solutions/support/adrotate-development/?mtm_campaign=adrotate&mtm_keyword=finish_update_notification\" target=\"_blank\">development page</a> and usually there is an article on <a href=\"https://ajdg.solutions/blog/\" target=\"_blank\">the blog</a> with more information as well.</div>";
 			echo "</div>";
 		}
 	}

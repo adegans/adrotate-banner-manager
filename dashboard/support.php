@@ -20,7 +20,7 @@
 					<p><img src="<?php echo plugins_url('/images/icon-support.png', dirname(__FILE__)); ?>" class="alignleft pro-image" /><?php _e("Is something not working the way you expect it to? If you need help you can check the manuals and guides on my website. There is a lot of information on the support forum asked by other users. Chances are your question has already been asked and answered or if not, I am always happy to help!", 'adrotate'); ?></p>
 
 					<p><a href="https://ajdg.solutions/support/adrotate-manuals/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><strong><?php _e("AdRotate Banner Manager manuals and guides", 'adrotate'); ?></strong></a><br /><em><?php _e("Take a look at the AdRotate Manuals.", 'adrotate'); ?> <a href="https://ajdg.solutions/support/adrotate-manuals/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><?php _e("Find answers", 'adrotate'); ?> &raquo;</a></em></p>
-					<p><a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><strong><?php _e("AdRotate Banner Manager support forum", 'adrotate'); ?></strong></a><br /><em><?php _e("Ask anything about AdRotate Banner Manager on my support forum.", 'adrotate'); ?> <a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><?php _e("Ask your question", 'adrotate'); ?> &raquo;</a></em></p>
+					<p><a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><strong><?php _e("AdRotate support forum", 'adrotate'); ?></strong></a><br /><em><?php _e("Ask anything about AdRotate Banner Manager on my support forum.", 'adrotate'); ?> <a href="https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><?php _e("Ask your question", 'adrotate'); ?> &raquo;</a></em></p>
 					<p><a href="https://ajdg.solutions/product/support-ticket/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><strong><?php _e("Premium ticket support", 'adrotate'); ?></strong></a><br /><em><?php _e("Buy a priority support ticket for private and quick assistance.", 'adrotate'); ?> <a href="https://ajdg.solutions/product/support-ticket/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><?php _e("More information", 'adrotate'); ?> &raquo;</a></em></p>
 					<p><a href="https://support.ajdg.net/" target="_blank"><strong><?php _e("Report security issues", 'adrotate'); ?></strong></a><br /><em><?php _e("Found a security flaw?", 'adrotate'); ?> <a href="https://support.ajdg.net/" target="_blank"><?php _e("Please report it", 'adrotate'); ?> &raquo;</a></em></p>
 				</div>
@@ -31,29 +31,38 @@
 				<div id="stats" class="ajdg-postbox-content">
 					<table width="100%">
 						<tr>
-							<td width="49.5%">
-								<div class="ajdg-sales-widget" style="display: inline-block; margin-right:2%;">
+							<td width="33.33%">
+								<div class="ajdg-sales-widget" style="display: inline-block;">
 									<a href="https://ajdg.solutions/product/adrotate-pro-single/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><div class="header"><img src="<?php echo plugins_url("/images/offers/monetize-your-site.jpg", dirname(__FILE__)); ?>" alt="AdRotate Professional" width="228" height="120"></div></a>
 									<a href="https://ajdg.solutions/product/adrotate-pro-single/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><div class="title"><?php _e("AdRotate Professional", 'adrotate'); ?></div></a>
 									<div class="sub_title"><?php _e("All the features you need!", 'adrotate'); ?></div>
-									<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank">Get started for only &euro; 49</a></div>
+									<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><?php _e("Buy now", 'adrotate'); ?></a></div>
 									<hr>
-									<div class="description"><?php _e("Turn up your advertising management to 11 with AdRotate Pro and benefit from the many extra features and premium support.", 'adrotate'); ?></div>
+									<div class="description"><?php _e("Turn up your advertising management to 11 with AdRotate Pro and benefit from the many extra features.", 'adrotate'); ?></div>
 								</div>
+							</td>
+							<td width="33.33%">
+								<div class="ajdg-sales-widget" style="display: inline-block;">
+									<a href="https://ajdg.solutions/product/adrotate-html5-setup-service/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><div class="header"><img src="<?php echo plugins_url("/images/offers/html5-service.jpg", dirname(__FILE__)); ?>" alt="HTML5 Advert setup" width="228" height="120"></div></a>
+									<a href="https://ajdg.solutions/product/adrotate-html5-setup-service/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><div class="title"><?php _e("HTML5 Advert setup", 'adrotate'); ?></div></a>
+									<div class="sub_title"><?php _e("Professional service", 'adrotate'); ?></div>
+									<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-html5-setup-service/?mtm_campaign=adrotatepro&mtm_keyword=info_page" target="_blank"><?php _e("Learn more", 'adrotate'); ?></a></div>
+									<hr>
+									<div class="description"><?php _e("Do you have a HTML5 advert but can’t get it to work in AdRotate Banner Manager? I’ll help you out!", 'adrotate'); ?></div>
+								</div>							
 							</td>
 							<td>
 								<div class="ajdg-sales-widget" style="display: inline-block;">
 									<a href="https://ajdg.solutions/plugins/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><div class="header"><img src="<?php echo plugins_url("/images/offers/more-plugins.jpg", dirname(__FILE__)); ?>" alt="AJdG Solutions Plugins" width="228" height="120"></div></a>
 									<a href="https://ajdg.solutions/plugins/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><div class="title"><?php _e("All my plugins", 'adrotate'); ?></div></a>
-									<div class="sub_title"><?php _e("WordPress and ClassicPress", 'adrotate'); ?></div>
-									<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank">View all plugins</a></div>
+									<div class="sub_title"><?php _e("WordPress", 'adrotate'); ?></div>
+									<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/?mtm_campaign=adrotate&mtm_keyword=adrotate_support_page" target="_blank"><?php _e("View all plugins", 'adrotate'); ?></a></div>
 									<hr>
-									<div class="description"><?php _e("Cool plugins that improve your websites security, deter spammers and fake accounts and increase your WooCommerce efficacy.", 'adrotate'); ?></div>
+									<div class="description"><?php _e("Cool plugins that improve WooCommerce online store; faster checkout, no checkout, payment stats and more!", 'adrotate'); ?></div>
 								</div>
 							</td>
 						</tr>
 					</table>
-					<center><em><small><?php _e("Prices shown in Euros, your bank will convert your local currency to Euros for free.", 'adrotate'); ?></small></em></center>
 				</div>
 			</div>
 

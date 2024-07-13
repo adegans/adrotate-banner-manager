@@ -416,56 +416,65 @@ function adrotate_insert_group() {
  Purpose:   Prepare input form on saving new or updated banners
 -------------------------------------------------------------*/
 function adrotate_insert_media() {
-	global $wpdb, $adrotate_config;
+	global $adrotate_config;
 
 	if(wp_verify_nonce($_POST['adrotate_nonce'], 'adrotate_save_media')) {
 		if(current_user_can('adrotate_ad_manage')) {
-			if($_FILES['adrotate_image']['size'] > 0 AND $_FILES['adrotate_image']['size'] <= 512000) {
-				$file_path = WP_CONTENT_DIR.'/'.esc_attr($_POST['adrotate_image_location']).'/';
-				$file = explode('.', adrotate_sanitize_file_name($_FILES['adrotate_image']['name']));
-				$file_name = implode('.', $file);
-				$file_extension = array_pop($file);
-				$file_mimetype = mime_content_type($_FILES['adrotate_image']['tmp_name']);
 
+			if($_FILES['adrotate_image']['size'] > 0 AND $_FILES['adrotate_image']['size'] <= 512000) {
+				$file_path = WP_CONTENT_DIR."/".esc_attr($_POST['adrotate_image_location'])."/";
+
+				$file = pathinfo(adrotate_sanitize_file_name($_FILES['adrotate_image']['name']));
+				$file['mimetype'] = mime_content_type($_FILES['adrotate_image']['tmp_name']);
+
+				// Everyone can upload these
 				$allowed_extensions = array('jpg', 'jpeg', 'gif', 'png', 'svg', 'webp');
-				$allowed_mimetypes = array('image/jpg', 'image/pjpeg', 'image/jpeg', 'image/gif', 'image/png', 'image/svg', 'image/webp');
+				$allowed_mimetypes = array('image/jpg', 'image/jpeg', 'image/gif', 'image/png', 'image/svg', 'image/webp');
 				
 				if(current_user_can('unfiltered_html')) {
+					// Higher level and enabled users can also upload these.
 					$allowed_extensions = array_merge($allowed_extensions, array('html', 'htm', 'js', 'zip'));
 					$allowed_mimetypes = array_merge($allowed_mimetypes, array('text/html', 'text/htm', 'application/x-javascript', 'application/javascript', 'text/javascript', 'application/zip'));
 				}
 
-				if(in_array($file_extension, $allowed_extensions) AND in_array($file_mimetype, $allowed_mimetypes)) {
+				if(in_array($file['extension'], $allowed_extensions) AND in_array($file['mimetype'], $allowed_mimetypes)) {
 					if ($_FILES['adrotate_image']['error'] > 0) {
-						if($_FILES['adrotate_image']['error'] == 1 OR $_FILES['adrotate_image']['error'] == 2) $errorcode = 511;
-						else if($_FILES['adrotate_image']['error'] == 3) $errorcode = 506;
-						else if($_FILES['adrotate_image']['error'] == 4) $errorcode = 506;
-						else if($_FILES['adrotate_image']['error'] == 6 OR $_FILES['adrotate_image']['error'] == 7) $errorcode = 506;
-						else $errorcode = '';
+						if($_FILES['adrotate_image']['error'] == 1 OR $_FILES['adrotate_image']['error'] == 2) {
+							$errorcode = 511;
+						} else if($_FILES['adrotate_image']['error'] == 3) {
+							$errorcode = 506;
+						} else if($_FILES['adrotate_image']['error'] == 4) {
+							$errorcode = 506;
+						} else if($_FILES['adrotate_image']['error'] == 6 OR $_FILES['adrotate_image']['error'] == 7) {
+							$errorcode = 506;
+						} else {
+							$errorcode = '';
+						}
+
 						adrotate_return('adrotate-media', $errorcode); // Other error
 					} else {
-						if(!move_uploaded_file($_FILES['adrotate_image']['tmp_name'], $file_path.$file_name)) {
+						if(!move_uploaded_file($_FILES['adrotate_image']['tmp_name'], $file_path.$file['basename'])) {
 							adrotate_return('adrotate-media', 506); // Upload error
 						}
 
-						if($file_mimetype == 'application/zip' AND $file_extension == 'zip') {
+						if(($file['mimetype'] == 'application/zip' OR $file['mimetype'] == 'application/zip-compressed' OR $file['mimetype'] == 'application/x-zip-compressed') AND $file['extension'] == 'zip') {
 							require_once(ABSPATH .'/wp-admin/includes/file.php');
 
 							$creds = request_filesystem_credentials(wp_nonce_url('admin.php?page=adrotate-media'), '', false, $file_path, null);
 						    if(!WP_Filesystem($creds)) {
-								request_filesystem_credentials(wp_nonce_url('admin.php?page=adrotate-media'), '', true, $file_path, null);
+								$creds = request_filesystem_credentials(wp_nonce_url('admin.php?page=adrotate-media'), '', true, $file_path, null);
 							}
 
-							$unzipfile = unzip_file($file_path.$file_name.'.'.$file_extension, $file_path.$file_name);
+							$unzipfile = unzip_file($file_path.$file['basename'], $file_path.$file['filename']);
 							if(is_wp_error($unzipfile)) {
-								adrotate_return('adrotate-media', 512); // Can not unzip file
+								adrotate_return('adrotate-media', 512, array('error' => $unzipfile->get_error_message())); // Can not unzip file
 							}
 
 							// Delete unwanted files
-							adrotate_clean_folder_contents($file_path.$file_name);
+							adrotate_clean_folder_contents($file_path.$file['filename']);
 
 							// Delete the uploaded zip
-							adrotate_unlink($file_name.'.'.$file_extension);
+							adrotate_unlink($file['basename']);
 						}
 
 						adrotate_return('adrotate-media', 202); // Success

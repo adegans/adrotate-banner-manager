@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/?mtm_campaign=adrotate&mtm_keyword=plugin_info
 Description: Manage all your adverts with all the features you need while keeping things simple.
 Text Domain: adrotate
-Version: 5.13.1
+Version: 5.13.2
 License: GPLv3
 */
 
@@ -80,7 +80,6 @@ if(is_admin()) {
 	add_action('admin_menu', 'adrotate_dashboard');
 	add_action('admin_enqueue_scripts', 'adrotate_dashboard_scripts');
 	add_action('admin_notices','adrotate_notifications_dashboard');
-	add_action('upgrader_process_complete', 'adrotate_finish_upgrade', 10, 2); // Finish update in the background
 	add_filter('plugin_action_links_' . plugin_basename( __FILE__ ), 'adrotate_action_links');
 	/*--- Internal redirects ------------------------------------*/
 	if(isset($_POST['adrotate_generate_submit'])) add_action('init', 'adrotate_generate_input');
@@ -97,17 +96,15 @@ if(is_admin()) {
  Purpose:   Add pages to admin menus
 -------------------------------------------------------------*/
 function adrotate_dashboard() {
-	$adrotate_page = $adrotate_pro = $adrotate_adverts = $adrotate_groups = $adrotate_settings =  '';
-
 	add_menu_page('AdRotate', 'AdRotate', 'adrotate_ad_manage', 'adrotate', 'adrotate_manage', plugins_url('/images/icon-menu.png', __FILE__), '25.8');
-	$adrotate_adverts = add_submenu_page('adrotate', 'AdRotate · '.__("Manage Adverts", 'adrotate'), __("Manage Adverts", 'adrotate'), 'adrotate_ad_manage', 'adrotate', 'adrotate_manage');
-	$adrotate_groups = add_submenu_page('adrotate', 'AdRotate · '.__("Manage Groups", 'adrotate'), __("Manage Groups", 'adrotate'), 'adrotate_group_manage', 'adrotate-groups', 'adrotate_manage_group');
-	$adrotate_schedules = add_submenu_page('adrotate', 'AdRotate · '.__("Manage Schedules", 'adrotate'), __("Manage Schedules", 'adrotate'), 'adrotate_ad_manage', 'adrotate-schedules', 'adrotate_manage_schedules');
-	$adrotate_media = add_submenu_page('adrotate', 'AdRotate · '.__("Manage Media", 'adrotate'), __("Manage Media", 'adrotate'), 'adrotate_ad_manage', 'adrotate-media', 'adrotate_manage_media');
-	$adrotate_statistics = add_submenu_page('adrotate', 'AdRotate · '.__("Statistics", 'adrotate'), __("Statistics", 'adrotate'), 'adrotate_ad_manage', 'adrotate-statistics', 'adrotate_statistics');
-	$adrotate_pro = add_submenu_page('adrotate', 'AdRotate · '.__("Get AdRotate Pro", 'adrotate'), __("Get AdRotate Pro", 'adrotate'), 'adrotate_ad_manage', 'adrotate-pro', 'adrotate_pro');
-	$adrotate_support = add_submenu_page('adrotate', 'AdRotate · '.__("Support", 'adrotate'), __("Support", 'adrotate'), 'manage_options', 'adrotate-support', 'adrotate_support');
-	$adrotate_settings = add_submenu_page('adrotate', 'AdRotate · '.__("Settings", 'adrotate'), __("Settings", 'adrotate'), 'manage_options', 'adrotate-settings', 'adrotate_options');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Manage Adverts", 'adrotate'), __("Manage Adverts", 'adrotate'), 'adrotate_ad_manage', 'adrotate', 'adrotate_manage');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Manage Groups", 'adrotate'), __("Manage Groups", 'adrotate'), 'adrotate_group_manage', 'adrotate-groups', 'adrotate_manage_group');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Manage Schedules", 'adrotate'), __("Manage Schedules", 'adrotate'), 'adrotate_ad_manage', 'adrotate-schedules', 'adrotate_manage_schedules');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Manage Media", 'adrotate'), __("Manage Media", 'adrotate'), 'adrotate_ad_manage', 'adrotate-media', 'adrotate_manage_media');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Statistics", 'adrotate'), __("Statistics", 'adrotate'), 'adrotate_ad_manage', 'adrotate-statistics', 'adrotate_statistics');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Get AdRotate Pro", 'adrotate'), __("Get AdRotate Pro", 'adrotate'), 'adrotate_ad_manage', 'adrotate-pro', 'adrotate_pro');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Support", 'adrotate'), __("Support", 'adrotate'), 'manage_options', 'adrotate-support', 'adrotate_support');
+	add_submenu_page('adrotate', 'AdRotate · '.__("Settings", 'adrotate'), __("Settings", 'adrotate'), 'manage_options', 'adrotate-settings', 'adrotate_options');
 }
 
 /*-------------------------------------------------------------
@@ -135,11 +132,10 @@ function adrotate_pro() {
 function adrotate_manage() {
 	global $wpdb, $userdata, $adrotate_config;
 
-	$status = $file = $view = $ad_edit_id = '';
-	if(isset($_GET['status'])) $status = sanitize_key($_GET['status']);
-	if(isset($_GET['file'])) $file = sanitize_file_name($_GET['file']);
-	if(isset($_GET['view'])) $view = sanitize_key($_GET['view']);
-	if(isset($_GET['ad'])) $ad_edit_id = sanitize_key($_GET['ad']);
+	$view = (isset($_GET['view'])) ? sanitize_key($_GET['view']) : '';
+	$status = (isset($_GET['status'])) ? sanitize_key($_GET['status']) : '';
+	$ad_edit_id =(isset($_GET['ad'])) ? sanitize_key($_GET['ad']) : '';
+	$file = (isset($_GET['file'])) ? sanitize_file_name($_GET['file']) : '';
 
 	if(!is_numeric($status)) $status = 0;
 	if(!is_numeric($ad_edit_id)) $ad_edit_id = 0;
@@ -230,18 +226,12 @@ function adrotate_manage() {
 
     	<?php
 
-	    if (empty($view) OR $view == 'manage') {
-			// Show list of errorous ads if any
-			if (count($error) > 0) {
-				include('dashboard/publisher/adverts-error.php');
-			}
+	    if(empty($view) OR $view == 'manage') {
+			if(count($error) > 0) include('dashboard/publisher/adverts-error.php');
 
 			include('dashboard/publisher/adverts-main.php');
 
-			// Show disabled ads, if any
-			if (count($disabled) > 0) {
-				include('dashboard/publisher/adverts-disabled.php');
-			}
+			if (count($disabled) > 0) include('dashboard/publisher/adverts-disabled.php');
 		} else if($view == 'addnew' OR $view == 'edit') {
 			include('dashboard/publisher/adverts-edit.php');
 	   	} else if($view == 'generator') {
@@ -263,10 +253,9 @@ function adrotate_manage() {
 function adrotate_manage_group() {
 	global $wpdb, $adrotate_config;
 
-	$status = $view = $group_edit_id = '';
-	if(isset($_GET['status'])) $status = sanitize_key($_GET['status']);
-	if(isset($_GET['view'])) $view = sanitize_key($_GET['view']);
-	if(isset($_GET['group'])) $group_edit_id = sanitize_key($_GET['group']);
+	$status = (isset($_GET['status'])) ? sanitize_key($_GET['status']) : '';
+	$view = (isset($_GET['view'])) ? sanitize_key($_GET['view']) : '';
+	$group_edit_id =(isset($_GET['group'])) ? sanitize_key($_GET['group']) : '';
 
 	if(!is_numeric($status)) $status = 0;
 	if(!is_numeric($group_edit_id)) $group_edit_id = 0;
@@ -347,9 +336,8 @@ function adrotate_manage_schedules() {
 function adrotate_manage_media() {
 	global $wpdb, $adrotate_config;
 
-	$status = $file = '';
-	if(isset($_GET['status'])) $status = sanitize_key($_GET['status']);
-	if(isset($_GET['file'])) $file = sanitize_file_name($_GET['file']);
+	$status = (isset($_GET['status'])) ? sanitize_key($_GET['status']) : '';
+	$file = (isset($_GET['file'])) ? sanitize_file_name($_GET['file']) : '';
 
 	if(!is_numeric($status)) $status = 0;
 
@@ -388,11 +376,10 @@ function adrotate_manage_media() {
 function adrotate_statistics() {
 	global $wpdb, $adrotate_config;
 
-	$status = $view = $file = $id = '';
-	if(isset($_GET['status'])) $status = sanitize_key($_GET['status']);
-	if(isset($_GET['view'])) $view = sanitize_key($_GET['view']);
-	if(isset($_GET['id'])) $id = sanitize_key($_GET['id']);
-	if(isset($_GET['file'])) $file = sanitize_file_name($_GET['file']);
+	$view = (isset($_GET['view'])) ? sanitize_key($_GET['view']) : '';
+	$status = (isset($_GET['status'])) ? sanitize_key($_GET['status']) : '';
+	$id =(isset($_GET['id'])) ? sanitize_key($_GET['id']) : '';
+	$file = (isset($_GET['file'])) ? sanitize_file_name($_GET['file']) : '';
 
 	if(!is_numeric($status)) $status = 0;
 	if(!is_numeric($id)) $id = 0;
@@ -436,11 +423,12 @@ function adrotate_statistics() {
 function adrotate_support() {
 	global $wpdb, $adrotate_config;
 
-	$status = $file = '';
-	if(isset($_GET['status'])) $status = sanitize_key($_GET['status']);
-	if(isset($_GET['file'])) $file = sanitize_file_name($_GET['file']);
+	$view = (isset($_GET['view'])) ? sanitize_key($_GET['view']) : '';
+	$status = (isset($_GET['status'])) ? sanitize_key($_GET['status']) : '';
+	$file = (isset($_GET['file'])) ? sanitize_file_name($_GET['file']) : '';
 
 	if(!is_numeric($status)) $status = 0;
+
 	$current_user = wp_get_current_user();
 
 	if(adrotate_is_networked()) {
@@ -470,12 +458,11 @@ function adrotate_support() {
 function adrotate_options() {
 	global $wpdb, $wp_roles;
 
-    $active_tab = (isset($_GET['tab'])) ? sanitize_key($_GET['tab']) : 'general';
+	$active_tab = (isset($_GET['tab'])) ? sanitize_key($_GET['tab']) : 'general';
 	$status = (isset($_GET['status'])) ? sanitize_key($_GET['status']) : '';
+	$action =(isset($_GET['action'])) ? sanitize_key($_GET['action']) : '';
 
 	if(!is_numeric($status)) $status = 0;
-
-	$action = (isset($_GET['action'])) ? sanitize_key($_GET['action']) : '';
 
 	if(isset($_GET['adrotate-nonce']) AND wp_verify_nonce($_GET['adrotate-nonce'], 'maintenance')) {
 		if($action == 'check-all-ads') {
@@ -489,7 +476,7 @@ function adrotate_options() {
 		}
 
 		if($action == 'reset-tasks') {
-			adrotate_check_cron_schedules();
+			adrotate_check_schedules();
 			$status = 407;
 		}
 	}

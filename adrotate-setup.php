@@ -67,7 +67,7 @@ function adrotate_activate_setup() {
 		adrotate_database_install();
 		adrotate_dummy_data();
 		adrotate_check_config();
-		adrotate_check_cron_schedules();
+		adrotate_check_schedules();
 
 		// Set the capabilities for the administrator
 		$role = get_role('administrator');
@@ -211,10 +211,10 @@ function adrotate_uninstall_setup() {
 }
 
 /*-------------------------------------------------------------
- Name:      adrotate_check_cron_schedules
+ Name:      adrotate_check_schedules
  Purpose:   Set or reset maintenance schedules for AdRotate
 -------------------------------------------------------------*/
-function adrotate_check_cron_schedules() {
+function adrotate_check_schedules() {
 	$firstrun = adrotate_date_start('day');
 	if(!wp_next_scheduled('adrotate_empty_trackerdata')) { // Periodically clean trackerdata
 		wp_schedule_event($firstrun + 1800, 'twicedaily', 'adrotate_empty_trackerdata');
@@ -496,7 +496,7 @@ function adrotate_finish_upgrade() {
 	}
 
 	adrotate_check_config();
-	adrotate_check_cron_schedules();
+	adrotate_check_schedules();
 	adrotate_evaluate_ads();
 }
 
@@ -627,7 +627,7 @@ function adrotate_core_upgrade() {
 
 	// 4.1
 	if($adrotate_version['current'] < 389) {
-		adrotate_check_cron_schedules();
+		adrotate_check_schedules();
 	}
 
 	// 4.4
