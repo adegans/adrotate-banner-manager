@@ -17,7 +17,7 @@
 	<tr>
 		<th valign="top"><?php _e("Check adverts", 'adrotate'); ?></th>
 		<td>
-			<input type="submit" id="post-role-submit" name="adrotate_evaluate_all_ads" value="<?php _e("Check all adverts for configuration errors", 'adrotate'); ?>" class="button-secondary" onclick="return confirm('<?php _e("You are about to check all adverts for errors.", 'adrotate'); ?>\n\n<?php _e("This might take a few seconds!", 'adrotate'); ?>\n\n<?php _e("OK to continue, CANCEL to stop.", 'adrotate'); ?>')" />
+			<a class="button" href="<?php echo wp_nonce_url(admin_url('admin.php?page=adrotate-settings&tab=maintenance&action=check-all-ads'), 'maintenance', 'adrotate-nonce'); ?>" onclick="return confirm('<?php _e("You are about to check all adverts for errors.", 'adrotate'); ?>\n\n<?php _e("This might take a few seconds!", 'adrotate'); ?>\n\n<?php _e("OK to continue, CANCEL to stop.", 'adrotate'); ?>')"><?php _e("Check all adverts for configuration errors", 'adrotate'); ?></a>
 			<br /><br />
 			<span class="description"><?php _e("Apply all evaluation rules to all adverts to see if any error slipped in. This may take a few seconds.", 'adrotate'); ?></span>
 		</td>
@@ -52,7 +52,7 @@
 		<th width="15%"><?php _e("Unfiltered HTML", 'adrotate'); ?></th>
 		<td colspan="3">
 			<?php
-			if(defined('DISALLOW_UNFILTERED_HTML') && DISALLOW_UNFILTERED_HTML) { 
+			if(defined('DISALLOW_UNFILTERED_HTML') && !DISALLOW_UNFILTERED_HTML) { 
 				echo "<span style=\"color:#009900;\">".__("Allowed", 'adrotate')."</span>";
 			} else {
 				echo "<span style=\"color:#CC2900;\">".__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate')."</span><br />".__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'true' in your wp-config.php file.", 'adrotate')." <a href=\"https://ipstack.com/product\" target=\"_blank\">".__("More info", 'adrotate')."</a>";
@@ -69,7 +69,7 @@
 	<tr>
 		<th valign="top"><?php _e("Background tasks", 'adrotate'); ?></th>
 		<td colspan="3">
-			<a class="button" href="<?php echo wp_nonce_url('admin.php?page=adrotate-settings&tab=maintenance&action=reset-tasks', 'nonce', 'adrotate-nonce'); ?>"><?php _e("Reset background tasks", 'adrotate'); ?></a>
+			<a class="button" href="<?php echo wp_nonce_url(admin_url('admin.php?page=adrotate-settings&tab=maintenance&action=reset-tasks'), 'maintenance', 'adrotate-nonce'); ?>"><?php _e("Reset background tasks", 'adrotate'); ?></a>
 
 			<br /><br />
 			<span class="description"><em><?php _e("If automated tasks such as expiring adverts does not work reliable or one of the above schedules is missing use this button to reset the tasks.", 'adrotate'); ?></em></span>
@@ -102,15 +102,17 @@
 			<br /><?php echo __("Previous:", 'adrotate')." ".$adrotate_db_version['previous']; ?>
 		</td>
 	</tr>
+	<?php if($adrotate_db_version['current'] < ADROTATE_DB_VERSION OR $adrotate_version['current'] < ADROTATE_VERSION) { ?>
 	<tr>
 		<th valign="top"><?php _e("Manual upgrade", 'adrotate'); ?></th>
 		<td colspan="3">
-			<a class="button" href="<?php echo wp_nonce_url('admin.php?page=adrotate-settings&tab=maintenance&action=update-db', 'nonce', 'adrotate-nonce'); ?>"><?php _e("Run updater manually", 'adrotate'); ?></a>
+			<a class="button" href="<?php echo wp_nonce_url(admin_url('admin.php?page=adrotate-settings&tab=maintenance&action=update-db'), 'maintenance', 'adrotate-nonce'); ?>"><?php _e("Run updater manually", 'adrotate'); ?></a>
 
 			<br /><br />
 			<span class="description"><em><?php _e("If the automatic update for some reason doesn't complete. Or you notice that the above versions are mismatched you can update the database and settings using this button.", 'adrotate'); ?></em></span>
 		</td>
 	</tr>
+	<?php } ?>
 </table>
 
 </form>

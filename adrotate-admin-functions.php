@@ -106,17 +106,6 @@ function adrotate_select_pages($saved, $count = 2, $child_of = 0, $parent = 0) {
 }
 
 /*-------------------------------------------------------------
- Name:      adrotate_prepare_evaluate_ads
- Purpose:   Initiate automated evaluations for errors and determine the ad status and return to a dashboard
--------------------------------------------------------------*/
-function adrotate_prepare_evaluate_ads() {
-	// Verify all ads
-	adrotate_evaluate_ads();
-
-	adrotate_return('adrotate-settings', 405, array('tab' => 'maintenance'));
-}
-
-/*-------------------------------------------------------------
  Name:      adrotate_evaluate_ads
  Purpose:   Initiate evaluations for errors and determine the ad status
 -------------------------------------------------------------*/

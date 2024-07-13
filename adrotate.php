@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/?mtm_campaign=adrotate&mtm_keyword=plugin_info
 Description: Manage all your adverts with all the features you need while keeping things simple.
 Text Domain: adrotate
-Version: 5.13
+Version: 5.13.1
 License: GPLv3
 */
 
@@ -76,7 +76,6 @@ if(is_admin()) {
 	include_once($adrotate_path.'/adrotate-admin-statistics.php');
 	include_once($adrotate_path.'/adrotate-admin-portability.php');
 
-	adrotate_check_config();
 	/*--- Dashboard hooks ---------------------------------------*/
 	add_action('admin_menu', 'adrotate_dashboard');
 	add_action('admin_enqueue_scripts', 'adrotate_dashboard_scripts');
@@ -91,7 +90,6 @@ if(is_admin()) {
 	if(isset($_POST['adrotate_create_folder'])) add_action('init', 'adrotate_insert_folder');
 	if(isset($_POST['adrotate_action_submit'])) add_action('init', 'adrotate_request_action');
 	if(isset($_POST['adrotate_save_options'])) add_action('init', 'adrotate_options_submit');
-	if(isset($_POST['adrotate_evaluate_all_ads'])) add_action('init', 'adrotate_prepare_evaluate_ads');
 }
 
 /*-------------------------------------------------------------
@@ -479,7 +477,12 @@ function adrotate_options() {
 
 	$action = (isset($_GET['action'])) ? sanitize_key($_GET['action']) : '';
 
-	if(isset($_GET['adrotate-nonce']) AND wp_verify_nonce($_GET['adrotate-nonce'], 'nonce')) {
+	if(isset($_GET['adrotate-nonce']) AND wp_verify_nonce($_GET['adrotate-nonce'], 'maintenance')) {
+		if($action == 'check-all-ads') {
+			adrotate_evaluate_ads();
+			$status = 405;
+		}
+	
 		if($action == 'update-db') {
 			adrotate_finish_upgrade();
 			$status = 409;

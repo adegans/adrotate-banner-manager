@@ -5,7 +5,7 @@ Tags: ads, banner manager, adsense, advert, banners
 Requires at least: 4.9
 Requires PHP: 7.4
 Tested up to: 6.6
-Stable tag: 5.13
+Stable tag: 5.13.1
 License: GPLv3
 
 Advertising made easy. Manage all your ads including Google Ads, Amazon banners and many more from your dashboard.
@@ -103,6 +103,10 @@ For more detailed instructions check out the [installation steps](https://ajdg.s
 == Changelog ==
 
 For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/?mtm_campaign=adrotate&mtm_kwd=readme).
+
+= AdRotate 5.13.1 =
+* [fix] Unfiltered HTML indicator reversed in Maintenance
+* [fix] Missing _nonce value for maintenance functions
 
 = AdRotate 5.13 =
 * [new] Upload webp banner images through the media manager

@@ -596,8 +596,6 @@ function adrotate_request_action() {
 					}
 				}
 			}
-			// Verify all ads
-			adrotate_prepare_evaluate_ads(false);
 		}
 
 		if($group_ids != '') {
