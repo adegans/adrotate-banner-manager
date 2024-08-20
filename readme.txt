@@ -3,11 +3,11 @@ Contributors: adegans
 Donate link: https://www.arnan.me/donate.html
 Tags: ads, banner manager, adsense, affiliate, banners
 Requires at least: 4.9
-Tested up to: 6.6
+Tested up to: 6.6.1
 CP requires at least: 1.0
 CP tested up to: 2.1.1
 Requires PHP: 7.4
-Stable tag: 5.13.2
+Stable tag: 5.13.3
 License: GPLv3
 
 Advertising made easy. Manage all your ads including Google Ads, Amazon banners and many more from your dashboard.
@@ -96,7 +96,7 @@ Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/
 
 == Installation ==
 
-Installing AdRotate is super easy. 
+Installing AdRotate is super easy.
 - Search for "AdRotate Arnan" or "AdRotate" in your plugin dashboard and click on the "Install" button for **AdRotate Banner Manager**.
 - A new menu called "AdRotate" appears in the WordPress navigation.
 - From this menu you'll handle everything related to **AdRotate Banner Manager**.
@@ -106,6 +106,13 @@ For more detailed instructions check out the [installation steps](https://ajdg.s
 == Changelog ==
 
 For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/?mtm_campaign=adrotate&mtm_kwd=readme).
+
+= AdRotate 5.13.3 =
+* [change] Use WordPress native function when uploading files
+* [change] Use WordPress native function when creating folders
+* [change] Creating folders checks if folder already exists
+* [change] Uploading a file checks if file already exists
+* [fix] Missing confirm notice when creating a folder
 
 = AdRotate 5.13.2 =
 * [fix] Missing mimetype when uploading banner images

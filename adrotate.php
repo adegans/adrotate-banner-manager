@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/?mtm_campaign=adrotate&mtm_keyword=plugin_info
 Description: Manage all your adverts with all the features you need while keeping things simple.
 Text Domain: adrotate
-Version: 5.13.2
+Version: 5.13.3
 License: GPLv3
 */
 
@@ -398,7 +398,7 @@ function adrotate_statistics() {
 	<div class="wrap">
 		<h2><?php _e("Advert Statistics", 'adrotate'); ?></h2>
 
-		<?php 
+		<?php
 		if($status > 0) adrotate_status($status, array('file' => $file));
 
 	    if(empty($view)) {
@@ -441,7 +441,7 @@ function adrotate_support() {
 	<div class="wrap">
 		<h1><?php _e("AdRotate Support", 'adrotate'); ?></h1>
 
-		<?php 
+		<?php
 		if($status > 0) adrotate_status($status);
 
 		include('dashboard/support.php');
@@ -469,7 +469,7 @@ function adrotate_options() {
 			adrotate_evaluate_ads();
 			$status = 405;
 		}
-	
+
 		if($action == 'update-db') {
 			adrotate_finish_upgrade();
 			$status = 409;

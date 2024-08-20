@@ -254,20 +254,6 @@ function adrotate_ad_is_in_groups($id) {
 }
 
 /*-------------------------------------------------------------
- Name:      adrotate_sanitize_file_name
- Purpose:   Clean up file names of files that are being uploaded.
--------------------------------------------------------------*/
-function adrotate_sanitize_file_name($filename) {
-    $special_chars = array('?', '[', ']', '/', '\\', '=', '<', '>', ':', ';', ',', '"', '\'', '&', '$', '#', '*', '(', ')', '|', '~', '`', '!', '{', '}');
-
-    $filename = str_replace($special_chars, '', $filename);
-    $filename = preg_replace('/[\s-]+/', '-', $filename);
-    $filename = strtolower(trim($filename, '.-_'));
-
-    return $filename;
-}
-
-/*-------------------------------------------------------------
  Name:      adrotate_dropdown_roles
  Purpose:   Returns all roles that can be used
 -------------------------------------------------------------*/
@@ -436,14 +422,14 @@ function adrotate_notifications_dashboard() {
 		// Finish update
 		$adrotate_db_version = get_option('adrotate_db_version');
 		$adrotate_version = get_option('adrotate_version');
-	
+
 		if($adrotate_db_version['current'] < ADROTATE_DB_VERSION OR $adrotate_version['current'] < ADROTATE_VERSION) {
 			$plugin_version = get_plugins();
 			$plugin_version = $plugin_version['adrotate/adrotate.php']['Version'];
-	
+
 			// Do the update
 			adrotate_finish_upgrade();
-	
+
 			// Thank user for updating
 			echo "<div class=\"ajdg-notification notice\">";
 			echo "	<div class=\"ajdg-notification-logo\" style=\"background-image:url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
@@ -809,6 +795,10 @@ function adrotate_status($status, $args = null) {
 
 		case '213' :
 			echo "<div id=\"message\" class=\"updated\"><p>". __("Group including the Adverts in it deleted", 'adrotate') ."</p></div>";
+		break;
+
+		case '223' :
+			echo "<div id=\"message\" class=\"updated\"><p>". __("Folder created", 'adrotate') ."</p></div>";
 		break;
 
 		case '226' :
