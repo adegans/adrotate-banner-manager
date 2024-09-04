@@ -20,14 +20,10 @@ function adrotate_generate_input() {
 		$id = '';
 		if(isset($_POST['adrotate_id'])) $id = sanitize_key($_POST['adrotate_id']);
 
-		$fullsize_image = $targeturl = $nofollow = $basic_dropdown = $adwidth = $adheight = '';
+		$fullsize_image = $targeturl = $new_window = $portability = $nofollow = $adwidth = $adheight = '';
 		if(isset($_POST['adrotate_fullsize_dropdown'])) $fullsize_image = strip_tags(trim($_POST['adrotate_fullsize_dropdown']));
 		if(isset($_POST['adrotate_targeturl'])) $targeturl = strip_tags(trim($_POST['adrotate_targeturl']));
-
-		$new_window = '';
 		if(isset($_POST['adrotate_newwindow'])) $new_window = strip_tags(trim($_POST['adrotate_newwindow']));
-
-		$portability = '';
 		if(isset($_POST['adrotate_portability'])) $portability = strip_tags(trim($_POST['adrotate_portability']));
 
 		if(current_user_can('adrotate_ad_manage')) {
@@ -37,20 +33,16 @@ function adrotate_generate_input() {
 				if($fullsize_size){
 					$adwidth = " width=\"".$fullsize_size[0]."\"";
 					$adheight = " height=\"".$fullsize_size[1]."\"";
-				} else {
-					$adwidth = $adheight = "";
 				}
 
 				// Open in a new window?
 				if(isset($new_window) AND strlen($new_window) != 0) {
 					$new_window = " target=\"_blank\"";
-				} else {
-					$new_window = "";
 				}
 
 				// Determine image settings
 				$imagetype = 'dropdown';
-				$image = WP_CONTENT_URL."/%folder%/".$fullsize_image;
+				$image = WP_CONTENT_URL."/banners/".$fullsize_image;
 				$asset = "<img src=\"%asset%\"".$adwidth.$adheight." />";
 
 				// Generate code
@@ -219,7 +211,9 @@ function adrotate_insert_advert() {
 			}
 			unset($value);
 
-			// Verify ad
+			// Verify ads
+			adrotate_evaluate_ads();
+
 			if($type == 'empty') {
 				$action = 'new';
 			} else {

@@ -9,7 +9,7 @@
 *  liability that might arise from its use.
 ------------------------------------------------------------------------------------ */
 
-if(!$ad_edit_id) { 
+if(!$ad_edit_id) {
 	$edit_id = $wpdb->get_var("SELECT `id` FROM `{$wpdb->prefix}adrotate` WHERE `type` = 'generator' ORDER BY `id` DESC LIMIT 1;");
 	if($edit_id == 0) {
 	    $wpdb->insert($wpdb->prefix."adrotate", array('title' => '', 'bannercode' => '', 'thetime' => $now, 'updated' => $now, 'author' => $userdata->user_login, 'imagetype' => 'dropdown', 'image' => '', 'tracker' => 'N', 'desktop' => 'Y', 'mobile' => 'Y', 'tablet' => 'Y', 'os_ios' => 'Y', 'os_android' => 'Y', 'type' => 'generator', 'weight' => 6, 'autodelete' => 'N', 'budget' => 0, 'crate' => 0, 'irate' => 0, 'cities' => serialize(array()), 'countries' => serialize(array())));
@@ -28,28 +28,29 @@ if($edit_banner) {
 	wp_enqueue_media();
 	wp_enqueue_script('uploader-hook', plugins_url().'/adrotate/library/uploader-hook.js', array('jquery'));
 	?>
-	
+
 		<form method="post" action="admin.php?page=adrotate">
 		<?php wp_nonce_field('adrotate_generate_ad','adrotate_nonce'); ?>
 		<input type="hidden" name="adrotate_id" value="<?php echo $edit_banner->id;?>" />
-	
+
 		<h2><?php _e("Generate Advert Code", 'adrotate'); ?></h2>
 		<table class="widefat" style="margin-top: .5em">
-	
+
 			<thead>
 			<tr>
 		        <th colspan="2"><strong><?php _e("Required", 'adrotate'); ?></strong></th>
 			</tr>
 			</thead>
-			
+
 			<tbody>
 			<tr>
 		        <th valign="top"><?php _e("Banner image", 'adrotate'); ?></th>
 				<td>
 					<select tabindex="1" id="adrotate_fullsize_dropdown" name="adrotate_fullsize_dropdown" style="min-width: 300px;">
-   						<option value=""><?php _e("Select advert image", 'adrotate'); ?></option>
+						<option value=""><?php _e("Select advert image", 'adrotate'); ?></option>
 						<?php
-						foreach(adrotate_dropdown_folder_contents(WP_CONTENT_DIR."/".$adrotate_config['banner_folder'], array('jpg', 'jpeg', 'gif', 'png')) as $key => $option) {
+						$assets = adrotate_dropdown_folder_contents(WP_CONTENT_DIR."/".$adrotate_config['banner_folder'], array('jpg', 'jpeg', 'gif', 'png', 'webp'));
+						foreach($assets as $key => $option) {
 							echo "<option value=\"$option\">$option</option>";
 						}
 						?>
@@ -63,13 +64,13 @@ if($edit_banner) {
 		        </td>
 			</tr>
 			</tbody>
-			
+
 			<thead>
 			<tr>
 		        <th colspan="2"><strong><?php _e("Viewports", 'adrotate'); ?> - <?php _e("Available in AdRotate Pro", 'adrotate'); ?></strong></th>
 			</tr>
 			</thead>
-			
+
 			<tbody>
 			<tr>
 		        <th valign="top"><?php _e("Smaller Devices", 'adrotate'); ?></th>
@@ -98,13 +99,13 @@ if($edit_banner) {
 			<tr>
 		        <td colspan="2"><strong><?php _e("Important:", 'adrotate'); ?></strong> <?php _e("All sizes are optional, but it is highly recommended to use at least the small and medium size. Devices with viewports greater than 1280px will use the full sized banner.", 'adrotate'); ?><br /><?php _e("Are your files not listed? Upload them via the AdRotate Media Manager. For your convenience, use easy to use filenames.", 'adrotate'); ?></td>
 			</tr>
-	
+
 			<thead>
 			<tr>
 		        <th colspan="2"><strong><?php _e("Optional", 'adrotate'); ?></strong></th>
 			</tr>
 			</thead>
-			
+
 			<tbody>
 			<tr>
 		        <th valign="top"><?php _e("Target window", 'adrotate'); ?></th>
@@ -125,13 +126,13 @@ if($edit_banner) {
 		        </td>
 	 		</tr>
 			</tbody>
-	
+
 			<thead>
 			<tr>
 		        <th colspan="2"><strong><?php _e("Portability", 'adrotate'); ?></strong></th>
 			</tr>
 			</thead>
-			
+
 			<tbody>
 			<tr>
 		        <th valign="top"><?php _e("Advert hash", 'adrotate'); ?></th>
@@ -142,12 +143,12 @@ if($edit_banner) {
 			</tbody>
 
 		</table>
-	
+
 		<p class="submit">
 			<input tabindex="8" type="submit" name="adrotate_generate_submit" class="button-primary" value="<?php _e("Generate and Configure Advert", 'adrotate'); ?>" />
 			<a href="admin.php?page=adrotate&view=manage" class="button"><?php _e("Cancel", 'adrotate'); ?></a> <?php _e("Always test your adverts before activating them.", 'adrotate'); ?>
 		</p>
-	
+
 		<p><em><strong><?php _e("CAUTION:", 'adrotate'); ?></strong> <?php _e("While the Code Generator has been tested and works, code generation, as always, is a interpretation of user input. If you provide the correct bits and pieces, a working advert may be generated. If you leave fields empty or insert the wrong info you probably end up with a broken advert.", 'adrotate'); ?><br /><strong><?php _e("NOTE:", 'adrotate'); ?></strong> <?php _e("If you insert an Advert Hash, all other fields are ignored.", 'adrotate'); ?></em></p>
 	</form>
 <?php

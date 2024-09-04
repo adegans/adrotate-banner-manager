@@ -133,7 +133,6 @@
 	</div>
 
 	<div style="text-align: center;">
-		<p style="font-size: 175%;"><a href="https://ajdg.solutions/contact/?mtm_campaign=adrotate&mtm_keyword=adrotatepro_page" target="_blank">Let me know</a> if you have any questions!
-		<br />I'm looking forward to your and message!</p>
+		<p style="font-size: 175%;"><a href="https://ajdg.solutions/contact/?mtm_campaign=adrotate&mtm_keyword=adrotatepro_page" target="_blank">Let me know</a> if you have any questions.<br />I'm looking forward to hearing from you!</p>
 	</div>
 </div>

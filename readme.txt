@@ -7,7 +7,7 @@ Tested up to: 6.6.1
 CP requires at least: 1.0
 CP tested up to: 2.1.1
 Requires PHP: 7.4
-Stable tag: 5.13.3
+Stable tag: 5.13.4
 License: GPLv3
 
 Advertising made easy. Manage all your ads including Google Ads, Amazon banners and many more from your dashboard.
@@ -80,7 +80,7 @@ As a result **AdRotate Banner Manager** is trusted by tens of thousands of busin
 * Option to either track clicks or impressions, or both
 * Same day ticket support accessible from your dashboard
 
-Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website! \
+Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website!
 Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
 
 = Translations =
@@ -106,6 +106,10 @@ For more detailed instructions check out the [installation steps](https://ajdg.s
 == Changelog ==
 
 For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/?mtm_campaign=adrotate&mtm_kwd=readme).
+
+= AdRotate 5.13.4 =
+* [fix] Image selection not kept when using the advert generator
+* [fix] webp images are now listed in the advert generator
 
 = AdRotate 5.13.3 =
 * [change] Use WordPress native function when uploading files
