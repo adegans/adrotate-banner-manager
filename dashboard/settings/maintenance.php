@@ -13,7 +13,7 @@
 <form name="settings" id="post" method="post" action="admin.php?page=adrotate-settings&tab=maintenance">
 <?php wp_nonce_field('adrotate_settings','adrotate_nonce_settings'); ?>
 <h2><?php _e("Maintenance", 'adrotate'); ?></h2>
-<table class="form-table">			
+<table class="form-table">
 	<tr>
 		<th valign="top"><?php _e("Check adverts", 'adrotate'); ?></th>
 		<td>
@@ -25,7 +25,7 @@
 </table>
 
 <h3><?php _e("Status and Versions", 'adrotate'); ?></h3>
-<table class="form-table">			
+<table class="form-table">
 	<tr>
 		<th valign="top"><?php _e("Current status of adverts", 'adrotate'); ?></th>
 		<td colspan="3"><?php _e("Normal", 'adrotate'); ?>: <?php echo $advert_status['normal']; ?>, <?php _e("Error", 'adrotate'); ?>: <?php echo $advert_status['error']; ?>, <?php _e("Expired", 'adrotate'); ?>: <?php echo $advert_status['expired']; ?>, <?php _e("Expires Soon", 'adrotate'); ?>: <?php echo $advert_status['expiressoon']; ?>, <?php _e("Unknown", 'adrotate'); ?>: <?php echo $advert_status['unknown']; ?>.</td>
@@ -52,10 +52,10 @@
 		<th width="15%"><?php _e("Unfiltered HTML", 'adrotate'); ?></th>
 		<td colspan="3">
 			<?php
-			if(defined('DISALLOW_UNFILTERED_HTML') && !DISALLOW_UNFILTERED_HTML) { 
+			if(defined('DISALLOW_UNFILTERED_HTML') && !DISALLOW_UNFILTERED_HTML) {
 				echo "<span style=\"color:#009900;\">".__("Allowed", 'adrotate')."</span>";
 			} else {
-				echo "<span style=\"color:#CC2900;\">".__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate')."</span><br />".__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'true' in your wp-config.php file.", 'adrotate')." <a href=\"https://ipstack.com/product\" target=\"_blank\">".__("More info", 'adrotate')."</a>";
+				echo "<span style=\"color:#CC2900;\">".__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate')."</span><br />".__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php file.", 'adrotate')." <a href=\"https://ipstack.com/product\" target=\"_blank\">".__("More info", 'adrotate')."</a>";
 			}
 			?>
 		</td>
@@ -79,25 +79,25 @@
 
 <h2><?php _e("Internal Versions", 'adrotate'); ?></h2>
 <span class="description"><?php _e("Unless you experience database issues or a warning shows below, these numbers are not really relevant for troubleshooting. Support may ask for them to verify your database status.", 'adrotate'); ?></span>
-<table class="form-table">			
+<table class="form-table">
 	<tr>
 		<th width="15%" valign="top"><?php _e("AdRotate version", 'adrotate'); ?></th>
 		<td>
-			<?php 
+			<?php
 			echo __("Current:", 'adrotate')."<span style=\"color:#009900;\">".$adrotate_version['current']."</span>";
-			if($adrotate_version['current'] != ADROTATE_VERSION) { 
-				echo "<span style=\"color:#CC2900;\">".__("Should be:", 'adrotate')." ".ADROTATE_VERSION."</span>"; 
-			} 
+			if($adrotate_version['current'] != ADROTATE_VERSION) {
+				echo "<span style=\"color:#CC2900;\">".__("Should be:", 'adrotate')." ".ADROTATE_VERSION."</span>";
+			}
 			?>
 			<br /><?php echo __("Previous:", 'adrotate')." ".$adrotate_version['previous']; ?>
 		</td>
 		<th width="15%" valign="top"><?php _e("Database version", 'adrotate'); ?></th>
 		<td>
-			<?php 
+			<?php
 			echo __("Current:", 'adrotate')."<span style=\"color:#009900;\">".$adrotate_db_version['current']."</span>";
-			if($adrotate_db_version['current'] != ADROTATE_DB_VERSION) { 
+			if($adrotate_db_version['current'] != ADROTATE_DB_VERSION) {
 				echo "<span style=\"color:#CC2900;\">".__("Should be:", 'adrotate')." ".ADROTATE_DB_VERSION."</span>";
-			} 
+			}
 			?>
 			<br /><?php echo __("Previous:", 'adrotate')." ".$adrotate_db_version['previous']; ?>
 		</td>
