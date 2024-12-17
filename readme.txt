@@ -1,6 +1,6 @@
 === AdRotate Banner Manager - The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.13.6
+Stable tag: 5.13.6.1
 Requires at least: 4.9
 Tested up to: 6.7.1
 Requires PHP: 7.4
@@ -105,9 +105,10 @@ For more detailed instructions check out the [installation steps](https://ajdg.s
 
 For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/).
 
-= AdRotate 5.13.6 =
+= AdRotate 5.13.6 & 5.13.6.1=
 * [update] Copyright notices for 2025
 * [update] Compatibility info for WordPress and ClassicPress
+* [change] Removed stray debug code
 
 = AdRotate 5.13.5 =
 * [update] WordPress media uploader only lists and allows relevant files

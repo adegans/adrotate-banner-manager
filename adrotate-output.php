@@ -12,7 +12,6 @@
 /*-------------------------------------------------------------
  Name:      adrotate_ad
  Purpose:   Show requested ad
- Since:		3.0
 -------------------------------------------------------------*/
 function adrotate_ad($banner_id, $opt = null) {
 	global $wpdb, $adrotate_config;
@@ -58,7 +57,6 @@ function adrotate_ad($banner_id, $opt = null) {
 /*-------------------------------------------------------------
  Name:      adrotate_group
  Purpose:   Fetch ads in specified group(s) and show a random ad
- Since:		3.0
 -------------------------------------------------------------*/
 function adrotate_group($group_ids, $opt = null) {
 	global $wpdb, $adrotate_config;
@@ -201,7 +199,6 @@ function adrotate_group($group_ids, $opt = null) {
 /*-------------------------------------------------------------
  Name:      adrotate_group_post_inject
  Purpose:   Prepare group for post injection
- Since:		5.10
 -------------------------------------------------------------*/
 function adrotate_group_post_inject($group_id) {
 	global $wpdb, $adrotate_config;
@@ -261,7 +258,6 @@ function adrotate_group_post_inject($group_id) {
 /*-------------------------------------------------------------
  Name:      adrotate_shortcode
  Purpose:   Prepare function requests for calls on shortcodes
- Since:		0.7
 -------------------------------------------------------------*/
 function adrotate_shortcode($atts, $content = null) {
 	global $adrotate_config;
@@ -314,7 +310,6 @@ function adrotate_shortcode($atts, $content = null) {
 /*-------------------------------------------------------------
  Name:      adrotate_inject_posts_cache_wrapper
  Purpose:   Wrap post injection return with caching code?
- Since:		5.10
 -------------------------------------------------------------*/
 function adrotate_inject_posts_cache_wrapper($group_id) {
 	global $adrotate_config;
@@ -346,10 +341,6 @@ function adrotate_inject_posts_cache_wrapper($group_id) {
 -------------------------------------------------------------*/
 function adrotate_inject_posts($post_content) {
 	global $wpdb, $post;
-
-echo '<pre>';
-print_r($post);
-echo '</pre>';
 
 	$categories_top = $categories_bottom = $categories_inside = array();
 	if(is_page()) {
@@ -459,7 +450,6 @@ echo '</pre>';
 /*-------------------------------------------------------------
  Name:      adrotate_preview
  Purpose:   Show preview of selected advert (Dashboard)
- Since:		3.0
 -------------------------------------------------------------*/
 function adrotate_preview($banner_id) {
 	global $wpdb;
@@ -488,7 +478,6 @@ function adrotate_preview($banner_id) {
 /*-------------------------------------------------------------
  Name:      adrotate_ad_output
  Purpose:   Prepare the output for viewing
- Since:		3.0
 -------------------------------------------------------------*/
 function adrotate_ad_output($id, $group, $name, $bannercode, $tracker, $image) {
 	global $blog_id, $adrotate_config;
@@ -606,7 +595,6 @@ function adrotate_scripts() {
 /*-------------------------------------------------------------
  Name:      adrotate_custom_javascript
  Purpose:   Add required JavaScript to adrotate_scripts()
- Since:		3.10.5
 -------------------------------------------------------------*/
 function adrotate_custom_javascript() {
 	global $wpdb, $adrotate_config;
@@ -632,7 +620,6 @@ function adrotate_custom_javascript() {
 /*-------------------------------------------------------------
  Name:      adrotate_nonce_error
  Purpose:   Display a formatted error if Nonce fails
- Since:		3.7.4.2
 -------------------------------------------------------------*/
 function adrotate_nonce_error() {
 	echo "	<h2 style=\"text-align: center;\">".__("Oh no! Something went wrong!", 'adrotate')."</h2>";
@@ -644,7 +631,6 @@ function adrotate_nonce_error() {
 /*-------------------------------------------------------------
  Name:      adrotate_error
  Purpose:   Show errors for problems in using AdRotate, should they occur
- Since:		3.0
 -------------------------------------------------------------*/
 function adrotate_error($action, $arg = null) {
 	switch($action) {
