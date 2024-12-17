@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2024 Arnan de Gans. All Rights Reserved.
+*  Copyright 2008-2025 Arnan de Gans. All Rights Reserved.
 *  ADROTATE is a registered trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -346,6 +346,10 @@ function adrotate_inject_posts_cache_wrapper($group_id) {
 -------------------------------------------------------------*/
 function adrotate_inject_posts($post_content) {
 	global $wpdb, $post;
+
+echo '<pre>';
+print_r($post);
+echo '</pre>';
 
 	$categories_top = $categories_bottom = $categories_inside = array();
 	if(is_page()) {

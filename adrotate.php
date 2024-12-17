@@ -6,13 +6,20 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Manage all your adverts with all the features you need while keeping things simple.
 Text Domain: adrotate
-Version: 5.13.5
+Version: 5.13.6
 License: GPLv3
+*/
+
+/*
+* Requires PHP: 7.4
+* Requires CP: 1.0
+* Tested CP: 2.3.1
+* Premium URI: https://ajdg.solutions/
 */
 
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2024 Arnan de Gans. All Rights Reserved.
+*  Copyright 2008-2025 Arnan de Gans. All Rights Reserved.
 *  ADROTATE is a registered trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
