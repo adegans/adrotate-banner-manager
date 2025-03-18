@@ -1,8 +1,8 @@
 === AdRotate Banner Manager - The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.13.6.1
+Stable tag: 5.13.7
 Requires at least: 4.9
-Tested up to: 6.7.1
+Tested up to: 6.7.2
 Requires PHP: 7.4
 Donate link: https://ajdg.solutions/product/adrotate-pro-single/
 Tags: ads, banner manager, adsense, affiliate, banners
@@ -79,7 +79,7 @@ As a result **AdRotate Banner Manager** is trusted by tens of thousands of busin
 * Same day ticket support accessible from your dashboard
 
 Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website!
-Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
+Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) ~ [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
 
 = Translations =
 
@@ -105,7 +105,13 @@ For more detailed instructions check out the [installation steps](https://ajdg.s
 
 For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/).
 
-= AdRotate 5.13.6 & 5.13.6.1=
+= AdRotate 5.13.7 =
+* [update] All support links to match current support system
+* [update] Compatibility info for WordPress and ClassicPress
+* [update] Reformatted AdRotate Credits area
+* [fix] Several formatting issues in dashboard
+
+= AdRotate 5.13.6 & 5.13.6.1 =
 * [update] Copyright notices for 2025
 * [update] Compatibility info for WordPress and ClassicPress
 * [change] Removed stray debug code

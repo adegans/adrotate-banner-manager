@@ -382,7 +382,7 @@ function adrotate_notifications_dashboard() {
 			if($review_banner != 1 AND $review_banner < (current_time('timestamp') - (8 * DAY_IN_SECONDS))) {
 				echo "<div class=\"ajdg-notification notice\">";
 				echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
-				echo "	<div class=\"ajdg-notification-message\">Hello <strong>".$displayname."</strong>! You have been using <strong>AdRotate</strong> for a few days. If you like or found a use for AdRotate Banner Manager, please share <strong>your experience</strong> and write a review. Thanks for being awesome!<br />If you have questions, complaints or something else that does not belong in a review, please use the <a href=\"".admin_url('admin.php?page=adrotate-support')."\">support forum</a>!</div>";
+				echo "	<div class=\"ajdg-notification-message\">Hello <strong>".$displayname."</strong>! You have been using <strong>AdRotate</strong> for a few days. If you like or found a use for AdRotate Banner Manager, please share <strong>your experience</strong> and write a review. Thanks for being awesome!<br />If you have questions, complaints or something else that does not belong in a review, please use the <a href=\"".admin_url('admin.php?page=adrotate-support')."\">support options here</a>!</div>";
 				echo "	<div class=\"ajdg-notification-cta\">";
 				echo "		<a href=\"https://wordpress.org/support/view/plugin-reviews/adrotate?rate=5#postform\" class=\"ajdg-notification-act button-primary\">Write Review</a>";
 				echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=1\" class=\"ajdg-notification-dismiss\">Maybe later</a>";
@@ -606,8 +606,8 @@ function adrotate_unlink($asset, $path = '') {
 -------------------------------------------------------------*/
 function adrotate_action_links($links) {
 	$extra_links = array();
-	$extra_links['ajdg-adrotate-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124&mtm_campaign=adrotate&mtm_keyword=action_links', '<strong>Get AdRotate Pro</strong>');
-	$extra_links['ajdg-adrotate-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/?mtm_campaign=adrotatepro', 'More plugins');
+	$extra_links['ajdg-adrotate-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124', '<strong>Get AdRotate Pro</strong>');
+	$extra_links['ajdg-adrotate-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/', 'More plugins');
 
 	return array_merge($extra_links, $links);
 }
@@ -622,16 +622,16 @@ function adrotate_credits() {
 	echo "<thead>";
 	echo "<tr valign=\"top\">";
 	echo "	<th width=\"70%\"><strong>".__("Get more features with AdRotate Professional", 'adrotate')."</strong></th>";
-	echo "	<th><strong>".__("Starting at &euro; 49.00", 'adrotate')." - <a href=\"https://ajdg.solutions/product-category/adrotate-pro/?mtm_campaign=adrotate&mtm_keyword=credits_license\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></strong></th>";
+	echo "	<th><strong>".__("Starting at &euro; 39.00", 'adrotate')." - <a href=\"https://ajdg.solutions/product-category/adrotate-pro/\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></strong></th>";
 	echo "</tr>";
 	echo "</thead>";
 
 	echo "<tbody>";
 	echo "<tr>";
 
-	echo "<td><a href=\"https://ajdg.solutions/plugins/adrotate-for-wordpress/?mtm_campaign=adrotate&mtm_keyword=credits_license\" target=\"_blank\"><img src=\"".plugins_url('/images/logo-60x60.png', __FILE__)."\" class=\"alignleft pro-image\" /></a><p>".__("<strong>AdRotate Professional</strong> has a lot more to offer for even better advertising management and premium support. Enjoy features like <strong>Geo Targeting</strong>, <strong>Schedules</strong>, more advanced <strong>Post Injection</strong> and much more. Check out the feature comparison tab on any of the product pages to see what AdRotate Pro has to offer for you! When you upgrade to <strong>AdRotate Professional</strong> make sure you use coupon <strong>GETADROTATEPRO</strong> on checkout for 10 percent off on any license.", 'adrotate')." <a href=\"https://ajdg.solutions/product-category/adrotate-pro/?mtm_campaign=adrotate&mtm_keyword=credits_license\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></p></td>";
+	echo "<td><a href=\"https://ajdg.solutions/plugins/adrotate-for-wordpress/\" target=\"_blank\"><img src=\"".plugins_url('/images/logo-60x60.png', __FILE__)."\" class=\"alignleft pro-image\" /></a><p>".__("<strong>AdRotate Professional</strong> has a lot more to offer for even better advertising management and premium support. Enjoy features like <strong>Geo Targeting</strong>, <strong>multiple Schedules</strong> per ad and <strong>Schedules</strong> have more options, more advanced <strong>Post Injection</strong> and much more. Check out the feature comparison tab on any of the product pages to see what AdRotate Pro has to offer for you! When you upgrade to <strong>AdRotate Professional</strong> make sure you use coupon <strong>GETADROTATEPRO</strong> on checkout for 10 percent off on any license.", 'adrotate')." <a href=\"https://ajdg.solutions/product-category/adrotate-pro/\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></p></td>";
 
-	echo "<td><p><a href=\"https://ajdg.solutions/product/adrotate-pro-single/?mtm_campaign=adrotate&mtm_keyword=credits_license\" target=\"_blank\"><strong>".__("Get a Single License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for one WordPress website.", 'adrotate')."</em></p>"."<p><a href=\"https://ajdg.solutions/product/adrotate-pro-multi/?mtm_campaign=adrotate&mtm_keyword=credits_license\" target=\"_blank\"><strong>".__("Go big with the Multi License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for up-to five WordPress websites.", 'adrotate')."</em></p></td>";
+	echo "<td><p><a href=\"https://ajdg.solutions/product/adrotate-pro-single/\" target=\"_blank\"><strong>".__("Get a Single License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for one WordPress website.", 'adrotate')."</em></p>"."<p><a href=\"https://ajdg.solutions/product/adrotate-pro-multi/\" target=\"_blank\"><strong>".__("Go big with the Multi License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for up-to five WordPress websites.", 'adrotate')."</em></p></td>";
 
 	echo "</tr>";
 
@@ -648,9 +648,9 @@ function adrotate_credits() {
 
 	echo "<tbody>";
 	echo "<tr>";
-	echo "<td><a href=\"https://ajdg.solutions/forums/forum/adrotate-for-wordpress/\" title=\"Getting help with AdRotate\"><img src=\"".plugins_url('/images/icon-support.png', __FILE__)."\" alt=\"AdRotate Logo\" width=\"60\" height=\"60\" align=\"left\" style=\"padding:5px;\" /></a><p>".__("If you need help, or have questions about AdRotate, the best and fastest way to get your answer is via the AdRotate support forum. Usually I answer questions the same day, often with a solution in the first answer.", 'adrotate')."</p>"."<p><a href=\"https://ajdg.solutions/support/adrotate-manuals/?mtm_campaign=adrotate&mtm_keyword=credits\" target=\"_blank\" class=\"button-primary\">".__("AdRotate Manuals", 'adrotate')."</a> <a href=\"https://ajdg.solutions/forums/forum/adrotate-for-wordpress/?mtm_campaign=adrotate&mtm_keyword=credits\" target=\"_blank\" class=\"button-primary\">".__("Support Forums", 'adrotate')."</a> <a href=\"https://ajdg.solutions/product/support-ticket/?mtm_campaign=adrotate&mtm_keyword=credits\" target=\"_blank\" class=\"button-secondary\">".__("Buy Support Ticket", 'adrotate')."</a></p></td>";
+	echo "<td><img src=\"".plugins_url('/images/icon-support.png', __FILE__)."\" alt=\"AdRotate Logo\" width=\"60\" height=\"60\" align=\"left\" style=\"padding:5px;\" /><p>".__("If you need help, or have questions about AdRotate, the fastest way to get your answer is via the Knowledgebase. All popular features to get you started are explained there. If you need an answer right now or the knowledge base does not answer your question you can buy a Priority support ticket as well.", 'adrotate')."</p>"."<p><a href=\"https://support.ajdg.net/knowledgebase.php\" target=\"_blank\" class=\"button-primary\">".__("AdRotate Knowledge Base", 'adrotate')."</a> <a href=\"https://ajdg.solutions/product/support-ticket/\" target=\"_blank\" class=\"button-secondary\">".__("Buy Support Ticket", 'adrotate')."</a></p></td>";
 
-	echo "<td><a href=\"https://wordpress.org/support/view/plugin-reviews/adrotate?rate=5#postform\" title=\"Review AdRotate for WordPress\"><img src=\"".plugins_url('/images/icon-contact.png', __FILE__)."\" alt=\"AdRotate Banner Manager\" width=\"60\" height=\"60\" align=\"left\" style=\"padding:5px;\" /></a><p>".__("Arnan needs your help. Please consider writing a review or sharing AdRotate in Social media if you find the plugin useful. Writing a review and sharing AdRotate on social media costs you nothing but doing so is super helpful.", 'adrotate')."</p>"."<p><a class=\"button-primary\" target=\"_blank\" href=\"https://ajdg.solutions/forums/forum/adrotate-for-wordpress/reviews/?rate=5#new-post\">".__("Write review on WordPress.org", 'adrotate')."</a> <a class=\"button\" target=\"_blank\" href=\"https://ajdg.solutions/product/adrotate-banner-manager/#tab-reviews\">".__("Write review on ajdg.solutions", 'adrotate')."</a></p></td>";
+	echo "<td><img src=\"".plugins_url('/images/icon-contact.png', __FILE__)."\" alt=\"AdRotate Banner Manager\" width=\"60\" height=\"60\" align=\"left\" style=\"padding:5px;\" /><p>".__("Arnan needs your help. Please consider writing a review or sharing AdRotate in Social media if you find the plugin useful. Doing so costs you nothing but your endorsement is super helpful to spread the word about AdRotate which in turn helps with continued development of the plugin.", 'adrotate')."</p>"."<p><a class=\"button-primary\" target=\"_blank\" href=\"https://wordpress.org/support/plugin/adrotate/reviews/?rate=5#new-post\">".__("Write review on WordPress.org", 'adrotate')."</a>&nbsp;&nbsp;".__("Thanks a lot in advance!!", 'adrotate')."</p></td>";
 
 	echo "</tr>";
 
@@ -702,13 +702,13 @@ function adrotate_dashboard_error() {
 
 	// Misc
 	if(!is_writable(WP_CONTENT_DIR."/".$adrotate_config['banner_folder'])) {
-		$error['banners_folder'] = __("Your AdRotate Banner folder is not writable or does not exist.", 'adrotate')." <a href=\"https://ajdg.solutions/support/adrotate-manuals/manage-banner-images/\" target=\"_blank\">".__("Set up your banner folder", 'adrotate')."</a>.";
+		$error['banners_folder'] = __("Your AdRotate Banner folder is not writable or does not exist.", 'adrotate')." <a href=\"https://support.ajdg.net/knowledgebase.php?article=20\" target=\"_blank\">".__("Set up your banner folder", 'adrotate')."</a>.";
 	}
 	if(is_dir(WP_PLUGIN_DIR."/adrotate-pro/")) {
 		$error['adrotate_exists'] = __("You have AdRotate Professional installed. Please switch to AdRotate Pro! You can delete this plugin after AdRotate Pro is activated.", 'adrotate')." <a href=\"".admin_url('/plugins.php?s=adrotate&plugin_status=all')."\">".__("Switch plugins", 'adrotate')."</a>.";
 	}
 	if(basename(__DIR__) != 'adrotate' AND basename(__DIR__) != 'adrotate-pro') {
-		$error['adrotate_folder_names'] = __("Something is wrong with your installation of AdRotate. Either the plugin is installed twice or your current installation has the wrong folder name. Please install the plugin properly!", 'adrotate').' <a href="https://ajdg.solutions/support/adrotate-manuals/installing-adrotate-on-your-website/" target="_blank">'.__("Installation instructions", 'adrotate').'</a>.';
+		$error['adrotate_folder_names'] = __("Something is wrong with your installation of AdRotate. Either the plugin is installed twice or your current installation has the wrong folder name. Please install the plugin properly!", 'adrotate').' <a href="https://support.ajdg.net/knowledgebase.php?article=5" target="_blank">'.__("Installation instructions", 'adrotate').'</a>.';
 	}
 
 	$error = (isset($error) AND is_array($error)) ? $error : false;

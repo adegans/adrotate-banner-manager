@@ -389,7 +389,7 @@ function adrotate_insert_group() {
 				unset($width_sum, $grid_width, $height_sum, $grid_height);
 			}
 
-			$group_css = get_option('adrotate_group_css');
+			$group_css = get_option('adrotate_group_css', array());
 			$group_css[$id] = $output_css;
 			update_option('adrotate_group_css', $group_css);
 			// end CSS
