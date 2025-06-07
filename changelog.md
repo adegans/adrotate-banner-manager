@@ -1,5 +1,10 @@
 # AdRotate Banner Manager full changelog
 
+## 5.14 - Jun 7, 2025
+- [fix] XSS security flaw when saving widgets
+- [fix] Warning for widget type not being set when adding more widgets
+- [update] Improved widget saving code and formatting
+
 ## 5.13.7 - March 18, 2025
 - [update] All support links to match current support system
 - [update] Compatibility info for WordPress and ClassicPress

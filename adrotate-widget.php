@@ -42,6 +42,7 @@ class adrotate_widgets extends WP_Widget {
 		if(empty($instance['adid'])) $instance['adid'] = 0;
 		if(empty($instance['siteid'])) $instance['siteid'] = $blog_id;
 		if(empty($instance['title'])) $instance['title'] = '';
+		if(empty($instance['type'])) $instance['type'] = 'single';
 
         $title = apply_filters('widget_title', $instance['title']);
 
@@ -89,29 +90,26 @@ class adrotate_widgets extends WP_Widget {
 		if($adrotate_config['widgetalign'] == 'Y') echo '</li></ul>';
 		
 		echo $after_widget;
-
 	}
 
 	/*-------------------------------------------------------------
 	 Purpose:   Save the widget options per instance
 	-------------------------------------------------------------*/
 	public function update($new_instance, $old_instance) {
-		$new_instance['title'] = strip_tags($new_instance['title']);
-		$new_instance['description'] = strip_tags($new_instance['description']);
-		$new_instance['type'] = strip_tags($new_instance['type']);
+		$new_instance['title'] = sanitize_title($new_instance['title']);
+		$new_instance['type'] = sanitize_text_field($new_instance['type']);
+		$new_instance['siteid'] = sanitize_key($new_instance['siteid']);
 		
 		//Try and preserve pre-fix widget IDs
-		if(isset($new_instance['id']) and $new_instance['adid'] < 1) {
+		if(isset($new_instance['id']) AND $new_instance['adid'] < 1) {
 			$new_instance['adid'] = $new_instance['id'];
 		} else {
-			$new_instance['adid'] = strip_tags($new_instance['adid']);
+			$new_instance['adid'] = sanitize_key($new_instance['adid']);
 		}
-		$new_instance['siteid'] = strip_tags($new_instance['siteid']);
 
 		$instance = wp_parse_args($new_instance, $old_instance);
 
 		return $instance;
-
 	}
 
 	/*-------------------------------------------------------------
@@ -123,24 +121,15 @@ class adrotate_widgets extends WP_Widget {
 		$defaults = array();
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		
-		$title = $description = $type = $adid = '';
+		$title = $description = $adid = '';
+		$type = 'single';
 		extract($instance);
-		$title = sanitize_title($title);
-		$description = sanitize_text_field($description);
-		$type = sanitize_key($type);
-		$adid = sanitize_key($adid);
 ?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title (optional):', 'adrotate' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			<br />
 			<small><?php _e( 'HTML will be stripped out.', 'adrotate' ); ?></small>
-		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e( 'Description (optional):', 'adrotate' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" type="text" value="<?php echo $description; ?>" />
-			<br />
-			<small><?php _e( 'What is this widget used for? (Not parsed, HTML will be stripped out.)', 'adrotate' ); ?></small>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e( 'Type:', 'adrotate' ); ?></label>
