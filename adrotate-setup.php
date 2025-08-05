@@ -26,9 +26,9 @@ function adrotate_activate($network_wide) {
 		}
 
 		switch_to_blog($current_blog);
-		return;
+	} else {
+		adrotate_activate_setup();
 	}
-	adrotate_activate_setup();
 }
 
 /*-------------------------------------------------------------
@@ -61,8 +61,6 @@ function adrotate_activate_setup() {
 		add_option('adrotate_geo_requests', 0);
 		add_option('adrotate_dynamic_required', 0);
 		update_option('adrotate_hide_getpro', current_time('timestamp') + (14 * DAY_IN_SECONDS));
-		update_option('adrotate_hide_review', current_time('timestamp'));
-		update_option('adrotate_hide_birthday', current_time('timestamp'));
 
 		adrotate_database_install();
 		adrotate_dummy_data();
@@ -90,18 +88,18 @@ function adrotate_activate_setup() {
  Purpose:   Deactivate script
 -------------------------------------------------------------*/
 function adrotate_deactivate($network_wide) {
-	global $wpdb;
-
 	if(is_multisite()) {
+		global $wpdb;
+
+		$current_blog = $wpdb->blogid;
 		$blog_ids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
 
-		if($blog_ids) {
-			foreach($blog_ids as $blog_id) {
-				switch_to_blog($blog_id);
-				adrotate_deactivate_setup();
-				restore_current_blog();
-			}
+		foreach($blog_ids as $blog_id) {
+			switch_to_blog($blog_id);
+			adrotate_deactivate_setup();
 		}
+
+		switch_to_blog($current_blog);
 	} else {
 		adrotate_deactivate_setup();
 	}
@@ -115,7 +113,6 @@ function adrotate_deactivate_setup() {
 	global $wp_roles;
 
 	update_option('adrotate_hide_getpro', current_time('timestamp') + (14 * DAY_IN_SECONDS));
-	update_option('adrotate_hide_review', current_time('timestamp'));
 
 	// Clean up capabilities from ALL users
 	$editable_roles = apply_filters('editable_roles', $wp_roles->roles);
@@ -144,15 +141,15 @@ function adrotate_uninstall($network_wide) {
 
         foreach($blogids as $blog_id) {
             switch_to_blog($blog_id);
-			// Only if AdRotate Banner Manager is not active
-			if(!is_plugin_active('adrotate-pro/adrotate-pro.php')) {
+			// Only if AdRotate (Pro) is not active
+			if(!is_plugin_active('adrotate-pro/adrotate-pro.php') OR !is_plugin_active('adrotate/adrotate.php')) {
 				adrotate_uninstall_setup();
 			}
         }
         switch_to_blog($current_blog);
-        return;
-    }
-    adrotate_uninstall_setup();
+    } else {
+	    adrotate_uninstall_setup();
+	}
 }
 
 /*-------------------------------------------------------------
@@ -162,21 +159,8 @@ function adrotate_uninstall($network_wide) {
 function adrotate_uninstall_setup() {
 	global $wpdb, $wp_roles;
 
-	// Clean up capabilities from ALL users
-	$editable_roles = apply_filters('editable_roles', $wp_roles->roles);
-	foreach($editable_roles as $role => $details) {
-		$wp_roles->remove_cap($details['name'], 'adrotate_ad_manage');
-		$wp_roles->remove_cap($details['name'], 'adrotate_ad_delete');
-		$wp_roles->remove_cap($details['name'], 'adrotate_group_manage');
-		$wp_roles->remove_cap($details['name'], 'adrotate_group_delete');
-	}
-
-	// Clear out userroles
-	remove_role('adrotate_advertiser');
-
-	// Clear out wp_cron
-	wp_clear_scheduled_hook('adrotate_evaluate_ads'); // Obsolete in 5.13
-	wp_clear_scheduled_hook('adrotate_empty_trackerdata');
+	// Disable the plugin
+	adrotate_deactivate_setup();
 
 	// Drop MySQL Tables
 	$wpdb->query("DROP TABLE IF EXISTS `{$wpdb->prefix}adrotate`");
@@ -198,11 +182,12 @@ function adrotate_uninstall_setup() {
 	delete_option('adrotate_header_output');
 	delete_option('adrotate_dynamic_required');
 	delete_option('adrotate_hide_license');
-	delete_option('adrotate_hide_review');
 	delete_option('adrotate_hide_getpro');
-	delete_option('adrotate_hide_birthday');
 	delete_option('adrotate_advert_status');
 	delete_option('adrotate_notifications');
+
+	delete_option('adrotate_hide_review'); // Obsolete in 5.14.1
+	delete_option('adrotate_hide_birthday'); // Obsolete in 5.14.1
 
 	// Clean up user meta
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_is_advertiser';");

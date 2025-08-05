@@ -357,51 +357,20 @@ function adrotate_notifications_dashboard() {
 	if(current_user_can('adrotate_ad_manage')) {
 		$page = (isset($_GET['page'])) ? $_GET['page'] : '';
 
-		// These only show on AdRotate pages
-		if(strpos($page, 'adrotate') !== false) {
-			if(isset($_GET['hide']) AND $_GET['hide'] == 0) update_option('adrotate_hide_getpro', current_time('timestamp') + (31 * DAY_IN_SECONDS));
-			if(isset($_GET['hide']) AND $_GET['hide'] == 1) update_option('adrotate_hide_review', 1);
-			if(isset($_GET['hide']) AND $_GET['hide'] == 2) update_option('adrotate_hide_birthday', current_time('timestamp') + (10 * MONTH_IN_SECONDS));
+		if(isset($_GET['hide']) AND $_GET['hide'] == 0) update_option('adrotate_hide_getpro', current_time('timestamp') + (2 * MONTH_IN_SECONDS));
 
-			// Get AdRotate Pro
-			$getpro_banner = get_option('adrotate_hide_getpro');
-			if($getpro_banner < current_time('timestamp')) {
-				echo "<div class=\"ajdg-notification notice\">";
-				echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
-				echo "	<div class=\"ajdg-notification-message\">Hello <strong>".$displayname."</strong>. Have you considered upgrading to <strong>AdRotate Professional</strong> yet?<br />Get extra features such as Geo Targeting, Scheduling, Mobile Adverts, More advanced Post Injection, access to premium ticket support and much more...<br />";
-				echo " Licenses start as low as &euro; 49 and you can use coupon code <strong>GETADROTATEPRO</strong> to get a 10% discount on any <strong>AdRotate Professional</strong> license!</div>";
-				echo "	<div class=\"ajdg-notification-cta\">";
-				echo "		<a href=\"".admin_url('admin.php?page=adrotate-pro')."\" class=\"ajdg-notification-act button-primary\">GET ADROTATE PRO</a>";
-				echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=0\" class=\"ajdg-notification-dismiss\">Maybe later</a>";
-				echo "	</div>";
-				echo "</div>";
-			}
-
-			// Write a review
-			$review_banner = get_option('adrotate_hide_review');
-			if($review_banner != 1 AND $review_banner < (current_time('timestamp') - (8 * DAY_IN_SECONDS))) {
-				echo "<div class=\"ajdg-notification notice\">";
-				echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
-				echo "	<div class=\"ajdg-notification-message\">Hello <strong>".$displayname."</strong>! You have been using <strong>AdRotate</strong> for a few days. If you like or found a use for AdRotate Banner Manager, please share <strong>your experience</strong> and write a review. Thanks for being awesome!<br />If you have questions, complaints or something else that does not belong in a review, please use the <a href=\"".admin_url('admin.php?page=adrotate-support')."\">support options here</a>!</div>";
-				echo "	<div class=\"ajdg-notification-cta\">";
-				echo "		<a href=\"https://wordpress.org/support/view/plugin-reviews/adrotate?rate=5#postform\" class=\"ajdg-notification-act button-primary\">Write Review</a>";
-				echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=1\" class=\"ajdg-notification-dismiss\">Maybe later</a>";
-				echo "	</div>";
-				echo "</div>";
-			}
-
-			// Birthday
-			$birthday_banner = get_option('adrotate_hide_birthday');
-			if($birthday_banner < current_time('timestamp') AND date('M', current_time('timestamp')) == 'Feb') {
-				echo "<div class=\"ajdg-notification notice\">";
-				echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/birthday.png', __FILE__)."');\"><span></span></div>";
-				echo "	<div class=\"ajdg-notification-message\">Hey <strong>".$displayname."</strong>! Did you know it is Arnan his birtyday this month? February 9th to be exact. Wish him a happy birthday via Telegram!<br />Who is Arnan? He made AdRotate for you - Check out his <a href=\"https://www.arnan.me/?mtm_campaign=adrotate&mtm_keyword=birthday_banner\" target=\"_blank\">website</a>.</div>";
-				echo "	<div class=\"ajdg-notification-cta\">";
-				echo "		<a href=\"https://t.me/arnandegans\" target=\"_blank\" class=\"ajdg-notification-act button-primary goosebox\"><i class=\"icn-tg\"></i>Wish Happy Birthday</a>";
-				echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=2\" class=\"ajdg-notification-dismiss\">Not now</a>";
-				echo "	</div>";
-				echo "</div>";
-			}
+		// Get AdRotate Pro
+		$getpro_banner = get_option('adrotate_hide_getpro');
+		if($getpro_banner < current_time('timestamp')) {
+			echo "<div class=\"ajdg-notification notice\">";
+			echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
+			echo "	<div class=\"ajdg-notification-message\">Hello <strong>".ucfirst($displayname)."</strong>. Have you considered upgrading to <strong>AdRotate Professional</strong> yet?<br />Get features such as Geo Targeting, Advanced Scheduling, Mobile Adverts, Advanced Post Injection, access to ticket support and much more...<br />";
+			echo " Use coupon code <strong>GETADROTATEPRO</strong> to get a 10% discount on any <strong>AdRotate Professional</strong> license!</div>";
+			echo "	<div class=\"ajdg-notification-cta\">";
+			echo "		<a href=\"".admin_url('admin.php?page=adrotate-pro')."\" class=\"ajdg-notification-act button-primary\">MORE INFORMATION</a>";
+			echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=0\" class=\"ajdg-notification-dismiss\">Maybe later</a>";
+			echo "	</div>";
+			echo "</div>";
 		}
 
 		// Advert notifications, errors, important stuff
@@ -607,6 +576,7 @@ function adrotate_unlink($asset, $path = '') {
 function adrotate_action_links($links) {
 	$extra_links = array();
 	$extra_links['ajdg-adrotate-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124', '<strong>Get AdRotate Pro</strong>');
+	$extra_links['ajdg-adrotate-help'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://support.ajdg.net/knowledgebase.php', 'Plugin support');
 	$extra_links['ajdg-adrotate-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/', 'More plugins');
 
 	return array_merge($extra_links, $links);
@@ -622,7 +592,7 @@ function adrotate_credits() {
 	echo "<thead>";
 	echo "<tr valign=\"top\">";
 	echo "	<th width=\"70%\"><strong>".__("Get more features with AdRotate Professional", 'adrotate')."</strong></th>";
-	echo "	<th><strong>".__("Starting at &euro; 39.00", 'adrotate')." - <a href=\"https://ajdg.solutions/product-category/adrotate-pro/\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></strong></th>";
+	echo "	<th><strong>".__("Starting at only &euro; 49.00", 'adrotate')." - <a href=\"https://ajdg.solutions/product-category/adrotate-pro/\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></strong></th>";
 	echo "</tr>";
 	echo "</thead>";
 
@@ -631,7 +601,7 @@ function adrotate_credits() {
 
 	echo "<td><a href=\"https://ajdg.solutions/plugins/adrotate-for-wordpress/\" target=\"_blank\"><img src=\"".plugins_url('/images/logo-60x60.png', __FILE__)."\" class=\"alignleft pro-image\" /></a><p>".__("<strong>AdRotate Professional</strong> has a lot more to offer for even better advertising management and premium support. Enjoy features like <strong>Geo Targeting</strong>, <strong>multiple Schedules</strong> per ad and <strong>Schedules</strong> have more options, more advanced <strong>Post Injection</strong> and much more. Check out the feature comparison tab on any of the product pages to see what AdRotate Pro has to offer for you! When you upgrade to <strong>AdRotate Professional</strong> make sure you use coupon <strong>GETADROTATEPRO</strong> on checkout for 10 percent off on any license.", 'adrotate')." <a href=\"https://ajdg.solutions/product-category/adrotate-pro/\" target=\"_blank\">".__("Compare Licenses", 'adrotate')." &raquo;</a></p></td>";
 
-	echo "<td><p><a href=\"https://ajdg.solutions/product/adrotate-pro-single/\" target=\"_blank\"><strong>".__("Get a Single License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for one WordPress website.", 'adrotate')."</em></p>"."<p><a href=\"https://ajdg.solutions/product/adrotate-pro-multi/\" target=\"_blank\"><strong>".__("Go big with the Multi License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for up-to five WordPress websites.", 'adrotate')."</em></p></td>";
+	echo "<td><p><a href=\"https://ajdg.solutions/product/adrotate-pro-single/\" target=\"_blank\"><strong>".__("Get a Single site License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for AdRotate Professional.", 'adrotate')."</em></p>"."<p><a href=\"https://ajdg.solutions/product/adrotate-pro-multi/\" target=\"_blank\"><strong>".__("Go big with the Multi License", 'adrotate')."</strong></a><br /><em>".__("One year of updates for up-to twenty activations.", 'adrotate')."</em></p></td>";
 
 	echo "</tr>";
 
@@ -642,7 +612,7 @@ function adrotate_credits() {
 	echo "<thead>";
 	echo "<tr valign=\"top\">";
 	echo "	<th width=\"50%\"><strong>".__("Do you have a question?", 'adrotate')."</strong></th>";
-	echo "	<th><strong>".__("Support AdRotate Banner Manager", 'adrotate')."</strong></th>";
+	echo "	<th><strong>".__("Help Support AdRotate Banner Manager", 'adrotate')."</strong></th>";
 	echo "</tr>";
 	echo "</thead>";
 

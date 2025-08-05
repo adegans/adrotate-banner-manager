@@ -10,34 +10,28 @@
 ------------------------------------------------------------------------------------ */
 ?>
 
-<div style="text-align: center; font-size: 300%; line-height: 2em;">Hello there. Thanks for checking out AdRotate Pro!</div>
+<div style="text-align: center; font-size: 400%; line-height: 2em;">Time to become an advertiser professional!</div>
 
 <div style="text-align: center; margin: 30px 0;">
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
 		<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/single.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Single" width="228" height="120"></div></a>
 		<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><div class="title">Excellent for bloggers</div></a>
-		<div class="sub_title">Use on 1 website<br /><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
+		<div class="sub_title">For 1 website<br /><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
 		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1124" target="_blank">Buy for &euro; 49</a></div>
 	</div>
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
 		<a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/duo.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Duo" width="228" height="120"></div></a>
 		<a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><div class="title">Most popular</div></a>
-		<div class="sub_title">Use on 2 websites<br /><a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
-		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1126" target="_blank">Buy for &euro; 59</a></div>
+		<div class="sub_title">For 2 websites<br /><a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
+		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1126" target="_blank">Buy for &euro; 79</a></div>
 	</div>
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
 		<a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/multi.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Multi" width="228" height="120"></div></a>
-		<a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><div class="title">Larger deployments</div></a>
-		<div class="sub_title">Use on up-to 5 websites<br /><a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
-		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1128" target="_blank">Buy for &euro; 129</a></div>
+		<a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><div class="title">Agencies and Newspapers</div></a>
+		<div class="sub_title">For 20 websites<br /><a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
+		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1128" target="_blank">Buy for &euro; 199</a></div>
 	</div>
-	<div class="ajdg-sales-widget" style="display: inline-block; width: 20%;">
-		<a href="https://ajdg.solutions/product/adrotate-pro-developer/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/developer.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Developer" width="228" height="120"></div></a>
-		<a href="https://ajdg.solutions/product/adrotate-pro-developer/" target="_blank"><div class="title">Supports network activation</div></a>
-		<div class="sub_title">Use on up-to 100 websites<br /><a href="https://ajdg.solutions/product/adrotate-pro-developer/" target="_blank"><strong>View product page</strong></a><br />Updates for 1 year<br />Ticket support for 1 year<br />Non-recurring payment</div>
-		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1130" target="_blank">Buy for &euro; 249</a></div>
-	</div>
-	<center><em><small><?php _e("All prices are shown in Euros, your bank will convert your currency to Euros for free.", 'adrotate'); ?></small></em></center>
+	<center><em><?php _e("You can use all major credit cards, PayPal, and other local payment options through my secure payment portal.", 'adrotate'); ?><br /><small><?php _e("All prices are shown in Euros, your bank will convert your currency to Euros for free.", 'adrotate'); ?></small></em></center>
 </div>
 
 <div id="dashboard-widgets-wrap">
@@ -134,29 +128,28 @@
 </div>
 
 <div style="text-align: center;">
-	<p style="font-size: 175%;"><a href="https://ajdg.solutions/contact/" target="_blank">Let me know</a> if you have any questions. I'm looking forward to hearing from you!</p>
+	<p style="font-size: 175%;">Choose AdRotate Pro and instantly become an advertising professional!</p>
 </div>
 
 <div style="text-align: center; margin: 30px 0;">
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
 		<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/single.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Single" width="228" height="120"></div></a>
-		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><strong>View product page</strong></a></div>
+		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><strong>More information</strong></a></div>
 		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1124" target="_blank">Buy for &euro; 49</a></div>
 	</div>
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
 		<a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/duo.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Duo" width="228" height="120"></div></a>
-		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><strong>View product page</strong></a></div>
-		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1126" target="_blank">Buy for &euro; 59</a></div>
+		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-duo/" target="_blank"><strong>More information</strong></a></div>
+		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1126" target="_blank">Buy for &euro; 79</a></div>
 	</div>
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
 		<a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/multi.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Multi" width="228" height="120"></div></a>
-		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><strong>View product page</strong></a></div>
-		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1128" target="_blank">Buy for &euro; 129</a></div>
-	</div>
-	<div class="ajdg-sales-widget" style="display: inline-block; width: 20%;">
-		<a href="https://ajdg.solutions/product/adrotate-pro-developer/" target="_blank"><div class="header"><img src="<?php echo plugins_url('/images/pro/developer.jpg', dirname(__FILE__)); ?>" alt="AdRotate Pro Developer" width="228" height="120"></div></a>
-		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-developer/" target="_blank"><strong>View product page</strong></a></div>
-		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1130" target="_blank">Buy for &euro; 249</a></div>
+		<div class="sub_title"><a href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><strong>More information</strong></a></div>
+		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/?add-to-cart=1128" target="_blank">Buy for &euro; 199</a></div>
 	</div>
 	<center><em><small><?php _e("All prices are shown in Euros, your bank will convert your currency to Euros for free.", 'adrotate'); ?></small></em></center>
+</div>
+
+<div style="text-align: center;">
+	<p style="font-size: 175%;">Questions? <a href="https://ajdg.solutions/contact/" target="_blank">Click here</a>! I'm looking forward to hearing from you!</p>
 </div>

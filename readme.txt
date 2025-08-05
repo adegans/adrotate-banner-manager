@@ -1,8 +1,8 @@
 === AdRotate Banner Manager - The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.14
+Stable tag: 5.14.1
 Requires at least: 4.9
-Tested up to: 6.8.1
+Tested up to: 6.8.2
 Requires PHP: 7.4
 Donate link: https://ajdg.solutions/product/adrotate-pro-single/
 Tags: ads, banner manager, adsense, affiliate, banners
@@ -103,110 +103,18 @@ For more detailed instructions check out the [installation steps](https://ajdg.s
 
 == Changelog ==
 
-For the full changelog check out the [development page](https://ajdg.solutions/support/adrotate-development/).
+**5.14.1 - August 5, 2025**
+* update - Simplified de-activation code
+* update - Simplified uninstall code
+* update - Revised footer credits
+* update - Revised 'AdRotate Pro' page
+* removed - Birthday banner
+* removed - Review banner
 
-= AdRotate 5.13.7 =
-* [update] All support links to match current support system
-* [update] Compatibility info for WordPress and ClassicPress
-* [update] Reformatted AdRotate Credits area
-* [fix] Several formatting issues in dashboard
-
-= AdRotate 5.13.6 & 5.13.6.1 =
-* [update] Copyright notices for 2025
-* [update] Compatibility info for WordPress and ClassicPress
-* [change] Removed stray debug code
-
-= AdRotate 5.13.5 =
-* [update] WordPress media uploader only lists and allows relevant files
-* [fix] Text indicating unfiltered html suggesting the wrong setting
-
-= AdRotate 5.13.4 =
-* [fix] Image selection not kept when using the advert generator
-* [fix] webp images are now listed in the advert generator
-
-= AdRotate 5.13.3 =
-* [change] Use WordPress native function when uploading files
-* [change] Use WordPress native function when creating folders
-* [change] Creating folders checks if folder already exists
-* [change] Uploading a file checks if file already exists
-* [fix] Missing confirm notice when creating a folder
-
-= AdRotate 5.13.2 =
-* [fix] Missing mimetype when uploading banner images
-* [update] Rollback to v1.1 for clicktracker Javascript
-
-= AdRotate 5.13.1 =
-* [fix] Unfiltered HTML indicator reversed in Maintenance
-* [fix] Missing _nonce value for maintenance functions
-
-= AdRotate 5.13 =
-* [new] Upload webp banner images through the media manager
-* [security] Low level users can no longer access the dashboard
-* [security] Low level users can no longer upload html/js/zip files
-* [security] DISALLOW_UNFILTERED_HTML required for Javascript ads
-* [security] DISALLOW_UNFILTERED_HTML required for group wrapper
-* [change] Previews disabled for some Javascript ads
-* [change] Separated most dashboard code from the front-end
-* [change] Updated and merged various functions
-* [update] Enabled/disabled icons now based on generated svg
-* [update] Consistent use of single and double-quotes
-* [i18n] Translations updated
-* [removed] Removed setting to disable dynamic groups
-* [removed] Welcome pointer when first activating the plugin
-* [removed] Lots of unused or outdated code
-
-= AdRotate 5.12.10 =
-* [i18n] Translations updated
-* [change] Dashboards and pricing updated
-* [change] Database upgrade for AdRotate Pro compatibility
-
-= AdRotate 5.12.9 =
-* [fix] Wrong name for clicktracker click_object
-
-= AdRotate 5.12.8 =
-* [change] No longer requires jQuery for clicktracker
-* [change] Dashboard updates
-
-= AdRotate 5.12.7 =
-* [fix] Color coding of adverts when editing groups
-* [fix] Color coding labels below adverts
-* [fix] Color coding labels below schedules
-* [fix] Dynamic groups not always hiding first advert
-* [change] Reworked group output and made it more efficient
-* [change] Improved PHP 8 compatibility
-
-= AdRotate 5.12.6 =
-* [fix] Advert block now use the correct advert ID
-* [fix] Group block now use the correct group ID
-
-= AdRotate 5.12.5 =
-* [new] Blocks now support fragmented cache
-* [change] Requires PHP 7.4 or newer
-* [change] Removed CSV ad exports, use portability instead
-* [i18n] Updated translations
-
-= AdRotate 5.12.4 =
-* [fix] Wrong 'update failed' error when updating to version 5.12.3
-* [fix] No longer redirects to Settings page when update completes
-
-= AdRotate 5.12.3 =
-* Tested to work with WordPRess 6.3
-* [fix] Typo in DONOTCACHEOBJECT constant name
-
-= AdRotate 5.12.2 =
-* [change] Dashboard updates
-* [change] Updated readme, WordPress compatibility
-* [i18n] Updated translations
-
-= AdRotate 5.12.1 =
-* [i18n] All translations updated
-* [fix] Several spelling errors
-
-= AdRotate 5.12 =
-* [change] Dashboard updates
-* [tweak] All but the first ads are set to display:none; for dynamic groups
-* [new] Automated trigger after updates to finish the update
-* [removed] wp_cache_set() for stats
+**5.14 - Jun 7, 2025**
+* fix - XSS security flaw when saving widgets
+* fix - Warning for widget type not being set when adding more widgets
+* update - Improved widget saving code and formatting
 
 Be a Pro and get [AdRotate Professional](https://ajdg.solutions/product-category/adrotate-pro/) to support the plugin and get more features!
 
@@ -260,6 +168,9 @@ Yes!
 
 = Does AdRotate work with ClassicPress? =
 Yes!
+
+= Got a full changelog? =
+The full changelog is included with every download. Look for the changelog.md file.
 
 == Screenshots ==
 
