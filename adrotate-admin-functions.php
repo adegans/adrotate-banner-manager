@@ -338,7 +338,6 @@ function adrotate_dashboard_scripts() {
 		wp_enqueue_script('raphael', plugins_url('/library/raphael-min.js', __FILE__), array('jquery'));
 		wp_enqueue_script('elycharts', plugins_url('/library/elycharts.min.js', __FILE__), array('jquery', 'raphael'));
 		wp_enqueue_script('textatcursor', plugins_url('/library/textatcursor.js', __FILE__), ADROTATE_VERSION);
-		wp_enqueue_script('goosebox', plugins_url('/library/goosebox.js', __FILE__), ADROTATE_VERSION);
 		wp_enqueue_script('adrotate-datepicker', plugins_url('/library/jquery.datepicker.js', __FILE__), array('jquery'), ADROTATE_VERSION);
 	}
 

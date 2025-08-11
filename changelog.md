@@ -1,5 +1,12 @@
 # AdRotate Banner Manager full changelog
 
+## 5.15 - August 11, 2025
+* Performance - No more redundant queries when using any Manage Adverts dashboard
+* Performance - Code cleanup for group editing
+* Change - Reworked the Manage Adverts loading code for a massive speed increase on larger sites
+* Change - Reworked the Manage Groups loading code for more uniform code
+* Removed - Unused goosebox.js file
+
 ## 5.14.1 - August 5, 2025
 * update - Simplified de-activation code
 * update - Simplified uninstall code

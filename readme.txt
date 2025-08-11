@@ -1,6 +1,6 @@
 === AdRotate Banner Manager - The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.14.1
+Stable tag: 5.15
 Requires at least: 4.9
 Tested up to: 6.8.2
 Requires PHP: 7.4
@@ -79,7 +79,7 @@ As a result **AdRotate Banner Manager** is trusted by tens of thousands of busin
 * Same day ticket support accessible from your dashboard
 
 Learn all about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website!
-Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) ~ [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
+Available AdRotate Pro licenses [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ [20 sites license](https://ajdg.solutions/product/adrotate-pro-multi/)
 
 = Translations =
 
@@ -99,9 +99,17 @@ Installing AdRotate is super easy.
 - A new menu called "AdRotate" appears in the WordPress navigation.
 - From this menu you'll handle everything related to **AdRotate Banner Manager**.
 
-For more detailed instructions check out the [installation steps](https://ajdg.solutions/support/adrotate-manuals/installing-adrotate-on-your-website/) on the AdRotate website.
+For more detailed instructions check out the [installation steps](https://support.ajdg.net/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+
+**5.15 - August 11, 2025**
+* Performance - No more redundant queries when using any Manage Adverts dashboard
+* Performance - Code cleanup for group editing
+* Change - Reworked the Manage Adverts loading code for a massive speed increase on larger sites
+* Change - Reworked the Manage Groups loading code for more uniform code
+* Removed - Unused goosebox.js file
 
 **5.14.1 - August 5, 2025**
 * update - Simplified de-activation code
@@ -125,19 +133,19 @@ Enjoy this update with the latest tweaks and improvements for AdRotate Banner Ma
 == Frequently Asked Questions ==
 
 = How do I use AdRotate? =
-Take a look at the [user guides](https://ajdg.solutions/support/adrotate-manuals/).
-You can also post your questions on the [forum](https://ajdg.solutions/forums/forum/adrotate-for-wordpress/).
+Take a look at the [user guides](https://support.ajdg.net/knowledgebase.php?category=3).
+You can also post your questions on the [forum](https://wordpress.org/support/plugin/adrotate/).
 
 = I need help with this plugin =
-The best place to ask your question is on my [support forum](https://ajdg.solutions/forums/forum/adrotate-for-wordpress/).
-The forum is checked daily and most questions are answered within hours.
+The best place to ask your question is on the [support forum](https://wordpress.org/support/plugin/adrotate/).
+Or, if you need faster help, [buy a support ticket](https://ajdg.solutions/product/support-ticket/).
 
 = Does AdRotate offer click tracking? =
 Yes, AdRotate Banner Manager counts clicks and impressions.
 
 = Can I use my ads or tags from Google AdSense? =
 Yes, usually you can use their code as-is.
-Most ads, from any ad server, work without special tricks or tweaks.
+Most ads, from any ad server, work without issue.
 
 = Does AdRotate support HTML5 ads? =
 Yes!
@@ -147,7 +155,7 @@ Yep, check out my website [AJdG Solutions](https://ajdg.solutions/)
 
 = Why do some dashboard notifications look so ugly =
 If a dashboard notification misses its layout or looks out of shape try clearing your browser cache.
-Some ad blockers block parts of the AdRotate dashboard, check out this page to make an exception for your website in adblockers - [Whitelist your site](https://ajdg.solutions/support/adrotate-manuals/configure-adblockers-for-your-own-website/).
+Some ad blockers block parts of the AdRotate dashboard, check out this page to make an exception for your website in adblockers - [Whitelist your site](https://support.ajdg.net/knowledgebase.php?article=45).
 
 = Is AdRotate compatible with Yoast SEO or other SEO plugins? =
 Yes, Yoast SEO, All-in-One SEO pack and all other SEO plugins work fine with AdRotate.

@@ -62,17 +62,12 @@ function adrotate_date_start($what) {
  Name:      adrotate_count_impression
  Purpose:   Count Impressions where needed
 -------------------------------------------------------------*/
-function adrotate_count_impression($ad_id, $group_id = 0, $blog_id = 0) {
+function adrotate_count_impression($ad_id, $group_id = 0) {
 	global $wpdb, $adrotate_config;
 
 	$now = current_time('timestamp');
 	$today = adrotate_date_start('day');
 	$remote_ip = adrotate_get_remote_ip();
-
-	if($blog_id > 0 AND adrotate_is_networked()) {
-		$current_blog = $wpdb->blogid;
-		switch_to_blog($blog_id);
-	}
 
 	$impression_timer = $now - $adrotate_config['impression_timer'];
 
@@ -88,10 +83,6 @@ function adrotate_count_impression($ad_id, $group_id = 0, $blog_id = 0) {
 
 			$wpdb->insert($wpdb->prefix."adrotate_tracker", array('ipaddress' => $remote_ip, 'timer' => $now, 'bannerid' => $ad_id, 'stat' => 'i'));
 		}
-	}
-
-	if($blog_id > 0 AND adrotate_is_networked()) {
-		switch_to_blog($current_blog);
 	}
 }
 
@@ -109,9 +100,9 @@ function adrotate_impression_callback() {
 
 	$meta = esc_attr($meta);
 	// Don't use $impression_timer - It's for impressions used in javascript
-	list($ad_id, $group_id, $blog_id, $impression_timer) = explode(",", $meta, 4);
-	if(is_numeric($ad_id) AND is_numeric($group_id) AND is_numeric($blog_id)) {
-		adrotate_count_impression($ad_id, $group_id, $blog_id);
+	list($ad_id, $group_id, $impression_timer) = explode(",", $meta, 3);
+	if(is_numeric($ad_id) AND is_numeric($group_id)) {
+		adrotate_count_impression($ad_id, $group_id);
 	}
 
 	die();
@@ -133,14 +124,9 @@ function adrotate_click_callback() {
 
 	$meta = esc_attr($meta);
 	// Don't use $impression_timer - It's for impressions used in javascript
-	list($ad_id, $group_id, $blog_id, $impression_timer) = explode(",", $meta, 4);
+	list($ad_id, $group_id, $impression_timer) = explode(",", $meta, 3);
 
-	if(is_numeric($ad_id) AND is_numeric($group_id) AND is_numeric($blog_id)) {
-		if($blog_id > 0 AND adrotate_is_networked()) {
-			$current_blog = $wpdb->blogid;
-			switch_to_blog($blog_id);
-		}
-
+	if(is_numeric($ad_id) AND is_numeric($group_id)) {
 		$remote_ip = adrotate_get_remote_ip();
 
 		if(adrotate_is_human() AND $remote_ip != "unknown" AND !empty($remote_ip)) {
@@ -162,10 +148,6 @@ function adrotate_click_callback() {
 
 			// Advertising budget
 			$wpdb->query("UPDATE `{$wpdb->prefix}adrotate` SET `budget` = `budget` - `crate` WHERE `id` = {$ad_id} AND `crate` > 0;");
-		}
-
-		if($blog_id > 0 AND adrotate_is_networked()) {
-			switch_to_blog($current_blog);
 		}
 
 		unset($remote_ip, $track, $meta, $ad_id, $group_id, $remote, $banner);

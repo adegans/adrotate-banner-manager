@@ -43,7 +43,8 @@
 			</tr>
 			</thead>
 			<tbody>
-		<?php foreach($error as $banner) {
+		<?php 
+		foreach($error as $banner) {
 			$grouplist = adrotate_ad_is_in_groups($banner['id']);
 			
 			$class = '';
@@ -57,7 +58,10 @@
 				<td><strong><a class="row-title" href="<?php echo admin_url('/admin.php?page=adrotate&view=edit&ad='.$banner['id']); ?>" title="<?php _e("Edit", 'adrotate'); ?>"><?php echo stripslashes($banner['title']);?></a></strong> <?php if($adrotate_config['stats'] == 1 AND $banner['tracker'] == 'Y' AND $banner['type'] != 'error') { ?>- <a href="<?php echo admin_url('/admin.php?page=adrotate-statistics&view=advert&id='.$banner['id']);?>" title="<?php _e("Stats", 'adrotate'); ?>"><?php _e("Stats", 'adrotate'); ?></a><?php } ?><span style="color:#999;"><?php if(strlen($grouplist) > 0) echo "<br /><span style=\"font-weight:bold;\">".__("Groups:", 'adrotate')."</span> ".$grouplist; ?></span></td>
 				<td><?php echo date_i18n('F d, Y', $banner['firstactive']);?><br /><span style="color: <?php echo adrotate_prepare_color($banner['lastactive']);?>;"><?php echo date_i18n('F d, Y', $banner['lastactive']);?></span></td>
 			</tr>
-			<?php } ?>
+		<?php 
+			unset($banner, $grouplist);
+		} 
+		?>
 		</tbody>
 	</table>
 

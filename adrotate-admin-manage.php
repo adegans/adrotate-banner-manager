@@ -239,8 +239,7 @@ function adrotate_insert_group() {
 	global $wpdb, $adrotate_config;
 
 	if(wp_verify_nonce($_POST['adrotate_nonce'], 'adrotate_save_group')) {
-		$action = $id = $name = $modus = '';
-		if(isset($_POST['adrotate_action'])) $action = sanitize_key($_POST['adrotate_action']);
+		$id = $name = $modus = '';
 		if(isset($_POST['adrotate_id'])) $id = sanitize_key($_POST['adrotate_id']);
 		if(isset($_POST['adrotate_groupname'])) $name = sanitize_text_field($_POST['adrotate_groupname']);
 		if(isset($_POST['adrotate_modus'])) $modus = sanitize_key(trim($_POST['adrotate_modus']));

@@ -8,18 +8,15 @@
 *  By using this code you agree to indemnify Arnan de Gans from any
 *  liability that might arise from its use.
 ------------------------------------------------------------------------------------ */
-?>
-<?php if(!$group_edit_id) {
-	$action = "group_new";
+
+if(!$group_edit_id) {
 	$edit_id = $wpdb->get_var("SELECT `id` FROM `{$wpdb->prefix}adrotate_groups` WHERE `name` = '' ORDER BY `id` DESC LIMIT 1;");
 	if($edit_id == 0) {
 		$wpdb->insert($wpdb->prefix.'adrotate_groups', array('name' => '', 'modus' => 0, 'fallback' => '0', 'network' => '0', 'cat' => '', 'cat_loc' => 0, 'cat_par' => 0, 'page' => '', 'page_loc' => 0, 'page_par' => 0, 'woo_cat' => '', 'woo_loc' => 0, 'bbpress' => '', 'bbpress_loc' => 0, 'mobile' => 0, 'geo' => 0, 'wrapper_before' => '', 'wrapper_after' => '', 'gridrows' => 2, 'gridcolumns' => 2, 'admargin' => 0, 'admargin_bottom' => 0, 'admargin_left' => 0, 'admargin_right' => 0, 'adwidth' => '728', 'adheight' => '90', 'adspeed' => 6000, 'repeat_impressions' => 'Y'));
 	    $edit_id = $wpdb->insert_id;
 	}
+
 	$group_edit_id = $edit_id;
-	?>
-<?php } else {
-	$action = "group_edit";
 }
 
 $edit_group = $wpdb->get_row("SELECT * FROM `{$wpdb->prefix}adrotate_groups` WHERE `id` = {$group_edit_id};");
@@ -51,7 +48,6 @@ if($edit_group) {
 	<form name="editgroup" id="post" method="post" action="admin.php?page=adrotate-groups">
 		<?php wp_nonce_field('adrotate_save_group','adrotate_nonce'); ?>
 		<input type="hidden" name="adrotate_id" value="<?php echo $edit_group->id; ?>" />
-		<input type="hidden" name="adrotate_action" value="<?php echo $action; ?>" />
 
 		<?php if($edit_group->name == '') { ?>
 			<h3><?php _e("New Group", 'adrotate'); ?></h3>

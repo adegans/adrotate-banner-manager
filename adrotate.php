@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Manage all your adverts with all the features you need while keeping things simple.
 Text Domain: adrotate
-Version: 5.14.1
+Version: 5.15
 License: GPLv3
 */
 
@@ -123,8 +123,6 @@ function adrotate_pro() {
 	<div class="wrap">
 		<h1><?php _e("Get AdRotate Professional", 'adrotate'); ?></h1>
 
-		<br class="clear" />
-
 		<?php include('dashboard/adrotatepro.php'); ?>
 
 		<br class="clear" />
@@ -168,58 +166,6 @@ function adrotate_manage() {
 
 		<?php
 		if($status > 0) adrotate_status($status, array('file' => $file));
-
-		$allbanners = $wpdb->get_results("SELECT `id`, `title`, `type`, `tracker`, `weight` FROM `{$wpdb->prefix}adrotate` WHERE (`type` != 'empty' OR `type` != 'a_empty' OR `type` != 'queue') ORDER BY `id` ASC;");
-
-		$active = $disabled = $error = array();
-		foreach($allbanners as $singlebanner) {
-			$starttime = $stoptime = 0;
-			$starttime = $wpdb->get_var("SELECT `starttime` FROM `{$wpdb->prefix}adrotate_schedule`, `{$wpdb->prefix}adrotate_linkmeta` WHERE `ad` = '{$singlebanner->id}' AND `schedule` = `{$wpdb->prefix}adrotate_schedule`.`id` ORDER BY `starttime` ASC LIMIT 1;");
-			$stoptime = $wpdb->get_var("SELECT `stoptime` FROM `{$wpdb->prefix}adrotate_schedule`, `{$wpdb->prefix}adrotate_linkmeta` WHERE `ad` = '{$singlebanner->id}' AND `schedule` = `{$wpdb->prefix}adrotate_schedule`.`id` ORDER BY `stoptime` DESC LIMIT 1;");
-
-			$type = $singlebanner->type;
-			if($type == 'active' AND $stoptime <= $in7days) $type = '7days';
-			if($type == 'active' AND $stoptime <= $in2days) $type = '2days';
-			if($type == 'active' AND $stoptime <= $now) $type = 'expired';
-
-			$title = (strlen($singlebanner->title) == 0) ? 'Advert '.$singlebanner->id.' [temp]' : $singlebanner->title;
-
-			if($type == 'active' OR $type == '7days') {
-				$active[$singlebanner->id] = array(
-					'id' => $singlebanner->id,
-					'title' => $title,
-					'type' => $type,
-					'tracker' => $singlebanner->tracker,
-					'weight' => $singlebanner->weight,
-					'firstactive' => $starttime,
-					'lastactive' => $stoptime
-				);
-			}
-
-			if($type == 'error' OR $type == 'expired' OR $type == '2days') {
-				$error[$singlebanner->id] = array(
-					'id' => $singlebanner->id,
-					'title' => $title,
-					'type' => $type,
-					'tracker' => $singlebanner->tracker,
-					'weight' => $singlebanner->weight,
-					'firstactive' => $starttime,
-					'lastactive' => $stoptime
-				);
-			}
-
-			if($type == 'disabled') {
-				$disabled[$singlebanner->id] = array(
-					'id' => $singlebanner->id,
-					'title' => $title,
-					'type' => $type,
-					'tracker' => $singlebanner->tracker,
-					'weight' => $singlebanner->weight,
-					'firstactive' => $starttime,
-					'lastactive' => $stoptime
-				);
-			}
-		}
 		?>
 
 		<div class="tablenav">
@@ -234,15 +180,11 @@ function adrotate_manage() {
     	<?php
 
 	    if(empty($view) OR $view == 'manage') {
-			if(count($error) > 0) include('dashboard/publisher/adverts-error.php');
-
-			include('dashboard/publisher/adverts-main.php');
-
-			if (count($disabled) > 0) include('dashboard/publisher/adverts-disabled.php');
+			include('dashboard/publisher/manage-adverts.php');
 		} else if($view == 'addnew' OR $view == 'edit') {
-			include('dashboard/publisher/adverts-edit.php');
+			include('dashboard/publisher/manage-adverts-edit.php');
 	   	} else if($view == 'generator') {
-			include('dashboard/publisher/adverts-generator.php');
+			include('dashboard/publisher/manage-adverts-generator.php');
 		}
 		?>
 		<br class="clear" />
@@ -298,9 +240,9 @@ function adrotate_manage_group() {
 
 		<?php
 		if (empty($view) OR $view == 'manage') {
-			include('dashboard/publisher/groups-main.php');
+			include('dashboard/publisher/manage-groups.php');
 		} else if($view == 'addnew' OR $view == 'edit') {
-			include('dashboard/publisher/groups-edit.php');
+			include('dashboard/publisher/manage-groups-edit.php');
 		}
 		?>
 		<br class="clear" />
@@ -325,7 +267,7 @@ function adrotate_manage_schedules() {
 		<h1><?php _e("Manage Schedules", 'adrotate'); ?></h1>
 
     	<?php
-		include('dashboard/publisher/schedules-main.php');
+		include('dashboard/publisher/manage-schedules.php');
 		?>
 
 		<br class="clear" />

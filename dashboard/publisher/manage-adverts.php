@@ -8,7 +8,69 @@
 *  By using this code you agree to indemnify Arnan de Gans from any
 *  liability that might arise from its use.
 ------------------------------------------------------------------------------------ */
+
+$banners = $wpdb->get_results("SELECT `id`, `title`, `type`, `tracker`, `weight` FROM `{$wpdb->prefix}adrotate` WHERE (`type` != 'empty' OR `type` != 'a_empty' OR `type` != 'queue') ORDER BY `id` ASC;");
+
+$active = $disabled = $error = array();
+foreach($banners as $banner) {
+	$title = (strlen($banner->title) == 0) ? 'Advert '.$banner->id.' [temp]' : $banner->title;
+
+	$starttime = $stoptime = 0;
+	$starttime = $wpdb->get_var("SELECT `starttime` FROM `{$wpdb->prefix}adrotate_schedule`, `{$wpdb->prefix}adrotate_linkmeta` WHERE `ad` = '{$banner->id}' AND `schedule` = `{$wpdb->prefix}adrotate_schedule`.`id` ORDER BY `starttime` ASC LIMIT 1;");
+	$stoptime = $wpdb->get_var("SELECT `stoptime` FROM `{$wpdb->prefix}adrotate_schedule`, `{$wpdb->prefix}adrotate_linkmeta` WHERE `ad` = '{$banner->id}' AND `schedule` = `{$wpdb->prefix}adrotate_schedule`.`id` ORDER BY `stoptime` DESC LIMIT 1;");
+
+	$type = $banner->type;
+	if($type == 'active' AND $stoptime <= $in7days) $type = '7days';
+	if($type == 'active' AND $stoptime <= $in2days) $type = '2days';
+	if($type == 'active' AND $stoptime <= $now) $type = 'expired';
+
+	if($type == 'active' OR $type == '7days') {
+		$active[$banner->id] = array(
+			'id' => $banner->id,
+			'title' => $title,
+			'type' => $type,
+			'tracker' => $banner->tracker,
+			'weight' => $banner->weight,
+			'firstactive' => $starttime,
+			'lastactive' => $stoptime
+		);
+	}
+
+	if($type == 'error' OR $type == 'expired' OR $type == '2days') {
+		$error[$banner->id] = array(
+			'id' => $banner->id,
+			'title' => $title,
+			'type' => $type,
+			'tracker' => $banner->tracker,
+			'weight' => $banner->weight,
+			'firstactive' => $starttime,
+			'lastactive' => $stoptime
+		);
+	}
+
+	if($type == 'disabled') {
+		$disabled[$banner->id] = array(
+			'id' => $banner->id,
+			'title' => $title,
+			'type' => $banner->type,
+			'tracker' => $banner->tracker,
+			'weight' => $banner->weight,
+			'firstactive' => $starttime,
+			'lastactive' => $stoptime
+		);
+	}
+	
+	unset($banner, $title, $starttime, $stoptime, $type);
+}
+
+unset($allbanners);
 ?>
+
+<?php 
+// Load dashboard part for ads with errors	
+if(count($error) > 0) include(plugin_dir_path(__FILE__).'manage-adverts-error.php');
+?>
+
 <h3><?php _e("Active Adverts", 'adrotate'); ?></h3>
 
 <form name="banners" id="post" method="post" action="admin.php?page=adrotate">
@@ -82,7 +144,10 @@
 					<?php } ?>
 				<?php } ?>
 			</tr>
-		<?php } ?>
+		<?php 
+			unset($banner, $stats, $stats_today, $ctr, $grouplist);
+		} 
+		?>
 	<?php } else { ?>
 		<tr id='no-groups'>
 			<th class="check-column">&nbsp;</th>
@@ -93,3 +158,8 @@
 	</table>
 
 </form>
+
+<?php 
+// Load dashboard part for disabled ads
+if(count($disabled) > 0) include(plugin_dir_path(__FILE__).'manage-adverts-disabled.php');
+?>

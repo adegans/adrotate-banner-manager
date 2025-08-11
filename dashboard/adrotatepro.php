@@ -10,7 +10,7 @@
 ------------------------------------------------------------------------------------ */
 ?>
 
-<div style="text-align: center; font-size: 400%; line-height: 2em;">Time to become an advertiser professional!</div>
+<div style="text-align: center; font-size: 400%; line-height: 2em;">Ready to become an advertiser professional?</div>
 
 <div style="text-align: center; margin: 30px 0;">
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">
@@ -128,7 +128,7 @@
 </div>
 
 <div style="text-align: center;">
-	<p style="font-size: 175%;">Choose AdRotate Pro and instantly become an advertising professional!</p>
+	<p style="font-size: 175%;">Choose AdRotate Pro and become an advertising professional!</p>
 </div>
 
 <div style="text-align: center; margin: 30px 0;">

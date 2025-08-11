@@ -41,7 +41,7 @@ function adrotate_ad($banner_id, $opt = null) {
 			$output .= "</div>";
 
 			if($adrotate_config['stats'] == 1 AND $banner['tracker'] == 'Y') {
-				adrotate_count_impression($banner['id'], 0, 0);
+				adrotate_count_impression($banner['id'], 0);
 			}
 		} else {
 			$output .= adrotate_error('ad_expired', array($banner_id));
@@ -158,7 +158,7 @@ function adrotate_group($group_ids, $opt = null) {
 							}
 
 							if($adrotate_config['stats'] == 1 AND $ads[$array_key]['tracker'] == 'Y') {
-								adrotate_count_impression($ads[$array_key]['id'], $group->id, 0);
+								adrotate_count_impression($ads[$array_key]['id'], $group->id);
 							}
 
 							unset($ads[$array_key]);
@@ -173,7 +173,7 @@ function adrotate_group($group_ids, $opt = null) {
 						$output .= "</div>";
 
 						if($adrotate_config['stats'] == 1 AND $ads[$array_key]['tracker'] == 'Y') {
-							adrotate_count_impression($ads[$array_key]['id'], $group->id, 0);
+							adrotate_count_impression($ads[$array_key]['id'], $group->id);
 						}
 					}
 
@@ -479,21 +479,17 @@ function adrotate_preview($banner_id) {
  Name:      adrotate_ad_output
  Purpose:   Prepare the output for viewing
 -------------------------------------------------------------*/
-function adrotate_ad_output($id, $group, $name, $bannercode, $tracker, $image) {
-	global $blog_id, $adrotate_config;
+function adrotate_ad_output($ad_id, $group_id, $name, $bannercode, $tracker, $image) {
+	global $adrotate_config;
 
 	$banner_output = $bannercode;
 	$banner_output = stripslashes(htmlspecialchars_decode($banner_output, ENT_QUOTES));
 
 	if($adrotate_config['stats'] > 0 AND $tracker == 'Y') {
-		if(empty($blog_id) or $blog_id == '') {
-			$blog_id = 0;
-		}
-
 		if($adrotate_config['stats'] == 1) { // Internal tracker
 			preg_match_all('/<a[^>](?:.*?)>/i', $banner_output, $matches, PREG_SET_ORDER);
 			if(isset($matches[0])) {
-				$banner_output = str_ireplace('<a ', '<a data-track="'.base64_encode($id.','.$group.','.$blog_id.','.$adrotate_config['impression_timer']).'" ', $banner_output);
+				$banner_output = str_ireplace('<a ', '<a data-track="'.base64_encode($ad_id.','.$group_id.','.$adrotate_config['impression_timer']).'" ', $banner_output);
 				foreach($matches[0] as $value) {
 					if(preg_match('/<a[^>]+class=\"(.+?)\"[^>]*>/i', $value, $regs)) {
 					    $result = $regs[1].' gofollow';
@@ -513,7 +509,7 @@ function adrotate_ad_output($id, $group, $name, $bannercode, $tracker, $image) {
 	$banner_output = str_replace('%random%', rand(100000,999999), $banner_output);
 	$banner_output = str_replace('%asset%', $image, $banner_output); // Replaces %image%
 	$banner_output = str_replace('%image%', $image, $banner_output); // Depreciated, remove in AdRotate 5.0
-	$banner_output = str_replace('%id%', $id, $banner_output);
+	$banner_output = str_replace('%id%', $ad_id, $banner_output);
 	$banner_output = do_shortcode($banner_output);
 
 	return $banner_output;
