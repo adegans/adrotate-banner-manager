@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Manage all your adverts with all the features you need while keeping things simple.
 Text Domain: adrotate
-Version: 5.15
+Version: 5.15.1
 License: GPLv3
 */
 
@@ -44,8 +44,8 @@ if(function_exists('register_block_type')) include_once($adrotate_path.'/adrotat
 
 /*--- Check and Load config ---------------------------------*/
 load_plugin_textdomain('adrotate', false, 'adrotate/language');
-$adrotate_config = get_option('adrotate_config');
-$adrotate_crawlers = get_option('adrotate_crawlers');
+$adrotate_config = get_option("adrotate_config");
+$adrotate_crawlers = get_option("adrotate_crawlers");
 $adrotate_version = get_option("adrotate_version");
 $adrotate_db_version = get_option("adrotate_db_version");
 /*-----------------------------------------------------------*/
@@ -67,7 +67,7 @@ if(!is_admin()) {
 	add_filter('the_content', 'adrotate_inject_posts', 12);
 }
 
-if($adrotate_config['stats'] == 1){
+if(is_array($adrotate_config) AND $adrotate_config['stats'] == 1){
 	add_action('wp_ajax_adrotate_impression', 'adrotate_impression_callback');
 	add_action('wp_ajax_nopriv_adrotate_impression', 'adrotate_impression_callback');
 	add_action('wp_ajax_adrotate_click', 'adrotate_click_callback');

@@ -124,7 +124,6 @@ function adrotate_deactivate_setup() {
 	}
 
 	// Clear out wp_cron
-	wp_clear_scheduled_hook('adrotate_evaluate_ads');
 	wp_clear_scheduled_hook('adrotate_empty_trackerdata');
 }
 
@@ -261,7 +260,7 @@ function adrotate_check_config() {
 	if(!isset($notifications['notification_dash_soon']) OR ($notifications['notification_dash_soon'] != 'Y' AND $notifications['notification_dash_soon'] != 'N')) $notifications['notification_dash_soon'] = 'Y';
 	update_option('adrotate_notifications', $notifications);
 
-	if(!is_array($crawlers)) $crawlers = array('008', 'bot', 'crawler', 'spider', 'Accoona-AI-Agent', 'alexa', 'Arachmo', 'B-l-i-t-z-B-O-T', 'boitho.com-dc', 'Cerberian Drtrs','Charlotte', 'cosmos', 'Covario IDS', 'DataparkSearch','FindLinks', 'Holmes', 'htdig', 'ia_archiver', 'ichiro', 'inktomi', 'igdeSpyder', 'L.webis', 'Larbin', 'LinkWalker', 'lwp-trivial', 'mabontland', 'Mnogosearch', 'mogimogi', 'Morning Paper', 'MVAClient', 'NetResearchServer', 'NewsGator', 'NG-Search', 'NutchCVS', 'Nymesis', 'oegp', 'Orbiter', 'Peew', 'Pompos', 'PostPost', 'PycURL', 'Qseero', 'Radian6', 'SBIder', 'ScoutJet', 'Scrubby', 'SearchSight', 'semanticdiscovery', 'ShopWiki', 'silk', 'Snappy', 'Sqworm', 'StackRambler', 'Teoma', 'TinEye', 'truwoGPS', 'updated', 'Vagabondo', 'Vortex', 'voyager', 'VYU2', 'webcollage', 'Websquash.com', 'wf84', 'WomlpeFactory', 'yacy', 'Yahoo! Slurp', 'Yahoo! Slurp China', 'YahooSeeker', 'YahooSeeker-Testing', 'YandexImages', 'Yeti', 'yoogliFetchAgent', 'Zao', 'ZyBorg', 'froogle','looksmart', 'Firefly', 'NationalDirectory', 'Ask Jeeves', 'TECNOSEEK', 'InfoSeek', 'Scooter', 'appie', 'WebBug', 'Spade', 'rabaz', 'TechnoratiSnoop');
+	if(empty($crawlers)) $crawlers = array('008', 'bot', 'crawler', 'spider', 'Accoona-AI-Agent', 'alexa', 'Arachmo', 'B-l-i-t-z-B-O-T', 'boitho.com-dc', 'Cerberian Drtrs','Charlotte', 'cosmos', 'Covario IDS', 'DataparkSearch','FindLinks', 'Holmes', 'htdig', 'ia_archiver', 'ichiro', 'inktomi', 'igdeSpyder', 'L.webis', 'Larbin', 'LinkWalker', 'lwp-trivial', 'mabontland', 'Mnogosearch', 'mogimogi', 'Morning Paper', 'MVAClient', 'NetResearchServer', 'NewsGator', 'NG-Search', 'NutchCVS', 'Nymesis', 'oegp', 'Orbiter', 'Peew', 'Pompos', 'PostPost', 'PycURL', 'Qseero', 'Radian6', 'SBIder', 'ScoutJet', 'Scrubby', 'SearchSight', 'semanticdiscovery', 'ShopWiki', 'silk', 'Snappy', 'Sqworm', 'StackRambler', 'Teoma', 'TinEye', 'truwoGPS', 'updated', 'Vagabondo', 'Vortex', 'voyager', 'VYU2', 'webcollage', 'Websquash.com', 'wf84', 'WomlpeFactory', 'yacy', 'Yahoo! Slurp', 'Yahoo! Slurp China', 'YahooSeeker', 'YahooSeeker-Testing', 'YandexImages', 'Yeti', 'yoogliFetchAgent', 'Zao', 'ZyBorg', 'froogle','looksmart', 'Firefly', 'NationalDirectory', 'Ask Jeeves', 'TECNOSEEK', 'InfoSeek', 'Scooter', 'appie', 'WebBug', 'Spade', 'rabaz', 'TechnoratiSnoop');
 	update_option('adrotate_crawlers', $crawlers);
 }
 

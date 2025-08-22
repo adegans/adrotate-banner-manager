@@ -1,5 +1,8 @@
 # AdRotate Banner Manager full changelog
 
+## 5.15.1 - August ??, 2025
+* Fix - Output warning when activating the plugin for the first time
+
 ## 5.15 - August 11, 2025
 * Performance - No more redundant queries when using any Manage Adverts dashboard
 * Performance - Code cleanup for group editing

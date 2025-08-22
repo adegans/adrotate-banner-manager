@@ -1,11 +1,11 @@
 === AdRotate Banner Manager - The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.15
+Stable tag: 5.15.1
 Requires at least: 4.9
 Tested up to: 6.8.2
 Requires PHP: 7.4
 Donate link: https://ajdg.solutions/product/adrotate-pro-single/
-Tags: ads, banner manager, adsense, affiliate, banners
+Tags: ads, ad manager, adsense, amazon, monetize
 License: GPLv3
 
 Advertising made easy. Manage all your ads including Google Ads, Amazon banners and many more from your dashboard.
@@ -103,6 +103,8 @@ For more detailed instructions check out the [installation steps](https://suppor
 
 == Changelog ==
 
+## 5.15.1 - August 22, 2025
+* Fix - Output warning when activating the plugin for the first time
 
 **5.15 - August 11, 2025**
 * Performance - No more redundant queries when using any Manage Adverts dashboard
