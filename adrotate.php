@@ -13,7 +13,7 @@ License: GPLv3
 /*
 * Requires PHP: 7.4
 * Requires CP: 1.0
-* Tested CP: 2.4.1
+* Tested CP: 2.5
 * Premium URI: https://ajdg.solutions/
 */
 
@@ -54,6 +54,7 @@ $adrotate_db_version = get_option("adrotate_db_version");
 register_activation_hook(__FILE__, 'adrotate_activate');
 register_deactivation_hook(__FILE__, 'adrotate_deactivate');
 register_uninstall_hook(__FILE__, 'adrotate_uninstall');
+add_action('activated_plugin', 'adrotate_activation_redirect');
 add_action('adrotate_empty_trackerdata', 'adrotate_empty_trackerdata');
 add_action('widgets_init', 'adrotate_widget');
 add_filter('adrotate_apply_photon','adrotate_apply_jetpack_photon');

@@ -14,21 +14,22 @@
  Purpose:   Set up AdRotate on your current blog
 -------------------------------------------------------------*/
 function adrotate_activate($network_wide) {
-	if(is_multisite() AND $network_wide) {
-		global $wpdb;
-
-		$current_blog = $wpdb->blogid;
-		$blog_ids = $wpdb->get_col("SELECT `blog_id` FROM $wpdb->blogs;");
-
-		foreach($blog_ids as $blog_id) {
-			switch_to_blog($blog_id);
+	// Plugin is network activated
+	if($network_wide) {
+		$site_ids = get_sites(array('fields' => 'ids'));
+	
+		// Go through all sites
+	    foreach($site_ids as $site_id) {
+			switch_to_blog($site_id);
 			adrotate_activate_setup();
-		}
+			restore_current_blog();
+    	}
 
-		switch_to_blog($current_blog);
-	} else {
-		adrotate_activate_setup();
+		return;
 	}
+	
+	// Or just a single site
+	adrotate_activate_setup();
 }
 
 /*-------------------------------------------------------------
@@ -88,21 +89,21 @@ function adrotate_activate_setup() {
  Purpose:   Deactivate script
 -------------------------------------------------------------*/
 function adrotate_deactivate($network_wide) {
-	if(is_multisite()) {
-		global $wpdb;
-
-		$current_blog = $wpdb->blogid;
-		$blog_ids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
-
-		foreach($blog_ids as $blog_id) {
-			switch_to_blog($blog_id);
+	if($network_wide) {
+		$site_ids = get_sites(array('fields' => 'ids'));
+	
+		// Go through all sites
+	    foreach($site_ids as $site_id) {
+			switch_to_blog($site_id);
 			adrotate_deactivate_setup();
-		}
+			restore_current_blog();
+    	}
 
-		switch_to_blog($current_blog);
-	} else {
-		adrotate_deactivate_setup();
+		return;
 	}
+	
+	// Or just a single site
+	adrotate_deactivate_setup();
 }
 
 /*-------------------------------------------------------------
@@ -132,23 +133,24 @@ function adrotate_deactivate_setup() {
  Purpose:   Initiate uninstallation
 -------------------------------------------------------------*/
 function adrotate_uninstall($network_wide) {
-    if(is_multisite() AND $network_wide) {
-	    global $wpdb;
-
-        $current_blog = $wpdb->blogid;
-        $blogids = $wpdb->get_col("SELECT `blog_id` FROM $wpdb->blogs;");
-
-        foreach($blogids as $blog_id) {
-            switch_to_blog($blog_id);
-			// Only if AdRotate (Pro) is not active
-			if(!is_plugin_active('adrotate-pro/adrotate-pro.php') OR !is_plugin_active('adrotate/adrotate.php')) {
-				adrotate_uninstall_setup();
+	if($network_wide) {
+		$site_ids = get_sites(array('fields' => 'ids'));
+	
+		// Go through all sites
+	    foreach($site_ids as $site_id) {
+			switch_to_blog($site_id);
+			// Only if AdRotate Pro is not active on this site
+			if(!is_plugin_active('adrotate-pro/adrotate-pro.php')) {
+				adrotatepro_uninstall_setup();
 			}
-        }
-        switch_to_blog($current_blog);
-    } else {
-	    adrotate_uninstall_setup();
+			restore_current_blog();
+    	}
+
+		return;
 	}
+	
+	// Or just a single site
+	adrotatepro_uninstall_setup();
 }
 
 /*-------------------------------------------------------------
@@ -192,6 +194,17 @@ function adrotate_uninstall_setup() {
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_is_advertiser';");
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_notes';");
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_permissions';");
+}
+
+/*-------------------------------------------------------------
+ Name:      adrotate_activation_redirect
+ Purpose:   Redirect to the AdRotate menu when activated
+-------------------------------------------------------------*/
+function adrotate_activation_redirect($plugin) {
+    if($plugin == plugin_basename('adrotate/adrotate.php')) {
+        wp_safe_redirect(admin_url('admin.php?page=adrotate'));
+		exit;
+    }
 }
 
 /*-------------------------------------------------------------

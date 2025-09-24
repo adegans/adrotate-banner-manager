@@ -103,8 +103,9 @@ For more detailed instructions check out the [installation steps](https://suppor
 
 == Changelog ==
 
-## 5.15.1 - August 22, 2025
+**5.15.1 - September 24, 2025**
 * Fix - Output warning when activating the plugin for the first time
+* Update - Activation/de-activation/uninstall routine
 
 **5.15 - August 11, 2025**
 * Performance - No more redundant queries when using any Manage Adverts dashboard
