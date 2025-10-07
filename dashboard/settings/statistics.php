@@ -28,16 +28,16 @@
 				<option value="0" disabled>Google Tag Manager (<?php _e("Advanced", 'adrotate'); ?>)</option>
 			</select><br />
 			<span class="description">
-				<strong>AdRotate Statistics</strong> - <?php _e("Tracks impressions and clicks locally", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/adrotate-manuals/adrotate-statistics/?mtm_campaign=adrotatepro&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
+				<strong>AdRotate Statistics</strong> - <?php _e("Tracks impressions and clicks locally", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=29&mtm_campaign=adrotate&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
 				<strong><?php _e("Supports:", 'adrotate'); ?></strong> <em><?php _e("Clicks and Impressions, Click and impression limits, impression spread for schedules. Javascript/HTML5 adverts will only track impressions.", 'adrotate'); ?></em><br /><br />
 
-				<strong>Matomo</strong> - <?php _e("Requires my Matomo Tracker plugin installed or the Matomo tracking code in your sites footer. See the manual for details.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/adrotate-manuals/track-advert-stats-with-matomo/?mtm_campaign=adrotatepro&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
+				<strong>Matomo</strong> - <?php _e("Requires my Matomo Tracker plugin installed or the Matomo tracking code in your sites footer. See the manual for details.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=31&mtm_campaign=adrotate&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
 				<strong><?php _e("Supports:", 'adrotate'); ?></strong> <em><?php _e("Clicks and Impressions via events. Javascript/HTML5 adverts will only track impressions.", 'adrotate'); ?></em><br /><br />
 
-				<strong>Google Analytics 4</strong> - <?php _e("Requires the Google Global Tag from GA4 installed behind your sites head tag and a Google Analytics 4 Account!", 'adrotate'); ?>  - <a href="https://ajdg.solutions/support/adrotate-manuals/track-advert-stats-with-google-analytics/installing-and-using-google-global-tag/?mtm_campaign=adrotatepro&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
+				<strong>Google Analytics</strong> - <?php _e("Requires the Google Global Tag from GA4 installed behind your sites head tag and a Google Analytics Account!", 'adrotate'); ?>  - <a href="https://support.ajdg.net/knowledgebase.php?article=33&mtm_campaign=adrotate&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
 				<strong><?php _e("Supports:", 'adrotate'); ?></strong> <em><?php _e("Clicks and Impressions via custom events you need to set up. Javascript/HTML5 adverts will only track impressions.", 'adrotate'); ?></em><br /><br />
 
-				<strong>Google Tag Manager (for GA4)</strong> - <?php _e("Requires Google Tag Manager installed in your sites head tag and a Google Analytics 4 Account!", 'adrotate'); ?>  - <a href="https://ajdg.solutions/support/adrotate-manuals/track-advert-stats-with-google-analytics/installing-and-using-google-tag-manager/?mtm_campaign=adrotatepro&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
+				<strong>Google Tag Manager</strong> - <?php _e("Requires Google Tag Manager installed in your sites head tag and a Google Analytics Account!", 'adrotate'); ?>  - <a href="https://support.ajdg.net/knowledgebase.php?article=32&mtm_campaign=adrotatepro&mtm_keyword=settings_stats" target="_blank"><?php _e("Setup guide", 'adrotate'); ?></a>.<br />
 				<strong><?php _e("Supports:", 'adrotate'); ?></strong> <em><?php _e("Clicks and Impressions via custom events. Javascript/HTML5 adverts will only track impressions.", 'adrotate'); ?></em><br /><br />
 			</span>
 		</td>

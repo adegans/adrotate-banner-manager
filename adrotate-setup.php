@@ -141,7 +141,7 @@ function adrotate_uninstall($network_wide) {
 			switch_to_blog($site_id);
 			// Only if AdRotate Pro is not active on this site
 			if(!is_plugin_active('adrotate-pro/adrotate-pro.php')) {
-				adrotatepro_uninstall_setup();
+				adrotate_uninstall_setup();
 			}
 			restore_current_blog();
     	}
@@ -150,7 +150,7 @@ function adrotate_uninstall($network_wide) {
 	}
 	
 	// Or just a single site
-	adrotatepro_uninstall_setup();
+	adrotate_uninstall_setup();
 }
 
 /*-------------------------------------------------------------
@@ -194,17 +194,6 @@ function adrotate_uninstall_setup() {
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_is_advertiser';");
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_notes';");
 	$wpdb->query("DELETE FROM `{$wpdb->prefix}usermeta` WHERE `meta_key` = 'adrotate_permissions';");
-}
-
-/*-------------------------------------------------------------
- Name:      adrotate_activation_redirect
- Purpose:   Redirect to the AdRotate menu when activated
--------------------------------------------------------------*/
-function adrotate_activation_redirect($plugin) {
-    if($plugin == plugin_basename('adrotate/adrotate.php')) {
-        wp_safe_redirect(admin_url('admin.php?page=adrotate'));
-		exit;
-    }
 }
 
 /*-------------------------------------------------------------

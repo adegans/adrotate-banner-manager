@@ -4,9 +4,9 @@ Plugin Name: AdRotate Banner Manager
 Plugin URI: https://ajdg.solutions/product/adrotate-banner-manager/
 Author: Arnan de Gans
 Author URI: https://www.arnan.me/
-Description: Manage all your adverts with all the features you need while keeping things simple.
+Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
 Text Domain: adrotate
-Version: 5.15.2
+Version: 5.15.3
 License: GPLv3
 */
 
@@ -54,7 +54,6 @@ $adrotate_db_version = get_option("adrotate_db_version");
 register_activation_hook(__FILE__, 'adrotate_activate');
 register_deactivation_hook(__FILE__, 'adrotate_deactivate');
 register_uninstall_hook(__FILE__, 'adrotate_uninstall');
-add_action('activated_plugin', 'adrotate_activation_redirect');
 add_action('adrotate_empty_trackerdata', 'adrotate_empty_trackerdata');
 add_action('widgets_init', 'adrotate_widget');
 add_filter('adrotate_apply_photon','adrotate_apply_jetpack_photon');

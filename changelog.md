@@ -1,4 +1,9 @@
-# AdRotate Banner Manager full changelog
+# AdRotate Banner Manager changelog
+
+## 5.15.3 - October 7, 2025
+* Fix - Removed unreliable/broken WordPress redirect when activating the plugin
+* Fix - Wrong function name in uninstall routine
+* Update - Links to statistics manuals
 
 ## 5.15.2 - September 24, 2025
 * Update - Activation/de-activation/uninstall routine

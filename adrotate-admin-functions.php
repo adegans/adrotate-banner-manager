@@ -17,9 +17,8 @@ function adrotate_rand($length = 8) {
 	$available_chars = 'abcdefghijklmnopqrstuvwxyz';
 
 	$result = '';
-	$size = strlen($available_chars);
 	for($i = 0; $i < $length; $i++) {
-		$result .= $available_chars[rand(0, $size - 1)];
+		$result .= $available_chars[mt_rand(0, 25)];
 	}
 
 	return $result;
@@ -657,7 +656,6 @@ function adrotate_dashboard_error() {
 	if($adrotate_config['w3caching'] == "Y" AND !defined('W3TC_DYNAMIC_SECURITY')) {
 		$error['w3tc_no_hash'] = __("You have enable caching support but the W3TC_DYNAMIC_SECURITY definition is not set.", 'adrotate')." <a href=\"".admin_url('/admin.php?page=adrotate-settings&tab=misc')."\">".__("How to configure W3 Total Cache", 'adrotate')."</a>.";
 	}
-
 	if($adrotate_config['borlabscache'] == "Y" AND !is_plugin_active('borlabs-cache/borlabs-cache.php')) {
 		$error['borlabs_not_active'] = __("You have enable caching support but Borlabs Cache is not active on your site!", 'adrotate')." <a href=\"".admin_url('/admin.php?page=adrotate-settings&tab=misc')."\">".__("Disable Borlabs Cache Support", 'adrotate')."</a>.";
 	}
