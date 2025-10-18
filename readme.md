@@ -4,7 +4,9 @@
 Advertising made easy. Manage all your ads and campaigns from your dashboard.
 
 View on: [ajdg.solutions](https://ajdg.solutions/product/adrotate-banner-manager/) ~ [WordPres.org](https://wordpress.org/plugins/adrotate/) \
-Also consider AdRotate Professional: [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ [5 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) ~ [100 sites license](https://ajdg.solutions/product/adrotate-pro-developer/)
+Also consider AdRotate Professional: [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ [20 sites license](https://ajdg.solutions/product/adrotate-pro-multi/)
+
+Get help with all my plugins on the [Knowledgebase](https://support.ajdg.net/).
 
 ## Description
 Easily manage all your ads in WordPress and ClassicPress with **AdRotate Banner Manager**! \
