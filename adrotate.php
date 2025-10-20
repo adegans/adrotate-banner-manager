@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
 Text Domain: adrotate
-Version: 5.15.3
+Version: 5.15.4
 License: GPLv3
 */
 

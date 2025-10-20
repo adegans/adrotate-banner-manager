@@ -538,6 +538,7 @@ function adrotate_header() {
 	$output .= "\t.g-col { position:relative; float:left; }\n";
 	$output .= "\t.g-col:first-child { margin-left: 0; }\n";
 	$output .= "\t.g-col:last-child { margin-right: 0; }\n";
+
 	if($generated_css) {
 		foreach($generated_css as $group_id => $css) {
 			if(strlen($css) > 0) {
@@ -546,12 +547,15 @@ function adrotate_header() {
 		}
 		unset($generated_css);
 	}
+
 	$output .= "\t@media only screen and (max-width: 480px) {\n";
 	$output .= "\t\t.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }\n";
 	$output .= "\t}\n";
+
 	if($adrotate_config['widgetpadding'] == "Y") {
 		$output .= ".adrotate_widgets, .ajdg_bnnrwidgets, .ajdg_grpwidgets { overflow:hidden; padding:0; }\n";
 	}
+
 	$output .= "</style>\n";
 	$output .= "<!-- /AdRotate CSS -->\n\n";
 

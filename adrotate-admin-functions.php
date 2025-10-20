@@ -355,20 +355,23 @@ function adrotate_notifications_dashboard() {
 	if(current_user_can('adrotate_ad_manage')) {
 		$page = (isset($_GET['page'])) ? $_GET['page'] : '';
 
-		if(isset($_GET['hide']) AND $_GET['hide'] == 0) update_option('adrotate_hide_getpro', current_time('timestamp') + (2 * MONTH_IN_SECONDS));
-
-		// Get AdRotate Pro
-		$getpro_banner = get_option('adrotate_hide_getpro');
-		if($getpro_banner < current_time('timestamp')) {
-			echo "<div class=\"ajdg-notification notice\">";
-			echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
-			echo "	<div class=\"ajdg-notification-message\">Hello <strong>".ucfirst($displayname)."</strong>. Have you considered upgrading to <strong>AdRotate Professional</strong> yet?<br />Get features such as Geo Targeting, Advanced Scheduling, Mobile Adverts, Advanced Post Injection, access to ticket support and much more...<br />";
-			echo " Use coupon code <strong>GETADROTATEPRO</strong> to get a 10% discount on any <strong>AdRotate Professional</strong> license!</div>";
-			echo "	<div class=\"ajdg-notification-cta\">";
-			echo "		<a href=\"".admin_url('admin.php?page=adrotate-pro')."\" class=\"ajdg-notification-act button-primary\">MORE INFORMATION</a>";
-			echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=0\" class=\"ajdg-notification-dismiss\">Maybe later</a>";
-			echo "	</div>";
-			echo "</div>";
+		// Only show on AdRotate pages
+		if(strpos($page, 'adrotate') !== false) {
+			if(isset($_GET['hide']) AND $_GET['hide'] == 0) update_option('adrotate_hide_getpro', current_time('timestamp') + (3 * MONTH_IN_SECONDS));
+	
+			// Get AdRotate Pro
+			$getpro_banner = get_option('adrotate_hide_getpro');
+			if($getpro_banner < current_time('timestamp')) {
+				echo "<div class=\"ajdg-notification notice\">";
+				echo "	<div class=\"ajdg-notification-logo\" style=\"background-image: url('".plugins_url('/images/notification.png', __FILE__)."');\"><span></span></div>";
+				echo "	<div class=\"ajdg-notification-message\">Hello <strong>".ucfirst($displayname)."</strong>. Have you considered upgrading to <strong>AdRotate Professional</strong> yet?<br />Get features such as Geo Targeting, Advanced Scheduling, Mobile Adverts, Advanced Post Injection, access to ticket support and much more...<br />";
+				echo " Use coupon code <strong>GETADROTATEPRO</strong> to get a 10% discount on any <strong>AdRotate Professional</strong> license!</div>";
+				echo "	<div class=\"ajdg-notification-cta\">";
+				echo "		<a href=\"".admin_url('admin.php?page=adrotate-pro')."\" class=\"ajdg-notification-act button-primary\">MORE INFORMATION</a>";
+				echo "		<a href=\"".admin_url('admin.php?page=adrotate')."&hide=0\" class=\"ajdg-notification-dismiss\">Maybe later</a>";
+				echo "	</div>";
+				echo "</div>";
+			}
 		}
 
 		// Advert notifications, errors, important stuff

@@ -1,5 +1,9 @@
 # AdRotate Banner Manager changelog
 
+## 5.15.4 - October 19, 2025
+* Fix - AdRotate Pro banner showing on too many dashboard pages
+* Change - AdRotate Pro banner showing less often
+
 ## 5.15.3 - October 7, 2025
 * Fix - Removed unreliable/broken WordPress redirect when activating the plugin
 * Fix - Wrong function name in uninstall routine

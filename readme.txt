@@ -1,8 +1,8 @@
 === AdRotate Banner Manager – The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.15.3
+Stable tag: 5.15.4
 Requires at least: 4.9
-Tested up to: 6.8.2
+Tested up to: 6.8.3
 Requires PHP: 7.4
 Donate link: https://ajdg.solutions/product/adrotate-pro-single/
 Tags: ads, ad manager, adsense, banner, monetize
@@ -102,6 +102,10 @@ Installing AdRotate is super easy.
 For more detailed instructions check out the [installation steps](https://support.ajdg.net/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.15.4 - October 19, 2025**
+* Fix - AdRotate Pro banner showing on too many dashboard pages
+* Change - AdRotate Pro banner showing less often
 
 **5.15.3 - October 7, 2025**
 * Fix - Removed unreliable/broken WordPress redirect when activating the plugin
