@@ -14,67 +14,143 @@
 <?php wp_nonce_field('adrotate_settings','adrotate_nonce_settings'); ?>
 <input type="hidden" name="adrotate_settings_tab" value="<?php echo $active_tab; ?>" />
 
-<h2><?php _e("General Settings", 'adrotate'); ?></h2>
-<span class="description"><?php _e("General settings for AdRotate.", 'adrotate'); ?> <?php _e("Some options are only available in AdRotate Pro!", 'adrotate'); ?></span>
-<table class="form-table">			
-	<tr>
-		<th valign="top"><?php _e("Duplicate adverts", 'adrotate'); ?></th>
-		<td><input type="checkbox" name="adrotate_duplicate_adverts_filter" id="adrotate_duplicate_adverts_filter" disabled /><?php _e("Try and prevent adverts in groups that are in Default or Block mode from showing multiple times on the same page load.", 'adrotate'); ?></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Shortcode in widgets", 'adrotate'); ?></th>
-		<td><input type="checkbox" name="adrotate_textwidget_shortcodes" disabled /><?php _e("Try and activate shortcodes in text widgets if your theme does not add support for it by itself. (This does not always work!)", 'adrotate'); ?></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Advert live preview", 'adrotate'); ?></th>
-		<td><input type="checkbox" name="adrotate_live_preview" disabled /><?php _e("Disable live previews for adverts if you have faulty adverts that overflow their designated area while creating/editing adverts.", 'adrotate'); ?></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Load jQuery", 'adrotate'); ?></th>
-		<td><label for="adrotate_jquery"><input type="checkbox" name="adrotate_jquery" id="adrotate_jquery" <?php if($adrotate_config['jquery'] == 'Y') { ?>checked="checked" <?php } ?> /><?php _e("Load jQuery if your theme does not load it already. jQuery is required for dynamic groups, statistics and some other features.", 'adrotate'); ?></label></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Load scripts in footer?", 'adrotate'); ?></th>
-		<td><label for="adrotate_jsfooter"><input type="checkbox" name="adrotate_jsfooter" id="adrotate_jsfooter" <?php if($adrotate_config['jsfooter'] == 'Y') { ?>checked="checked" <?php } ?> /><?php _e("Load all AdRotate Javascripts in the footer of your site.", 'adrotate'); ?></label></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Adblock disguise", 'adrotate'); ?></th>
-		<td>
-			<input name="adrotate_adblock_disguise" type="text" class="search-input" size="6" value="getpro" disabled /> <?php _e("Leave empty to disable. Use only lowercaps letters. For example:", 'adrotate'); ?> <?php echo adrotate_rand(6); ?><br />
-			<span class="description"><?php _e("Try and avoid adblock plugins in most modern browsers when using shortcodes.", 'adrotate'); ?><br /><?php _e("To also apply this feature to widgets, use a text widget with a shortcode instead of the AdRotate widget.", 'adrotate'); ?><br /><?php _e("Avoid the use of obvious keywords or filenames in your adverts or this feature will have little effect!", 'adrotate'); ?></span>
-		</td>
-	</tr>
-</table>
+<h1><?php _e('General Settings', 'adrotate'); ?></h1>
 
-<h3><?php _e("Banner Folder", 'adrotate'); ?></h3>
-<span class="description"><?php _e("Set a folder where your banner images will be stored.", 'adrotate'); ?></span>
-<table class="form-table">
-	<tr>
-		<th valign="top"><?php _e("Folder name", 'adrotate'); ?></th>
-		<td>
-			<?php echo WP_CONTENT_DIR; ?>/<input name="adrotate_banner_folder_disabled" type="text" class="search-input" size="20" value="<?php echo $adrotate_config['banner_folder']; ?>" disabled="1" />/ <?php _e("(Default: banners).", 'adrotate'); ?><br />
-			<span class="description"><?php _e("To try and trick ad blockers you could set the folder to something crazy like:", 'adrotate'); ?> "<?php echo adrotate_rand(12); ?>".<br />
-			<?php _e("This folder will not be automatically created if it doesn't exist. AdRotate will show errors when the folder is missing.", 'adrotate'); ?></span>
-		</td>
-	</tr>
-</table>
+<div class="ajdg-box-wrap">
+	<div class="ajdg-box-three">
 
-<h3><?php _e("Bot filter", 'adrotate'); ?></h3>
-<span class="description"><?php _e("The bot filter is used for the AdRotate stats tracker.", 'adrotate'); ?></span>
-<table class="form-table">
-	<tr>
-		<th valign="top"><?php _e("User-Agent Filter", 'adrotate'); ?></th>
-		<td>
-			<textarea name="adrotate_crawlers" cols="90" rows="10"><?php echo $crawlers; ?></textarea><br />
-			<span class="description"><?php _e("A comma separated list of keywords. Filter out bots/crawlers/user-agents.", 'adrotate'); ?><br />
-			<?php _e("Keep in mind that this might give false positives. The word 'fire' also matches 'firefox', but not vice-versa. So be careful!", 'adrotate'); ?><br />
-			<?php _e("Only words with alphanumeric characters and [ - _ ] are allowed. All other characters are stripped out.", 'adrotate'); ?><br />
-			<?php _e("Additionally to the list specified here, empty User-Agents are blocked as well.", 'adrotate'); ?> (<?php _e("Learn more about", 'adrotate'); ?> <a href="http://en.wikipedia.org/wiki/User_agent" title="User Agents" target="_blank"><?php _e("user-agents", 'adrotate'); ?></a>.)</span>
-		</td>
-	</tr>
-</table>
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('Settings', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
 
-<p class="submit">
-  	<input type="submit" name="adrotate_save_options" class="button-primary" value="<?php _e("Update Options", 'adrotate'); ?>" />
-</p>
+				<p><label for="adrotate_duplicate_adverts_filter">
+					<strong><?php _e("Duplicate adverts:", 'adrotate'); ?></strong> <select name="adrotate_duplicate_adverts_filter" tabindex="10" disabled>
+						<option disabled value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option disabled value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Try and prevent adverts in groups that are in Default or Block mode from showing multiple times on the same page load.", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_textwidget_shortcodes">
+					<strong><?php _e("Shortcode in widgets:", 'adrotate'); ?></strong> <select name="adrotate_textwidget_shortcodes" tabindex="20" disabled>
+						<option disabled value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option disabled value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Try and activate shortcodes in text widgets if your theme does not add support for it by itself. (This does not always work!)", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_live_preview">
+					<strong><?php _e("Advert live preview:", 'adrotate'); ?></strong> <select name="adrotate_live_preview" tabindex="30" disabled>
+						<option disabled value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option disabled value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Disable live previews for adverts if you have faulty adverts that overflow their designated area while creating/editing adverts.", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_jquery">
+					<strong><?php _e("Load jQuery:", 'adrotate'); ?></strong> <select name="adrotate_jquery" tabindex="40">
+						<option <?php echo ($adrotate_config['jquery'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option <?php echo ($adrotate_config['jquery'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Load jQuery if your theme does not load it already. jQuery is required for dynamic groups, statistics and some other features.", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_jsfooter">
+					<strong><?php _e("Load scripts in footer:", 'adrotate'); ?></strong> <select name="adrotate_jsfooter" tabindex="50">
+						<option <?php echo ($adrotate_config['jsfooter'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option <?php echo ($adrotate_config['jsfooter'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Load all AdRotate Javascripts in the footer of your site.", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_adblock_disguise">
+					<strong><?php _e('Adblock disguise:', 'adrotate'); ?></strong> <input tabindex="60" name="adrotate_adblock_disguise" type="text" class="search-input"  size="8" value="getpro" autocomplete="off" disabled /> <?php _e("Use only lowercase letters. For example:", 'adrotate'); ?> <?php echo adrotate_rand(6); ?>.
+					<br /><small><?php _e("A random string of ~6 characters. Leave empty to disable. This makes the standardized output of AdRotate harder to detect by adblockers when using shortcodes.", 'adrotate'); ?> <?php _e("To also apply this feature to widgets, use a text widget or block with a shortcode instead of the AdRotate widget.", 'adrotate'); ?> <?php _e("Avoid the use of obvious keywords or filenames in your adverts or this feature will have less effect!", 'adrotate'); ?></small>
+				</label></p>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('Banner Folder', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
+
+				<p><strong>Currently:</strong> <?php echo WP_CONTENT_DIR; ?>/<strong><?php echo $adrotate_config['banner_folder'];?></strong>/</p>
+				<p><label for="adrotate_banner_folder"><strong><?php _e('Folder name:', 'adrotate'); ?></strong> <input tabindex="70" name="adrotate_banner_folder" type="text" class="search-input" size="20" value="<?php echo $adrotate_config['banner_folder'];?>" autocomplete="off" disabled /> <?php _e("Default: banners.", 'adrotate'); ?><br /><small><?php _e("To try and trick ad blockers you could set the folder to something crazy like:", 'adrotate'); ?> "<?php echo adrotate_rand(12); ?>".<br />
+		<?php _e("This folder will not be automatically created if it doesn't exist. AdRotate will show errors when the folder is missing.", 'adrotate'); ?></small></label></p>
+
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('ads.txt file', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
+
+				<p><strong>Currently AdRotate looks for it here:</strong> <?php echo get_site_url(); ?>/<?php echo $adrotate_config['adstxt_file'];?>ads.txt</p>
+				<p><label for="adrotate_adstxt_file"><strong><?php _e('Location:', 'adrotate'); ?></strong> <input tabindex="80" name="adrotate_adstxt_file" type="text" class="search-input" size="20" value="<?php echo $adrotate_config['adstxt_file'];?>" autocomplete="off" disabled /> <?php _e("Default: (empty).", 'adrotate'); ?><br /><small><?php _e("Commonly the ads.txt file is in the root of your site and this setting does not need to be changed.", 'adrotate'); ?><br /><?php _e("If you redirect the ads.txt you can enter the new location here. Otherwise this field should be left empty.", 'adrotate'); ?></small></label></p>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('Bot filter / User-Agent Filter', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
+
+				<p><label for="adrotate_crawlers"><textarea name="adrotate_crawlers" style="width:100%;" rows="10" tabindex="90"><?php echo $crawlers; ?></textarea><br /><small><?php _e("Comma separated keywords. Only words with alphanumeric characters and [ - _ ] are accepted.", 'adrotate'); ?><br /><?php _e("Keep in mind that adding simplistic or generic keywords may give false positives. The word 'fire' also matches 'firefox' for example. However", 'adrotate'); ?><br />
+		<?php _e("Additionally to the list specified here, empty User-Agents are blocked.", 'adrotate'); ?> (<?php _e("Learn more about", 'adrotate'); ?> <a href="http://en.wikipedia.org/wiki/User_agent" title="User Agents" target="_blank"><?php _e("user-agents", 'adrotate'); ?></a>.)</small></label></p>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<p class="submit">
+			  	<input type="submit" name="adrotate_save_options" class="button-primary" value="<?php _e("Save settings", 'adrotate'); ?>" tabindex="1000" /> <em><?php _e("Some settings are only available in AdRotate Pro!", 'adrotate'); ?></em>
+			</p>
+		</div>
+
+	</div>
+	<div class="ajdg-box-one">
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('Become an advertising professional', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content ajdg-box-sale">
+
+				<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><img src="<?php echo plugins_url("../images/offers/monetize-your-site.jpg", dirname(__FILE__)); ?>" alt="AdRotate Professional" width="100%"></a>
+				<div class="title"><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("AdRotate Professional", 'adrotate'); ?></a></div>
+				<div class="sub_title"><?php _e("Starting at only €49.00", 'adrotate'); ?><br /><a href="https://ajdg.solutions/product-category/adrotate-pro/" target="_blank">Compare Licenses</a></div>
+				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("Get a Single site License", 'adrotate'); ?></a></div>
+				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><?php _e("Go big with the Multi License", 'adrotate'); ?></a></div>
+				<hr>
+				<div class="description"><?php _e("AdRotate Professional has a lot more to offer for even better advertising management and premium support. Enjoy features like Geo Targeting, better Schedules offering more options, expanded Post Injection and much more.", 'adrotate'); ?></div>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('I make other plugins too', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content ajdg-box-sale">
+	
+				<a href="https://ajdg.solutions/plugins/" target="_blank"><img src="<?php echo plugins_url("../images/offers/more-plugins.jpg", dirname(__FILE__)); ?>" alt="AJdG Solutions Plugins" width="100%"></a>
+				<div class="sub_title"><?php _e("For WordPress, WooCommerce and ClassicPress", 'adrotate'); ?></div>
+				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/" target="_blank"><?php _e("View all plugins", 'adrotate'); ?></a></div>
+				<hr>
+				<div class="description"><?php _e("Handy plugins that improve your WooCommerce online store; faster checkout, no checkout, improve security, automate things, payment stats and more!", 'adrotate'); ?></div>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('News & Updates', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
+
+				<p><a href="http://ajdg.solutions/feed/" target="_blank" title="Subscribe to the AJdG Solutions RSS feed!" class="button-primary"><i class="icn-rss"></i><?php _e('Subscribe via RSS feed', 'adrotate'); ?></a> <em><?php _e('No account required!', 'adrotate'); ?></em></p>
+				<?php echo adrotate_fetch_rss_feed(); ?>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
 </form>

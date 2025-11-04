@@ -13,33 +13,110 @@
 <?php wp_nonce_field('adrotate_settings','adrotate_nonce_settings'); ?>
 <input type="hidden" name="adrotate_settings_tab" value="<?php echo $active_tab; ?>" />
 
-<h2><?php _e("Miscellaneous", 'adrotate'); ?></h2>
-<table class="form-table">
-	<tr>
-		<th valign="top"><?php _e("Widget alignment", 'adrotate'); ?></th>
-		<td><label for="adrotate_widgetalign"><input type="checkbox" name="adrotate_widgetalign" id="adrotate_widgetalign" <?php if($adrotate_config['widgetalign'] == 'Y') { ?>checked="checked" <?php } ?> /> <?php _e("Check this box if your widgets do not align in your themes sidebar. (Does not always help!)", 'adrotate'); ?></label></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Widget padding", 'adrotate'); ?></th>
-		<td><label for="adrotate_widgetpadding"><input type="checkbox" name="adrotate_widgetpadding" id="adrotate_widgetpadding" <?php if($adrotate_config['widgetpadding'] == 'Y') { ?>checked="checked" <?php } ?> /> <?php _e("Enable this to remove the padding (blank space) around ads in widgets. (Does not always work!)", 'adrotate'); ?></label></td>
-	</tr>
-	<?php if($adrotate_config['w3caching'] == 'Y' AND !defined('W3TC_DYNAMIC_SECURITY')) { ?>
-	<tr>
-		<th valign="top"><?php _e("NOTICE:", 'adrotate'); ?></th>
-		<td><span style="color:#f00;"><?php _e("You have enabled W3 Total Caching support but not defined the security hash.", 'adrotate'); ?></span><br /><br /><?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://ajdg.solutions/support/adrotate-manuals/caching-support/"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a><br /><pre>define('W3TC_DYNAMIC_SECURITY', '<?php echo md5(rand(0,999)); ?>');</pre></td>
-	</tr>
-	<?php } ?>
-	<tr>
-		<th valign="top"><?php _e("W3 Total Caching", 'adrotate'); ?></th>
-		<td><label for="adrotate_w3caching"><input type="checkbox" name="adrotate_w3caching" id="adrotate_w3caching" <?php if($adrotate_config['w3caching'] == 'Y') { ?>checked="checked" <?php } ?> /> <?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?></label></td>
-	</tr>
-	<tr>
-		<th valign="top"><?php _e("Borlabs Cache", 'adrotate'); ?></th>
-		<td><label for="adrotate_borlabscache"><input type="checkbox" name="adrotate_borlabscache" id="adrotate_borlabscache" <?php if($adrotate_config['borlabscache'] == 'Y') { ?>checked="checked" <?php } ?> /> <?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?></label></td>
-	</tr>
-</table>
+<h1><?php _e('Miscellaneous', 'adrotate'); ?></h1>
 
-<p class="submit">
-  	<input type="submit" name="adrotate_save_options" class="button-primary" value="<?php _e("Update Options", 'adrotate'); ?>" />
-</p>
+<div class="ajdg-box-wrap">
+	<div class="ajdg-box-three">
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('Settings', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
+
+				<p><label for="adrotate_widgetalign">
+					<strong><?php _e("Widget alignment:", 'adrotate'); ?></strong> <select name="adrotate_widgetalign" tabindex="10">
+						<option <?php echo ($adrotate_config['widgetalign'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option <?php echo ($adrotate_config['widgetalign'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Enable this if your widgets do not align with your themes sidebar. (Some themes ignore this!)", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_widgetpadding">
+					<strong><?php _e("Widget padding:", 'adrotate'); ?></strong> <select name="adrotate_widgetpadding" tabindex="20">
+						<option <?php echo ($adrotate_config['widgetpadding'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option <?php echo ($adrotate_config['widgetpadding'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Enable this to remove the padding (blank space) around ads in widgets. (Some themes prevent this!)", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_hide_schedules">
+					<strong><?php _e("Hide schedules:", 'adrotate'); ?></strong> <select name="adrotate_hide_schedules" tabindex="30" disabled>
+						<option disabled value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option disabled value="N"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("When editing adverts, hide schedules that are not in use by that advert.", 'adrotate'); ?></small>
+				</label></p>
+
+				<?php if($adrotate_config['w3caching'] == 'Y' AND !defined('W3TC_DYNAMIC_SECURITY')) { ?>
+				<p>
+					<strong><?php _e("NOTICE:", 'adrotate'); ?></strong> <?php _e("You have enabled W3 Total Caching support but not defined the security hash.", 'adrotate'); ?>
+				</p>
+				<p>
+					<?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://ajdg.solutions/support/adrotate-manuals/caching-support/"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a>
+					<br /><pre>define('W3TC_DYNAMIC_SECURITY', 'adrotate');</pre>
+				</p>
+				<?php } ?>
+
+				<p><label for="adrotate_w3caching">
+					<strong><?php _e("W3 Total Caching compatibility:", 'adrotate'); ?></strong> <select name="adrotate_w3caching" tabindex="40">
+						<option <?php echo ($adrotate_config['w3caching'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option <?php echo ($adrotate_config['w3caching'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/adrotate-manuals/caching-support/"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+				</label></p>
+
+				<p><label for="adrotate_borlabscache">
+					<strong><?php _e("Borlabs Cache compatibility:", 'adrotate'); ?></strong> <select name="adrotate_borlabscache" tabindex="50">
+						<option <?php echo ($adrotate_config['borlabscache'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
+						<option <?php echo ($adrotate_config['borlabscache'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
+					</select>
+					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?></small>
+				</label></p>
+
+				<p>
+					<em><?php _e("It may take a while for the ad to start rotating. The caching plugin needs to refresh the cache. This can several days if not done manually.", 'adrotate'); ?> <?php _e("Caching support only works for [shortcodes] and the AdRotate Widget and Blocks. If you use a PHP Snippet you need to wrap your PHP in the exclusion code yourself.", 'adrotate'); ?></em>
+				</p>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<p class="submit">
+			  	<input type="submit" name="adrotate_save_options" class="button-primary" value="<?php _e("Save settings", 'adrotate'); ?>" tabindex="1000" /> <em><?php _e("Some settings are only available in AdRotate Pro!", 'adrotate'); ?></em>
+			</p>
+		</div>
+
+	</div>
+	<div class="ajdg-box-one">
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('Become an advertising professional', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content ajdg-box-sale">
+
+				<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><img src="<?php echo plugins_url("../images/offers/monetize-your-site.jpg", dirname(__FILE__)); ?>" alt="AdRotate Professional" width="100%"></a>
+				<div class="title"><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("AdRotate Professional", 'adrotate'); ?></a></div>
+				<div class="sub_title"><?php _e("Starting at only €49.00", 'adrotate'); ?><br /><a href="https://ajdg.solutions/product-category/adrotate-pro/" target="_blank">Compare Licenses</a></div>
+				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("Get a Single site License", 'adrotate'); ?></a></div>
+				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><?php _e("Go big with the Multi License", 'adrotate'); ?></a></div>
+				<hr>
+				<div class="description"><?php _e("AdRotate Professional has a lot more to offer for even better advertising management and premium support. Enjoy features like Geo Targeting, better Schedules offering more options, expanded Post Injection and much more.", 'adrotate'); ?></div>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e('I make other plugins too', 'adrotate'); ?></h2>
+			<div class="ajdg-box-content ajdg-box-sale">
+	
+				<a href="https://ajdg.solutions/plugins/" target="_blank"><img src="<?php echo plugins_url("../images/offers/more-plugins.jpg", dirname(__FILE__)); ?>" alt="AJdG Solutions Plugins" width="100%"></a>
+				<div class="sub_title"><?php _e("For WordPress, WooCommerce and ClassicPress", 'adrotate'); ?></div>
+				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/" target="_blank"><?php _e("View all plugins", 'adrotate'); ?></a></div>
+				<hr>
+				<div class="description"><?php _e("Handy plugins that improve your WooCommerce online store; faster checkout, no checkout, improve security, automate things, payment stats and more!", 'adrotate'); ?></div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
 </form>

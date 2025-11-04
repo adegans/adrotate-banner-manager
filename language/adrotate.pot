@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AdRotate\n"
-"POT-Creation-Date: 2025-08-05 16:13-0600\n"
+"POT-Creation-Date: 2025-11-03 20:14-0700\n"
 "PO-Revision-Date: 2019-09-20 12:05-0500\n"
 "Last-Translator: Arnan de Gans <support@ajdg.solutions>\n"
 "Language-Team: Arnan de Gans\n"
@@ -17,284 +17,232 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adrotate-admin-functions.php:381
+#: adrotate-admin-functions.php:51
+msgid "RSS Error:"
+msgstr ""
+
+#: adrotate-admin-functions.php:58
+msgid "An error has occurred, which probably means the feed is down. Try again later."
+msgstr ""
+
+#: adrotate-admin-functions.php:79
+msgid "Untitled"
+msgstr ""
+
+#: adrotate-admin-functions.php:452
 msgid "your attention:"
 msgstr ""
 
-#: adrotate-admin-functions.php:594
-msgid "Get more features with AdRotate Professional"
-msgstr ""
-
-#: adrotate-admin-functions.php:595
-msgid "Starting at only &euro; 49.00"
-msgstr ""
-
-#: adrotate-admin-functions.php:595 adrotate-admin-functions.php:602
-msgid "Compare Licenses"
-msgstr ""
-
-#: adrotate-admin-functions.php:602
-msgid "<strong>AdRotate Professional</strong> has a lot more to offer for even better advertising management and premium support. Enjoy features like <strong>Geo Targeting</strong>, <strong>multiple Schedules</strong> per ad and <strong>Schedules</strong> have more options, more advanced <strong>Post Injection</strong> and much more. Check out the feature comparison tab on any of the product pages to see what AdRotate Pro has to offer for you! When you upgrade to <strong>AdRotate Professional</strong> make sure you use coupon <strong>GETADROTATEPRO</strong> on checkout for 10 percent off on any license."
-msgstr ""
-
-#: adrotate-admin-functions.php:604
-msgid "Get a Single site License"
-msgstr ""
-
-#: adrotate-admin-functions.php:604
-msgid "One year of updates for AdRotate Professional."
-msgstr ""
-
-#: adrotate-admin-functions.php:604
-msgid "Go big with the Multi License"
-msgstr ""
-
-#: adrotate-admin-functions.php:604
-msgid "One year of updates for up-to twenty activations."
-msgstr ""
-
-#: adrotate-admin-functions.php:614
-msgid "Do you have a question?"
-msgstr ""
-
-#: adrotate-admin-functions.php:615
-msgid "Help Support AdRotate Banner Manager"
-msgstr ""
-
-#: adrotate-admin-functions.php:621
-msgid "If you need help, or have questions about AdRotate, the fastest way to get your answer is via the Knowledgebase. All popular features to get you started are explained there. If you need an answer right now or the knowledge base does not answer your question you can buy a Priority support ticket as well."
-msgstr ""
-
-#: adrotate-admin-functions.php:621 dashboard/support.php:22
-msgid "AdRotate Knowledge Base"
-msgstr ""
-
-#: adrotate-admin-functions.php:621
-msgid "Buy Support Ticket"
-msgstr ""
-
-#: adrotate-admin-functions.php:623
-msgid "Arnan needs your help. Please consider writing a review or sharing AdRotate in Social media if you find the plugin useful. Doing so costs you nothing but your endorsement is super helpful to spread the word about AdRotate which in turn helps with continued development of the plugin."
-msgstr ""
-
-#: adrotate-admin-functions.php:623
-msgid "Write review on WordPress.org"
-msgstr ""
-
-#: adrotate-admin-functions.php:623
-msgid "Thanks a lot in advance!!"
-msgstr ""
-
-#: adrotate-admin-functions.php:644 adrotate-admin-functions.php:647
-#: adrotate-admin-functions.php:651 dashboard/settings/maintenance.php:18
+#: adrotate-admin-functions.php:671 adrotate-admin-functions.php:674
+#: adrotate-admin-functions.php:678
 msgid "Check adverts"
 msgstr ""
 
-#: adrotate-admin-functions.php:656
+#: adrotate-admin-functions.php:683
 msgid "You have enabled caching support but W3 Total Cache is not active on your site!"
 msgstr ""
 
-#: adrotate-admin-functions.php:656
+#: adrotate-admin-functions.php:683
 msgid "Disable W3 Total Cache Support"
 msgstr ""
 
-#: adrotate-admin-functions.php:659
+#: adrotate-admin-functions.php:686
 msgid "You have enable caching support but the W3TC_DYNAMIC_SECURITY definition is not set."
 msgstr ""
 
-#: adrotate-admin-functions.php:659
+#: adrotate-admin-functions.php:686
 msgid "How to configure W3 Total Cache"
 msgstr ""
 
-#: adrotate-admin-functions.php:663
+#: adrotate-admin-functions.php:689
 msgid "You have enable caching support but Borlabs Cache is not active on your site!"
 msgstr ""
 
-#: adrotate-admin-functions.php:663
+#: adrotate-admin-functions.php:689
 msgid "Disable Borlabs Cache Support"
 msgstr ""
 
-#: adrotate-admin-functions.php:668
+#: adrotate-admin-functions.php:694
 msgid "You have enabled Borlabs Cache support but Fragment caching is not enabled!"
 msgstr ""
 
-#: adrotate-admin-functions.php:668
+#: adrotate-admin-functions.php:694
 msgid "Enable Fragment Caching"
 msgstr ""
 
-#: adrotate-admin-functions.php:675
+#: adrotate-admin-functions.php:701
 msgid "Your AdRotate Banner folder is not writable or does not exist."
 msgstr ""
 
-#: adrotate-admin-functions.php:675
+#: adrotate-admin-functions.php:701
 msgid "Set up your banner folder"
 msgstr ""
 
-#: adrotate-admin-functions.php:678
+#: adrotate-admin-functions.php:704
 msgid "You have AdRotate Professional installed. Please switch to AdRotate Pro! You can delete this plugin after AdRotate Pro is activated."
 msgstr ""
 
-#: adrotate-admin-functions.php:678
+#: adrotate-admin-functions.php:704
 msgid "Switch plugins"
 msgstr ""
 
-#: adrotate-admin-functions.php:681
+#: adrotate-admin-functions.php:707
 msgid "Something is wrong with your installation of AdRotate. Either the plugin is installed twice or your current installation has the wrong folder name. Please install the plugin properly!"
 msgstr ""
 
-#: adrotate-admin-functions.php:681
+#: adrotate-admin-functions.php:707
 msgid "Installation instructions"
 msgstr ""
 
-#: adrotate-admin-functions.php:723
+#: adrotate-admin-functions.php:749
 msgid "Advert saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:727
+#: adrotate-admin-functions.php:753
 msgid "Group saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:731
+#: adrotate-admin-functions.php:757
 msgid "Banner image saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:735
+#: adrotate-admin-functions.php:761
 msgid "Ad(s) deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:739
+#: adrotate-admin-functions.php:765
 msgid "Group deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:743
+#: adrotate-admin-functions.php:769
 msgid "Asset(s) deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:747
+#: adrotate-admin-functions.php:773
 msgid "Something went wrong deleting the file or folder. Make sure your permissions are in order."
 msgstr ""
 
-#: adrotate-admin-functions.php:751
+#: adrotate-admin-functions.php:777
 msgid "Advert(s) statistics reset"
 msgstr ""
 
-#: adrotate-admin-functions.php:755
+#: adrotate-admin-functions.php:781
 msgid "Advert(s) renewed"
 msgstr ""
 
-#: adrotate-admin-functions.php:759
+#: adrotate-admin-functions.php:785
 msgid "Advert(s) deactivated"
 msgstr ""
 
-#: adrotate-admin-functions.php:763
+#: adrotate-admin-functions.php:789
 msgid "Advert(s) activated"
 msgstr ""
 
-#: adrotate-admin-functions.php:767
+#: adrotate-admin-functions.php:793
 msgid "Group including the Adverts in it deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:771
+#: adrotate-admin-functions.php:797
 msgid "Folder created"
 msgstr ""
 
-#: adrotate-admin-functions.php:775
+#: adrotate-admin-functions.php:801
 msgid "Advert HTML generated and placed in the AdCode field. Configure your advert below. Do not forget to check all settings and schedule the advert."
 msgstr ""
 
-#: adrotate-admin-functions.php:780
+#: adrotate-admin-functions.php:806
 msgid "Settings saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:784
+#: adrotate-admin-functions.php:810
 msgid "Database optimized"
 msgstr ""
 
-#: adrotate-admin-functions.php:788
+#: adrotate-admin-functions.php:814
 msgid "Database repaired"
 msgstr ""
 
-#: adrotate-admin-functions.php:792
+#: adrotate-admin-functions.php:818
 msgid "Adverts evaluated and statuses have been corrected where required"
 msgstr ""
 
-#: adrotate-admin-functions.php:796
+#: adrotate-admin-functions.php:822
 msgid "Cleanup complete"
 msgstr ""
 
-#: adrotate-admin-functions.php:800
+#: adrotate-admin-functions.php:826
 msgid "Scheduled tasks reset"
 msgstr ""
 
-#: adrotate-admin-functions.php:804
+#: adrotate-admin-functions.php:830
 msgid "If there were any 3rd party plugins interfering with AdRotate they have been disabled"
 msgstr ""
 
-#: adrotate-admin-functions.php:808
+#: adrotate-admin-functions.php:834
 msgid "Database updated"
 msgstr ""
 
-#: adrotate-admin-functions.php:812
+#: adrotate-admin-functions.php:838
 msgid "Database and core settings updated"
 msgstr ""
 
-#: adrotate-admin-functions.php:812
+#: adrotate-admin-functions.php:838
 msgid "Thanks for updating AdRotate Banner Manager!"
 msgstr ""
 
-#: adrotate-admin-functions.php:812
+#: adrotate-admin-functions.php:838
 msgid "If you run into any issues with the new version please send a email through the support dashboard as soon as possible with any errors or symptoms you encounter."
 msgstr ""
 
-#: adrotate-admin-functions.php:817
+#: adrotate-admin-functions.php:843
 msgid "Action prohibited"
 msgstr ""
 
-#: adrotate-admin-functions.php:821
+#: adrotate-admin-functions.php:847
 msgid "The advert was saved but has an issue which might prevent it from working properly. Review the colored advert."
 msgstr ""
 
-#: adrotate-admin-functions.php:825
+#: adrotate-admin-functions.php:851
 msgid "No data found in selected time period"
 msgstr ""
 
-#: adrotate-admin-functions.php:829
+#: adrotate-admin-functions.php:855
 msgid "Database can only be optimized or cleaned once every hour"
 msgstr ""
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:859
 msgid "Form can not be (partially) empty!"
 msgstr ""
 
-#: adrotate-admin-functions.php:837
+#: adrotate-admin-functions.php:863
 msgid "No file uploaded."
 msgstr ""
 
-#: adrotate-admin-functions.php:841
+#: adrotate-admin-functions.php:867
 msgid "No adverts found."
 msgstr ""
 
-#: adrotate-admin-functions.php:845
+#: adrotate-admin-functions.php:871
 msgid "Wrong file type. No file uploaded."
 msgstr ""
 
-#: adrotate-admin-functions.php:849
+#: adrotate-admin-functions.php:875
 msgid "No file selected or file is too large."
 msgstr ""
 
-#: adrotate-admin-functions.php:853
+#: adrotate-admin-functions.php:879
 msgid "There was an error unzipping the file. Please try again later."
 msgstr ""
 
-#: adrotate-admin-functions.php:857
+#: adrotate-admin-functions.php:883
 msgid "The advert hash is not usable or is missing required data. Please copy the hash correctly and try again."
 msgstr ""
 
-#: adrotate-admin-functions.php:861
+#: adrotate-admin-functions.php:887
 msgid "The advert hash can not be used on the same site as it originated from or is not a valid hash for importing."
 msgstr ""
 
-#: adrotate-admin-functions.php:865
+#: adrotate-admin-functions.php:891
 msgid "Unexpected error"
 msgstr ""
 
@@ -457,104 +405,108 @@ msgstr ""
 msgid "Fill in the ID of the type you want to display!"
 msgstr ""
 
-#: adrotate.php:107 adrotate.php:167
+#: adrotate.php:108 adrotate.php:166
 msgid "Manage Adverts"
 msgstr ""
 
-#: adrotate.php:108 adrotate.php:287 dashboard/publisher/groups-main.php:12
+#: adrotate.php:109 adrotate.php:226 dashboard/publisher/manage-groups.php:12
 msgid "Manage Groups"
 msgstr ""
 
-#: adrotate.php:109 adrotate.php:325 dashboard/publisher/schedules-main.php:12
+#: adrotate.php:110 adrotate.php:260
+#: dashboard/publisher/manage-schedules.php:12
 msgid "Manage Schedules"
 msgstr ""
 
-#: adrotate.php:110
+#: adrotate.php:111
 msgid "Manage Media"
 msgstr ""
 
-#: adrotate.php:111 adrotate.php:500 dashboard/adrotatepro.php:110
-#: dashboard/publisher/adverts-edit.php:184
+#: adrotate.php:112 adrotate.php:422 dashboard/adrotatepro.php:110
+#: dashboard/publisher/manage-adverts-edit.php:186
 #: dashboard/publisher/statistics-main.php:23
 #: dashboard/settings/statistics.php:17
 msgid "Statistics"
 msgstr ""
 
-#: adrotate.php:112 adrotate.php:230 adrotate.php:295
+#: adrotate.php:113 adrotate.php:177 adrotate.php:234
 msgid "Get AdRotate Pro"
 msgstr ""
 
-#: adrotate.php:113
+#: adrotate.php:114
 msgid "Support"
 msgstr ""
 
-#: adrotate.php:114
+#: adrotate.php:115 dashboard/settings/general.php:23
+#: dashboard/settings/misc.php:22
 msgid "Settings"
 msgstr ""
 
-#: adrotate.php:124
+#: adrotate.php:125
 msgid "Get AdRotate Professional"
 msgstr ""
 
-#: adrotate.php:227 adrotate.php:293
+#: adrotate.php:174 adrotate.php:232
 msgid "Manage"
 msgstr ""
 
-#: adrotate.php:228
+#: adrotate.php:175
 msgid "Advert Generator"
 msgstr ""
 
-#: adrotate.php:229 dashboard/publisher/adverts-edit.php:114
+#: adrotate.php:176 dashboard/publisher/manage-adverts-edit.php:116
 msgid "New Advert"
 msgstr ""
 
-#: adrotate.php:294
+#: adrotate.php:233
 msgid "Add New"
 msgstr ""
 
-#: adrotate.php:361
+#: adrotate.php:291
 msgid "Manage Media and Assets"
 msgstr ""
 
-#: adrotate.php:365
+#: adrotate.php:295
 msgid "Upload images to the AdRotate Pro banners folder from here. This is useful if you have HTML5 adverts containing multiple files."
 msgstr ""
 
-#: adrotate.php:406
+#: adrotate.php:331
 msgid "Advert Statistics"
 msgstr ""
 
-#: adrotate.php:449
+#: adrotate.php:371
 msgid "AdRotate Support"
 msgstr ""
 
-#: adrotate.php:493
+#: adrotate.php:415
 msgid "AdRotate Settings"
 msgstr ""
 
-#: adrotate.php:498 dashboard/publisher/statistics-main.php:28
+#: adrotate.php:420 dashboard/publisher/statistics-main.php:28
 msgid "General"
 msgstr ""
 
-#: adrotate.php:499 dashboard/adrotatepro.php:118
-#: dashboard/settings/notifications.php:18
+#: adrotate.php:421 dashboard/adrotatepro.php:118
+#: dashboard/settings/notifications.php:17
 msgid "Notifications"
 msgstr ""
 
-#: adrotate.php:501 dashboard/adrotatepro.php:86
-#: dashboard/publisher/groups-edit.php:205
+#: adrotate.php:423 dashboard/adrotatepro.php:86
+#: dashboard/publisher/manage-groups-edit.php:201
+#: dashboard/settings/geotargeting.php:17
 msgid "Geo Targeting"
 msgstr ""
 
-#: adrotate.php:502 dashboard/settings/roles.php:17
+#: adrotate.php:424 dashboard/settings/roles.php:17
 msgid "Access Roles"
 msgstr ""
 
-#: adrotate.php:503 dashboard/settings/misc.php:16
+#: adrotate.php:425 dashboard/settings/misc.php:16
 msgid "Miscellaneous"
 msgstr ""
 
-#: adrotate.php:504 dashboard/settings/maintenance.php:15
+#: adrotate.php:426 dashboard/settings/maintenance.php:17
+#: dashboard/settings/maintenance.php:79
 msgid "Maintenance"
 msgstr ""
 
@@ -634,92 +586,92 @@ msgstr ""
 msgid "When you enable email notifications in AdRotate Professional you get an email alert when adverts expire or need your attention. Get notified when adverts expire, have errors or when advertisers create new adverts. This is of-course on top of the built-in dashboard notifications and error detection. AdRotate Pro detects a lot more errors and faults in adcode and provides basic advise on how to fix those issues."
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:15
+#: dashboard/publisher/manage-adverts-disabled.php:15
 msgid "Disabled Adverts"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:16
+#: dashboard/publisher/manage-adverts-disabled.php:16
 msgid "These adverts are temporarily disabled. You can archive adverts to permanently disable them."
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:16
+#: dashboard/publisher/manage-adverts-disabled.php:16
 msgid "Archiving adverts moves gathered statistics away from the live database which may speed up your website."
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:21
-#: dashboard/publisher/adverts-error.php:20
-#: dashboard/publisher/adverts-main.php:20
-#: dashboard/publisher/groups-main.php:20
-#: dashboard/publisher/schedules-main.php:21
+#: dashboard/publisher/manage-adverts-disabled.php:21
+#: dashboard/publisher/manage-adverts-error.php:20
+#: dashboard/publisher/manage-adverts.php:82
+#: dashboard/publisher/manage-groups.php:20
+#: dashboard/publisher/manage-schedules.php:21
 msgid "Bulk Actions"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:22
-#: dashboard/publisher/adverts-edit.php:192
+#: dashboard/publisher/manage-adverts-disabled.php:22
+#: dashboard/publisher/manage-adverts-edit.php:194
 msgid "Activate"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:23
-#: dashboard/publisher/adverts-error.php:22
-#: dashboard/publisher/adverts-main.php:22 dashboard/publisher/media.php:68
+#: dashboard/publisher/manage-adverts-disabled.php:23
+#: dashboard/publisher/manage-adverts-error.php:22
+#: dashboard/publisher/manage-adverts.php:84 dashboard/publisher/media.php:68
 #: dashboard/publisher/media.php:73 dashboard/publisher/media.php:77
 msgid "Delete"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:24
-#: dashboard/publisher/adverts-error.php:23
-#: dashboard/publisher/adverts-main.php:23
+#: dashboard/publisher/manage-adverts-disabled.php:24
+#: dashboard/publisher/manage-adverts-error.php:23
+#: dashboard/publisher/manage-adverts.php:85
 msgid "Reset stats"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:26
-#: dashboard/publisher/adverts-error.php:30
-#: dashboard/publisher/adverts-main.php:29
-#: dashboard/publisher/groups-main.php:24
-#: dashboard/publisher/schedules-main.php:22
+#: dashboard/publisher/manage-adverts-disabled.php:26
+#: dashboard/publisher/manage-adverts-error.php:30
+#: dashboard/publisher/manage-adverts.php:91
+#: dashboard/publisher/manage-groups.php:24
+#: dashboard/publisher/manage-schedules.php:22
 msgid "Go"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:36
-#: dashboard/publisher/adverts-edit.php:269
-#: dashboard/publisher/adverts-error.php:40
-#: dashboard/publisher/adverts-main.php:38
-#: dashboard/publisher/groups-edit.php:362
-#: dashboard/publisher/groups-main.php:32
-#: dashboard/publisher/schedules-main.php:31
+#: dashboard/publisher/manage-adverts-disabled.php:36
+#: dashboard/publisher/manage-adverts-edit.php:271
+#: dashboard/publisher/manage-adverts-error.php:40
+#: dashboard/publisher/manage-adverts.php:100
+#: dashboard/publisher/manage-groups-edit.php:358
+#: dashboard/publisher/manage-groups.php:32
+#: dashboard/publisher/manage-schedules.php:31
 msgid "ID"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:37
-#: dashboard/publisher/adverts-error.php:42
-#: dashboard/publisher/adverts-main.php:39
-#: dashboard/publisher/schedules-main.php:32
+#: dashboard/publisher/manage-adverts-disabled.php:37
+#: dashboard/publisher/manage-adverts-error.php:42
+#: dashboard/publisher/manage-adverts.php:101
+#: dashboard/publisher/manage-schedules.php:32
 msgid "Start / End"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:38
-#: dashboard/publisher/adverts-edit.php:122
-#: dashboard/publisher/adverts-edit.php:270
-#: dashboard/publisher/adverts-error.php:41
-#: dashboard/publisher/adverts-main.php:40
-#: dashboard/publisher/groups-edit.php:65
-#: dashboard/publisher/groups-edit.php:363
-#: dashboard/publisher/groups-main.php:33 dashboard/publisher/media.php:48
-#: dashboard/publisher/schedules-main.php:33
+#: dashboard/publisher/manage-adverts-disabled.php:38
+#: dashboard/publisher/manage-adverts-edit.php:124
+#: dashboard/publisher/manage-adverts-edit.php:272
+#: dashboard/publisher/manage-adverts-error.php:41
+#: dashboard/publisher/manage-adverts.php:102
+#: dashboard/publisher/manage-groups-edit.php:61
+#: dashboard/publisher/manage-groups-edit.php:359
+#: dashboard/publisher/manage-groups.php:33
+#: dashboard/publisher/manage-schedules.php:33 dashboard/publisher/media.php:48
 msgid "Name"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:40
-#: dashboard/publisher/adverts-main.php:42
-#: dashboard/publisher/groups-edit.php:367
-#: dashboard/publisher/groups-main.php:36
+#: dashboard/publisher/manage-adverts-disabled.php:40
+#: dashboard/publisher/manage-adverts.php:104
+#: dashboard/publisher/manage-groups-edit.php:363
+#: dashboard/publisher/manage-groups.php:36
 msgid "Shown"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:41
-#: dashboard/publisher/adverts-main.php:44
-#: dashboard/publisher/groups-edit.php:368
-#: dashboard/publisher/groups-main.php:38
+#: dashboard/publisher/manage-adverts-disabled.php:41
+#: dashboard/publisher/manage-adverts.php:106
+#: dashboard/publisher/manage-groups-edit.php:364
+#: dashboard/publisher/manage-groups.php:38
 #: dashboard/publisher/statistics-advert.php:52
 #: dashboard/publisher/statistics-advert.php:58
 #: dashboard/publisher/statistics-advert.php:72
@@ -737,8 +689,8 @@ msgstr ""
 msgid "Clicks"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:42
-#: dashboard/publisher/adverts-main.php:46
+#: dashboard/publisher/manage-adverts-disabled.php:42
+#: dashboard/publisher/manage-adverts.php:108
 #: dashboard/publisher/statistics-advert.php:53
 #: dashboard/publisher/statistics-advert.php:59
 #: dashboard/publisher/statistics-advert.php:73
@@ -756,947 +708,1007 @@ msgstr ""
 msgid "CTR"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:62
-#: dashboard/publisher/adverts-error.php:57
-#: dashboard/publisher/adverts-main.php:68
-#: dashboard/publisher/groups-main.php:79
+#: dashboard/publisher/manage-adverts-disabled.php:62
+#: dashboard/publisher/manage-adverts-error.php:58
+#: dashboard/publisher/manage-adverts.php:130
+#: dashboard/publisher/manage-groups.php:79
 msgid "Edit"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:62
-#: dashboard/publisher/adverts-error.php:57
-#: dashboard/publisher/adverts-main.php:68
-#: dashboard/publisher/groups-main.php:79
+#: dashboard/publisher/manage-adverts-disabled.php:62
+#: dashboard/publisher/manage-adverts-error.php:58
+#: dashboard/publisher/manage-adverts.php:130
+#: dashboard/publisher/manage-groups.php:79
 msgid "Stats"
 msgstr ""
 
-#: dashboard/publisher/adverts-disabled.php:62
-#: dashboard/publisher/adverts-error.php:57
-#: dashboard/publisher/adverts-main.php:68
+#: dashboard/publisher/manage-adverts-disabled.php:62
+#: dashboard/publisher/manage-adverts-error.php:58
+#: dashboard/publisher/manage-adverts.php:130
 msgid "Groups:"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:50
+#: dashboard/publisher/manage-adverts-edit.php:52
 msgid "The AdCode cannot be empty!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:54
+#: dashboard/publisher/manage-adverts-edit.php:56
 msgid "You did not use %asset% in your AdCode but did select a file to use!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:58
+#: dashboard/publisher/manage-adverts-edit.php:60
 msgid "You did use %asset% in your AdCode but did not select a file to use!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:62
+#: dashboard/publisher/manage-adverts-edit.php:64
 msgid "There is a problem saving the image. Please re-select your image and re-save the advert!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:66
+#: dashboard/publisher/manage-adverts-edit.php:68
 msgid "This kind of advert can not have statistics enabled in AdRotate. Separate impression counting is available in AdRotate Pro."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:72
+#: dashboard/publisher/manage-adverts-edit.php:74
 msgid "This advert is expired and currently not shown on your website!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:76
+#: dashboard/publisher/manage-adverts-edit.php:78
 msgid "The advert will expire in less than 2 days!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:80
+#: dashboard/publisher/manage-adverts-edit.php:82
 msgid "This advert will expire in less than 7 days!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:84
+#: dashboard/publisher/manage-adverts-edit.php:86
 msgid "This advert has been disabled and does not rotate on your site!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:88
+#: dashboard/publisher/manage-adverts-edit.php:90
 msgid "AdRotate cannot find an error but the advert is marked erroneous, try re-saving the ad!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:116
+#: dashboard/publisher/manage-adverts-edit.php:118
 msgid "Edit Advert"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:131
+#: dashboard/publisher/manage-adverts-edit.php:133
 msgid "AdCode"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:136
+#: dashboard/publisher/manage-adverts-edit.php:138
 msgid "Basic Examples:"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:137
+#: dashboard/publisher/manage-adverts-edit.php:139
 msgid "Click any of the examples to use it."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:146
+#: dashboard/publisher/manage-adverts-edit.php:148
 msgid "Useful tags"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:148
+#: dashboard/publisher/manage-adverts-edit.php:150
 msgid "Insert the advert ID Number."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:148
+#: dashboard/publisher/manage-adverts-edit.php:150
 msgid "Use this tag when selecting a image below."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:148
+#: dashboard/publisher/manage-adverts-edit.php:150
 msgid "Insert the advert name."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:148
+#: dashboard/publisher/manage-adverts-edit.php:150
 msgid "Insert a random string. Useful for DFP/DoubleClick type adverts."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:148
+#: dashboard/publisher/manage-adverts-edit.php:150
 msgid "Add inside the &lt;a&gt; tag to open the advert in a new window."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:148
+#: dashboard/publisher/manage-adverts-edit.php:150
 msgid "Add inside the &lt;a&gt; tag to tell crawlers to ignore this link."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:149
+#: dashboard/publisher/manage-adverts-edit.php:151
 msgid "Place the cursor where you want to add a tag and click to add it to your AdCode."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:154
+#: dashboard/publisher/manage-adverts-edit.php:156
 msgid "Preview"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:157
+#: dashboard/publisher/manage-adverts-edit.php:159
 msgid "Note: While this preview is an accurate one, it might look different then it does on the website."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:158
+#: dashboard/publisher/manage-adverts-edit.php:160
 msgid "This is because of CSS differences. Your themes CSS file is not active here!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:163
+#: dashboard/publisher/manage-adverts-edit.php:165
 msgid "Banner asset"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:165
+#: dashboard/publisher/manage-adverts-edit.php:167
 msgid "WordPress media:"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:165
+#: dashboard/publisher/manage-adverts-edit.php:167
 msgid "Select Banner"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:167
+#: dashboard/publisher/manage-adverts-edit.php:169
 msgid "- OR -"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:168
+#: dashboard/publisher/manage-adverts-edit.php:170
 msgid "Banner folder:"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:169
+#: dashboard/publisher/manage-adverts-edit.php:171
 msgid "No image selected"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:179
+#: dashboard/publisher/manage-adverts-edit.php:181
 msgid "Use %asset% in the adcode instead of the file path."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:179
+#: dashboard/publisher/manage-adverts-edit.php:181
 msgid "Use either the text field or the dropdown. If the textfield has content that field has priority."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:186
+#: dashboard/publisher/manage-adverts-edit.php:188
 msgid "Count clicks and impressions."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:187
+#: dashboard/publisher/manage-adverts-edit.php:189
 msgid "Click counting does not work for Javascript/html5 adverts such as those provided by Google AdSense/DFP/DoubleClick."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:195
+#: dashboard/publisher/manage-adverts-edit.php:197
 msgid "Enabled, this ad will be visible"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:196
+#: dashboard/publisher/manage-adverts-edit.php:198
 msgid "Disabled, do not show this advert anywhere"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:202
+#: dashboard/publisher/manage-adverts-edit.php:204
 msgid "Target your audience with Geo Targeting and easily select which devices and mobile operating systems the advert should show on with AdRotate Pro!"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:202
-#: dashboard/publisher/adverts-edit.php:240
-#: dashboard/publisher/groups-edit.php:227
+#: dashboard/publisher/manage-adverts-edit.php:204
+#: dashboard/publisher/manage-adverts-edit.php:242
+#: dashboard/publisher/manage-groups-edit.php:223
 msgid "Upgrade now"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:204
+#: dashboard/publisher/manage-adverts-edit.php:206
 msgid "Schedule your advert"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:205
+#: dashboard/publisher/manage-adverts-edit.php:207
 msgid "Time uses a 24 hour clock. When you're used to the AM/PM system keep this in mind: If the start or end time is after lunch, add 12 hours. 2PM is 14:00 hours. 6AM is 6:00 hours."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:209
+#: dashboard/publisher/manage-adverts-edit.php:211
 msgid "Start date"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:213
+#: dashboard/publisher/manage-adverts-edit.php:215
 msgid "End date"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:219
+#: dashboard/publisher/manage-adverts-edit.php:221
 msgid "Start time"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:224
+#: dashboard/publisher/manage-adverts-edit.php:226
 msgid "End time"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:232
+#: dashboard/publisher/manage-adverts-edit.php:234
 msgid "Maximum Clicks"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:233
-#: dashboard/publisher/adverts-edit.php:235
+#: dashboard/publisher/manage-adverts-edit.php:235
+#: dashboard/publisher/manage-adverts-edit.php:237
 msgid "Leave empty or 0 to skip this."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:234
+#: dashboard/publisher/manage-adverts-edit.php:236
 msgid "Maximum Impressions"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:240
+#: dashboard/publisher/manage-adverts-edit.php:242
 msgid "Plan ahead and create multiple and more advanced schedules for each advert with AdRotate Pro."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:242
-#: dashboard/publisher/groups-edit.php:157
-#: dashboard/publisher/groups-edit.php:314
+#: dashboard/publisher/manage-adverts-edit.php:244
+#: dashboard/publisher/manage-groups-edit.php:153
+#: dashboard/publisher/manage-groups-edit.php:310
 msgid "Usage"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:246
-#: dashboard/publisher/groups-edit.php:161
-#: dashboard/publisher/groups-edit.php:318
+#: dashboard/publisher/manage-adverts-edit.php:248
+#: dashboard/publisher/manage-groups-edit.php:157
+#: dashboard/publisher/manage-groups-edit.php:314
 msgid "Widget"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:247
+#: dashboard/publisher/manage-adverts-edit.php:249
 msgid "Drag the AdRotate widget to the sidebar where you want to place the advert and select the advert or the group the advert is in."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:250
-#: dashboard/publisher/groups-edit.php:165
-#: dashboard/publisher/groups-edit.php:322
+#: dashboard/publisher/manage-adverts-edit.php:252
+#: dashboard/publisher/manage-groups-edit.php:161
+#: dashboard/publisher/manage-groups-edit.php:318
 msgid "In a post or page"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:252
-#: dashboard/publisher/groups-edit.php:167
-#: dashboard/publisher/groups-edit.php:324
+#: dashboard/publisher/manage-adverts-edit.php:254
+#: dashboard/publisher/manage-groups-edit.php:163
+#: dashboard/publisher/manage-groups-edit.php:320
 msgid "Directly in a theme"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:259
-#: dashboard/publisher/adverts-edit.php:302
+#: dashboard/publisher/manage-adverts-edit.php:261
+#: dashboard/publisher/manage-adverts-edit.php:304
 msgid "Save Advert"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:260
-#: dashboard/publisher/adverts-edit.php:303
-#: dashboard/publisher/adverts-generator.php:149
-#: dashboard/publisher/groups-edit.php:175
-#: dashboard/publisher/groups-edit.php:332
-#: dashboard/publisher/groups-edit.php:426
+#: dashboard/publisher/manage-adverts-edit.php:262
+#: dashboard/publisher/manage-adverts-edit.php:305
+#: dashboard/publisher/manage-adverts-generator.php:149
+#: dashboard/publisher/manage-groups-edit.php:171
+#: dashboard/publisher/manage-groups-edit.php:328
+#: dashboard/publisher/manage-groups-edit.php:422
 msgid "Cancel"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:264
+#: dashboard/publisher/manage-adverts-edit.php:266
 msgid "Select Groups"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:271
-#: dashboard/publisher/groups-main.php:34
-#: dashboard/publisher/schedules-main.php:34
+#: dashboard/publisher/manage-adverts-edit.php:273
+#: dashboard/publisher/manage-groups.php:34
+#: dashboard/publisher/manage-schedules.php:34
 #: dashboard/publisher/statistics-main.php:35
 msgid "Adverts"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:280
-#: dashboard/publisher/groups-main.php:62
-#: dashboard/settings/geotargeting.php:54 dashboard/settings/statistics.php:25
+#: dashboard/publisher/manage-adverts-edit.php:282
+#: dashboard/publisher/manage-groups.php:62
+#: dashboard/settings/statistics.php:29
 msgid "Default"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:281
-#: dashboard/publisher/groups-main.php:63
+#: dashboard/publisher/manage-adverts-edit.php:283
+#: dashboard/publisher/manage-groups.php:63
 msgid "Dynamic"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:281
-#: dashboard/publisher/groups-main.php:63
+#: dashboard/publisher/manage-adverts-edit.php:283
+#: dashboard/publisher/manage-groups.php:63
 msgid "second rotation"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:282
-#: dashboard/publisher/groups-main.php:64
+#: dashboard/publisher/manage-adverts-edit.php:284
+#: dashboard/publisher/manage-groups.php:64
 msgid "Block"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:282
-#: dashboard/publisher/groups-main.php:64
+#: dashboard/publisher/manage-adverts-edit.php:284
+#: dashboard/publisher/manage-groups.php:64
 msgid "grid"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:283
-#: dashboard/publisher/groups-edit.php:234
-#: dashboard/publisher/groups-main.php:65
+#: dashboard/publisher/manage-adverts-edit.php:285
+#: dashboard/publisher/manage-groups-edit.php:230
+#: dashboard/publisher/manage-groups.php:65
 msgid "Post Injection"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:284
+#: dashboard/publisher/manage-adverts-edit.php:286
 msgid "Geolocation"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:291
-#: dashboard/publisher/groups-edit.php:74
-#: dashboard/publisher/groups-main.php:79
+#: dashboard/publisher/manage-adverts-edit.php:293
+#: dashboard/publisher/manage-groups-edit.php:70
+#: dashboard/publisher/manage-groups.php:79
 msgid "Mode"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:308
-#: dashboard/publisher/adverts-generator.php:132
+#: dashboard/publisher/manage-adverts-edit.php:310
+#: dashboard/publisher/manage-adverts-generator.php:132
 msgid "Portability"
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:309
+#: dashboard/publisher/manage-adverts-edit.php:311
 msgid "This long code is your advert. It includes all settings from above except the schedule and group selection. You can import this hash into another setup of AdRotate or AdRotate Professional. Do not alter the hash or the advert will not work. In most browsers you can tripleclick in the field to select the whole thing. You can paste the hash into the 'Advert Hash' field in the Advert Generator of another AdRotate setup."
 msgstr ""
 
-#: dashboard/publisher/adverts-edit.php:313
-#: dashboard/publisher/adverts-generator.php:138
+#: dashboard/publisher/manage-adverts-edit.php:315
+#: dashboard/publisher/manage-adverts-generator.php:138
 msgid "Advert hash"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:12
+#: dashboard/publisher/manage-adverts-error.php:12
 msgid "Adverts that need attention"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:13
+#: dashboard/publisher/manage-adverts-error.php:13
 msgid "The adverts listed here are currently not showing on your website. This is because they are almost expired, have expired or have configuration issues."
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:13
+#: dashboard/publisher/manage-adverts-error.php:13
 msgid "To fix the issue edit each advert and look for one or more notification at the top to see what AdRotate thinks is wrong with it."
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:21
-#: dashboard/publisher/adverts-main.php:21
+#: dashboard/publisher/manage-adverts-error.php:21
+#: dashboard/publisher/manage-adverts.php:83
 msgid "Deactivate"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:24
-#: dashboard/publisher/adverts-main.php:24
+#: dashboard/publisher/manage-adverts-error.php:24
+#: dashboard/publisher/manage-adverts.php:86
 msgid "-- Renew --"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:25
-#: dashboard/publisher/adverts-main.php:25
+#: dashboard/publisher/manage-adverts-error.php:25
+#: dashboard/publisher/manage-adverts.php:87
 msgid "For 1 year"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:26
-#: dashboard/publisher/adverts-main.php:26
+#: dashboard/publisher/manage-adverts-error.php:26
+#: dashboard/publisher/manage-adverts.php:88
 msgid "For 180 days"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:27
-#: dashboard/publisher/adverts-main.php:27
+#: dashboard/publisher/manage-adverts-error.php:27
+#: dashboard/publisher/manage-adverts.php:89
 msgid "For 30 days"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:28
-#: dashboard/publisher/adverts-main.php:28
+#: dashboard/publisher/manage-adverts-error.php:28
+#: dashboard/publisher/manage-adverts.php:90
 msgid "For 7 days"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:65
-#: dashboard/publisher/groups-edit.php:419
+#: dashboard/publisher/manage-adverts-error.php:69
+#: dashboard/publisher/manage-groups-edit.php:415
 msgid "Configuration errors"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:66
-#: dashboard/publisher/groups-edit.php:420
-#: dashboard/publisher/schedules-main.php:89
+#: dashboard/publisher/manage-adverts-error.php:70
+#: dashboard/publisher/manage-groups-edit.php:416
+#: dashboard/publisher/manage-schedules.php:89
 msgid "Expires soon"
 msgstr ""
 
-#: dashboard/publisher/adverts-error.php:67
-#: dashboard/publisher/groups-edit.php:421
-#: dashboard/publisher/schedules-main.php:90
-#: dashboard/settings/maintenance.php:31
+#: dashboard/publisher/manage-adverts-error.php:71
+#: dashboard/publisher/manage-groups-edit.php:417
+#: dashboard/publisher/manage-schedules.php:90
+#: dashboard/settings/maintenance.php:30
 msgid "Expired"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:36
+#: dashboard/publisher/manage-adverts-generator.php:36
 msgid "Generate Advert Code"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:41
+#: dashboard/publisher/manage-adverts-generator.php:41
 msgid "Required"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:47
+#: dashboard/publisher/manage-adverts-generator.php:47
 msgid "Banner image"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:50
+#: dashboard/publisher/manage-adverts-generator.php:50
 msgid "Select advert image"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:57
+#: dashboard/publisher/manage-adverts-generator.php:57
 msgid "Is your file not listed? Upload it to the banners folder using (s)FTP."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:61
+#: dashboard/publisher/manage-adverts-generator.php:61
 msgid "Target website"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:63
+#: dashboard/publisher/manage-adverts-generator.php:63
 msgid "Where does the person clicking the advert go?"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:70
+#: dashboard/publisher/manage-adverts-generator.php:70
 msgid "Viewports"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:70
-#: dashboard/publisher/groups-edit.php:218
-#: dashboard/settings/notifications.php:48
+#: dashboard/publisher/manage-adverts-generator.php:70
+#: dashboard/publisher/manage-groups-edit.php:214
 msgid "Available in AdRotate Pro"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:76
+#: dashboard/publisher/manage-adverts-generator.php:76
 msgid "Smaller Devices"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:79
-#: dashboard/publisher/adverts-generator.php:87
-#: dashboard/publisher/adverts-generator.php:95
+#: dashboard/publisher/manage-adverts-generator.php:79
+#: dashboard/publisher/manage-adverts-generator.php:87
+#: dashboard/publisher/manage-adverts-generator.php:95
 msgid "No file selected"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:80
+#: dashboard/publisher/manage-adverts-generator.php:80
 msgid "Smaller smartphones and tablets with a viewport of up to 480px wide (up-to 1440px resolution)."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:84
+#: dashboard/publisher/manage-adverts-generator.php:84
 msgid "Medium sized Devices"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:88
+#: dashboard/publisher/manage-adverts-generator.php:88
 msgid "Larger smartphones or Small tablets with a viewport of up to 960px wide (up-to 1536px resolution)."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:92
+#: dashboard/publisher/manage-adverts-generator.php:92
 msgid "Larger Devices"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:96
+#: dashboard/publisher/manage-adverts-generator.php:96
 msgid "Small laptops and Larger tablets with a viewport of up to 1280px wide (up-to 2048px resolution)."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:100
+#: dashboard/publisher/manage-adverts-generator.php:100
 #: dashboard/publisher/media.php:37
 msgid "Important:"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:100
+#: dashboard/publisher/manage-adverts-generator.php:100
 msgid "All sizes are optional, but it is highly recommended to use at least the small and medium size. Devices with viewports greater than 1280px will use the full sized banner."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:100
+#: dashboard/publisher/manage-adverts-generator.php:100
 msgid "Are your files not listed? Upload them via the AdRotate Media Manager. For your convenience, use easy to use filenames."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:105
+#: dashboard/publisher/manage-adverts-generator.php:105
 msgid "Optional"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:111
+#: dashboard/publisher/manage-adverts-generator.php:111
 msgid "Target window"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:113
+#: dashboard/publisher/manage-adverts-generator.php:113
 msgid "Open the advert in a new window?"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:113
+#: dashboard/publisher/manage-adverts-generator.php:113
 msgid "(Recommended)"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:117
+#: dashboard/publisher/manage-adverts-generator.php:117
 msgid "NoFollow"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:119
+#: dashboard/publisher/manage-adverts-generator.php:119
 msgid "Tell crawlers and search engines not to follow the target website url?"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:119
-#: dashboard/publisher/adverts-generator.php:125
+#: dashboard/publisher/manage-adverts-generator.php:119
+#: dashboard/publisher/manage-adverts-generator.php:125
 msgid "(Available in AdRotate Pro)"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:119
+#: dashboard/publisher/manage-adverts-generator.php:119
 msgid "Letting bots (Such as Googlebot) index paid links may negatively affect your SEO and PageRank."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:123
+#: dashboard/publisher/manage-adverts-generator.php:123
 msgid "Alt and Title"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:125
+#: dashboard/publisher/manage-adverts-generator.php:125
 msgid "Add an alt and title attribute based on the asset name?"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:125
+#: dashboard/publisher/manage-adverts-generator.php:125
 msgid "Some bots/crawlers use them as a descriptive measure to see what the code is about."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:140
+#: dashboard/publisher/manage-adverts-generator.php:140
 msgid "To import a ready made advert, enter a advert hash from another AdRotate setup..."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:148
+#: dashboard/publisher/manage-adverts-generator.php:148
 msgid "Generate and Configure Advert"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:149
+#: dashboard/publisher/manage-adverts-generator.php:149
 msgid "Always test your adverts before activating them."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:152
+#: dashboard/publisher/manage-adverts-generator.php:152
 msgid "CAUTION:"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:152
+#: dashboard/publisher/manage-adverts-generator.php:152
 msgid "While the Code Generator has been tested and works, code generation, as always, is a interpretation of user input. If you provide the correct bits and pieces, a working advert may be generated. If you leave fields empty or insert the wrong info you probably end up with a broken advert."
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:152
+#: dashboard/publisher/manage-adverts-generator.php:152
 msgid "NOTE:"
 msgstr ""
 
-#: dashboard/publisher/adverts-generator.php:152
+#: dashboard/publisher/manage-adverts-generator.php:152
 msgid "If you insert an Advert Hash, all other fields are ignored."
 msgstr ""
 
-#: dashboard/publisher/adverts-main.php:12
+#: dashboard/publisher/manage-adverts.php:74
 msgid "Active Adverts"
 msgstr ""
 
-#: dashboard/publisher/adverts-main.php:43
-#: dashboard/publisher/adverts-main.php:45
-#: dashboard/publisher/groups-main.php:37
-#: dashboard/publisher/groups-main.php:39
+#: dashboard/publisher/manage-adverts.php:105
+#: dashboard/publisher/manage-adverts.php:107
+#: dashboard/publisher/manage-groups.php:37
+#: dashboard/publisher/manage-groups.php:39
 #: dashboard/publisher/statistics-advert.php:44
 #: dashboard/publisher/statistics-group.php:51
 msgid "Today"
 msgstr ""
 
-#: dashboard/publisher/adverts-main.php:89
+#: dashboard/publisher/manage-adverts.php:154
 msgid "No adverts created yet!"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:41
+#: dashboard/publisher/manage-groups-edit.php:38
 msgid "Your block is a 1x1 grid. Either add more rows or columns or set the group to Default mode."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:44
+#: dashboard/publisher/manage-groups-edit.php:41
 msgid "You have enabled Post Injection but did not select any categories."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:47
+#: dashboard/publisher/manage-groups-edit.php:44
 msgid "You have enabled Page Injection but did not select any pages."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:57
+#: dashboard/publisher/manage-groups-edit.php:53
 msgid "New Group"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:59
+#: dashboard/publisher/manage-groups-edit.php:55
 msgid "Edit Group"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:77
+#: dashboard/publisher/manage-groups-edit.php:73
 msgid "Default - Show one ad at a time"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:78
+#: dashboard/publisher/manage-groups-edit.php:74
 msgid "Dynamic Mode - Show a different ad every few seconds"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:79
+#: dashboard/publisher/manage-groups-edit.php:75
 msgid "Block Mode - Show a block of adverts"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:83
+#: dashboard/publisher/manage-groups-edit.php:79
 msgid "Dynamic mode requires jQuery. You can enable this in AdRotate Settings."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:87
+#: dashboard/publisher/manage-groups-edit.php:83
 msgid "Advert size"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:89
+#: dashboard/publisher/manage-groups-edit.php:85
 msgid "pixel(s) wide"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:89
+#: dashboard/publisher/manage-groups-edit.php:85
 msgid "pixel(s) high."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:92
+#: dashboard/publisher/manage-groups-edit.php:88
 msgid "Define the maximum size of the adverts in pixels. Size can be 'auto' (Not recommended)."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:98
+#: dashboard/publisher/manage-groups-edit.php:94
 msgid "Dynamic and Block Mode"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:102
+#: dashboard/publisher/manage-groups-edit.php:98
 msgid "Block size"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:108
+#: dashboard/publisher/manage-groups-edit.php:104
 msgid "rows"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:112
+#: dashboard/publisher/manage-groups-edit.php:108
 msgid "columns"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:115
+#: dashboard/publisher/manage-groups-edit.php:111
 msgid "Block Mode"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:115
+#: dashboard/publisher/manage-groups-edit.php:111
 msgid "Larger blocks will degrade your sites performance! Default: 2/2."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:119
+#: dashboard/publisher/manage-groups-edit.php:115
 msgid "Automated refresh"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:138
+#: dashboard/publisher/manage-groups-edit.php:134
 msgid "seconds."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:141
-#: dashboard/publisher/groups-edit.php:150
+#: dashboard/publisher/manage-groups-edit.php:137
+#: dashboard/publisher/manage-groups-edit.php:146
 msgid "Dynamic Mode"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:141
+#: dashboard/publisher/manage-groups-edit.php:137
 msgid "Load a new advert in this interval without reloading the page. Default: 6."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:145
+#: dashboard/publisher/manage-groups-edit.php:141
 msgid "Repeat impressions"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:147
+#: dashboard/publisher/manage-groups-edit.php:143
 msgid "Count impressions for every cycle of adverts?"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:150
+#: dashboard/publisher/manage-groups-edit.php:146
 msgid "Uncheck this option to only count impressions for the first cycle of adverts."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:155
-#: dashboard/publisher/groups-edit.php:227
+#: dashboard/publisher/manage-groups-edit.php:151
+#: dashboard/publisher/manage-groups-edit.php:223
 msgid "Get access to all features in AdRotate Pro."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:155
+#: dashboard/publisher/manage-groups-edit.php:151
 msgid "Upgrade today"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:162
-#: dashboard/publisher/groups-edit.php:319
+#: dashboard/publisher/manage-groups-edit.php:158
+#: dashboard/publisher/manage-groups-edit.php:315
 msgid "Drag the AdRotate widget to the sidebar you want it in, select 'Group of Adverts' and enter ID"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:174
-#: dashboard/publisher/groups-edit.php:331
-#: dashboard/publisher/groups-edit.php:425
+#: dashboard/publisher/manage-groups-edit.php:170
+#: dashboard/publisher/manage-groups-edit.php:327
+#: dashboard/publisher/manage-groups-edit.php:421
 msgid "Save Group"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:178 dashboard/settings/statistics.php:28
+#: dashboard/publisher/manage-groups-edit.php:174
+#: dashboard/settings/statistics.php:32
 msgid "Advanced"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:182
+#: dashboard/publisher/manage-groups-edit.php:178
 msgid "Advert Margin"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:184
+#: dashboard/publisher/manage-groups-edit.php:180
 msgid "pixel(s)"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:187
+#: dashboard/publisher/manage-groups-edit.php:183
 msgid "A transparent area outside the advert in pixels. Default: 0."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:187
+#: dashboard/publisher/manage-groups-edit.php:183
 msgid "Set to 0 to disable."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:187
+#: dashboard/publisher/manage-groups-edit.php:183
 msgid "Margins are automatically disabled for blocks where required."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:191
+#: dashboard/publisher/manage-groups-edit.php:187
 msgid "Align the group"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:194
+#: dashboard/publisher/manage-groups-edit.php:190
 msgid "None (Default)"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:195
+#: dashboard/publisher/manage-groups-edit.php:191
 msgid "Left"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:196
+#: dashboard/publisher/manage-groups-edit.php:192
 msgid "Right"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:197
+#: dashboard/publisher/manage-groups-edit.php:193
 msgid "Center"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:201
+#: dashboard/publisher/manage-groups-edit.php:197
 msgid "Align the group in your post or page. Using 'center' may affect your margin setting. Not every theme supports this feature."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:206
+#: dashboard/publisher/manage-groups-edit.php:202
 msgid "Enable Geo Targeting for this group."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:207
+#: dashboard/publisher/manage-groups-edit.php:203
 msgid "Do not forget to tell the adverts for which areas they should show."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:210
+#: dashboard/publisher/manage-groups-edit.php:206
 msgid "Mobile Support"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:211
+#: dashboard/publisher/manage-groups-edit.php:207
 msgid "Enable mobile support for this group."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:212
+#: dashboard/publisher/manage-groups-edit.php:208
 msgid "Do not forget to put at least one mobile advert in this group."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:215
+#: dashboard/publisher/manage-groups-edit.php:211
 msgid "Fallback Group"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:222
+#: dashboard/publisher/manage-groups-edit.php:218
 msgid "Select another group to fall back on when all adverts are expired, not in the visitors geographic area or are otherwise unavailable."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:237
-#: dashboard/publisher/groups-edit.php:276
-#: dashboard/settings/geotargeting.php:24
+#: dashboard/publisher/manage-groups-edit.php:233
+#: dashboard/publisher/manage-groups-edit.php:272
 msgid "Disabled"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:238
-#: dashboard/publisher/groups-edit.php:277
+#: dashboard/publisher/manage-groups-edit.php:234
+#: dashboard/publisher/manage-groups-edit.php:273
 msgid "Widget (Pro only)"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:239
-#: dashboard/publisher/groups-edit.php:278
+#: dashboard/publisher/manage-groups-edit.php:235
+#: dashboard/publisher/manage-groups-edit.php:274
 msgid "Before content"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:240
-#: dashboard/publisher/groups-edit.php:279
+#: dashboard/publisher/manage-groups-edit.php:236
+#: dashboard/publisher/manage-groups-edit.php:275
 msgid "After content"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:241
-#: dashboard/publisher/groups-edit.php:280
+#: dashboard/publisher/manage-groups-edit.php:237
+#: dashboard/publisher/manage-groups-edit.php:276
 msgid "Before and after content"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:242
-#: dashboard/publisher/groups-edit.php:281
+#: dashboard/publisher/manage-groups-edit.php:238
+#: dashboard/publisher/manage-groups-edit.php:277
 msgid "Inside the content..."
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:246
-#: dashboard/publisher/groups-edit.php:285
+#: dashboard/publisher/manage-groups-edit.php:242
+#: dashboard/publisher/manage-groups-edit.php:281
 msgid "after the middle paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:247
-#: dashboard/publisher/groups-edit.php:286
+#: dashboard/publisher/manage-groups-edit.php:243
+#: dashboard/publisher/manage-groups-edit.php:282
 msgid "after the 1st paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:248
-#: dashboard/publisher/groups-edit.php:287
+#: dashboard/publisher/manage-groups-edit.php:244
+#: dashboard/publisher/manage-groups-edit.php:283
 msgid "after the 2nd paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:249
-#: dashboard/publisher/groups-edit.php:288
+#: dashboard/publisher/manage-groups-edit.php:245
+#: dashboard/publisher/manage-groups-edit.php:284
 msgid "after the 3rd paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:250
-#: dashboard/publisher/groups-edit.php:289
+#: dashboard/publisher/manage-groups-edit.php:246
+#: dashboard/publisher/manage-groups-edit.php:285
 msgid "after the 4th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:251
-#: dashboard/publisher/groups-edit.php:290
+#: dashboard/publisher/manage-groups-edit.php:247
+#: dashboard/publisher/manage-groups-edit.php:286
 msgid "after the 5th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:252
-#: dashboard/publisher/groups-edit.php:291
+#: dashboard/publisher/manage-groups-edit.php:248
+#: dashboard/publisher/manage-groups-edit.php:287
 msgid "after the 6th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:253
-#: dashboard/publisher/groups-edit.php:292
+#: dashboard/publisher/manage-groups-edit.php:249
+#: dashboard/publisher/manage-groups-edit.php:288
 msgid "after the 7th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:254
-#: dashboard/publisher/groups-edit.php:293
+#: dashboard/publisher/manage-groups-edit.php:250
+#: dashboard/publisher/manage-groups-edit.php:289
 msgid "after the 8th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:255
-#: dashboard/publisher/groups-edit.php:294
+#: dashboard/publisher/manage-groups-edit.php:251
+#: dashboard/publisher/manage-groups-edit.php:290
 msgid "after the 10th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:256
-#: dashboard/publisher/groups-edit.php:295
+#: dashboard/publisher/manage-groups-edit.php:252
+#: dashboard/publisher/manage-groups-edit.php:291
 msgid "after the 12th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:257
-#: dashboard/publisher/groups-edit.php:296
+#: dashboard/publisher/manage-groups-edit.php:253
+#: dashboard/publisher/manage-groups-edit.php:292
 msgid "after the 14th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:258
-#: dashboard/publisher/groups-edit.php:297
+#: dashboard/publisher/manage-groups-edit.php:254
+#: dashboard/publisher/manage-groups-edit.php:293
 msgid "after the 16th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:259
-#: dashboard/publisher/groups-edit.php:298
+#: dashboard/publisher/manage-groups-edit.php:255
+#: dashboard/publisher/manage-groups-edit.php:294
 msgid "after the 18th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:260
-#: dashboard/publisher/groups-edit.php:299
+#: dashboard/publisher/manage-groups-edit.php:256
+#: dashboard/publisher/manage-groups-edit.php:295
 msgid "after the 20th paragraph"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:262
+#: dashboard/publisher/manage-groups-edit.php:258
 msgid "Select Categories"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:273
+#: dashboard/publisher/manage-groups-edit.php:269
 msgid "Page Injection"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:302
+#: dashboard/publisher/manage-groups-edit.php:298
 msgid "Select Pages"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:335
+#: dashboard/publisher/manage-groups-edit.php:331
 msgid "Wrapper code"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:336
+#: dashboard/publisher/manage-groups-edit.php:332
 msgid "Wraps around each advert. HTML/JavaScript allowed, use with care!"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:340
+#: dashboard/publisher/manage-groups-edit.php:336
 msgid "Before advert"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:343
-#: dashboard/publisher/groups-edit.php:351
+#: dashboard/publisher/manage-groups-edit.php:339
+#: dashboard/publisher/manage-groups-edit.php:347
 msgid "Example:"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:344
+#: dashboard/publisher/manage-groups-edit.php:340
 msgid "Options:"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:348
+#: dashboard/publisher/manage-groups-edit.php:344
 msgid "After advert"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:357
+#: dashboard/publisher/manage-groups-edit.php:353
 msgid "Select adverts"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:364
+#: dashboard/publisher/manage-groups-edit.php:360
 msgid "Visible until"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:365
+#: dashboard/publisher/manage-groups-edit.php:361
 msgid "Weight"
 msgstr ""
 
-#: dashboard/publisher/groups-edit.php:412
+#: dashboard/publisher/manage-groups-edit.php:408
 msgid "No adverts created!"
 msgstr ""
 
-#: dashboard/publisher/groups-main.php:21
+#: dashboard/publisher/manage-groups.php:21
 msgid "Delete Group"
 msgstr ""
 
-#: dashboard/publisher/groups-main.php:22
+#: dashboard/publisher/manage-groups.php:22
 msgid "Delete Group including adverts"
 msgstr ""
 
-#: dashboard/publisher/groups-main.php:24
+#: dashboard/publisher/manage-groups.php:24
 msgid "You are about to delete a group"
 msgstr ""
 
-#: dashboard/publisher/groups-main.php:24
+#: dashboard/publisher/manage-groups.php:24
 msgid "This action can not be undone!"
 msgstr ""
 
-#: dashboard/publisher/groups-main.php:24 dashboard/settings/maintenance.php:20
+#: dashboard/publisher/manage-groups.php:24
+#: dashboard/settings/maintenance.php:83
 msgid "OK to continue, CANCEL to stop."
 msgstr ""
 
-#: dashboard/publisher/groups-main.php:93
+#: dashboard/publisher/manage-groups.php:93
 msgid "No groups created!"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:13
+msgid "In AdRotate Pro you can schedule adverts for multiple periods of time. One schedule can be assigned to many adverts allowing you to manage multi advert campaigns easily. Schedules can be active on certain days of the week or on certain hours of the day."
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:13
+msgid "Get more scheduling options with"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:36
+msgid "Max Shown"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:37
+msgid "Max Clicks"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Mon:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Tue:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Wed:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Thu:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Fri:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Sat:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Sun:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Between:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Impression spread:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:72
+msgid "Auto Delete:"
+msgstr ""
+
+#: dashboard/publisher/manage-schedules.php:83
+msgid "Nothing here!"
 msgstr ""
 
 #: dashboard/publisher/media.php:19
@@ -1755,66 +1767,6 @@ msgstr ""
 msgid "Certain files such as html, js and zip can only be uploaded by Editors and Administrators. This is a security restriction to prevent XSS attacks."
 msgstr ""
 
-#: dashboard/publisher/schedules-main.php:13
-msgid "In AdRotate Pro you can schedule adverts for multiple periods of time. One schedule can be assigned to many adverts allowing you to manage multi advert campaigns easily. Schedules can be active on certain days of the week or on certain hours of the day."
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:13
-msgid "Get more scheduling options with"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:36
-msgid "Max Shown"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:37
-msgid "Max Clicks"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Mon:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Tue:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Wed:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Thu:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Fri:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Sat:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Sun:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Between:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Impression spread:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:72
-msgid "Auto Delete:"
-msgstr ""
-
-#: dashboard/publisher/schedules-main.php:83
-msgid "Nothing here!"
-msgstr ""
-
 #: dashboard/publisher/statistics-advert.php:39
 msgid "Statistics for advert"
 msgstr ""
@@ -1857,7 +1809,6 @@ msgstr ""
 #: dashboard/publisher/statistics-advert.php:108
 #: dashboard/publisher/statistics-group.php:112
 #: dashboard/publisher/statistics-main.php:82
-#: dashboard/settings/notifications.php:58
 msgid "Note:"
 msgstr ""
 
@@ -1879,258 +1830,364 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
-#: dashboard/settings/general.php:18
-msgid "General settings for AdRotate."
+#: dashboard/settings/general.php:27
+msgid "Duplicate adverts:"
 msgstr ""
 
-#: dashboard/settings/general.php:18 dashboard/settings/statistics.php:18
-msgid "Some options are only available in AdRotate Pro!"
+#: dashboard/settings/general.php:28 dashboard/settings/general.php:36
+#: dashboard/settings/general.php:44 dashboard/settings/general.php:52
+#: dashboard/settings/general.php:60 dashboard/settings/misc.php:27
+#: dashboard/settings/misc.php:35 dashboard/settings/misc.php:43
+#: dashboard/settings/misc.php:61 dashboard/settings/misc.php:69
+#: dashboard/settings/notifications.php:31
+#: dashboard/settings/notifications.php:39
+#: dashboard/settings/notifications.php:46
+#: dashboard/settings/notifications.php:52
+#: dashboard/settings/notifications.php:59
+#: dashboard/settings/notifications.php:73
+#: dashboard/settings/notifications.php:88
+#: dashboard/settings/notifications.php:96
+#: dashboard/settings/notifications.php:104
+#: dashboard/settings/notifications.php:112
+#: dashboard/settings/notifications.php:120
+#: dashboard/settings/statistics.php:66 dashboard/settings/statistics.php:74
+#: dashboard/settings/statistics.php:82
+msgid "No"
 msgstr ""
 
-#: dashboard/settings/general.php:21
-msgid "Duplicate adverts"
+#: dashboard/settings/general.php:29 dashboard/settings/general.php:37
+#: dashboard/settings/general.php:45 dashboard/settings/general.php:53
+#: dashboard/settings/general.php:61 dashboard/settings/misc.php:28
+#: dashboard/settings/misc.php:36 dashboard/settings/misc.php:44
+#: dashboard/settings/misc.php:62 dashboard/settings/misc.php:70
+#: dashboard/settings/notifications.php:30
+#: dashboard/settings/notifications.php:38
+#: dashboard/settings/notifications.php:45
+#: dashboard/settings/notifications.php:53
+#: dashboard/settings/notifications.php:60
+#: dashboard/settings/notifications.php:74
+#: dashboard/settings/notifications.php:89
+#: dashboard/settings/notifications.php:97
+#: dashboard/settings/notifications.php:105
+#: dashboard/settings/notifications.php:113
+#: dashboard/settings/notifications.php:121
+#: dashboard/settings/statistics.php:65 dashboard/settings/statistics.php:73
+#: dashboard/settings/statistics.php:81
+msgid "Yes"
 msgstr ""
 
-#: dashboard/settings/general.php:22
+#: dashboard/settings/general.php:31
 msgid "Try and prevent adverts in groups that are in Default or Block mode from showing multiple times on the same page load."
 msgstr ""
 
-#: dashboard/settings/general.php:25
-msgid "Shortcode in widgets"
+#: dashboard/settings/general.php:35
+msgid "Shortcode in widgets:"
 msgstr ""
 
-#: dashboard/settings/general.php:26
+#: dashboard/settings/general.php:39
 msgid "Try and activate shortcodes in text widgets if your theme does not add support for it by itself. (This does not always work!)"
 msgstr ""
 
-#: dashboard/settings/general.php:29
-msgid "Advert live preview"
+#: dashboard/settings/general.php:43
+msgid "Advert live preview:"
 msgstr ""
 
-#: dashboard/settings/general.php:30
+#: dashboard/settings/general.php:47
 msgid "Disable live previews for adverts if you have faulty adverts that overflow their designated area while creating/editing adverts."
 msgstr ""
 
-#: dashboard/settings/general.php:33
-msgid "Load jQuery"
-msgstr ""
-
-#: dashboard/settings/general.php:34
-msgid "Load jQuery if your theme does not load it already. jQuery is required for dynamic groups, statistics and some other features."
-msgstr ""
-
-#: dashboard/settings/general.php:37
-msgid "Load scripts in footer?"
-msgstr ""
-
-#: dashboard/settings/general.php:38
-msgid "Load all AdRotate Javascripts in the footer of your site."
-msgstr ""
-
-#: dashboard/settings/general.php:41
-msgid "Adblock disguise"
-msgstr ""
-
-#: dashboard/settings/general.php:43
-msgid "Leave empty to disable. Use only lowercaps letters. For example:"
-msgstr ""
-
-#: dashboard/settings/general.php:44
-msgid "Try and avoid adblock plugins in most modern browsers when using shortcodes."
-msgstr ""
-
-#: dashboard/settings/general.php:44
-msgid "To also apply this feature to widgets, use a text widget with a shortcode instead of the AdRotate widget."
-msgstr ""
-
-#: dashboard/settings/general.php:44
-msgid "Avoid the use of obvious keywords or filenames in your adverts or this feature will have little effect!"
-msgstr ""
-
-#: dashboard/settings/general.php:49
-msgid "Banner Folder"
-msgstr ""
-
-#: dashboard/settings/general.php:50
-msgid "Set a folder where your banner images will be stored."
-msgstr ""
-
-#: dashboard/settings/general.php:53
-msgid "Folder name"
+#: dashboard/settings/general.php:51
+msgid "Load jQuery:"
 msgstr ""
 
 #: dashboard/settings/general.php:55
-msgid "(Default: banners)."
+msgid "Load jQuery if your theme does not load it already. jQuery is required for dynamic groups, statistics and some other features."
 msgstr ""
 
-#: dashboard/settings/general.php:56
-msgid "To try and trick ad blockers you could set the folder to something crazy like:"
-msgstr ""
-
-#: dashboard/settings/general.php:57
-msgid "This folder will not be automatically created if it doesn't exist. AdRotate will show errors when the folder is missing."
-msgstr ""
-
-#: dashboard/settings/general.php:62
-msgid "Bot filter"
+#: dashboard/settings/general.php:59
+msgid "Load scripts in footer:"
 msgstr ""
 
 #: dashboard/settings/general.php:63
-msgid "The bot filter is used for the AdRotate stats tracker."
+msgid "Load all AdRotate Javascripts in the footer of your site."
 msgstr ""
 
-#: dashboard/settings/general.php:66
-msgid "User-Agent Filter"
+#: dashboard/settings/general.php:67
+msgid "Adblock disguise:"
 msgstr ""
 
-#: dashboard/settings/general.php:69
-msgid "A comma separated list of keywords. Filter out bots/crawlers/user-agents."
+#: dashboard/settings/general.php:67
+msgid "Use only lowercase letters. For example:"
 msgstr ""
 
-#: dashboard/settings/general.php:70
-msgid "Keep in mind that this might give false positives. The word 'fire' also matches 'firefox', but not vice-versa. So be careful!"
+#: dashboard/settings/general.php:68
+msgid "A random string of ~6 characters. Leave empty to disable. This makes the standardized output of AdRotate harder to detect by adblockers when using shortcodes."
 msgstr ""
 
-#: dashboard/settings/general.php:71
-msgid "Only words with alphanumeric characters and [ - _ ] are allowed. All other characters are stripped out."
+#: dashboard/settings/general.php:68
+msgid "To also apply this feature to widgets, use a text widget or block with a shortcode instead of the AdRotate widget."
 msgstr ""
 
-#: dashboard/settings/general.php:72
-msgid "Additionally to the list specified here, empty User-Agents are blocked as well."
+#: dashboard/settings/general.php:68
+msgid "Avoid the use of obvious keywords or filenames in your adverts or this feature will have less effect!"
 msgstr ""
 
-#: dashboard/settings/general.php:72
+#: dashboard/settings/general.php:75
+msgid "Banner Folder"
+msgstr ""
+
+#: dashboard/settings/general.php:79
+msgid "Folder name:"
+msgstr ""
+
+#: dashboard/settings/general.php:79
+msgid "Default: banners."
+msgstr ""
+
+#: dashboard/settings/general.php:79
+msgid "To try and trick ad blockers you could set the folder to something crazy like:"
+msgstr ""
+
+#: dashboard/settings/general.php:80
+msgid "This folder will not be automatically created if it doesn't exist. AdRotate will show errors when the folder is missing."
+msgstr ""
+
+#: dashboard/settings/general.php:87
+msgid "ads.txt file"
+msgstr ""
+
+#: dashboard/settings/general.php:91
+msgid "Location:"
+msgstr ""
+
+#: dashboard/settings/general.php:91
+msgid "Default: (empty)."
+msgstr ""
+
+#: dashboard/settings/general.php:91
+msgid "Commonly the ads.txt file is in the root of your site and this setting does not need to be changed."
+msgstr ""
+
+#: dashboard/settings/general.php:91
+msgid "If you redirect the ads.txt you can enter the new location here. Otherwise this field should be left empty."
+msgstr ""
+
+#: dashboard/settings/general.php:97
+msgid "Bot filter / User-Agent Filter"
+msgstr ""
+
+#: dashboard/settings/general.php:100
+msgid "Comma separated keywords. Only words with alphanumeric characters and [ - _ ] are accepted."
+msgstr ""
+
+#: dashboard/settings/general.php:100
+msgid "Keep in mind that adding simplistic or generic keywords may give false positives. The word 'fire' also matches 'firefox' for example. However"
+msgstr ""
+
+#: dashboard/settings/general.php:101
+msgid "Additionally to the list specified here, empty User-Agents are blocked."
+msgstr ""
+
+#: dashboard/settings/general.php:101
 msgid "Learn more about"
 msgstr ""
 
-#: dashboard/settings/general.php:72
+#: dashboard/settings/general.php:101
 msgid "user-agents"
 msgstr ""
 
-#: dashboard/settings/general.php:78 dashboard/settings/misc.php:43
-#: dashboard/settings/notifications.php:72 dashboard/settings/roles.php:55
-#: dashboard/settings/statistics.php:85
-msgid "Update Options"
+#: dashboard/settings/general.php:108 dashboard/settings/geotargeting.php:83
+#: dashboard/settings/misc.php:84 dashboard/settings/notifications.php:131
+#: dashboard/settings/roles.php:73 dashboard/settings/statistics.php:102
+msgid "Save settings"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:17
-msgid "Geo Targeting - Available in AdRotate Pro"
+#: dashboard/settings/general.php:108 dashboard/settings/geotargeting.php:83
+#: dashboard/settings/misc.php:84 dashboard/settings/notifications.php:131
+#: dashboard/settings/roles.php:73 dashboard/settings/statistics.php:102
+msgid "Some settings are only available in AdRotate Pro!"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:18
-msgid "Target certain areas in the world for better advertising oppurtunities."
+#: dashboard/settings/general.php:116 dashboard/settings/geotargeting.php:91
+#: dashboard/settings/maintenance.php:135 dashboard/settings/misc.php:92
+#: dashboard/settings/notifications.php:139 dashboard/settings/roles.php:81
+#: dashboard/settings/statistics.php:110
+msgid "Become an advertising professional"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:21
-msgid "Which Geo Service"
+#: dashboard/settings/general.php:120 dashboard/settings/geotargeting.php:95
+#: dashboard/settings/maintenance.php:139 dashboard/settings/misc.php:96
+#: dashboard/settings/notifications.php:143 dashboard/settings/roles.php:85
+#: dashboard/settings/statistics.php:114 dashboard/support.php:50
+msgid "AdRotate Professional"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:32
+#: dashboard/settings/general.php:121 dashboard/settings/geotargeting.php:96
+#: dashboard/settings/maintenance.php:140 dashboard/settings/misc.php:97
+#: dashboard/settings/notifications.php:144 dashboard/settings/roles.php:86
+#: dashboard/settings/statistics.php:115
+msgid "Starting at only €49.00"
+msgstr ""
+
+#: dashboard/settings/general.php:122 dashboard/settings/geotargeting.php:97
+#: dashboard/settings/maintenance.php:141 dashboard/settings/misc.php:98
+#: dashboard/settings/notifications.php:145 dashboard/settings/roles.php:87
+#: dashboard/settings/statistics.php:116
+msgid "Get a Single site License"
+msgstr ""
+
+#: dashboard/settings/general.php:123 dashboard/settings/geotargeting.php:98
+#: dashboard/settings/maintenance.php:142 dashboard/settings/misc.php:99
+#: dashboard/settings/notifications.php:146 dashboard/settings/roles.php:88
+#: dashboard/settings/statistics.php:117
+msgid "Go big with the Multi License"
+msgstr ""
+
+#: dashboard/settings/general.php:125 dashboard/settings/geotargeting.php:100
+#: dashboard/settings/maintenance.php:144 dashboard/settings/misc.php:101
+#: dashboard/settings/notifications.php:148 dashboard/settings/roles.php:90
+#: dashboard/settings/statistics.php:119
+msgid "AdRotate Professional has a lot more to offer for even better advertising management and premium support. Enjoy features like Geo Targeting, better Schedules offering more options, expanded Post Injection and much more."
+msgstr ""
+
+#: dashboard/settings/general.php:131 dashboard/settings/geotargeting.php:106
+#: dashboard/settings/maintenance.php:150 dashboard/settings/misc.php:107
+#: dashboard/settings/notifications.php:154 dashboard/settings/roles.php:96
+#: dashboard/settings/statistics.php:125
+msgid "I make other plugins too"
+msgstr ""
+
+#: dashboard/settings/general.php:135 dashboard/settings/geotargeting.php:110
+#: dashboard/settings/maintenance.php:154 dashboard/settings/misc.php:111
+#: dashboard/settings/notifications.php:158 dashboard/settings/roles.php:100
+#: dashboard/settings/statistics.php:129
+msgid "For WordPress, WooCommerce and ClassicPress"
+msgstr ""
+
+#: dashboard/settings/general.php:136 dashboard/settings/geotargeting.php:111
+#: dashboard/settings/maintenance.php:155 dashboard/settings/misc.php:112
+#: dashboard/settings/notifications.php:159 dashboard/settings/roles.php:101
+#: dashboard/settings/statistics.php:130 dashboard/support.php:62
+msgid "View all plugins"
+msgstr ""
+
+#: dashboard/settings/general.php:138 dashboard/settings/geotargeting.php:113
+#: dashboard/settings/maintenance.php:157 dashboard/settings/misc.php:114
+#: dashboard/settings/notifications.php:161 dashboard/settings/roles.php:103
+#: dashboard/settings/statistics.php:132
+msgid "Handy plugins that improve your WooCommerce online store; faster checkout, no checkout, improve security, automate things, payment stats and more!"
+msgstr ""
+
+#: dashboard/settings/general.php:144
+msgid "News & Updates"
+msgstr ""
+
+#: dashboard/settings/general.php:147
+msgid "Subscribe via RSS feed"
+msgstr ""
+
+#: dashboard/settings/general.php:147
+msgid "No account required!"
+msgstr ""
+
+#: dashboard/settings/geotargeting.php:23
+msgid "Geo Targeting service"
+msgstr ""
+
+#: dashboard/settings/geotargeting.php:27
+msgid "Geo service to use:"
+msgstr ""
+
+#: dashboard/settings/geotargeting.php:28
+msgid "No Geo Targeting"
+msgstr ""
+
+#: dashboard/settings/geotargeting.php:38
 msgid "30000 free lookups every day, uses GeoLite2 databases from MaxMind!"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:33
-#: dashboard/settings/geotargeting.php:37
-#: dashboard/settings/geotargeting.php:41
-#: dashboard/settings/geotargeting.php:45 dashboard/settings/statistics.php:32
-#: dashboard/settings/statistics.php:35 dashboard/settings/statistics.php:38
-#: dashboard/settings/statistics.php:41
+#: dashboard/settings/geotargeting.php:39
+#: dashboard/settings/geotargeting.php:45
+#: dashboard/settings/geotargeting.php:51
+#: dashboard/settings/geotargeting.php:57 dashboard/settings/statistics.php:38
+#: dashboard/settings/statistics.php:43 dashboard/settings/statistics.php:48
+#: dashboard/settings/statistics.php:53
 msgid "Supports:"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:34
-#: dashboard/settings/geotargeting.php:38
-#: dashboard/settings/geotargeting.php:42
+#: dashboard/settings/geotargeting.php:40
 #: dashboard/settings/geotargeting.php:46
+#: dashboard/settings/geotargeting.php:52
+#: dashboard/settings/geotargeting.php:58
 msgid "Scalability:"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:34
+#: dashboard/settings/geotargeting.php:40
 msgid "Suitable for small to medium sized websites."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:36
-#: dashboard/settings/geotargeting.php:40 dashboard/settings/maintenance.php:58
+#: dashboard/settings/geotargeting.php:44
+#: dashboard/settings/geotargeting.php:50
 msgid "More info"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:36
+#: dashboard/settings/geotargeting.php:44
 msgid "10000 free lookups per month, requires account."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:38
+#: dashboard/settings/geotargeting.php:46
 msgid "Suitable for small to medium sized websites with a free account - Paid options available."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:40
+#: dashboard/settings/geotargeting.php:50
 msgid "The most accurate geo targeting available."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:42
+#: dashboard/settings/geotargeting.php:52
 msgid "Suitable for any size website as long as you have lookups."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:44
+#: dashboard/settings/geotargeting.php:56
 msgid "Basic geolocation included in every CloudFlare account."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:46
+#: dashboard/settings/geotargeting.php:58
 msgid "Suitable for any size website."
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:51
-msgid "Geo Cookie Lifespan"
+#: dashboard/settings/geotargeting.php:65
+msgid "MaxMind City/Country and ipstack"
 msgstr ""
 
-#: dashboard/settings/geotargeting.php:60
-msgid "Hours."
-msgstr ""
-
-#: dashboard/settings/geotargeting.php:61
-msgid "Geo Data is stored in a cookie to reduce lookups. How long should this cookie last? A longer period is less accurate for mobile users but may reduce the usage of your lookups drastically."
-msgstr ""
-
-#: dashboard/settings/geotargeting.php:67
-msgid "MaxMind City/Country"
+#: dashboard/settings/geotargeting.php:69
+msgid "User ID:"
 msgstr ""
 
 #: dashboard/settings/geotargeting.php:70
-msgid "Username/Email"
+msgid "Only used for MaxMind accounts."
 msgstr ""
 
 #: dashboard/settings/geotargeting.php:74
-msgid "Password/License Key"
+msgid "License Key/API Key:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:20
-msgid "You are about to check all adverts for errors."
+#: dashboard/settings/geotargeting.php:75
+msgid "Used for Maxmind and ipstack accounts."
 msgstr ""
 
-#: dashboard/settings/maintenance.php:20
-msgid "This might take a few seconds!"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:20
-msgid "Check all adverts for configuration errors"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:22
-msgid "Apply all evaluation rules to all adverts to see if any error slipped in. This may take a few seconds."
+#: dashboard/settings/maintenance.php:23
+msgid "Status"
 msgstr ""
 
 #: dashboard/settings/maintenance.php:27
-msgid "Status and Versions"
+msgid "Advert status:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:30
-msgid "Current status of adverts"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:31
+#: dashboard/settings/maintenance.php:28
 msgid "Normal"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:31
+#: dashboard/settings/maintenance.php:29
 msgid "Error"
 msgstr ""
 
@@ -2138,584 +2195,578 @@ msgstr ""
 msgid "Expires Soon"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:31
+#: dashboard/settings/maintenance.php:32
 msgid "Unknown"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:34
-msgid "Banners/assets Folder"
+#: dashboard/settings/maintenance.php:44
+msgid "Reports folder:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:38 dashboard/settings/maintenance.php:47
-msgid "Exists and appears writable"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:38 dashboard/settings/maintenance.php:47
-msgid "Not writable or does not exist"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:43
-msgid "Reports Folder"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:52
-msgid "Unfiltered HTML"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:56
-msgid "Allowed"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:58
-msgid "Your website's current setup does not allow for unfiltered code to be used in adverts."
-msgstr ""
-
-#: dashboard/settings/maintenance.php:58
-msgid "This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php file."
-msgstr ""
-
-#: dashboard/settings/maintenance.php:64
-msgid "Clean Trackerdata"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:65
-msgid "Not scheduled!"
-msgstr ""
-
-#: dashboard/settings/maintenance.php:70
+#: dashboard/settings/maintenance.php:66
 msgid "Background tasks"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:72
-msgid "Reset background tasks"
+#: dashboard/settings/maintenance.php:70
+msgid "Not scheduled!"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:75
-msgid "If automated tasks such as expiring adverts does not work reliable or one of the above schedules is missing use this button to reset the tasks."
+#: dashboard/settings/maintenance.php:73
+msgid "The listed date is the next time the task is supposed to run."
 msgstr ""
 
-#: dashboard/settings/maintenance.php:80
-msgid "Internal Versions"
+#: dashboard/settings/maintenance.php:83
+msgid "Check adverts:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:81
-msgid "Unless you experience database issues or a warning shows below, these numbers are not really relevant for troubleshooting. Support may ask for them to verify your database status."
+#: dashboard/settings/maintenance.php:83
+msgid "You are about to check all adverts for errors."
+msgstr ""
+
+#: dashboard/settings/maintenance.php:83
+msgid "This might take a few seconds!"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:83
+msgid "Check all adverts for configuration errors"
 msgstr ""
 
 #: dashboard/settings/maintenance.php:84
-msgid "AdRotate version"
+msgid "Apply all evaluation rules to all adverts to see if any error slipped in. This may take a few seconds."
 msgstr ""
 
-#: dashboard/settings/maintenance.php:87 dashboard/settings/maintenance.php:97
+#: dashboard/settings/maintenance.php:88
+msgid "Background tasks:"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:88
+msgid "Reset background tasks"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:89
+msgid "If automated tasks such as expiring adverts does not work reliably or one of the schedules listed on this page is missing, use this button to reset the tasks."
+msgstr ""
+
+#: dashboard/settings/maintenance.php:96
+msgid "Internal Versions"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:100
+msgid "AdRotate version:"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:102
+#: dashboard/settings/maintenance.php:112
 msgid "Current:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:89 dashboard/settings/maintenance.php:99
+#: dashboard/settings/maintenance.php:104
+#: dashboard/settings/maintenance.php:114
 msgid "Should be:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:92 dashboard/settings/maintenance.php:102
+#: dashboard/settings/maintenance.php:106
+#: dashboard/settings/maintenance.php:116
 msgid "Previous:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:94
-msgid "Database version"
+#: dashboard/settings/maintenance.php:110
+msgid "Database version:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:107
-msgid "Manual upgrade"
+#: dashboard/settings/maintenance.php:121
+msgid "Manual upgrade:"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:109
+#: dashboard/settings/maintenance.php:121
 msgid "Run updater manually"
 msgstr ""
 
-#: dashboard/settings/maintenance.php:112
+#: dashboard/settings/maintenance.php:124
 msgid "If the automatic update for some reason doesn't complete. Or you notice that the above versions are mismatched you can update the database and settings using this button."
 msgstr ""
 
-#: dashboard/settings/misc.php:19
-msgid "Widget alignment"
+#: dashboard/settings/misc.php:26
+msgid "Widget alignment:"
 msgstr ""
 
-#: dashboard/settings/misc.php:20
-msgid "Check this box if your widgets do not align in your themes sidebar. (Does not always help!)"
-msgstr ""
-
-#: dashboard/settings/misc.php:23
-msgid "Widget padding"
-msgstr ""
-
-#: dashboard/settings/misc.php:24
-msgid "Enable this to remove the padding (blank space) around ads in widgets. (Does not always work!)"
-msgstr ""
-
-#: dashboard/settings/misc.php:28
-msgid "NOTICE:"
-msgstr ""
-
-#: dashboard/settings/misc.php:29
-msgid "You have enabled W3 Total Caching support but not defined the security hash."
-msgstr ""
-
-#: dashboard/settings/misc.php:29
-msgid "AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;"
-msgstr ""
-
-#: dashboard/settings/misc.php:29
-msgid "Set up W3 Total Caching."
-msgstr ""
-
-#: dashboard/settings/misc.php:33
-msgid "W3 Total Caching"
+#: dashboard/settings/misc.php:30
+msgid "Enable this if your widgets do not align with your themes sidebar. (Some themes ignore this!)"
 msgstr ""
 
 #: dashboard/settings/misc.php:34
-msgid "Check this box if you use W3 Total Caching on your site."
-msgstr ""
-
-#: dashboard/settings/misc.php:37
-msgid "Borlabs Cache"
+msgid "Widget padding:"
 msgstr ""
 
 #: dashboard/settings/misc.php:38
+msgid "Enable this to remove the padding (blank space) around ads in widgets. (Some themes prevent this!)"
+msgstr ""
+
+#: dashboard/settings/misc.php:42
+msgid "Hide schedules:"
+msgstr ""
+
+#: dashboard/settings/misc.php:46
+msgid "When editing adverts, hide schedules that are not in use by that advert."
+msgstr ""
+
+#: dashboard/settings/misc.php:51
+msgid "NOTICE:"
+msgstr ""
+
+#: dashboard/settings/misc.php:51
+msgid "You have enabled W3 Total Caching support but not defined the security hash."
+msgstr ""
+
+#: dashboard/settings/misc.php:54
+msgid "AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;"
+msgstr ""
+
+#: dashboard/settings/misc.php:54
+msgid "Set up W3 Total Caching."
+msgstr ""
+
+#: dashboard/settings/misc.php:60
+msgid "W3 Total Caching compatibility:"
+msgstr ""
+
+#: dashboard/settings/misc.php:64
+msgid "Check this box if you use W3 Total Caching on your site."
+msgstr ""
+
+#: dashboard/settings/misc.php:64
+msgid "Setup guide."
+msgstr ""
+
+#: dashboard/settings/misc.php:68
+msgid "Borlabs Cache compatibility:"
+msgstr ""
+
+#: dashboard/settings/misc.php:72
 msgid "Check this box if you use Borlabs Caching on your site."
 msgstr ""
 
-#: dashboard/settings/notifications.php:19
-msgid "Set up who gets notifications if ads need your attention."
+#: dashboard/settings/misc.php:76
+msgid "It may take a while for the ad to start rotating. The caching plugin needs to refresh the cache. This can several days if not done manually."
 msgstr ""
 
-#: dashboard/settings/notifications.php:22
-msgid "How to notify"
+#: dashboard/settings/misc.php:76
+msgid "Caching support only works for [shortcodes] and the AdRotate Widget and Blocks. If you use a PHP Snippet you need to wrap your PHP in the exclusion code yourself."
 msgstr ""
 
-#: dashboard/settings/notifications.php:24
-msgid "Dashboard banner."
-msgstr ""
-
-#: dashboard/settings/notifications.php:25
-msgid "Email message."
-msgstr ""
-
-#: dashboard/settings/notifications.php:29
-msgid "Test notification"
-msgstr ""
-
-#: dashboard/settings/notifications.php:31
-msgid "Test"
-msgstr ""
-
-#: dashboard/settings/notifications.php:31
-msgid "Send a test notification to enabled methods. Before you test, save the options first!"
-msgstr ""
-
-#: dashboard/settings/notifications.php:36
+#: dashboard/settings/notifications.php:23
 msgid "Dashboard Banner"
 msgstr ""
 
+#: dashboard/settings/notifications.php:26
+msgid "These may show in a dashboard banner visible to all users who have access to AdRotate."
+msgstr ""
+
+#: dashboard/settings/notifications.php:29
+msgid "Show a dashboard notification:"
+msgstr ""
+
+#: dashboard/settings/notifications.php:33
+msgid "Notifications for adverts with configuration errors can not be turned off."
+msgstr ""
+
 #: dashboard/settings/notifications.php:37
-msgid "These go in a dashboard banner visible to all users with access to AdRotate on every WordPress dashboard page."
+msgid "Expired adverts:"
 msgstr ""
 
-#: dashboard/settings/notifications.php:40
-#: dashboard/settings/notifications.php:52
-msgid "What"
+#: dashboard/settings/notifications.php:44
+msgid "Adverts expiring in less than 2 days:"
 msgstr ""
 
-#: dashboard/settings/notifications.php:42
-msgid "Expired adverts."
+#: dashboard/settings/notifications.php:51
+msgid "Adverts expiring in less than 7 days:"
 msgstr ""
 
-#: dashboard/settings/notifications.php:43
-msgid "Almost expired adverts."
+#: dashboard/settings/notifications.php:58
+msgid "Schedules with warnings:"
 msgstr ""
 
-#: dashboard/settings/notifications.php:48
+#: dashboard/settings/notifications.php:68
 msgid "Email Message"
 msgstr ""
 
-#: dashboard/settings/notifications.php:49
-msgid "Receive email notifications about what is happening with your AdRotate setup."
+#: dashboard/settings/notifications.php:72
+msgid "Send alert emails:"
 msgstr ""
 
-#: dashboard/settings/notifications.php:54
-msgid "Daily digest of any advert status other than normal."
+#: dashboard/settings/notifications.php:76
+msgid "Choose if you want to be notified via email for common issues with adverts."
 msgstr ""
 
-#: dashboard/settings/notifications.php:55
-msgid "When you are running out of Geo Targeting Lookups."
+#: dashboard/settings/notifications.php:81
+msgid "E-mail addresses to notify:"
 msgstr ""
 
-#: dashboard/settings/notifications.php:56
-msgid "Any advertiser saving an advert in your moderation queue."
-msgstr ""
-
-#: dashboard/settings/notifications.php:57
-msgid "A moderator approved an advert from the moderation queue."
-msgstr ""
-
-#: dashboard/settings/notifications.php:58
-msgid "A moderator rejected an advert from the moderation queue."
-msgstr ""
-
-#: dashboard/settings/notifications.php:58
-msgid "If you have a lot of activity with many advertisers adding/changing adverts you may get a lot of messages!"
-msgstr ""
-
-#: dashboard/settings/notifications.php:58
-msgid "Sending out a lot of email is sometimes seen as automated mailing and deemed spammy. This may result in automated filters such as those used in services like Google Gmail and Microsoft Hotmail/Outlook.com blocking your server. Make sure you whitelist the sending address in your email account once you start receiving notifications!"
-msgstr ""
-
-#: dashboard/settings/notifications.php:63
-msgid "Publishers"
-msgstr ""
-
-#: dashboard/settings/notifications.php:66
+#: dashboard/settings/notifications.php:83
 msgid "Messages are sent once every 24 hours.  Maximum of 5 addresses. Comma separated. This field may not be empty!"
 msgstr ""
 
-#: dashboard/settings/roles.php:18
-msgid "Who has access to what? Choose the access level wisely and only give userroles access that you trust."
+#: dashboard/settings/notifications.php:87
+msgid "Daily digest:"
 msgstr ""
 
-#: dashboard/settings/roles.php:21
-msgid "Manage/Add/Edit adverts"
+#: dashboard/settings/notifications.php:91
+msgid "Daily digest of any advert status other than normal."
 msgstr ""
 
-#: dashboard/settings/roles.php:25
-msgid "Who can add and edit adverts."
+#: dashboard/settings/notifications.php:95
+msgid "Geo Targeting:"
 msgstr ""
 
-#: dashboard/settings/roles.php:29
-msgid "Delete/Reset adverts"
+#: dashboard/settings/notifications.php:99
+msgid "When you are running out of Geo Targeting Lookups."
 msgstr ""
 
-#: dashboard/settings/roles.php:33
-msgid "Who can delete adverts and reset advert stats."
+#: dashboard/settings/notifications.php:103
+msgid "Advertisers:"
+msgstr ""
+
+#: dashboard/settings/notifications.php:107
+msgid "Any advertiser saving an advert in your moderation queue."
+msgstr ""
+
+#: dashboard/settings/notifications.php:111
+msgid "Moderator approval:"
+msgstr ""
+
+#: dashboard/settings/notifications.php:115
+msgid "A moderator approved an advert from the moderation queue."
+msgstr ""
+
+#: dashboard/settings/notifications.php:119
+msgid "Moderator rejection:"
+msgstr ""
+
+#: dashboard/settings/notifications.php:123
+msgid "A moderator rejected an advert from the moderation queue."
+msgstr ""
+
+#: dashboard/settings/roles.php:23
+msgid "Permissions"
+msgstr ""
+
+#: dashboard/settings/roles.php:27
+msgid "Manage/Add/Edit adverts:"
+msgstr ""
+
+#: dashboard/settings/roles.php:30
+msgid "Who can add and edit adverts?"
+msgstr ""
+
+#: dashboard/settings/roles.php:34
+msgid "Delete/Reset adverts:"
 msgstr ""
 
 #: dashboard/settings/roles.php:37
-msgid "Manage/Add/Edit groups"
+msgid "Who can delete adverts and reset advert stats?"
 msgstr ""
 
 #: dashboard/settings/roles.php:41
-msgid "Who can add and edit groups."
+msgid "Manage/Add/Edit groups:"
 msgstr ""
 
-#: dashboard/settings/roles.php:45
-msgid "Delete groups"
+#: dashboard/settings/roles.php:44 dashboard/settings/roles.php:51
+msgid "Who can add and edit groups?"
 msgstr ""
 
-#: dashboard/settings/roles.php:49
-msgid "Who can delete groups."
+#: dashboard/settings/roles.php:48
+msgid "Delete groups:"
 msgstr ""
 
-#: dashboard/settings/statistics.php:18
-msgid "Track statistics for your adverts."
+#: dashboard/settings/roles.php:55
+msgid "Manage/Add/Edit schedules:"
 msgstr ""
 
-#: dashboard/settings/statistics.php:21
+#: dashboard/settings/roles.php:58
+msgid "Who can add and edit schedules?"
+msgstr ""
+
+#: dashboard/settings/roles.php:62
+msgid "Delete schedules:"
+msgstr ""
+
+#: dashboard/settings/roles.php:65
+msgid "Who can delete schedules?"
+msgstr ""
+
+#: dashboard/settings/statistics.php:23
 msgid "How to track stats"
 msgstr ""
 
-#: dashboard/settings/statistics.php:24
-msgid "Disabled - Do not track stats"
+#: dashboard/settings/statistics.php:27
+msgid "Stats tracker to use:"
 msgstr ""
 
-#: dashboard/settings/statistics.php:31
-msgid "Tracks impressions and clicks locally"
-msgstr ""
-
-#: dashboard/settings/statistics.php:31 dashboard/settings/statistics.php:34
-#: dashboard/settings/statistics.php:37 dashboard/settings/statistics.php:40
-msgid "Setup guide"
-msgstr ""
-
-#: dashboard/settings/statistics.php:32
-msgid "Clicks and Impressions, Click and impression limits, impression spread for schedules. Javascript/HTML5 adverts will only track impressions."
-msgstr ""
-
-#: dashboard/settings/statistics.php:34
-msgid "Requires my Matomo Tracker plugin installed or the Matomo tracking code in your sites footer. See the manual for details."
-msgstr ""
-
-#: dashboard/settings/statistics.php:35
-msgid "Clicks and Impressions via events. Javascript/HTML5 adverts will only track impressions."
+#: dashboard/settings/statistics.php:28
+msgid "Do not track stats"
 msgstr ""
 
 #: dashboard/settings/statistics.php:37
-msgid "Requires the Google Global Tag from GA4 installed behind your sites head tag and a Google Analytics 4 Account!"
+msgid "Tracks impressions and clicks locally"
+msgstr ""
+
+#: dashboard/settings/statistics.php:37 dashboard/settings/statistics.php:42
+#: dashboard/settings/statistics.php:47 dashboard/settings/statistics.php:52
+msgid "Setup guide"
 msgstr ""
 
 #: dashboard/settings/statistics.php:38
-msgid "Clicks and Impressions via custom events you need to set up. Javascript/HTML5 adverts will only track impressions."
+msgid "Clicks and Impressions, Click and impression limits, impression spread for schedules. Javascript/HTML5 adverts will only track impressions."
 msgstr ""
 
-#: dashboard/settings/statistics.php:40
-msgid "Requires Google Tag Manager installed in your sites head tag and a Google Analytics 4 Account!"
+#: dashboard/settings/statistics.php:42
+msgid "Requires my Matomo Tracker plugin installed or the Matomo tracking code in your sites footer. See the manual for details."
 msgstr ""
 
-#: dashboard/settings/statistics.php:41
-msgid "Clicks and Impressions via custom events. Javascript/HTML5 adverts will only track impressions."
+#: dashboard/settings/statistics.php:43
+msgid "Clicks and Impressions via events. Javascript/HTML5 adverts will only track impressions."
 msgstr ""
 
 #: dashboard/settings/statistics.php:47
-msgid "AdRotate Statistics"
+msgid "Requires the Google Global Tag from GA4 installed behind your sites head tag and a Google Analytics Account!"
 msgstr ""
 
 #: dashboard/settings/statistics.php:48
-msgid "The settings below are for the local tracker and have no effect when using Google Analytics or Matomo."
+msgid "Clicks and Impressions via custom events you need to set up. Javascript/HTML5 adverts will only track impressions."
 msgstr ""
 
-#: dashboard/settings/statistics.php:51
-msgid "Admin stats"
+#: dashboard/settings/statistics.php:52
+msgid "Requires Google Tag Manager installed in your sites head tag and a Google Analytics Account!"
 msgstr ""
 
 #: dashboard/settings/statistics.php:53
+msgid "Clicks and Impressions via custom events. Javascript/HTML5 adverts will only track impressions."
+msgstr ""
+
+#: dashboard/settings/statistics.php:60
+msgid "AdRotate Counter"
+msgstr ""
+
+#: dashboard/settings/statistics.php:64
+msgid "Admin stats:"
+msgstr ""
+
+#: dashboard/settings/statistics.php:68
 msgid "Track statistics from admin users."
 msgstr ""
 
-#: dashboard/settings/statistics.php:57
-msgid "Logged in impressions"
-msgstr ""
-
-#: dashboard/settings/statistics.php:59
-msgid "Track impressions from logged in users."
-msgstr ""
-
-#: dashboard/settings/statistics.php:63
-msgid "Logged in clicks"
-msgstr ""
-
-#: dashboard/settings/statistics.php:65
-msgid "Track clicks from logged in users."
-msgstr ""
-
-#: dashboard/settings/statistics.php:69
-msgid "Impression timer"
-msgstr ""
-
-#: dashboard/settings/statistics.php:71 dashboard/settings/statistics.php:78
-msgid "Seconds."
-msgstr ""
-
 #: dashboard/settings/statistics.php:72
-msgid "Default: 60."
-msgstr ""
-
-#: dashboard/settings/statistics.php:72
-msgid "This number may not be empty, be lower than 10 or exceed 3600 (1 hour)."
+msgid "Logged in impressions:"
 msgstr ""
 
 #: dashboard/settings/statistics.php:76
-msgid "Click timer"
+msgid "Track impressions from logged in users."
 msgstr ""
 
-#: dashboard/settings/statistics.php:79
+#: dashboard/settings/statistics.php:80
+msgid "Logged in clicks:"
+msgstr ""
+
+#: dashboard/settings/statistics.php:84
+msgid "Track clicks from logged in users."
+msgstr ""
+
+#: dashboard/settings/statistics.php:88
+msgid "Impression timer:"
+msgstr ""
+
+#: dashboard/settings/statistics.php:88
+msgid "Default: 60."
+msgstr ""
+
+#: dashboard/settings/statistics.php:89
+msgid "This number may not be empty, be lower than 10 or exceed 3600 (1 hour)."
+msgstr ""
+
+#: dashboard/settings/statistics.php:93
+msgid "Click timer:"
+msgstr ""
+
+#: dashboard/settings/statistics.php:93
 msgid "Default: 86400."
 msgstr ""
 
-#: dashboard/settings/statistics.php:79
+#: dashboard/settings/statistics.php:94
 msgid "This number may not be empty, be lower than 60 or exceed 86400 (24 hours)."
 msgstr ""
 
-#: dashboard/support.php:18
+#: dashboard/support.php:17
 msgid "Getting help with AdRotate Banner Manager"
 msgstr ""
 
-#: dashboard/support.php:20
-msgid "Is something not working the way you expect it to? If you need help you can check the manuals and guides on my website. There is a lot of information on the support forum asked by other users. Chances are your question has already been asked and answered or if not, I am always happy to help!"
+#: dashboard/support.php:21
+msgid "New to AdRotate Banner Manager? Is something not working the way you expect it to? When you need help with AdRotate or AdRotate Pro you can check the manuals and guides on my website. Also there is a lot of information on the support forum asked by other users. Chances are your question has already been asked and answered!"
 msgstr ""
 
-#: dashboard/support.php:22
+#: dashboard/support.php:25
+msgid "AdRotate Knowledge Base"
+msgstr ""
+
+#: dashboard/support.php:26
 msgid "Take a look at the AdRotate Manuals and Guides."
 msgstr ""
 
-#: dashboard/support.php:22
+#: dashboard/support.php:26
 msgid "Find answers"
 msgstr ""
 
-#: dashboard/support.php:23
+#: dashboard/support.php:30
 msgid "Buy a Support Ticket"
 msgstr ""
 
-#: dashboard/support.php:23
+#: dashboard/support.php:31
 msgid "Buy a priority support ticket for private and quick assistance."
 msgstr ""
 
-#: dashboard/support.php:23
+#: dashboard/support.php:31
 msgid "More information"
 msgstr ""
 
-#: dashboard/support.php:24
+#: dashboard/support.php:40
 msgid "Report security issues"
 msgstr ""
 
-#: dashboard/support.php:24
+#: dashboard/support.php:41
 msgid "Found a security flaw?"
 msgstr ""
 
-#: dashboard/support.php:24
+#: dashboard/support.php:41
 msgid "Please report it"
 msgstr ""
 
-#: dashboard/support.php:29
+#: dashboard/support.php:44
 msgid "Plugins and services"
 msgstr ""
 
-#: dashboard/support.php:36
-msgid "AdRotate Professional"
-msgstr ""
-
-#: dashboard/support.php:37
+#: dashboard/support.php:51
 msgid "More features!"
 msgstr ""
 
-#: dashboard/support.php:38
+#: dashboard/support.php:52
 msgid "Buy now"
 msgstr ""
 
-#: dashboard/support.php:40
+#: dashboard/support.php:54
 msgid "Turn up your advertising management to 11 with AdRotate Pro and benefit from the many extra features."
 msgstr ""
 
-#: dashboard/support.php:46
-msgid "HTML5 Advert setup"
-msgstr ""
-
-#: dashboard/support.php:47
-msgid "Professional service"
-msgstr ""
-
-#: dashboard/support.php:48
-msgid "Learn more"
-msgstr ""
-
-#: dashboard/support.php:50
-msgid "Do you have a HTML5 advert but can’t get it to work in AdRotate Banner Manager? I’ll help you out!"
-msgstr ""
-
-#: dashboard/support.php:56
+#: dashboard/support.php:60
 msgid "All my plugins"
 msgstr ""
 
-#: dashboard/support.php:57
+#: dashboard/support.php:61
 msgid "WordPress"
 msgstr ""
 
-#: dashboard/support.php:58
-msgid "View all plugins"
-msgstr ""
-
-#: dashboard/support.php:60
+#: dashboard/support.php:64
 msgid "Handy plugins that improve WooCommerce online store; faster checkout, no checkout, payment stats and more!"
 msgstr ""
 
-#: dashboard/support.php:72
+#: dashboard/support.php:77
 msgid "Priority Support is the default in AdRotate Professional"
 msgstr ""
 
-#: dashboard/support.php:75
+#: dashboard/support.php:82
 msgid "AdRotate Pro support always gets priority!"
 msgstr ""
 
-#: dashboard/support.php:75
+#: dashboard/support.php:83
 msgid "Unlimited tickets, straight from your dashboard."
 msgstr ""
 
-#: dashboard/support.php:75
+#: dashboard/support.php:84
 msgid "Using this form includes all the technical information for a quick solution."
 msgstr ""
 
-#: dashboard/support.php:75
+#: dashboard/support.php:85
 msgid "Available in AdRotate Professional!"
 msgstr ""
 
-#: dashboard/support.php:77
+#: dashboard/support.php:89
 msgid "Your name:"
 msgstr ""
 
-#: dashboard/support.php:78
+#: dashboard/support.php:94
 msgid "Your Email Address:"
 msgstr ""
 
-#: dashboard/support.php:79
+#: dashboard/support.php:99
 msgid "Subject:"
 msgstr ""
 
-#: dashboard/support.php:80
+#: dashboard/support.php:104
 msgid "Problem description / Question:"
 msgstr ""
 
-#: dashboard/support.php:82
+#: dashboard/support.php:109
 msgid "Advert I need help with:"
 msgstr ""
 
-#: dashboard/support.php:84
+#: dashboard/support.php:110
 msgid "Optionally select an advert"
 msgstr ""
 
-#: dashboard/support.php:85
+#: dashboard/support.php:111
 msgid "Selecting an advert will include the ad settings for Arnan to test on his website. Does not include group or schedule data."
 msgstr ""
 
-#: dashboard/support.php:86
+#: dashboard/support.php:115
 msgid "Please log in to my website and take a look."
 msgstr ""
 
-#: dashboard/support.php:86
+#: dashboard/support.php:115
 msgid "Checking this option will create a (temporary) account for Arnan to log in and take a look at your setup."
 msgstr ""
 
-#: dashboard/support.php:88
-msgid "When you send this form the following data will be submitted:"
+#: dashboard/support.php:119
+msgid "When you create a ticket, the following data will be submitted:"
 msgstr ""
 
-#: dashboard/support.php:89
+#: dashboard/support.php:120
 msgid "Your name, Account email address, Your website url and some basic WordPress information will be included with the message."
 msgstr ""
 
-#: dashboard/support.php:89
-msgid "This information is treated as confidential and is mandatory."
-msgstr ""
-
-#: dashboard/support.php:92
+#: dashboard/support.php:124
 msgid "Get Help"
 msgstr ""
 
-#: dashboard/support.php:92
+#: dashboard/support.php:124
 msgid "Premium Support is available in AdRotate Pro!"
 msgstr ""
 
-#: library/block.js:19 library/block.js:49
+#: library/block.js:21 library/block.js:47
 msgid "AdRotate Advert"
 msgstr ""
 
-#: library/block.js:22
+#: library/block.js:24
 msgid "Show a single advert by entering an advert ID."
 msgstr ""
 
-#: library/block.js:52
+#: library/block.js:51
 msgid "Enter an Advert ID (numbers only):"
 msgstr ""
 
-#: library/block.js:63
-msgid "You can find the advert ID in Manage Adverts. Any special markup, code or layout styles can be applied in the advert itself or by placing the advert in a group."
+#: library/block.js:62
+msgid "You can find the advert ID in Manage Adverts. Any special markup, code or layout styles can be applied in the advert itself."
 msgstr ""
 
-#: library/block.js:73 library/block.js:103
+#: library/block.js:72 library/block.js:98
 msgid "AdRotate Group"
 msgstr ""
 
-#: library/block.js:76
+#: library/block.js:75
 msgid "Show a group of adverts by entering a group ID."
 msgstr ""
 
-#: library/block.js:106
+#: library/block.js:102
 msgid "Enter a group ID (numbers only):"
 msgstr ""
 
-#: library/block.js:117
-msgid "You can find the group ID in Manage Groups. Any special markup, code or layout styles can be applied in the group wrapper when editing the group."
+#: library/block.js:113
+msgid "You can find the group ID in Manage Groups. Choose adverts, special markup, add code or layout styles when editing the group."
 msgstr ""

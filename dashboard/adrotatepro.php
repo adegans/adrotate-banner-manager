@@ -10,7 +10,7 @@
 ------------------------------------------------------------------------------------ */
 ?>
 
-<div style="text-align: center; font-size: 400%; line-height: 2em;">Ready to become an advertiser professional?</div>
+<div style="text-align: center; font-size: 400%; line-height: 2em;">Become an advertising professional!</div>
 
 <div style="text-align: center; margin: 30px 0;">
 	<div class="ajdg-sales-widget" style="display: inline-block; margin-right:20px; width: 20%;">

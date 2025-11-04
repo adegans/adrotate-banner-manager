@@ -735,25 +735,28 @@ function adrotate_options_submit() {
 		if($settings_tab == 'general') {
 			$config = get_option('adrotate_config');
 
-			$config['jquery'] = (isset($_POST['adrotate_jquery'])) ? 'Y' : 'N';
-			$config['jsfooter'] = (isset($_POST['adrotate_jsfooter'])) ? 'Y' : 'N';
+			$adrotate_jquery = $adrotate_jsfooter = $crawlers = '';
+			if(isset($_POST['adrotate_jquery'])) $adrotate_jquery = sanitize_text_field($_POST['adrotate_jquery']);
+			if(isset($_POST['adrotate_jsfooter'])) $adrotate_jsfooter = sanitize_text_field($_POST['adrotate_jsfooter']);
+			if(isset($_POST['adrotate_crawlers'])) $crawlers = sanitize_text_field($_POST['adrotate_crawlers']);
 
-			// Turn options off/reset them. Available in AdRotate Pro only
+			$config['duplicate_adverts_filter'] = 'N';
 			$config['textwidget_shortcodes'] = 'N';
+			$config['live_preview'] = 'Y';
+			$config['jquery'] = ($adrotate_jquery == 'Y') ? 'Y' : 'N';
+			$config['jsfooter'] = ($adrotate_jsfooter == 'Y') ? 'Y' : 'N';
+			$config['adblock_disguise'] = '';
 			$config['banner_folder'] = 'banners';
-			$config['notification_email'] = array();
-			$config['advertiser_email'] = array();
+			$config['adstxt_file'] = '';
+			// Geo Targeting (Doesn't have its own tab)
 			$config['enable_geo'] = 0;
-			$config['geo_cookie_life'] = 86400;
 			$config['geo_email'] = '';
 			$config['geo_pass'] = '';
-			$config['enable_advertisers'] = 'N';
-			$config['enable_editing'] = 'N';
-			$config['enable_geo_advertisers'] = 0;
+
 			update_option('adrotate_config', $config);
 
 			// Sort out crawlers
-			$crawlers = explode(',', trim($_POST['adrotate_crawlers']));
+			$crawlers = explode(',', $crawlers);
 			$new_crawlers = array();
 			foreach($crawlers as $crawler) {
 				$crawler = preg_replace('/[^a-zA-Z0-9\[\]\-_:; ]/i', '', trim($crawler));
@@ -765,20 +768,23 @@ function adrotate_options_submit() {
 		if($settings_tab == 'notifications') {
 			$notifications = get_option('adrotate_notifications');
 
-			$notifications['notification_dash'] = (isset($_POST['adrotate_notification_dash'])) ? 'Y' : 'N';
+			$notification_dash = $notification_dash_expired = $notification_dash_soon = '';
+			if(isset($_POST['adrotate_notification_dash'])) $notification_dash = sanitize_text_field($_POST['adrotate_notification_dash']);
+			if(isset($_POST['adrotate_notification_dash_expired'])) $notification_dash_expired = sanitize_text_field($_POST['adrotate_notification_dash_expired']);
+			if(isset($_POST['adrotate_notification_dash_soon'])) $notification_dash_soon = sanitize_text_field($_POST['adrotate_notification_dash_soon']);
 
-			// Dashboard Notifications
-			$notifications['notification_dash_expired'] = (isset($_POST['adrotate_notification_dash_expired'])) ? 'Y' : 'N';
-			$notifications['notification_dash_soon'] = (isset($_POST['adrotate_notification_dash_soon'])) ? 'Y' : 'N';
-
-			// Turn options off. Available in AdRotate Pro only
+			$notifications['notification_dash'] = ($notification_dash == 'Y') ? 'Y' : 'N';
 			$notifications['notification_email'] = 'N';
-			$notifications['notification_email_publisher'] = array(get_option('admin_email'));
+			$notifications['notification_dash_expired'] = ($notification_dash_expired == 'Y') ? 'Y' : 'N';
+			$notifications['notification_dash_soon'] = ($notification_dash_soon == 'Y') ? 'Y' : 'N';
+			$notifications['notification_dash_week'] = 'N';
+			$notifications['notification_schedules'] = 'N';
 			$notifications['notification_mail_geo'] = 'N';
 			$notifications['notification_mail_status'] = 'N';
 			$notifications['notification_mail_queue'] = 'N';
 			$notifications['notification_mail_approved'] = 'N';
 			$notifications['notification_mail_rejected'] = 'N';
+			$notifications['notification_email_publisher'] = array(get_option('admin_email'));
 
 			update_option('adrotate_notifications', $notifications);
 		}
@@ -786,22 +792,16 @@ function adrotate_options_submit() {
 		if($settings_tab == 'stats') {
 			$config = get_option('adrotate_config');
 
-			$stats = trim($_POST['adrotate_stats']);
+			$stats = $impression_timer = $click_timer = '';
+			if(isset($_POST['adrotate_stats'])) $stats = sanitize_text_field($_POST['adrotate_stats']);
+			if(isset($_POST['adrotate_impression_timer'])) $impression_timer = sanitize_text_field($_POST['adrotate_impression_timer']);
+			if(isset($_POST['adrotate_click_timer'])) $click_timer = sanitize_text_field($_POST['adrotate_click_timer']);
+
 			$config['stats'] = (is_numeric($stats) AND $stats >= 0 AND $stats <= 3) ? $stats : 1;
+			$config['enable_admin_stats'] = 'Y';
 			$config['enable_loggedin_impressions'] = 'Y';
 			$config['enable_loggedin_clicks'] = 'Y';
-			$config['enable_clean_trackerdata'] = (isset($_POST['adrotate_enable_clean_trackerdata'])) ? 'Y' : 'N';
-
-			if($config['enable_clean_trackerdata'] == 'Y' AND !wp_next_scheduled('adrotate_delete_transients')) {
-				wp_schedule_event(current_time('timestamp'), 'twicedaily', 'adrotate_delete_transients');
-			}
-			if($config['enable_clean_trackerdata'] == 'N' AND wp_next_scheduled('adrotate_delete_transients')) {
-				wp_clear_scheduled_hook('adrotate_delete_transients');
-			}
-
-			$impression_timer = trim($_POST['adrotate_impression_timer']);
 			$config['impression_timer'] = (is_numeric($impression_timer) AND $impression_timer >= 10 AND $impression_timer <= 3600) ? $impression_timer : 60;
-			$click_timer = trim($_POST['adrotate_click_timer']);
 			$config['click_timer'] = (is_numeric($click_timer) AND $click_timer >= 60 AND $click_timer <= 86400) ? $click_timer : 86400;
 
 			update_option('adrotate_config', $config);
@@ -810,14 +810,29 @@ function adrotate_options_submit() {
 		if($settings_tab == 'roles') {
 			$config = get_option('adrotate_config');
 
-			adrotate_set_capability($_POST['adrotate_ad_manage'], "adrotate_ad_manage");
-			adrotate_set_capability($_POST['adrotate_ad_delete'], "adrotate_ad_delete");
-			adrotate_set_capability($_POST['adrotate_group_manage'], "adrotate_group_manage");
-			adrotate_set_capability($_POST['adrotate_group_delete'], "adrotate_group_delete");
-			$config['ad_manage'] = $_POST['adrotate_ad_manage'];
-			$config['ad_delete'] = $_POST['adrotate_ad_delete'];
-			$config['group_manage'] = $_POST['adrotate_group_manage'];
-			$config['group_delete'] = $_POST['adrotate_group_delete'];
+			$ad_manage = $ad_delete = $group_manage = $group_delete = '';
+			if(isset($_POST['adrotate_ad_manage'])) $ad_manage = sanitize_text_field($_POST['adrotate_ad_manage']);
+			if(isset($_POST['adrotate_ad_delete'])) $ad_delete = sanitize_text_field($_POST['adrotate_ad_delete']);
+			if(isset($_POST['adrotate_group_manage'])) $group_manage = sanitize_text_field($_POST['adrotate_group_manage']);
+			if(isset($_POST['adrotate_group_delete'])) $group_delete = sanitize_text_field($_POST['adrotate_group_delete']);
+
+			adrotate_set_capability($ad_manage, "adrotate_ad_manage");
+			adrotate_set_capability($ad_delete, "adrotate_ad_delete");
+			adrotate_set_capability($group_manage, "adrotate_group_manage");
+			adrotate_set_capability($group_delete, "adrotate_group_delete");
+
+			$config['global_report'] = 'administrator';
+			$config['ad_manage'] = $ad_manage;
+			$config['ad_delete'] = $ad_delete;
+			$config['group_manage'] = $group_manage;
+			$config['group_delete'] = $group_delete;
+			$config['schedule_manage'] = 'administrator';
+			$config['schedule_delete'] = 'administrator';
+			$config['advertiser_manage'] = 'administrator';
+			$config['moderate'] = 'administrator';
+			$config['moderate_approve']	= 'administrator';
+			$config['enable_advertisers'] = 'N';
+			$config['advertiser'] = 'administrator';
 
 			update_option('adrotate_config', $config);
 		}
@@ -825,11 +840,19 @@ function adrotate_options_submit() {
 		if($settings_tab == 'misc') {
 			$config = get_option('adrotate_config');
 
-			$config['widgetalign'] = (isset($_POST['adrotate_widgetalign'])) ? 'Y' : 'N';
-			$config['widgetpadding'] = (isset($_POST['adrotate_widgetpadding'])) ? 'Y' : 'N';
-			$config['hide_schedules'] = (isset($_POST['adrotate_hide_schedules'])) ? 'Y' : 'N';
-			$config['w3caching'] = (isset($_POST['adrotate_w3caching'])) ? 'Y' : 'N';
-			$config['borlabscache'] = (isset($_POST['adrotate_borlabscache'])) ? 'Y' : 'N';
+			$widgetalign = $widgetpadding = $hide_schedules = $w3caching = $borlabscache = '';
+			if(isset($_POST['adrotate_widgetalign'])) $widgetalign = sanitize_text_field($_POST['adrotate_widgetalign']);
+			if(isset($_POST['adrotate_widgetpadding'])) $widgetpadding = sanitize_text_field($_POST['adrotate_widgetpadding']);
+			if(isset($_POST['adrotate_hide_schedules'])) $hide_schedules = sanitize_text_field($_POST['adrotate_hide_schedules']);
+			if(isset($_POST['adrotate_w3caching'])) $w3caching = sanitize_text_field($_POST['adrotate_w3caching']);
+			if(isset($_POST['adrotate_borlabscache'])) $borlabscache = sanitize_text_field($_POST['adrotate_borlabscache']);
+
+			$config['zindex'] = '-1';
+			$config['widgetalign'] = ($widgetalign == 'Y') ? 'Y' : 'N';
+			$config['widgetpadding'] = ($widgetpadding == 'Y') ? 'Y' : 'N';
+			$config['hide_schedules'] = ($hide_schedules == 'Y') ? 'Y' : 'N';
+			$config['w3caching'] = ($w3caching == 'Y') ? 'Y' : 'N';
+			$config['borlabscache'] = ($borlabscache == 'Y') ? 'Y' : 'N';
 
 			update_option('adrotate_config', $config);
 		}

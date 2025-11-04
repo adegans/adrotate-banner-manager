@@ -16,10 +16,10 @@
 function adrotate_get_stats($ad_id, $when = 0, $until = 0) {
 	global $wpdb;
 
-	$stats = $wpdb->get_row("SELECT SUM(`clicks`) as `clicks`, SUM(`impressions`) as `impressions` FROM `{$wpdb->prefix}adrotate_stats` WHERE `ad` = {$ad_id} AND `thetime` >= {$when} AND `thetime` <= {$until} GROUP BY `ad` ORDER BY `ad` ASC;", ARRAY_A);
+	$stats = $wpdb->get_row("SELECT SUM(`clicks`) as `clicks`, SUM(`impressions`) as `impressions` FROM `{$wpdb->prefix}adrotate_stats` WHERE `ad` = {$ad_id} AND `thetime` >= {$when} AND `thetime` <= {$until};", ARRAY_A);
 
-	if(empty($stats['clicks'])) $stats['clicks'] = '0';
-	if(empty($stats['impressions'])) $stats['impressions'] = '0';
+	if(empty($stats['clicks'])) $stats['clicks'] = 0;
+	if(empty($stats['impressions'])) $stats['impressions'] = 0;
 
 	return $stats;
 }

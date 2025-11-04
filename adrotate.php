@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
 Text Domain: adrotate
-Version: 5.15.4
+Version: 5.16
 License: GPLv3
 */
 
@@ -29,7 +29,7 @@ License: GPLv3
 
 /*--- AdRotate values ---------------------------------------*/
 define('ADROTATE_VERSION', 401);
-define('ADROTATE_DB_VERSION', 73);
+define('ADROTATE_DB_VERSION', 75);
 $adrotate_path = plugin_dir_path(__FILE__);
 /*-----------------------------------------------------------*/
 
@@ -87,7 +87,8 @@ if(is_admin()) {
 	add_action('admin_menu', 'adrotate_dashboard');
 	add_action('admin_enqueue_scripts', 'adrotate_dashboard_scripts');
 	add_action('admin_notices','adrotate_notifications_dashboard');
-	add_filter('plugin_action_links_' . plugin_basename( __FILE__ ), 'adrotate_action_links');
+	add_filter('plugin_row_meta', 'adrotate_meta_links', 10, 2);
+
 	/*--- Internal redirects ------------------------------------*/
 	if(isset($_POST['adrotate_generate_submit'])) add_action('init', 'adrotate_generate_input');
 	if(isset($_POST['adrotate_advert_submit'])) add_action('init', 'adrotate_insert_advert');
@@ -187,10 +188,6 @@ function adrotate_manage() {
 			include('dashboard/publisher/manage-adverts-generator.php');
 		}
 		?>
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
-
 	</div>
 <?php
 }
@@ -245,10 +242,6 @@ function adrotate_manage_group() {
 			include('dashboard/publisher/manage-groups-edit.php');
 		}
 		?>
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
-
 	</div>
 <?php
 }
@@ -269,11 +262,6 @@ function adrotate_manage_schedules() {
     	<?php
 		include('dashboard/publisher/manage-schedules.php');
 		?>
-
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
-
 	</div>
 <?php
 }
@@ -309,11 +297,6 @@ function adrotate_manage_media() {
 		<?php
 		include('dashboard/publisher/media.php');
 		?>
-
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
-
 	</div>
 <?php
 }
@@ -358,9 +341,6 @@ function adrotate_statistics() {
 			include('dashboard/publisher/statistics-group.php');
 		}
 		?>
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
 	</div>
 <?php
 }
@@ -480,11 +460,6 @@ function adrotate_options() {
 			include('dashboard/settings/maintenance.php');
 		}
 		?>
-
-		<br class="clear" />
-
-		<?php adrotate_credits(); ?>
-
 	</div>
 <?php
 }

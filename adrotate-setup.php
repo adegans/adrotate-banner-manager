@@ -432,7 +432,7 @@ function adrotate_database_install() {
 		`clicks` int(15) unsigned NOT NULL default '0',
 		`impressions` int(15) unsigned NOT NULL default '0',
 		PRIMARY KEY  (`id`),
-		INDEX `ad` (`ad`),
+		INDEX `ad_thetime` (`ad`, `thetime`),
 		INDEX `thetime` (`thetime`)
 	) ".$charset_collate.$engine.";");
 
@@ -444,7 +444,7 @@ function adrotate_database_install() {
 		`clicks` int(15) unsigned NOT NULL default '0',
 		`impressions` int(15) unsigned NOT NULL default '0',
 		PRIMARY KEY  (`id`),
-		INDEX `ad` (`ad`),
+		INDEX `ad_thetime` (`ad`, `thetime`),
 		INDEX `thetime` (`thetime`)
 	) ".$charset_collate.$engine.";");
 
@@ -589,6 +589,17 @@ function adrotate_database_upgrade() {
 	// AdRotate:	5.12.10
 	if($adrotate_db_version['current'] < 73) {
 		adrotate_del_column("{$wpdb->prefix}adrotate_groups", 'swap');
+	}
+
+	// Database: 	75
+	// AdRotate:	5.24
+	if($adrotate_db_version['current'] < 75) {
+		$wpdb->query("ALTER TABLE `{$wpdb->prefix}adrotate_stats` DROP INDEX `ad`;");
+		$wpdb->query("ALTER TABLE `{$wpdb->prefix}adrotate_stats` DROP INDEX `thetime`;");
+		$wpdb->query("ALTER TABLE `{$wpdb->prefix}adrotate_stats` ADD INDEX ad_thetime (ad, thetime), ADD INDEX thetime (thetime);");
+		$wpdb->query("ALTER TABLE `{$wpdb->prefix}adrotate_stats_archive` DROP INDEX `ad`;");
+		$wpdb->query("ALTER TABLE `{$wpdb->prefix}adrotate_stats_archive` DROP INDEX `thetime`;");
+		$wpdb->query("ALTER TABLE `{$wpdb->prefix}adrotate_stats_archive` ADD INDEX ad_thetime (ad, thetime), ADD INDEX thetime (thetime);");
 	}
 
 	update_option("adrotate_db_version", array('current' => ADROTATE_DB_VERSION, 'previous' => $adrotate_db_version['current']));

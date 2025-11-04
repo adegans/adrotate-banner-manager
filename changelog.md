@@ -1,5 +1,16 @@
 # AdRotate Banner Manager changelog
 
+## 5.16 - November 3, 2025
+* Performance - Faster queries for loading certain stats
+* Performance - Added faster INDEX for stats and stats_archive tables
+* Change - Database version 75
+* Change - Moved action links to plugin meta text
+* Fix - Widget title no longer converts to a slug
+* Update - All dashboard settings pages refreshed
+* Update - Support dashboard page refreshed
+* Update - Notification texts and footer banner
+* Update - Block code
+
 ## 5.15.4 - October 19, 2025
 * Fix - AdRotate Pro banner showing on too many dashboard pages
 * Change - AdRotate Pro banner showing less often
