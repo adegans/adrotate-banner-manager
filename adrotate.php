@@ -6,7 +6,7 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
 Text Domain: adrotate
-Version: 5.16
+Version: 5.16.1
 License: GPLv3
 */
 
@@ -29,11 +29,12 @@ License: GPLv3
 
 /*--- AdRotate values ---------------------------------------*/
 define('ADROTATE_VERSION', 401);
-define('ADROTATE_DB_VERSION', 75);
+define('ADROTATE_DB_VERSION', 76);
 $adrotate_path = plugin_dir_path(__FILE__);
 /*-----------------------------------------------------------*/
 
 /*--- Load Files --------------------------------------------*/
+include_once($adrotate_path.'/library/common.php');
 include_once($adrotate_path.'/adrotate-functions.php');
 include_once($adrotate_path.'/adrotate-statistics.php');
 include_once($adrotate_path.'/adrotate-output.php');

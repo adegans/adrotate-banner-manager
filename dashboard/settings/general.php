@@ -145,7 +145,7 @@
 			<div class="ajdg-box-content">
 
 				<p><a href="http://ajdg.solutions/feed/" target="_blank" title="Subscribe to the AJdG Solutions RSS feed!" class="button-primary"><i class="icn-rss"></i><?php _e('Subscribe via RSS feed', 'adrotate'); ?></a> <em><?php _e('No account required!', 'adrotate'); ?></em></p>
-				<?php echo adrotate_fetch_rss_feed(); ?>
+				<?php echo ajdg_fetch_rss_feed(); ?>
 
 			</div>
 		</div>

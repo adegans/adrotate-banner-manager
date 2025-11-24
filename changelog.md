@@ -1,5 +1,8 @@
 # AdRotate Banner Manager changelog
 
+## 5.16.1 - November 24, 2025
+* Fix - Database version discrepency with AdRotate Pro
+
 ## 5.16 - November 3, 2025
 * Performance - Faster queries for loading certain stats
 * Performance - Added faster INDEX for stats and stats_archive tables

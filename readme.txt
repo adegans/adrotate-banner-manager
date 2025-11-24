@@ -1,6 +1,6 @@
 === AdRotate Banner Manager – The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.16
+Stable tag: 5.16.1
 Requires at least: 4.9
 Tested up to: 6.8.3
 Requires PHP: 7.4
@@ -102,6 +102,9 @@ Installing AdRotate is super easy.
 For more detailed instructions check out the [installation steps](https://support.ajdg.net/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.16.1 - November 24, 2025**
+* Fix - Database discrepency with AdRotate Pro
 
 **5.16 - November 3, 2025**
 * Performance - Faster queries for loading certain stats
