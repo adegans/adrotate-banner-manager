@@ -10,19 +10,6 @@
 ------------------------------------------------------------------------------------ */
 
 /*-------------------------------------------------------------
- Name:      adrotate_is_networked
- Purpose:   Determine if AdRotate is network activated
--------------------------------------------------------------*/
-function adrotate_is_networked() {
-	if(!function_exists('is_plugin_active_for_network')) require_once(ABSPATH.'/wp-admin/includes/plugin.php');
-
-	if(is_plugin_active_for_network('adrotate/adrotate.php')) {
-		return true;
-	}
-	return false;
-}
-
-/*-------------------------------------------------------------
  Name:      adrotate_is_human
  Purpose:   Check if visitor is a bot
 -------------------------------------------------------------*/

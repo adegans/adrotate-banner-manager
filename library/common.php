@@ -28,7 +28,7 @@
  Note: 		Cache is shared between plugins!
 -------------------------------------------------------------*/
 if(!function_exists('ajdg_fetch_rss_feed')) {
-	function ajdg_fetch_rss_feed($show_items = 10) {
+	function ajdg_fetch_rss_feed($show_items = 6) {
 		// Is there a cached feed? Use it!
 		$ajdg_feeds = get_transient('ajdg_news_feeds');
 		if($ajdg_feeds) {
@@ -38,12 +38,12 @@ if(!function_exists('ajdg_fetch_rss_feed')) {
 		// Download feed(s)
 		$rss = fetch_feed(array(
 			'http://ajdg.solutions/feed/', 
-			'https://www.arnan.me/feed/rss'
+			'https://www.arnan.me/feed/page:feed.xml'
 		));
 	
 		// Check for errors
 		if(!is_numeric($show_items) OR $show_items < 1 OR $show_items > 20) {
-			$show_items = 10;
+			$show_items = 6;
 		}
 	
 		if(is_wp_error($rss)) {

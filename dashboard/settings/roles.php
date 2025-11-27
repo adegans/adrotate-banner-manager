@@ -23,46 +23,74 @@
 			<h2 class="ajdg-box-title"><?php _e('Permissions', 'adrotate'); ?></h2>
 			<div class="ajdg-box-content">
 
+				<p><label for="adrotate_global_report">
+					<strong><?php _e("Statistics page:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_global_report" disabled>
+						<?php wp_dropdown_roles($adrotate_config['global_report']); ?>
+					</select></span><br />
+					<small><?php _e("Who can access the Statistics dashboard page?", 'adrotate'); ?></small>
+				</label></p>
+
 				<p><label for="adrotate_ad_manage">
-					<strong><?php _e("Manage/Add/Edit adverts:", 'adrotate'); ?></strong> <select name="adrotate_ad_manage" tabindex="10">
-						<?php adrotate_dropdown_roles($adrotate_config['ad_manage']); ?>
-					</select><br />
+					<strong><?php _e("Manage/Add/Edit adverts:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_ad_manage" tabindex="10">
+						<?php wp_dropdown_roles($adrotate_config['ad_manage']); ?>
+					</select></span><br />
 					<small><?php _e("Who can add and edit adverts?", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_ad_delete">
-					<strong><?php _e("Delete/Reset adverts:", 'adrotate'); ?></strong> <select name="adrotate_ad_delete" tabindex="20">
-						<?php adrotate_dropdown_roles($adrotate_config['ad_delete']); ?>
-					</select><br />
+					<strong><?php _e("Delete/Reset adverts:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_ad_delete" tabindex="20">
+						<?php wp_dropdown_roles($adrotate_config['ad_delete']); ?>
+					</select></span><br />
 					<small><?php _e("Who can delete adverts and reset advert stats?", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_group_manage">
-					<strong><?php _e("Manage/Add/Edit groups:", 'adrotate'); ?></strong> <select name="adrotate_group_manage" tabindex="30">
-						<?php adrotate_dropdown_roles($adrotate_config['group_manage']); ?>
-					</select><br />
+					<strong><?php _e("Manage/Add/Edit groups:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_group_manage" tabindex="30">
+						<?php wp_dropdown_roles($adrotate_config['group_manage']); ?>
+					</select></span><br />
 					<small><?php _e("Who can add and edit groups?", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_group_delete">
-					<strong><?php _e("Delete groups:", 'adrotate'); ?></strong> <select name="adrotate_group_delete" tabindex="40">
-						<?php adrotate_dropdown_roles($adrotate_config['group_delete']); ?>
-					</select><br />
+					<strong><?php _e("Delete groups:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_group_delete" tabindex="40">
+						<?php wp_dropdown_roles($adrotate_config['group_delete']); ?>
+					</select></span><br />
 					<small><?php _e("Who can add and edit groups?", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_schedule_manage">
-					<strong><?php _e("Manage/Add/Edit schedules:", 'adrotate'); ?></strong> <select name="adrotate_schedule_manage" disabled>
-						<?php adrotate_dropdown_roles($adrotate_config['schedule_manage']); ?>
-					</select><br />
+					<strong><?php _e("Manage/Add/Edit schedules:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_schedule_manage" disabled>
+						<?php wp_dropdown_roles($adrotate_config['schedule_manage']); ?>
+					</select></span><br />
 					<small><?php _e("Who can add and edit schedules?", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_schedule_delete">
-					<strong><?php _e("Delete schedules:", 'adrotate'); ?></strong> <select name="adrotate_schedule_delete" disabled>
-						<?php adrotate_dropdown_roles($adrotate_config['schedule_delete']); ?>
-					</select><br />
+					<strong><?php _e("Delete schedules:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_schedule_delete" disabled>
+						<?php wp_dropdown_roles($adrotate_config['schedule_delete']); ?>
+					</select></span><br />
 					<small><?php _e("Who can delete schedules?", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_advertiser_manage">
+					<strong><?php _e("Manage advertisers:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_advertiser_manage" disabled>
+						<?php wp_dropdown_roles($adrotate_config['advertiser_manage']); ?>
+					</select></span><br />
+					<small><?php _e("Who can see and manage advertisers?", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_moderate">
+					<strong><?php _e("Moderate new adverts:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_moderate" disabled>
+						<?php wp_dropdown_roles($adrotate_config['moderate']); ?>
+					</select></span><br />
+					<small><?php _e("Who can approve adverts submitted by advertisers?", 'adrotate'); ?></small>
+				</label></p>
+
+				<p><label for="adrotate_moderate_approve">
+					<strong><?php _e("Moderation Queue:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_moderate_approve" disabled>
+						<?php wp_dropdown_roles($adrotate_config['moderate_approve']); ?>
+					</select></span><br />
+					<small><?php _e("Who can approve or reject adverts submitted by advertisers?", 'adrotate'); ?></small>
 				</label></p>
 
 			</div>
@@ -77,33 +105,7 @@
 	</div>
 	<div class="ajdg-box-one">
 
-		<div class="ajdg-box">
-			<h2 class="ajdg-box-title"><?php _e('Become an advertising professional', 'adrotate'); ?></h2>
-			<div class="ajdg-box-content ajdg-box-sale">
-
-				<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><img src="<?php echo plugins_url("../images/offers/monetize-your-site.jpg", dirname(__FILE__)); ?>" alt="AdRotate Professional" width="100%"></a>
-				<div class="title"><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("AdRotate Professional", 'adrotate'); ?></a></div>
-				<div class="sub_title"><?php _e("Starting at only €49.00", 'adrotate'); ?><br /><a href="https://ajdg.solutions/product-category/adrotate-pro/" target="_blank">Compare Licenses</a></div>
-				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("Get a Single site License", 'adrotate'); ?></a></div>
-				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><?php _e("Go big with the Multi License", 'adrotate'); ?></a></div>
-				<hr>
-				<div class="description"><?php _e("AdRotate Professional has a lot more to offer for even better advertising management and premium support. Enjoy features like Geo Targeting, better Schedules offering more options, expanded Post Injection and much more.", 'adrotate'); ?></div>
-
-			</div>
-		</div>
-
-		<div class="ajdg-box">
-			<h2 class="ajdg-box-title"><?php _e('I make other plugins too', 'adrotate'); ?></h2>
-			<div class="ajdg-box-content ajdg-box-sale">
-	
-				<a href="https://ajdg.solutions/plugins/" target="_blank"><img src="<?php echo plugins_url("../images/offers/more-plugins.jpg", dirname(__FILE__)); ?>" alt="AJdG Solutions Plugins" width="100%"></a>
-				<div class="sub_title"><?php _e("For WordPress, WooCommerce and ClassicPress", 'adrotate'); ?></div>
-				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/" target="_blank"><?php _e("View all plugins", 'adrotate'); ?></a></div>
-				<hr>
-				<div class="description"><?php _e("Handy plugins that improve your WooCommerce online store; faster checkout, no checkout, improve security, automate things, payment stats and more!", 'adrotate'); ?></div>
-
-			</div>
-		</div>
+		<?php include_once(dirname(__DIR__).'/sidebar.php'); ?>
 
 	</div>
 </div>

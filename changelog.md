@@ -1,5 +1,14 @@
 # AdRotate Banner Manager changelog
 
+## 5.17 - November 27, 2025
+* Update - Dashboard now works better on smaller devices (responsive)
+* Update - Improved portability hash generation
+* Update - All dashboard settings pages fine-tuned
+* Update - Support and AdRotate Pro dashboard pages refreshed
+* Update - Removed unused CSS from dashboard.css
+* Fix - Removed remaining multisite code causing warnings/errors for some people
+* Fix - Removed unused licensing code from the support form
+
 ## 5.16.1 - November 24, 2025
 * Fix - Database version discrepency with AdRotate Pro
 

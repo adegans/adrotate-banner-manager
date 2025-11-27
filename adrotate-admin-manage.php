@@ -54,7 +54,7 @@ function adrotate_generate_input() {
 				$portability = adrotate_portable_hash('import', $portability);
 
 				// Save the advert to the DB
-				$wpdb->update($wpdb->prefix.'adrotate', array('title' => $portability['title'], 'bannercode' => $portability['bannercode'], 'thetime' => $portability['thetime'], 'updated' => current_time('timestamp'), 'author' => $portability['author'],  'imagetype' => $portability['imagetype'], 'image' => $portability['image'], 'tracker' => $portability['tracker'], 'show_everyone' => $portability['show_everyone'], 'desktop' => $portability['desktop'], 'mobile' => $portability['mobile'], 'tablet' => $portability['tablet'], 'os_ios' => $portability['os_ios'], 'os_android' => $portability['os_android'], 'weight' => $portability['weight'], 'autodelete' => $portability['autodelete'], 'budget' => $portability['budget'], 'crate' => $portability['crate'], 'irate' => $portability['irate'], 'state_req' => $portability['state_req'], 'cities' => $portability['cities'], 'states' => $portability['states'], 'countries' => $portability['countries']), array('id' => $id));
+				$wpdb->update($wpdb->prefix.'adrotate', $portability, array('id' => $id));
 			}
 
 			adrotate_return('adrotate', 226, array('view' => 'edit', 'ad'=> $id));
@@ -327,7 +327,7 @@ function adrotate_insert_group() {
 			$wrapper_after = htmlspecialchars($wrapper_after, ENT_QUOTES);
 
 			// Update the group itself
-			$wpdb->update($wpdb->prefix.'adrotate_groups', array('name' => $name, 'modus' => $modus, 'fallback' => 0, 'network' => 0, 'cat' => $category, 'cat_loc' => $category_loc, 'cat_par' => $category_par, 'page' => $page, 'page_loc' => $page_loc, 'page_par' => $page_par, 'wrapper_before' => $wrapper_before, 'wrapper_after' => $wrapper_after, 'align' => $align, 'gridrows' => $rows, 'gridcolumns' => $columns, 'admargin' => $admargin, 'adwidth' => $adwidth, 'adheight' => $adheight, 'adspeed' => $adspeed), array('id' => $id));
+			$wpdb->update($wpdb->prefix.'adrotate_groups', array('name' => $name, 'modus' => $modus, 'fallback' => 0, 'cat' => $category, 'cat_loc' => $category_loc, 'cat_par' => $category_par, 'page' => $page, 'page_loc' => $page_loc, 'page_par' => $page_par, 'wrapper_before' => $wrapper_before, 'wrapper_after' => $wrapper_after, 'align' => $align, 'gridrows' => $rows, 'gridcolumns' => $columns, 'admargin' => $admargin, 'adwidth' => $adwidth, 'adheight' => $adheight, 'adspeed' => $adspeed), array('id' => $id));
 
 			// Determine Dynamic Library requirement
 			$dynamic_count = $wpdb->get_var("SELECT COUNT(*) as `total` FROM `{$wpdb->prefix}adrotate_groups` WHERE `name` != '' AND `modus` = 1;");

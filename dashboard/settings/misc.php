@@ -23,26 +23,26 @@
 			<div class="ajdg-box-content">
 
 				<p><label for="adrotate_widgetalign">
-					<strong><?php _e("Widget alignment:", 'adrotate'); ?></strong> <select name="adrotate_widgetalign" tabindex="10">
+					<strong><?php _e("Widget alignment:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_widgetalign" tabindex="10">
 						<option <?php echo ($adrotate_config['widgetalign'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['widgetalign'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
-					</select>
+					</select></span>
 					<br /><small><?php _e("Enable this if your widgets do not align with your themes sidebar. (Some themes ignore this!)", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_widgetpadding">
-					<strong><?php _e("Widget padding:", 'adrotate'); ?></strong> <select name="adrotate_widgetpadding" tabindex="20">
+					<strong><?php _e("Widget padding:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_widgetpadding" tabindex="20">
 						<option <?php echo ($adrotate_config['widgetpadding'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['widgetpadding'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
-					</select>
+					</select></span>
 					<br /><small><?php _e("Enable this to remove the padding (blank space) around ads in widgets. (Some themes prevent this!)", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_hide_schedules">
-					<strong><?php _e("Hide schedules:", 'adrotate'); ?></strong> <select name="adrotate_hide_schedules" tabindex="30" disabled>
+					<strong><?php _e("Hide schedules:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_hide_schedules" tabindex="30" disabled>
 						<option disabled value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option disabled value="N"><?php _e('Yes', 'adrotate'); ?></option>
-					</select>
+					</select></span>
 					<br /><small><?php _e("When editing adverts, hide schedules that are not in use by that advert.", 'adrotate'); ?></small>
 				</label></p>
 
@@ -51,29 +51,29 @@
 					<strong><?php _e("NOTICE:", 'adrotate'); ?></strong> <?php _e("You have enabled W3 Total Caching support but not defined the security hash.", 'adrotate'); ?>
 				</p>
 				<p>
-					<?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://ajdg.solutions/support/adrotate-manuals/caching-support/"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a>
+					<?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://support.ajdg.net/knowledgebase.php?article=46"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a>
 					<br /><pre>define('W3TC_DYNAMIC_SECURITY', 'adrotate');</pre>
 				</p>
 				<?php } ?>
 
 				<p><label for="adrotate_w3caching">
-					<strong><?php _e("W3 Total Caching compatibility:", 'adrotate'); ?></strong> <select name="adrotate_w3caching" tabindex="40">
+					<strong><?php _e("W3 Total Caching compatibility:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_w3caching" tabindex="40">
 						<option <?php echo ($adrotate_config['w3caching'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['w3caching'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
-					</select>
-					<br /><small><?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/adrotate-manuals/caching-support/"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+					</select></span>
+					<br /><small><?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p><label for="adrotate_borlabscache">
-					<strong><?php _e("Borlabs Cache compatibility:", 'adrotate'); ?></strong> <select name="adrotate_borlabscache" tabindex="50">
+					<strong><?php _e("Borlabs Cache compatibility:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_borlabscache" tabindex="50">
 						<option <?php echo ($adrotate_config['borlabscache'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['borlabscache'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
-					</select>
-					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?></small>
+					</select></span>
+					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p>
-					<em><?php _e("It may take a while for the ad to start rotating. The caching plugin needs to refresh the cache. This can several days if not done manually.", 'adrotate'); ?> <?php _e("Caching support only works for [shortcodes] and the AdRotate Widget and Blocks. If you use a PHP Snippet you need to wrap your PHP in the exclusion code yourself.", 'adrotate'); ?></em>
+					<em><?php _e("It may take a while for adverts to start rotating. The caching plugin needs to refresh/clear the cache. This can several days if not done manually.", 'adrotate'); ?> <?php _e("Caching support only works for [shortcodes] and the AdRotate Widget and Blocks. If you use a PHP Snippet you need to wrap your PHP in the exclusion code yourself.", 'adrotate'); ?></em>
 				</p>
 
 			</div>
@@ -88,33 +88,7 @@
 	</div>
 	<div class="ajdg-box-one">
 
-		<div class="ajdg-box">
-			<h2 class="ajdg-box-title"><?php _e('Become an advertising professional', 'adrotate'); ?></h2>
-			<div class="ajdg-box-content ajdg-box-sale">
-
-				<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><img src="<?php echo plugins_url("../images/offers/monetize-your-site.jpg", dirname(__FILE__)); ?>" alt="AdRotate Professional" width="100%"></a>
-				<div class="title"><a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("AdRotate Professional", 'adrotate'); ?></a></div>
-				<div class="sub_title"><?php _e("Starting at only €49.00", 'adrotate'); ?><br /><a href="https://ajdg.solutions/product-category/adrotate-pro/" target="_blank">Compare Licenses</a></div>
-				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("Get a Single site License", 'adrotate'); ?></a></div>
-				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><?php _e("Go big with the Multi License", 'adrotate'); ?></a></div>
-				<hr>
-				<div class="description"><?php _e("AdRotate Professional has a lot more to offer for even better advertising management and premium support. Enjoy features like Geo Targeting, better Schedules offering more options, expanded Post Injection and much more.", 'adrotate'); ?></div>
-
-			</div>
-		</div>
-
-		<div class="ajdg-box">
-			<h2 class="ajdg-box-title"><?php _e('I make other plugins too', 'adrotate'); ?></h2>
-			<div class="ajdg-box-content ajdg-box-sale">
-	
-				<a href="https://ajdg.solutions/plugins/" target="_blank"><img src="<?php echo plugins_url("../images/offers/more-plugins.jpg", dirname(__FILE__)); ?>" alt="AJdG Solutions Plugins" width="100%"></a>
-				<div class="sub_title"><?php _e("For WordPress, WooCommerce and ClassicPress", 'adrotate'); ?></div>
-				<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/" target="_blank"><?php _e("View all plugins", 'adrotate'); ?></a></div>
-				<hr>
-				<div class="description"><?php _e("Handy plugins that improve your WooCommerce online store; faster checkout, no checkout, improve security, automate things, payment stats and more!", 'adrotate'); ?></div>
-
-			</div>
-		</div>
+		<?php include_once(dirname(__DIR__).'/sidebar.php'); ?>
 
 	</div>
 </div>

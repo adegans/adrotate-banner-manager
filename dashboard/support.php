@@ -45,23 +45,23 @@
 				<table width="100%">
 					<tr>
 						<td width="50%">
-							<div class="ajdg-sales-widget" style="display: inline-block;">
+							<div class="ajdg-box-content ajdg-box-sale">
 								<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><div class="header"><img src="<?php echo plugins_url("/images/offers/monetize-your-site.jpg", dirname(__FILE__)); ?>" alt="AdRotate Professional" width="228" height="120"></div></a>
-								<a href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><div class="title"><?php _e("AdRotate Professional", 'adrotate'); ?></div></a>
+								<div class="title"><?php _e("AdRotate Professional", 'adrotate'); ?></div>
 								<div class="sub_title"><?php _e("More features!", 'adrotate'); ?></div>
 								<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-single/" target="_blank"><?php _e("Buy now", 'adrotate'); ?></a></div>
 								<hr>
-								<div class="description"><?php _e("Turn up your advertising management to 11 with AdRotate Pro and benefit from the many extra features.", 'adrotate'); ?></div>
+								<div class="description"><?php _e("Turn up your advertising management capabilities up to 11 with AdRotate Pro! Benefit from extra features and increase your revenue.", 'adrotate'); ?></div>
 							</div>
 						</td>
 						<td>
-							<div class="ajdg-sales-widget" style="display: inline-block;">
+							<div class="ajdg-box-content ajdg-box-sale">
 								<a href="https://ajdg.solutions/plugins/" target="_blank"><div class="header"><img src="<?php echo plugins_url("/images/offers/more-plugins.jpg", dirname(__FILE__)); ?>" alt="AJdG Solutions Plugins" width="228" height="120"></div></a>
-								<a href="https://ajdg.solutions/plugins/" target="_blank"><div class="title"><?php _e("All my plugins", 'adrotate'); ?></div></a>
-								<div class="sub_title"><?php _e("WordPress", 'adrotate'); ?></div>
+								<div class="title"><?php _e("All my plugins", 'adrotate'); ?></div>
+								<div class="sub_title"><?php _e("For WordPress and WooCommerce", 'adrotate'); ?></div>
 								<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/plugins/" target="_blank"><?php _e("View all plugins", 'adrotate'); ?></a></div>
 								<hr>
-								<div class="description"><?php _e("Handy plugins that improve WooCommerce online store; faster checkout, no checkout, payment stats and more!", 'adrotate'); ?></div>
+								<div class="description"><?php _e("Handy plugins that improve your WooCommerce online store; faster checkout, no checkout, payment stats and more!", 'adrotate'); ?></div>
 							</div>
 						</td>
 					</tr>

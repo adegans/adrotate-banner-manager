@@ -566,7 +566,7 @@ function adrotate_database_upgrade() {
 	// Database: 	68
 	// AdRotate:	5.8.24
 	if($adrotate_db_version['current'] < 68) {
-		adrotate_add_column("{$wpdb->prefix}adrotate_groups", 'swap', 'tinyint(1) NOT NULL default \'0\' AFTER `modus`');
+		//adrotate_add_column("{$wpdb->prefix}adrotate_groups", 'swap', 'tinyint(1) NOT NULL default \'0\' AFTER `modus`');
 		adrotate_add_column("{$wpdb->prefix}adrotate_schedule", 'spread_all', 'char(1) NOT NULL default \'N\' AFTER `spread`');
 	}
 
@@ -582,7 +582,7 @@ function adrotate_database_upgrade() {
 	// Database: 	72
 	// AdRotate:	5.12.7
 	if($adrotate_db_version['current'] < 72) {
-		adrotate_add_column("{$wpdb->prefix}adrotate_groups", 'network', 'mediumint(8) NOT NULL AFTER `fallback`');
+		//adrotate_add_column("{$wpdb->prefix}adrotate_groups", 'network', 'mediumint(8) NOT NULL AFTER `fallback`');
 		adrotate_del_column("{$wpdb->prefix}adrotate", 'os_other');
 	}
 

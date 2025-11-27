@@ -154,6 +154,9 @@ function adrotate_evaluate_ads() {
 		unset($ad);
 	}
 
+	// Delete unfinished ads
+	$wpdb->query("DELETE FROM `{$wpdb->prefix}adrotate` WHERE `type` = 'empty' OR `type` = 'a_empty' OR `type` = 'generator';");
+
 	$result = array('error' => $error, 'limit' => $limit, 'expired' => $expired, 'expiressoon' => $expiressoon, 'expiresweek' => $expiresweek, 'normal' => $normal, 'unknown' => $unknown);
 	update_option('adrotate_advert_status', $result);
 	unset($ads, $result);

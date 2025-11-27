@@ -12,7 +12,7 @@
 if(!$ad_edit_id) {
 	$edit_id = $wpdb->get_var("SELECT `id` FROM `{$wpdb->prefix}adrotate` WHERE `type` = 'generator' ORDER BY `id` DESC LIMIT 1;");
 	if($edit_id == 0) {
-	    $wpdb->insert($wpdb->prefix."adrotate", array('title' => '', 'bannercode' => '', 'thetime' => $now, 'updated' => $now, 'author' => $userdata->user_login, 'imagetype' => 'dropdown', 'image' => '', 'tracker' => 'N', 'desktop' => 'Y', 'mobile' => 'Y', 'tablet' => 'Y', 'os_ios' => 'Y', 'os_android' => 'Y', 'type' => 'generator', 'weight' => 6, 'autodelete' => 'N', 'budget' => 0, 'crate' => 0, 'irate' => 0, 'cities' => serialize(array()), 'countries' => serialize(array())));
+	    $wpdb->insert($wpdb->prefix."adrotate", array('title' => '', 'bannercode' => '', 'thetime' => $now, 'updated' => $now, 'author' => $userdata->user_login, 'imagetype' => 'dropdown', 'image' => '', 'tracker' => 'N', 'desktop' => 'Y', 'mobile' => 'Y', 'tablet' => 'Y', 'os_ios' => 'Y', 'os_android' => 'Y', 'type' => 'generator', 'weight' => 6, 'autodelete' => 'N', 'autodisable' => 'N', 'budget' => 0, 'crate' => 0, 'irate' => 0, 'cities' => serialize(array()), 'countries' => serialize(array())));
 	    $edit_id = $wpdb->insert_id;
 
 		$wpdb->insert($wpdb->prefix.'adrotate_schedule', array('name' => 'Schedule for ad '.$edit_id, 'starttime' => $now, 'stoptime' => $in84days, 'maxclicks' => 0, 'maximpressions' => 0, 'spread' => 'N', 'daystarttime' => '0000', 'daystoptime' => '0000', 'day_mon' => 'Y', 'day_tue' => 'Y', 'day_wed' => 'Y', 'day_thu' => 'Y', 'day_fri' => 'Y', 'day_sat' => 'Y', 'day_sun' => 'Y', 'autodelete' => 'N'));
@@ -135,7 +135,7 @@ if($edit_banner) {
 
 			<tbody>
 			<tr>
-		        <th valign="top"><?php _e("Advert hash", 'adrotate'); ?></th>
+		        <th valign="top"><?php _e("Advert Hash", 'adrotate'); ?></th>
 		        <td>
 					<textarea tabindex="2" id="adrotate_portability" name="adrotate_portability" cols="70" rows="5" class="ajdg-fullwidth" placeholder="<?php _e("To import a ready made advert, enter a advert hash from another AdRotate setup...", 'adrotate'); ?>"></textarea>
 		        </td>

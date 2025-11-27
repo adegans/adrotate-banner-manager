@@ -12,7 +12,7 @@
 if(!$group_edit_id) {
 	$edit_id = $wpdb->get_var("SELECT `id` FROM `{$wpdb->prefix}adrotate_groups` WHERE `name` = '' ORDER BY `id` DESC LIMIT 1;");
 	if($edit_id == 0) {
-		$wpdb->insert($wpdb->prefix.'adrotate_groups', array('name' => '', 'modus' => 0, 'fallback' => '0', 'network' => '0', 'cat' => '', 'cat_loc' => 0, 'cat_par' => 0, 'page' => '', 'page_loc' => 0, 'page_par' => 0, 'woo_cat' => '', 'woo_loc' => 0, 'bbpress' => '', 'bbpress_loc' => 0, 'mobile' => 0, 'geo' => 0, 'wrapper_before' => '', 'wrapper_after' => '', 'gridrows' => 2, 'gridcolumns' => 2, 'admargin' => 0, 'admargin_bottom' => 0, 'admargin_left' => 0, 'admargin_right' => 0, 'adwidth' => '728', 'adheight' => '90', 'adspeed' => 6000, 'repeat_impressions' => 'Y'));
+		$wpdb->insert($wpdb->prefix.'adrotate_groups', array('name' => '', 'modus' => 0, 'fallback' => '0', 'cat' => '', 'cat_loc' => 0, 'cat_par' => 0, 'page' => '', 'page_loc' => 0, 'page_par' => 0, 'woo_cat' => '', 'woo_loc' => 0, 'bbpress' => '', 'bbpress_loc' => 0, 'mobile' => 0, 'geo' => 0, 'wrapper_before' => '', 'wrapper_after' => '', 'gridrows' => 2, 'gridcolumns' => 2, 'admargin' => 0, 'admargin_bottom' => 0, 'admargin_left' => 0, 'admargin_right' => 0, 'adwidth' => '728', 'adheight' => '90', 'adspeed' => 6000, 'repeat_impressions' => 'Y'));
 	    $edit_id = $wpdb->insert_id;
 	}
 

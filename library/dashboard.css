@@ -35,26 +35,31 @@
 .wp-core-ui .ajdg-notification-cta a, .wp-core-ui .ajdg-notification-cta .button-primary:active { vertical-align: middle; }
 .ajdg-notification-dismiss { background: transparent; margin-left: 20px; border: 0; cursor: pointer; color: #BBB; text-decoration: none; }
 
-.icn-tg { position: relative; top: 2px; margin-right: 3px; display: inline-block; width: 14px; height: 14px; background: transparent 0 0 no-repeat; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNC4zMzIgMjQuMzMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNC4zMzIgMjQuMzMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGcgaWQ9ImM0MF9yc3MiPgoJCTxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im05LjQxNyAxNS4xODEtLjM5NyA1LjU4NGMuNTY4IDAgLjgxNC0uMjQ0IDEuMTA5LS41MzdsMi42NjMtMi41NDUgNS41MTggNC4wNDFjMS4wMTIuNTY0IDEuNzI1LjI2NyAxLjk5OC0uOTMxbDMuNjIyLTE2Ljk3Mi4wMDEtLjAwMWMuMzIxLTEuNDk2LS41NDEtMi4wODEtMS41MjctMS43MTRsLTIxLjI5IDguMTUxYy0xLjQ1My41NjQtMS40MzEgMS4zNzQtLjI0NyAxLjc0MWw1LjQ0MyAxLjY5MyAxMi42NDMtNy45MTFjLjU5NS0uMzk0IDEuMTM2LS4xNzYuNjkxLjIxOHoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4='); }
-
-/* Old dashboard styles (unused, temporarily kept for cache) */
-.ajdg-postbox-container { width: 49.5%; float: left; }
-.ajdg-postbox { margin: 0 8px; min-height: 100px; box-sizing: border-box; }
-.ajdg-postbox-content { margin-bottom: 20px; padding: 10px 20px 20px 20px; min-height: 40px; min-width:255px; border:#dfdfdf 1px solid; background-color:#fff; clear: both; position: relative; }
-
-/* Dashboard styles */
-.ajdg-box-wrap { overflow: hidden; margin: 0 -8px; padding-top: 10px; }
+/* Dashboard grid */
+.ajdg-box-wrap { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1em; width: 100%; max-width: 100%; margin: 0 auto;	padding: 10px 0; }
+.ajdg-box-wrap.narrow { width:70%; max-width:70%; }
+@media (max-width: 782px) {
+	.ajdg-box-wrap { grid-template-columns: 1fr; gap: 0.5em; padding: 0; }
+}
 /* -- Columns */
-.ajdg-box-one { width: 24.75%; float: left; }
-.ajdg-box-two { width: 49.5%; float: left; }
-.ajdg-box-three { width: 74.25%; float: left; }
-.ajdg-box-four { width: 99%; float: left; }
-.ajdg-box-onethird { width: 33%; float: left; }
-.ajdg-box-twothird { width: 66%; float: left; }
+.ajdg-box-one { grid-column: span 3; }
+.ajdg-box-two { grid-column: span 6; }
+.ajdg-box-three { grid-column: span 9; }
+.ajdg-box-four { grid-column: span 12; }
+.ajdg-box-onethird { grid-column: span 4; }
+.ajdg-box-twothird { grid-column: span 8; }
+@media (max-width: 960px) {
+  .ajdg-box-one, .ajdg-box-two, .ajdg-box-three, .ajdg-box-onethird, .ajdg-box-twothird { grid-column: span 6; }
+  .ajdg-box-four { grid-column: span 12; }
+  .ajdg-box-wrap.narrow { width: 100%; max-width: 100%; }
+}
+@media (max-width: 782px) {
+  .ajdg-box-one, .ajdg-box-two, .ajdg-box-three, .ajdg-box-four, .ajdg-box-onethird, .ajdg-box-twothird { grid-column: span 12; }
+}
 /* -- Box and contents */
-.ajdg-box { margin: 0 8px; min-height: 100px; box-sizing: border-box; }
+.ajdg-box { margin: 0; min-height: 100px; box-sizing: border-box; }
 .ajdg-box-title { padding-left: 4px; }
-.ajdg-box-content { margin-bottom: 20px; padding: 10px 20px 20px 20px; min-height: 40px; min-width:255px; border-radius: 6px; border:#dfdfdf 1px solid; background-color:#fff; clear: both; position: relative; }
+.ajdg-box-content { margin-bottom: 20px; padding: 10px 20px 20px 20px; border-radius: 6px; border:#dfdfdf 1px solid; background-color:#fff; clear: both; position: relative; }
 .pro-image { padding:0px 10px 0px 0px; }
 .ajdg-photo { border-radius: 5px; }
 .ajdg-fullwidth { width: 100%; }
@@ -73,28 +78,10 @@
 .ajdg-box-sale .cta_button:before { content:''; display: inline-block; height: 20px; vertical-align: middle; }
 .ajdg-box-sale .cta_button:hover { text-decoration: none; background-color: #ebedf0; }
 
-/* Old sales widget styles (unused, temporarily kept for cache) */
-.ajdg-sales-widget { margin: 0; padding: 0; background: #fff; width: 95%; box-sizing: border-box; border: 1px solid #dadde1; border-radius: 6px; font-family: Helvetica, Arial, sans-serif; font-size: 11px; unicode-bidi: embed; overflow: hidden; -webkit-text-size-adjust: none; line-height: 1.34; }
-
-.ajdg-sales-widget a { cursor: pointer; text-decoration: none; color: #385898; }
-.ajdg-sales-widget a:hover { text-decoration: underline; }
-.ajdg-sales-widget img { border: 0;	}
-.ajdg-sales-widget hr { margin: 0; background: #dadde1; border-width: 0; color: #dadde1; height: 1px; }
-
-.ajdg-sales-widget .header { position: relative; overflow: hidden; width: 100%; }
-.ajdg-sales-widget .header img{ position: relative; height: auto; min-height: initial; width: 100%; }
-
-.ajdg-sales-widget .title { color: #000; margin: 8px 12px 2px 12px; text-align: center; font-size: 14px; line-height: 18px; font-weight: 600; }
-.ajdg-sales-widget .sub_title{ margin: 5px 12px 10px 12px; text-align: center; font-size: 14px; font-weight: normal; }
-.ajdg-sales-widget .description { font-size: 12px; text-align: left; margin: 12px; }
-
-.ajdg-sales-widget .cta { margin: 8px 12px 12px 12px; text-align: center; }
-.ajdg-sales-widget .cta_button { padding: 0; border: 1px solid #ccd0d5; border-radius: 2px; box-sizing: content-box; width: 100%; display: inline-block; background-color: #f5f6f7; position: relative; text-align: center; text-decoration: none; color: #4b4f56; font-size: 16px; font-weight:bold; line-height: 32px; vertical-align: middle; cursor: pointer; white-space: nowrap; }
-.ajdg-sales-widget .cta_button:before { content:''; display: inline-block; height: 20px; vertical-align: middle; }
-.ajdg-sales-widget .cta_button:focus { box-shadow: 0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15); outline: none; }
-.ajdg-sales-widget .cta_button:active { transition: none; background-color: #dddfe2; border-color: #bec3c9; }
-.ajdg-sales-widget .cta_button:hover { text-decoration: none; background-color: #ebedf0; }
-.ajdg-sales-widget .cta_button+.cta_button { margin-left:4px; }
+/* Old dashboard styles (Used in some places in the edit dashboards) */
+.ajdg-postbox-container { width: 49.5%; float: left; }
+.ajdg-postbox { margin: 0 8px; min-height: 100px; box-sizing: border-box; }
+.ajdg-postbox-content { margin-bottom: 20px; padding: 10px 20px 20px 20px; min-height: 40px; min-width:255px; border:#dfdfdf 1px solid; background-color:#fff; clear: both; position: relative; }
 
 /* Tooltips */
 .ajdg-tooltip { position: relative; display: inline-block; border-bottom: 1px dotted black; }
