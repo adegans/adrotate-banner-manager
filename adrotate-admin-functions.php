@@ -25,6 +25,49 @@ function adrotate_rand($length = 8) {
 }
 
 /*-------------------------------------------------------------
+ Name:      adrotate_fetch_rss_feed
+ Purpose:   Load RSS feeds to show in the AdRotate dashboard. Cache it for a day.
+-------------------------------------------------------------*/
+function adrotate_fetch_rss_feed($url = '', $show_items = 6) {
+	// Check for errors
+	if(!is_numeric($show_items) OR $show_items < 1 OR $show_items > 20) {
+		$show_items = 6;
+	}
+
+	$rss = fetch_feed($url);
+
+	if(is_wp_error($rss)) {
+		$feed_output = '<p>' . __('The feed could not be fetched.') . '</p>';
+	} else if(!$rss->get_item_quantity()) {
+		$feed_output = '<p>' . __('The feed has no items or could not be read.') . '</p>';
+	} else {		
+		// Prepare output
+		$feed_output = '<ul>';
+		foreach($rss->get_items(0, $show_items) as $item) {
+			$link = $item->get_link();
+
+			while(!empty($link) AND stristr($link, 'http') !== $link) {
+				$link = substr($link, 1);
+			}
+
+			$link = esc_url(strip_tags($link));
+			$title = esc_html(trim(strip_tags($item->get_title())));
+			$date = $item->get_date('U');
+
+			if(empty($title)) $title = __('Untitled');
+			if($date) $date = ' <span class="rss-date">'.date_i18n(get_option('date_format'), $date).'</span>';
+
+			$feed_output .= (empty($link)) ? "<li>$title<br /><em>{$date}</em></li>" : "<li><a class='rsswidget' href='$link'>$title</a><br /><em>{$date}</em></li>";
+		}
+		$feed_output .= '</ul>';
+	}
+	unset($rss);
+
+	// Done!
+	return $feed_output;
+}
+
+/*-------------------------------------------------------------
  Name:      adrotate_select_categories
  Purpose:   Create scrolling menu of all categories.
 -------------------------------------------------------------*/

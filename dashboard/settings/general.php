@@ -92,6 +92,18 @@
 		</div>
 
 		<div class="ajdg-box">
+			<h2 class="ajdg-box-title"><?php _e("Reports Folder", 'adrotate'); ?></h2>
+			<div class="ajdg-box-content">
+
+				<p><strong>Currently:</strong> <?php echo WP_CONTENT_DIR; ?>/<strong><?php echo $adrotate_config['report_folder']; ?></strong>/</p>
+				<p><label for="adrotate_report_folder"><strong><?php _e("Folder name:", 'adrotate'); ?></strong> <input tabindex="70" name="adrotate_report_folder" type="text" class="search-input" size="20" value="<?php echo $adrotate_config['report_folder']; ?>" autocomplete="off" disabled /> <?php _e("Default: reports.", 'adrotate'); ?><br />
+				<small><?php _e("This is where exported stats get stored so you can download it.", 'adrotate'); ?><br />
+		<?php _e("This folder will not be automatically created if it doesn't exist. AdRotate will show errors when the folder is missing.", 'adrotate'); ?></small></label></p>
+
+			</div>
+		</div>
+
+		<div class="ajdg-box">
 			<h2 class="ajdg-box-title"><?php _e('ads.txt file', 'adrotate'); ?></h2>
 			<div class="ajdg-box-content">
 

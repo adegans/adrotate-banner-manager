@@ -724,10 +724,10 @@ function adrotate_renew($id, $howlong = 2592000) {
 }
 
 /*-------------------------------------------------------------
- Name:      adrotate_options_submit
+ Name:      adrotate_save_options
  Purpose:   Save options from dashboard
 -------------------------------------------------------------*/
-function adrotate_options_submit() {
+function adrotate_save_options() {
 	if(wp_verify_nonce($_POST['adrotate_nonce_settings'],'adrotate_settings')) {
 
 		$settings_tab = sanitize_key($_POST['adrotate_settings_tab']);
@@ -747,6 +747,7 @@ function adrotate_options_submit() {
 			$config['jsfooter'] = ($adrotate_jsfooter == 'Y') ? 'Y' : 'N';
 			$config['adblock_disguise'] = '';
 			$config['banner_folder'] = 'banners';
+			$config['report_folder'] = 'reports';
 			$config['adstxt_file'] = '';
 			// Geo Targeting (Doesn't have its own tab)
 			$config['enable_geo'] = 0;

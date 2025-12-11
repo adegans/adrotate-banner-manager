@@ -9,18 +9,23 @@
 		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><?php _e("Go big with the Multi License", 'adrotate'); ?></a></div>
 		<hr>
 		<div class="description">
-			<p><?php _e("AdRotate Professional has a lot more to offer for even better advertising management. It also includes premium support. Enjoy features like Geo Targeting, Schedules with more options, expanded Post Injection and much more.", 'adrotate'); ?></p>
+			<p><?php _e("Unlock all the greyed out features with AdRotate Professional. Besides of the settings you can actually see, AdRotate Pro has even more to offer under the hood for even better advertising management. Use features like Geo Targeting, Schedules with more options, expanded Post Injection and much more with AdRotate Pro!", 'adrotate'); ?></p>
+			<p><?php _e("Oh, and you'll also get access to Ticket Support, AdRotate Geo and one year of updates.", 'adrotate'); ?></p>
 		</div>
 
 	</div>
 </div>
 
 <div class="ajdg-box">
-	<h2 class="ajdg-box-title"><?php _e('News & Updates', 'adrotate'); ?></h2>
+	<h2 class="ajdg-box-title"><?php _e("Blogs & updates", 'adrotate'); ?></h2>
 	<div class="ajdg-box-content">
 
-		<p><a href="http://ajdg.solutions/feed/" target="_blank" title="Subscribe to the AJdG Solutions RSS feed!" class="button-primary"><i class="icn-rss"></i><?php _e('Subscribe via RSS feed', 'adrotate'); ?></a> <em><?php _e('No account required!', 'adrotate'); ?></em></p>
-		<?php echo ajdg_fetch_rss_feed(); ?>
+		<h3>AJdG Updates</h3>
+		<?php echo adrotate_fetch_rss_feed('https://ajdg.solutions/feed/', 3); ?>
+		<p>Stay up-to-date with plugins: <a href="https://ajdg.solutions/feed/" target="_blank" title="Subscribe to the AJdG Solutions blog!" class="button-primary"><i class="icn-rss"></i> RSS</a></p>
 
+		<h3>Arnan's blog</h3>
+		<?php echo adrotate_fetch_rss_feed('https://www.arnan.me/feed/page:feed.xml', 3); ?>
+		<p>Subscribe to the blog of Arnan: <a href="https://www.arnan.me/feed/page:feed.xml" target="_blank" title="Subscribe to Arnan's blog!" class="button-primary"><i class="icn-rss"></i> RSS</a></p>
 	</div>
 </div>

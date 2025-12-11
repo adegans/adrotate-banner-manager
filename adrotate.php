@@ -6,14 +6,14 @@ Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
 Text Domain: adrotate
-Version: 5.17
+Version: 5.17.1
 License: GPLv3
 */
 
 /*
 * Requires PHP: 7.4
 * Requires CP: 1.0
-* Tested CP: 2.5
+* Tested CP: 2.6
 * Premium URI: https://ajdg.solutions/
 */
 
@@ -28,13 +28,12 @@ License: GPLv3
 ------------------------------------------------------------------------------------ */
 
 /*--- AdRotate values ---------------------------------------*/
-define('ADROTATE_VERSION', 401);
+define('ADROTATE_VERSION', 408);
 define('ADROTATE_DB_VERSION', 76);
 $adrotate_path = plugin_dir_path(__FILE__);
 /*-----------------------------------------------------------*/
 
 /*--- Load Files --------------------------------------------*/
-include_once($adrotate_path.'/library/common.php');
 include_once($adrotate_path.'/adrotate-functions.php');
 include_once($adrotate_path.'/adrotate-statistics.php');
 include_once($adrotate_path.'/adrotate-output.php');
@@ -97,7 +96,7 @@ if(is_admin()) {
 	if(isset($_POST['adrotate_upload_media'])) add_action('init', 'adrotate_insert_media');
 	if(isset($_POST['adrotate_create_folder'])) add_action('init', 'adrotate_insert_folder');
 	if(isset($_POST['adrotate_action_submit'])) add_action('init', 'adrotate_request_action');
-	if(isset($_POST['adrotate_save_options'])) add_action('init', 'adrotate_options_submit');
+	if(isset($_POST['adrotate_save_options'])) add_action('init', 'adrotate_save_options');
 }
 
 /*-------------------------------------------------------------

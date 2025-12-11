@@ -33,28 +33,31 @@
 				</p>
 
 				<p>
-					<strong><?php esc_html_e("Banners/assets Folder", 'adrotate-pro'); ?></strong><br />
+					<strong><?php esc_html_e("Banners/assets Folder", 'adrotate'); ?></strong><br />
 					<?php
 					echo WP_CONTENT_DIR.'/'.$adrotate_config['banner_folder'].'/ -> ';
-					echo (is_writeable(WP_CONTENT_DIR.'/'.$adrotate_config['banner_folder']).'/') ? '<span style="color:#009900;">'.esc_html__("Exists and appears writable", 'adrotate-pro').'</span>' : '<span style="color:#CC2900;">'.esc_html__("Not writable or does not exist", 'adrotate-pro').'</span>';
+					echo (is_writeable(WP_CONTENT_DIR.'/'.$adrotate_config['banner_folder'].'/')) ? '<span style="color:#009900;">'.esc_html__("Exists and appears writable", 'adrotate').'</span>' : '<span style="color:#CC2900;">'.esc_html__("Not writable or does not exist", 'adrotate').'</span>';
 					?>
 				</p>
 
 				<p>
 					<strong><?php _e("Reports folder:", 'adrotate'); ?></strong><br />
 					<?php
-					echo WP_CONTENT_DIR.'/reports/'.' -> ';
-					echo (is_writable(WP_CONTENT_DIR.'/reports/')) ? '<span style="color:#009900;">'.esc_html__("Exists and appears writable", 'adrotate-pro').'</span>' : '<span style="color:#CC2900;">'.esc_html__("Not writable or does not exist", 'adrotate-pro').'</span>';
+					echo WP_CONTENT_DIR.'/'.$adrotate_config['report_folder'].'/ -> ';
+					echo (is_writable(WP_CONTENT_DIR.'/'.$adrotate_config['report_folder'].'/')) ? '<span style="color:#009900;">'.esc_html__("Exists and appears writable", 'adrotate').'</span>' : '<span style="color:#CC2900;">'.esc_html__("Not writable or does not exist", 'adrotate').'</span>';
+					echo '<br />';
+					echo WP_CONTENT_DIR.'/'.$adrotate_config['report_folder'].'/index.html -> ';
+					echo (file_exists(WP_CONTENT_DIR.'/'.$adrotate_config['report_folder'].'/index.html')) ? '<span style="color:#009900;">'.esc_html__("Exists", 'adrotate').'</span>' : '<span style="color:#CC2900;">'.esc_html__("Not found (Required for security)", 'adrotate').'</span>';
 					?>
 				</p>
 
 				<p>
-					<strong><?php esc_html_e("Unfiltered HTML:", 'adrotate-pro'); ?></strong> 
+					<strong><?php esc_html_e("Unfiltered HTML:", 'adrotate'); ?></strong> 
 					<?php
 					if(defined('DISALLOW_UNFILTERED_HTML') AND !DISALLOW_UNFILTERED_HTML) {
-						echo "<span style=\"color:#009900;\">".esc_html__("Excellent! Editors, Administrators and Superadmins can use unfiltered code.", 'adrotate-pro')."</span>";
+						echo "<span style=\"color:#009900;\">".esc_html__("Excellent! Editors, Administrators and Superadmins can use unfiltered code.", 'adrotate')."</span>";
 					} else {
-						echo "<span style=\"color:#CC2900;\">".esc_html__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate-pro')."</span><br />".esc_html__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php file.", 'adrotate-pro')." <a href=\"https://support.ajdg.net/knowledgebase.php?article=43\" target=\"_blank\">".esc_html__("How to enable unfiltered html", 'adrotate-pro')."</a>?";
+						echo "<span style=\"color:#CC2900;\">".esc_html__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate')."</span><br />".esc_html__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php file.", 'adrotate')." <a href=\"https://support.ajdg.net/knowledgebase.php?article=43\" target=\"_blank\">".esc_html__("How to enable unfiltered html", 'adrotate')."</a>?";
 					}
 					?>
 				</p>
@@ -67,7 +70,7 @@
 			<div class="ajdg-box-content">
 
 				<p>
-					<strong><?php esc_html_e("Delete expired trackerdata:", 'adrotate-pro'); ?></strong> <?php if(!$tracker) '<span style="color:#CC2900;">'._e("Not scheduled!", 'adrotate-pro').'</span>'; else echo '<span style="color:#009900;">'.date_i18n(get_option('date_format')." H:i", $tracker).'</span>'; ?>
+					<strong><?php esc_html_e("Delete expired trackerdata:", 'adrotate'); ?></strong> <?php if(!$tracker) '<span style="color:#CC2900;">'._e("Not scheduled!", 'adrotate').'</span>'; else echo '<span style="color:#009900;">'.date_i18n(get_option('date_format')." H:i", $tracker).'</span>'; ?>
 				</p>
 				
 				<p><em><?php _e("The listed date is the next time the task is supposed to run.", 'adrotate'); ?></em></p>

@@ -1,8 +1,8 @@
 === AdRotate Banner Manager – The only ad manager you'll need ===
 Contributors: adegans
-Stable tag: 5.17
+Stable tag: 5.17.1
 Requires at least: 4.9
-Tested up to: 6.8.3
+Tested up to: 6.9
 Requires PHP: 7.4
 Donate link: https://ajdg.solutions/product/adrotate-pro-single/
 Tags: ads, ad manager, adsense, banner, monetize

@@ -218,7 +218,7 @@
 
 <div style="text-align: center;">
 	<p><em><?php _e("You can use all major credit cards, PayPal, Apple Pay & Google Pay, and other local payment options through my secure payment portal.", 'adrotate'); ?><br />
-	<small><?php _e("All prices are shown in Euros, your bank will convert your currency to Euros for free.", 'adrotate'); ?></small></em></p>
+	<small><?php _e("All prices are shown in Euros, your bank will convert your currency to Euros at no cost to you.", 'adrotate'); ?></small></em></p>
 
 	<p style="font-size: 175%;">Questions? <a href="https://ajdg.solutions/contact/" target="_blank">Click here</a>! I'm looking forward to hearing from you!</p>
 </div>

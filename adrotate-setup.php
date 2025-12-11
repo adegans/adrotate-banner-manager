@@ -79,8 +79,19 @@ function adrotate_activate_setup() {
 		remove_role('adrotate_advertiser');
 
 		// Attempt to make the some folders
-		if(!is_dir(WP_CONTENT_DIR.'/banners')) mkdir(WP_CONTENT_DIR.'/banners', 0755);
-		if(!is_dir(WP_CONTENT_DIR.'/reports')) mkdir(WP_CONTENT_DIR.'/reports', 0755);
+		if(!is_dir(WP_CONTENT_DIR.'/banners')) {
+			mkdir(WP_CONTENT_DIR.'/banners', 0755);
+		}
+	
+		if(!is_dir(WP_CONTENT_DIR.'/reports')) {
+			mkdir(WP_CONTENT_DIR.'/reports', 0755);
+		}
+	
+		if(!file_exists(WP_CONTENT_DIR.'/reports/index.html')) {
+			$fprotect = fopen(WP_CONTENT_DIR.'/reports/index.html', 'wb');
+			fclose($fprotect);
+			unset($fprotect);
+		}
 	}
 }
 
@@ -243,6 +254,7 @@ function adrotate_check_config() {
 	if(!isset($config['enable_geo_advertisers'])) $config['enable_geo_advertisers'] = 0;
 	if(!isset($config['adblock_disguise'])) $config['adblock_disguise'] = '';
 	if(!isset($config['banner_folder'])) $config['banner_folder'] = "banners";
+	if(!isset($config['report_folder'])) $config['report_folder'] = "reports";
 	if(!isset($config['impression_timer']) OR $config['impression_timer'] < 10 OR $config['impression_timer'] > HOUR_IN_SECONDS) $config['impression_timer'] = 60;
 	if(!isset($config['click_timer']) OR $config['click_timer'] < 60 OR $config['click_timer'] > DAY_IN_SECONDS) $config['click_timer'] = DAY_IN_SECONDS;
 	if(!isset($config['hide_schedules']) OR ($config['hide_schedules'] != 'Y' AND $config['hide_schedules'] != 'N')) $config['hide_schedules'] = 'N';
@@ -757,6 +769,18 @@ function adrotate_core_upgrade() {
 		wp_clear_scheduled_hook('adrotate_evaluate_ads');
 	}
 
+	// 5.17.1
+	if($adrotate_version['current'] < 408) {
+		$config407 = get_option('adrotate_config');
+		$config407['report_folder'] = "reports";
+		update_option('adrotate_config', $config407);
+
+		if(!file_exists(WP_CONTENT_DIR.'/reports/index.html')) {
+			$fprotect = fopen(WP_CONTENT_DIR.'/reports/index.html', 'wb');
+			fclose($fprotect);
+			unset($fprotect);
+		}
+	}
 
 	update_option("adrotate_version", array('current' => ADROTATE_VERSION, 'previous' => $adrotate_version['current']));
 }
