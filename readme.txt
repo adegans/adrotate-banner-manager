@@ -1,10 +1,10 @@
-=== AdRotate Banner Manager – The only ad manager you'll need ===
+=== AdRotate Banner Manager ===
 Contributors: adegans
-Stable tag: 5.17.1
+Stable tag: 5.17.2
 Requires at least: 4.9
 Tested up to: 6.9
-Requires PHP: 7.4
-Donate link: https://ajdg.solutions/product/adrotate-pro-single/
+Requires PHP: 8.0
+Donate link: https://www.arnan.me/donate/
 Tags: ads, ad manager, adsense, banner, monetize
 License: GPLv3
 
@@ -102,6 +102,18 @@ Installing AdRotate is super easy.
 For more detailed instructions check out the [installation steps](https://support.ajdg.net/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.17.2 - December 26, 2025**
+* New - Support for the GooseUp Update Plugin
+* Fix - Missing ads.txt setting when activating the plugin
+* Added - Meta links
+* Removed - Action links
+* Change - i18n is now in the 'languages' folder
+
+**5.17.1 - December 11, 2025**
+* Fix - Better check if banners folder exist
+* Change - Internal RSS feed fetcher for one url at a time
+* i18n - Removed all outdated translations strings
 
 **5.17 - November 27, 2025**
 * Update - Dashboard now works better on smaller devices (responsive)

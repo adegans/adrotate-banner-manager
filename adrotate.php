@@ -5,21 +5,23 @@ Plugin URI: https://ajdg.solutions/product/adrotate-banner-manager/
 Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
-Text Domain: adrotate
-Version: 5.17.1
+Version: 5.17.2
 License: GPLv3
-*/
 
-/*
-* Requires PHP: 7.4
-* Requires CP: 1.0
-* Tested CP: 2.6
-* Premium URI: https://ajdg.solutions/
+Text Domain: adrotate
+Domain Path: /languages
+
+Requires at least: 6.0
+Requires PHP: 8.0
+Requires CP: 1.0
+Tested CP: 2.6
+Premium URI: https://ajdg.solutions/
+GooseUp: compatible
 */
 
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2025 Arnan de Gans. All Rights Reserved.
+*  Copyright 2008-2026 Arnan de Gans. All Rights Reserved.
 *  ADROTATE is a registered trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -43,7 +45,7 @@ if(function_exists('register_block_type')) include_once($adrotate_path.'/adrotat
 /*-----------------------------------------------------------*/
 
 /*--- Check and Load config ---------------------------------*/
-load_plugin_textdomain('adrotate', false, 'adrotate/language');
+load_plugin_textdomain('adrotate', false, 'adrotate/languages');
 $adrotate_config = get_option("adrotate_config");
 $adrotate_crawlers = get_option("adrotate_crawlers");
 $adrotate_version = get_option("adrotate_version");

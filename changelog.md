@@ -1,5 +1,12 @@
 # AdRotate Banner Manager changelog
 
+## 5.17.2 - December 26, 2025
+* New - Support for the GooseUp Update Plugin
+* Fix - Missing ads.txt setting when activating the plugin
+* Added - Meta links
+* Removed - Action links
+* Change - i18n is now in the 'languages' folder
+
 ## 5.17.1 - December 11, 2025
 * Fix - Better check if banners folder exist
 * Change - Internal RSS feed fetcher for one url at a time

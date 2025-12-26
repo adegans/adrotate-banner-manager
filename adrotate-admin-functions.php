@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2025 Arnan de Gans. All Rights Reserved.
+*  Copyright 2008-2026 Arnan de Gans. All Rights Reserved.
 *  ADROTATE is a registered trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -26,7 +26,7 @@ function adrotate_rand($length = 8) {
 
 /*-------------------------------------------------------------
  Name:      adrotate_fetch_rss_feed
- Purpose:   Load RSS feeds to show in the AdRotate dashboard. Cache it for a day.
+ Purpose:   Load RSS feeds to show in the AdRotate dashboard.
 -------------------------------------------------------------*/
 function adrotate_fetch_rss_feed($url = '', $show_items = 6) {
 	// Check for errors
@@ -459,7 +459,7 @@ function adrotate_notifications_dashboard() {
  Name:      adrotate_dropdown_folder_contents
  Purpose:   List folder contents for dropdown menu
 -------------------------------------------------------------*/
-function adrotate_dropdown_folder_contents($base_dir, $extensions = array('jpg', 'jpeg', 'gif', 'png', 'html', 'htm', 'js'), $max_level = 1, $level = 0, $parent = '') {
+function adrotate_dropdown_folder_contents($base_dir, $extensions = array('jpg', 'jpeg', 'gif', 'png', 'webp', 'html', 'htm', 'js'), $max_level = 1, $level = 0, $parent = '') {
 	$index = array();
 
 	// List the folders and files
@@ -517,7 +517,7 @@ function adrotate_mediapage_folder_contents($asset_folder, $level = 1) {
 
 	    if(count($assets) > 0) {
 			$new_level = $level + 1;
-			$extensions = array('jpg', 'jpeg', 'gif', 'png', 'svg', 'swf', 'flv', 'html', 'htm', 'js');
+			$extensions = array('jpg', 'jpeg', 'gif', 'png', 'webp', 'html', 'htm', 'js');
 
 			foreach($assets as $key => $asset) {
 				$fileinfo = pathinfo($asset);
@@ -623,12 +623,11 @@ function adrotate_unlink($asset, $path = '') {
 function adrotate_meta_links($links, $file) {
 	if($file !== 'adrotate/adrotate.php' ) return $links;
 
-	$extra_links = array();
-	$extra_links['ajdg-adrotate-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124', '<strong>Get AdRotate Pro</strong>');
-	$extra_links['ajdg-adrotate-help'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://support.ajdg.net/knowledgebase.php', 'Plugin support');
-	$extra_links['ajdg-adrotate-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/', 'More plugins');
+	$links['ajdg-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124', '<strong>Get AdRotate Pro</strong>');
+	$links['ajdg-help'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://support.ajdg.net/knowledgebase.php', 'Plugin support');
+	$links['ajdg-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/', 'More plugins');
 
-	return array_merge($links, $extra_links);
+	return $links;
 }
 
 /*-------------------------------------------------------------

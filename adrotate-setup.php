@@ -1,7 +1,7 @@
 <?php
 /* ------------------------------------------------------------------------------------
 *  COPYRIGHT AND TRADEMARK NOTICE
-*  Copyright 2008-2025 Arnan de Gans. All Rights Reserved.
+*  Copyright 2008-2026 Arnan de Gans. All Rights Reserved.
 *  ADROTATE is a registered trademark of Arnan de Gans.
 
 *  COPYRIGHT NOTICES AND ALL THE COMMENTS SHOULD REMAIN INTACT.
@@ -255,6 +255,7 @@ function adrotate_check_config() {
 	if(!isset($config['adblock_disguise'])) $config['adblock_disguise'] = '';
 	if(!isset($config['banner_folder'])) $config['banner_folder'] = "banners";
 	if(!isset($config['report_folder'])) $config['report_folder'] = "reports";
+	if(!isset($config['adstxt_file'])) $config['adstxt_file'] = "";
 	if(!isset($config['impression_timer']) OR $config['impression_timer'] < 10 OR $config['impression_timer'] > HOUR_IN_SECONDS) $config['impression_timer'] = 60;
 	if(!isset($config['click_timer']) OR $config['click_timer'] < 60 OR $config['click_timer'] > DAY_IN_SECONDS) $config['click_timer'] = DAY_IN_SECONDS;
 	if(!isset($config['hide_schedules']) OR ($config['hide_schedules'] != 'Y' AND $config['hide_schedules'] != 'N')) $config['hide_schedules'] = 'N';
@@ -775,6 +776,10 @@ function adrotate_core_upgrade() {
 		$config407['report_folder'] = "reports";
 		update_option('adrotate_config', $config407);
 
+		if(!is_dir(WP_CONTENT_DIR.'/reports')) {
+			mkdir(WP_CONTENT_DIR.'/reports', 0755);
+		}
+	
 		if(!file_exists(WP_CONTENT_DIR.'/reports/index.html')) {
 			$fprotect = fopen(WP_CONTENT_DIR.'/reports/index.html', 'wb');
 			fclose($fprotect);
