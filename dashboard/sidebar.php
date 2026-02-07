@@ -34,13 +34,8 @@
 	<h2 class="ajdg-box-title"><?php _e("Blogs & updates", 'adrotate'); ?></h2>
 	<div class="ajdg-box-content">
 
-		<h3>AJdG Updates</h3>
-		<?php echo adrotate_fetch_rss_feed('https://ajdg.solutions/feed/', 3); ?>
-		<p>Stay up-to-date with plugins: <a href="https://ajdg.solutions/feed/" target="_blank" title="Subscribe to the AJdG Solutions blog!" class="button-primary"><i class="icn-rss"></i> RSS</a></p>
-
-		<h3>Arnan's blog</h3>
-		<?php echo adrotate_fetch_rss_feed('https://www.arnan.me/feed/page:feed.xml', 3); ?>
-		<p>Subscribe to the blog of Arnan: <a href="https://www.arnan.me/feed/page:feed.xml" target="_blank" title="Subscribe to Arnan's blog!" class="button-primary"><i class="icn-rss"></i> RSS</a></p>
+		<p><?php echo adrotate_fetch_rss_feed(); ?></p>
+		<p><a href="https://ajdg.solutions/feed/" title="Subscribe to the AJdG Solutions blog!" class="button-primary"><i class="icn-rss"></i> ajdg.solutions</a>&nbsp;<a href="https://www.arnan.me/feed/page:feed.xml" title="Subscribe to Arnan's blog!" class="button-primary"><i class="icn-rss"></i> arnan.me</a></p>
 
 	</div>
 </div>

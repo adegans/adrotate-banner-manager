@@ -1,5 +1,9 @@
 # AdRotate Banner Manager changelog
 
+## 5.17.3 - January ??, 2026
+* Change - Improved RSS feed display
+* Added - Missing action link to dashboard
+
 ## 5.17.2 - December 26, 2025
 * New - Support for the GooseUp Update Plugin
 * Fix - Missing ads.txt setting when activating the plugin

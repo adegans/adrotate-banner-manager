@@ -69,7 +69,7 @@
 						<option <?php echo ($adrotate_config['borlabscache'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['borlabscache'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=67" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p>

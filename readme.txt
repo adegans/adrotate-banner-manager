@@ -1,6 +1,6 @@
 === AdRotate Banner Manager ===
 Contributors: adegans
-Stable tag: 5.17.2
+Stable tag: 5.17.3
 Requires at least: 4.9
 Tested up to: 6.9
 Requires PHP: 8.0
@@ -102,6 +102,10 @@ Installing AdRotate is super easy.
 For more detailed instructions check out the [installation steps](https://support.ajdg.net/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.17.3 - February 6, 2026**
+* Change - Improved RSS feed display
+* Added - Missing action link to dashboard
 
 **5.17.2 - December 26, 2025**
 * New - Support for the GooseUp Update Plugin

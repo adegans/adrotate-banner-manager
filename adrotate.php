@@ -5,7 +5,7 @@ Plugin URI: https://ajdg.solutions/product/adrotate-banner-manager/
 Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
-Version: 5.17.2
+Version: 5.17.3
 License: GPLv3
 
 Text Domain: adrotate
@@ -13,9 +13,6 @@ Domain Path: /languages
 
 Requires at least: 6.0
 Requires PHP: 8.0
-Requires CP: 1.0
-Tested CP: 2.6
-Premium URI: https://ajdg.solutions/
 GooseUp: compatible
 */
 
@@ -40,8 +37,13 @@ include_once($adrotate_path.'/adrotate-functions.php');
 include_once($adrotate_path.'/adrotate-statistics.php');
 include_once($adrotate_path.'/adrotate-output.php');
 include_once($adrotate_path.'/adrotate-widget.php');
-/*--- Blocks ------------------------------------------------*/
 if(function_exists('register_block_type')) include_once($adrotate_path.'/adrotate-block.php');
+/*-----------------------------------------------------------*/
+
+/*--- Setup -------------------------------------------------*/
+register_activation_hook(__FILE__, 'adrotate_activate');
+register_deactivation_hook(__FILE__, 'adrotate_deactivate');
+register_uninstall_hook(__FILE__, 'adrotate_uninstall');
 /*-----------------------------------------------------------*/
 
 /*--- Check and Load config ---------------------------------*/
@@ -53,9 +55,6 @@ $adrotate_db_version = get_option("adrotate_db_version");
 /*-----------------------------------------------------------*/
 
 /*--- Core --------------------------------------------------*/
-register_activation_hook(__FILE__, 'adrotate_activate');
-register_deactivation_hook(__FILE__, 'adrotate_deactivate');
-register_uninstall_hook(__FILE__, 'adrotate_uninstall');
 add_action('adrotate_empty_trackerdata', 'adrotate_empty_trackerdata');
 add_action('widgets_init', 'adrotate_widget');
 add_filter('adrotate_apply_photon','adrotate_apply_jetpack_photon');
@@ -90,6 +89,7 @@ if(is_admin()) {
 	add_action('admin_enqueue_scripts', 'adrotate_dashboard_scripts');
 	add_action('admin_notices','adrotate_notifications_dashboard');
 	add_filter('plugin_row_meta', 'adrotate_meta_links', 10, 2);
+	add_filter('plugin_action_links_' . plugin_basename( __FILE__ ), 'adrotate_action_links');
 
 	/*--- Internal redirects ------------------------------------*/
 	if(isset($_POST['adrotate_generate_submit'])) add_action('init', 'adrotate_generate_input');

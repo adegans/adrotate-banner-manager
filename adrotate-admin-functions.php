@@ -28,40 +28,50 @@ function adrotate_rand($length = 8) {
  Name:      adrotate_fetch_rss_feed
  Purpose:   Load RSS feeds to show in the AdRotate dashboard.
 -------------------------------------------------------------*/
-function adrotate_fetch_rss_feed($url = '', $show_items = 6) {
-	// Check for errors
-	if(!is_numeric($show_items) OR $show_items < 1 OR $show_items > 20) {
-		$show_items = 6;
+function adrotate_fetch_rss_feed() {
+	$feeds = array("https://ajdg.solutions/feed/", "https://www.arnan.me/feed/page:feed.xml");
+	$feed_items = array();
+	
+	foreach($feeds as $k => $feed) {
+		// Get a feed
+		$rss = fetch_feed($feed);
+		if(!is_wp_error($rss)) {
+			if($rss->get_item_quantity()) {
+				foreach($rss->get_items(0, 3) as $item) {
+					$date = trim($item->get_date('U'));
+					$title = esc_html(trim(strip_tags($item->get_title())));	
+					$link = esc_url(trim(strip_tags($item->get_link())));
+
+					if(empty($title)) $title = __('Untitled');
+					if(!empty($link) AND stristr($link, 'http') !== $link) $link = substr($link, 1);	
+			
+					$feed_items[$date]["title"] = $title;
+					$feed_items[$date]["link"] = $link;
+					
+					unset($item, $link, $title, $date);
+				}
+			}
+		}
+		unset($rss, $k, $feed);
 	}
 
-	$rss = fetch_feed($url);
-
-	if(is_wp_error($rss)) {
-		$feed_output = '<p>' . __('The feed could not be fetched.') . '</p>';
-	} else if(!$rss->get_item_quantity()) {
-		$feed_output = '<p>' . __('The feed has no items or could not be read.') . '</p>';
-	} else {		
+	if(count($feed_items) > 0) {
+		// Sort by key (timestamp)
+		krsort($feed_items);
+	
 		// Prepare output
 		$feed_output = '<ul>';
-		foreach($rss->get_items(0, $show_items) as $item) {
-			$link = $item->get_link();
+		foreach($feed_items as $date => $item) {
+			$nice_date = ' <span class="rss-date">'.date_i18n(get_option('date_format'), $date).'</span>';
 
-			while(!empty($link) AND stristr($link, 'http') !== $link) {
-				$link = substr($link, 1);
-			}
-
-			$link = esc_url(strip_tags($link));
-			$title = esc_html(trim(strip_tags($item->get_title())));
-			$date = $item->get_date('U');
-
-			if(empty($title)) $title = __('Untitled');
-			if($date) $date = ' <span class="rss-date">'.date_i18n(get_option('date_format'), $date).'</span>';
-
-			$feed_output .= (empty($link)) ? "<li>$title<br /><em>{$date}</em></li>" : "<li><a class='rsswidget' href='$link'>$title</a><br /><em>{$date}</em></li>";
+			$feed_output .= (empty($item["link"])) ? "<li>".$item["title"]."<br /><em>".$nice_date."</em></li>" : "<li><a class='rsswidget' href='".$item["link"]."'>".$item["title"]."</a><br /><em>".$nice_date."</em></li>";
+			
+			unset($date, $item, $nice_date);
 		}
 		$feed_output .= '</ul>';
+	} else {
+		$feed_output = '<p>Feeds could not be loaded, or there was nothing in it!</p>';
 	}
-	unset($rss);
 
 	// Done!
 	return $feed_output;
@@ -626,6 +636,16 @@ function adrotate_meta_links($links, $file) {
 	$links['ajdg-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124', '<strong>Get AdRotate Pro</strong>');
 	$links['ajdg-help'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://support.ajdg.net/knowledgebase.php', 'Plugin support');
 	$links['ajdg-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/', 'More plugins');
+
+	return $links;
+}
+
+/*-------------------------------------------------------------
+ Name:      adrotate_action_links
+ Purpose:	Extra links on the plugins dashboard page
+-------------------------------------------------------------*/
+function adrotate_action_links($links) {
+	$links['ajdg-dashboard'] = sprintf('<a href="%s">%s</a>', admin_url('admin.php?page=adrotate'), 'Dashboard');
 
 	return $links;
 }
