@@ -1,6 +1,12 @@
 # AdRotate Banner Manager changelog
 
-## 5.17.3 - January ??, 2026
+## 5.17.4 - March 9, 2026
+* Update - Rewritten the AdRotate Pro page
+* Update - Redone parts of the readme.txt
+* Update - Demo adverts link to a more modern page and use https
+* i18n - Updated translation strings
+
+## 5.17.3 - February 6, 2026
 * Change - Improved RSS feed display
 * Added - Missing action link to dashboard
 
@@ -14,7 +20,7 @@
 ## 5.17.1 - December 11, 2025
 * Fix - Better check if banners folder exist
 * Change - Internal RSS feed fetcher for one url at a time
-* i18n - Removed all outdated translations strings
+* i18n - Removed all outdated translation strings
 
 ## 5.17 - November 27, 2025
 * Update - Dashboard now works better on smaller devices (responsive)

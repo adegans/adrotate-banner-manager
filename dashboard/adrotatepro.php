@@ -10,7 +10,7 @@
 ------------------------------------------------------------------------------------ */
 ?>
 
-<div style="text-align: center; font-size: 400%; line-height: 2em;">Become an advertising professional!</div>
+<div style="text-align: center; font-size: 350%; line-height: 2em;">With AdRotate Pro you'll be an advertising professional!</div>
 
 <div class="ajdg-box-wrap narrow">
 	<div class="ajdg-box-onethird">
@@ -67,7 +67,7 @@
 			<div class="ajdg-box-content">
 
 				<img src="<?php echo plugins_url('/images/pro/demo-mobile.png', dirname(__FILE__)); ?>" class="alignleft pro-image" />
-				<p><?php _e("Show your campaigns to the right people, with Mobile Adverts in AdRotate Pro. You choose where your ads show up whether that is a Computer, a Phone or a Tablet. You can also differentiate between iOS and Android devices for maximum effect. This ensure that your mobile visitors see adverts that fit their screen size. Show different and correctly sized adverts on smartphones, tablets and computers. Mix and match as you please. Create as many mobile adverts as you need in the same group so the right advert is always available.", 'adrotate'); ?></p>
+				<p><?php _e("Reach your ideal audience with AdRotate Pro’s Mobile Adverts. Gain full control by targeting specific devices—computers, phones, or tablets—and even differentiate between iOS and Android for maximum impact. By serving correctly sized ads tailored to each screen, you ensure a seamless experience for every visitor. Mix and match your creative assets within a single group to ensure the most effective, responsive advert is always ready to display.", 'adrotate'); ?></p>
 
 			</div>
 		</div>
@@ -77,7 +77,7 @@
 			<div class="ajdg-box-content">
 
 				<img src="<?php echo plugins_url('/images/pro/demo-responsive.png', dirname(__FILE__)); ?>" class="alignleft pro-image" />
-				<p><?php _e("Create adverts that fit any display, mobile, desktop or tablet. Select up to 4 images in different sizes in the Advert Generator and have AdRotate Pro generate the code for you. Or if you have correctly sized ads already you can place them along any other advert as you normally would and they will look nice on phones, tablets and computers.", 'adrotate'); ?></p>
+				<p><?php _e("Design responsive ads for any screen—mobile, desktop, or tablet—with ease. Simply upload up to four images of different sizes into the Advert Generator, and AdRotate Pro will automatically generate the required code for you. Alternatively, if you already have custom-sized assets, you can integrate them alongside your other campaigns; AdRotate Pro ensures they display perfectly across all devices.", 'adrotate'); ?></p>
 
 			</div>
 		</div>
@@ -87,7 +87,8 @@
 			<div class="ajdg-box-content">
 
 				<img src="<?php echo plugins_url('/images/pro/demo-schedule.png', dirname(__FILE__)); ?>" class="alignleft pro-image" />
-				<p><?php _e("Plan ahead with AdRotate Pro, schedule your adverts and set up advertising campaigns based on dates and times. Seasonal adverts, weekly adverts, specific days in the week. Set a limit on impressions or clicks. You can spread impressions over the duration of the schedule with easy controls, too. This makes running ads very easy, leaving you free to focus on content writing.", 'adrotate'); ?></p>
+				<p><?php _e("Take full control of your timing with AdRotate Pro’s scheduling tools. Easily plan seasonal campaigns, weekly rotations, or ads for specific days and hours. You can set precise limits on impressions or clicks and use automated controls to spread delivery evenly across your schedule.
+Automating your campaigns ensures your ads run smoothly in the background, leaving you free to focus on creating content.", 'adrotate'); ?></p>
 
 			</div>
 		</div>
@@ -97,7 +98,7 @@
 			<div class="ajdg-box-content">
 
 				<img src="<?php echo plugins_url('/images/pro/demo-satisfy.png', dirname(__FILE__)); ?>" class="alignleft pro-image" />
-				<p><?php _e("Create users and enable them to act as Advertisers within AdRotate Pro. Advertisers can log in to their own little dashboard and review statistics for their own adverts. You can also enable accounts to create and edit their own adverts. Created or edited adverts go into the moderation queue for you or your staff to review before it goes live again.", 'adrotate'); ?></p>
+				<p><?php _e("Empower your clients by designating them as Advertisers within AdRotate Pro. Each user gains access to a private dashboard to monitor their own ad performance and statistics. You can also grant permissions for advertisers to create and edit their own ads. To maintain quality control, all new or modified content is held in a moderation queue for your team’s approval before going live.", 'adrotate'); ?></p>
 
 			</div>
 		</div>
@@ -107,7 +108,7 @@
 			<div class="ajdg-box-content">
 
 				<img src="<?php echo plugins_url('/images/pro/demo-support.png', dirname(__FILE__)); ?>" class="alignleft pro-image" />
-				<p><?php _e("When you activate your AdRotate Pro license you also get access to Premium Ticket Support, easily accessible from your dashboard. No more queueing up in forums, no emails getting lost. Instead, you get priority support. Ticket Support always gets priority over all other contact options meaning you never have to wait too long to get your answers.", 'adrotate'); ?></p>
+				<p><?php _e("When you activate your AdRotate Pro license, you get direct access to Priority Ticket Support right from your dashboard. There will be no need to use forums or worrying about lost support messages; you’ll receive priority assistance that puts you at the front of the line. This ensures you get the answers you need quickly so you can get back to business.", 'adrotate'); ?></p>
 
 			</div>
 		</div>
@@ -169,7 +170,7 @@
 </div>
 
 <div style="text-align: center;">
-	<p style="font-size: 175%;">Choose AdRotate Pro and become an advertising professional!</p>
+	<p style="font-size: 200%;">Choose your license</p>
 </div>
 
 <div class="ajdg-box-wrap narrow">
@@ -217,8 +218,8 @@
 </div>
 
 <div style="text-align: center;">
-	<p><em><?php _e("You can use all major credit cards, PayPal, Apple Pay & Google Pay, and other local payment options through my secure payment portal.", 'adrotate'); ?><br />
+	<p><em><?php _e("You can use all major Credit Cards, PayPal, and other local payment options through my secure payment portal.", 'adrotate'); ?><br />
 	<small><?php _e("All prices are shown in Euros, your bank will convert your currency to Euros at no cost to you.", 'adrotate'); ?></small></em></p>
 
-	<p style="font-size: 175%;">Questions? <a href="https://ajdg.solutions/contact/" target="_blank">Click here</a>! I'm looking forward to hearing from you!</p>
+	<p style="font-size: 175%;">Are you not sure if AdRotate Pro is for you? <a href="https://ajdg.solutions/contact/" target="_blank">Get in touch</a>! I'm looking forward to hearing from you!</p>
 </div>

@@ -9,8 +9,8 @@
 		<div class="cta"><a role="button" class="cta_button" href="https://ajdg.solutions/product/adrotate-pro-multi/" target="_blank"><?php _e("Go big with the Multi License", 'adrotate'); ?></a></div>
 		<hr>
 		<div class="description">
-			<p><?php _e("Unlock all the greyed out features with AdRotate Professional. Besides of the settings you can actually see, AdRotate Pro has much more to offer under the hood for even better advertising management. Better error detection, export your stats, but also features like Geo Targeting, and advanced Schedules. Expanded Post Injection and much more with AdRotate Pro!", 'adrotate'); ?></p>
-			<p><?php _e("Oh, and you'll also get access to Ticket Support, AdRotate Geo and one year of updates.", 'adrotate'); ?></p>
+			<p><?php _e("Unlock all of the features with AdRotate Professional. Besides of the settings you can actually see, AdRotate Pro has much more to offer under the hood for even better advertising management. Better error detection, export your stats, but also features like Geo Targeting, and advanced Schedules. Expanded Post Injection and much more with AdRotate Pro.", 'adrotate'); ?></p>
+			<p><?php _e("Oh, and you'll also get access to Ticket Support, AdRotate Geo and one year of updates!", 'adrotate'); ?></p>
 		</div>
 
 	</div>
