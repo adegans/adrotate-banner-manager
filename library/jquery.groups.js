@@ -1,9 +1,8 @@
 /*
 Dynamic advert rotation for AdRotate
-Version: 1.0.1
+Version: 1.0.2
 Original code: Arnan de Gans
-With help from: Mathias Joergensen, Fraser Munro
-Copyright: (c) 2020 Arnan de Gans
+Copyright: (c) 2020-2026 Arnan de Gans
 == Settings ==
 groupid : PHP Group ID [integer, defaults to 0]
 speed : Time each slide is shown [integer: milliseconds, defaults to 3000]
@@ -62,7 +61,7 @@ repeat_impressions : Stop counting impressions? [switch, defaults to Y]
 	            admeta = atob(tracker).split(',');
 				var name = escape('adrotate-'+admeta[0]);
 				var now = Math.round(Date.now()/1000);
-				var expired = now - admeta[3];
+				var expired = now - admeta[2];
 				var session = sessionStorage.getItem(name); // Get session data
 
 				if(session == null) { // New session, no previous data

@@ -5,7 +5,7 @@ Plugin URI: https://ajdg.solutions/product/adrotate-banner-manager/
 Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
-Version: 5.17.4
+Version: 5.17.5
 License: GPLv3
 
 Text Domain: adrotate

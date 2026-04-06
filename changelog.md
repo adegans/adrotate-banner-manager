@@ -1,5 +1,8 @@
 # AdRotate Banner Manager changelog
 
+## 5.17.5 - April 6, 2026
+* Fix - Wrong index for impression tracking in dynamic groups
+
 ## 5.17.4 - March 9, 2026
 * Update - Rewritten the AdRotate Pro page
 * Update - Redone parts of the readme.txt
