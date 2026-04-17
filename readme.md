@@ -9,6 +9,7 @@ Also consider AdRotate Professional: [1 site license](https://ajdg.solutions/pro
 Get help with all my plugins on the [Knowledgebase](https://support.ajdg.net/).
 
 ## Description
+
 Easily manage all your ads in WordPress and ClassicPress with **AdRotate Banner Manager**! \
 Trusted by tens of thousands of individuals and businesses.
 
@@ -21,9 +22,21 @@ Of-course banners you create yourself or get from your local businesses and spon
 Learn more about [AdRotate Banner Manager](https://ajdg.solutions/product/adrotate-banner-manager/) and [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/) on my website!
 
 ## Installation
+
 1. Navigate to your WordPress or ClassicPress dashboard.
 2. Navigate to the Plugins page and click 'Add New'.
 3. Search for 'Arnan adrotate' or 'AdRotate Banner Manager' in the plugin search
 4. Click install on the 'AdRotate Banner Manager' plugin.
 5. Once installed, activate the plugin and you're ready to go.
 6. Navigate to the AdRotate menu in your dashboard to set up adverts and campaigns.
+
+## GooseUp compatible
+
+AdRotate Banner Manager is compatible with the GooseUp Update System.  
+Find out more and [download the plugin](https://ajdg.solutions/product/gooseup/) from my website.
+
+## Is AdRotate Banner Manager useful for you?
+
+If you find AdRotate Banner Manager useful and want to help out, please consider a small [token of thanks](https://www.arnan.me/donate/)!  
+Or, the best way of supporting AdRotate is to buy a license for [AdRotate Pro](https://ajdg.solutions/product/adrotate-pro-single/).  
+Your donations will help as motivation. Thank you for your support!  
