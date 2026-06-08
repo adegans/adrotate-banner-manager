@@ -21,7 +21,7 @@
 		        <option value="group_delete"><?php _e("Delete Group", 'adrotate'); ?></option>
 				<option value="group_delete_banners"><?php _e("Delete Group including adverts", 'adrotate'); ?></option>
 			</select>
-			<input onclick="return confirm('<?php _e("You are about to delete a group", 'adrotate'); ?>\n<?php _e("This action can not be undone!", 'adrotate'); ?>\n<?php _e("OK to continue, CANCEL to stop.", 'adrotate'); ?>')" type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button-secondary" />
+			<input onclick="return confirm('<?php _e("You are about to delete a group", 'adrotate'); ?>\n<?php _e("This action can not be undone!", 'adrotate'); ?>\n<?php _e("OK to continue, CANCEL to stop.", 'adrotate'); ?>')" type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button action button-secondary" />
 		</div>
 	</div>
 

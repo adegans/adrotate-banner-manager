@@ -634,7 +634,7 @@ function adrotate_meta_links($links, $file) {
 	if($file !== 'adrotate/adrotate.php' ) return $links;
 
 	$links['ajdg-pro'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/cart/?add-to-cart=1124', '<strong>Get AdRotate Pro</strong>');
-	$links['ajdg-help'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://support.ajdg.net/knowledgebase.php', 'Plugin support');
+	$links['ajdg-help'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/support/knowledgebase.php', 'Plugin support');
 	$links['ajdg-more'] = sprintf('<a href="%s" target="_blank">%s</a>', 'https://ajdg.solutions/plugins/', 'More plugins');
 
 	return $links;
@@ -693,13 +693,13 @@ function adrotate_dashboard_error() {
 
 	// Misc
 	if(!is_writable(WP_CONTENT_DIR."/".$adrotate_config['banner_folder'])) {
-		$error['banners_folder'] = __("Your AdRotate Banner folder is not writable or does not exist.", 'adrotate')." <a href=\"https://support.ajdg.net/knowledgebase.php?article=20\" target=\"_blank\">".__("Set up your banner folder", 'adrotate')."</a>.";
+		$error['banners_folder'] = __("Your AdRotate Banner folder is not writable or does not exist.", 'adrotate')." <a href=\"https://ajdg.solutions/support/knowledgebase.php?article=20\" target=\"_blank\">".__("Set up your banner folder", 'adrotate')."</a>.";
 	}
 	if(is_dir(WP_PLUGIN_DIR."/adrotate-pro/")) {
 		$error['adrotate_exists'] = __("You have AdRotate Professional installed. Please switch to AdRotate Pro! You can delete this plugin after AdRotate Pro is activated.", 'adrotate')." <a href=\"".admin_url('/plugins.php?s=adrotate&plugin_status=all')."\">".__("Switch plugins", 'adrotate')."</a>.";
 	}
 	if(basename(__DIR__) != 'adrotate' AND basename(__DIR__) != 'adrotate-pro') {
-		$error['adrotate_folder_names'] = __("Something is wrong with your installation of AdRotate. Either the plugin is installed twice or your current installation has the wrong folder name. Please install the plugin properly!", 'adrotate').' <a href="https://support.ajdg.net/knowledgebase.php?article=5" target="_blank">'.__("Installation instructions", 'adrotate').'</a>.';
+		$error['adrotate_folder_names'] = __("Something is wrong with your installation of AdRotate. Either the plugin is installed twice or your current installation has the wrong folder name. Please install the plugin properly!", 'adrotate').' <a href="https://ajdg.solutions/support/knowledgebase.php?article=5" target="_blank">'.__("Installation instructions", 'adrotate').'</a>.';
 	}
 
 	$error = (isset($error) AND is_array($error)) ? $error : false;

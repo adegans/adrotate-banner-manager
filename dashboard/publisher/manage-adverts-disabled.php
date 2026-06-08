@@ -23,7 +23,7 @@
 		        <option value="delete"><?php _e("Delete", 'adrotate'); ?></option>
 		        <option value="reset"><?php _e("Reset stats", 'adrotate'); ?></option>
 			</select>
-			<input type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button-secondary" />
+			<input type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button action button-secondary" />
 		</div>
 	
 		<br class="clear" />

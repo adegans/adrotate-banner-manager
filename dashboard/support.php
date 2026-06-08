@@ -22,8 +22,8 @@
 				</p>
 
 				<p>
-					<a href="https://support.ajdg.net/knowledgebase.php" target="_blank"><strong><?php _e("AdRotate Knowledge Base", 'adrotate'); ?></strong></a><br />
-					<em><?php _e("Take a look at the AdRotate Manuals and Guides.", 'adrotate'); ?> <a href="https://support.ajdg.net/knowledgebase.php" target="_blank"><?php _e("Find answers", 'adrotate'); ?> &raquo;</a></em>
+					<a href="https://ajdg.solutions/support/knowledgebase.php" target="_blank"><strong><?php _e("AdRotate Knowledge Base", 'adrotate'); ?></strong></a><br />
+					<em><?php _e("Take a look at the AdRotate Manuals and Guides.", 'adrotate'); ?> <a href="https://ajdg.solutions/support/knowledgebase.php" target="_blank"><?php _e("Find answers", 'adrotate'); ?> &raquo;</a></em>
 				</p>
 				
 				<p>
@@ -37,8 +37,8 @@
 				</p>
 				
 				<p>
-					<a href="https://support.ajdg.net/index.php?a=add&category=4" target="_blank"><strong><?php _e("Report security issues", 'adrotate'); ?></strong></a><br />
-					<em><?php _e("Found a security flaw?", 'adrotate'); ?> <a href="https://support.ajdg.net/index.php?a=add&category=4" target="_blank"><?php _e("Please report it", 'adrotate'); ?> &raquo;</a></em>
+					<a href="https://ajdg.solutions/support/index.php?a=add&category=4" target="_blank"><strong><?php _e("Report security issues", 'adrotate'); ?></strong></a><br />
+					<em><?php _e("Found a security flaw?", 'adrotate'); ?> <a href="https://ajdg.solutions/support/index.php?a=add&category=4" target="_blank"><?php _e("Please report it", 'adrotate'); ?> &raquo;</a></em>
 				</p>
 
 				<h2><?php _e("Plugins and services", 'adrotate'); ?></h2>

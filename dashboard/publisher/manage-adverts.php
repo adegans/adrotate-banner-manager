@@ -88,7 +88,7 @@ if(count($error) > 0) include(plugin_dir_path(__FILE__).'manage-adverts-error.ph
 		        <option value="renew-5184000"><?php _e("For 180 days", 'adrotate'); ?></option>
 		        <option value="renew-2592000"><?php _e("For 30 days", 'adrotate'); ?></option>
 		        <option value="renew-604800"><?php _e("For 7 days", 'adrotate'); ?></option>
-			</select> <input type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button-secondary" />
+			</select> <input type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button action button-secondary" />
 		</div>	
 		<br class="clear" />
 	</div>

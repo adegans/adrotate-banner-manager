@@ -19,7 +19,7 @@
 		<div class="alignleft actions">
 			<select name="adrotate_action" id="cat" class="postform" disabled="1">
 		        <option value=""><?php _e("Bulk Actions", 'adrotate'); ?></option>
-			</select> <input type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button-secondary" disabled="1" />
+			</select> <input type="submit" id="post-action-submit" name="adrotate_action_submit" value="<?php _e("Go", 'adrotate'); ?>" class="button action button-secondary" disabled="1" />
 		</div>
 		<br class="clear" />
 	</div>

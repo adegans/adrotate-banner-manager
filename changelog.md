@@ -1,5 +1,9 @@
 # AdRotate Banner Manager changelog
 
+## 5.17.6 - June 7, 2026
+* Update - Support links
+* Update - Buttons to match the new WordPress 7 style
+
 ## 5.17.5 - April 6, 2026
 * Fix - Wrong index for impression tracking in dynamic groups
 

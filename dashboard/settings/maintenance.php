@@ -57,7 +57,7 @@
 					if(defined('DISALLOW_UNFILTERED_HTML') AND !DISALLOW_UNFILTERED_HTML) {
 						echo "<span style=\"color:#009900;\">".esc_html__("Excellent! Editors, Administrators and Superadmins can use unfiltered code.", 'adrotate')."</span>";
 					} else {
-						echo "<span style=\"color:#CC2900;\">".esc_html__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate')."</span><br />".esc_html__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php file.", 'adrotate')." <a href=\"https://support.ajdg.net/knowledgebase.php?article=43\" target=\"_blank\">".esc_html__("How to enable unfiltered html", 'adrotate')."</a>?";
+						echo "<span style=\"color:#CC2900;\">".esc_html__("Your website's current setup does not allow for unfiltered code to be used in adverts.", 'adrotate')."</span><br />".esc_html__("This is required for javascript adverts to work. To enable this you need to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php file.", 'adrotate')." <a href=\"https://ajdg.solutions/support/knowledgebase.php?article=43\" target=\"_blank\">".esc_html__("How to enable unfiltered html", 'adrotate')."</a>?";
 					}
 					?>
 				</p>

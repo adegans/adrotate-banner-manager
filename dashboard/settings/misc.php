@@ -51,7 +51,7 @@
 					<strong><?php _e("NOTICE:", 'adrotate'); ?></strong> <?php _e("You have enabled W3 Total Caching support but not defined the security hash.", 'adrotate'); ?>
 				</p>
 				<p>
-					<?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://support.ajdg.net/knowledgebase.php?article=46"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a>
+					<?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://ajdg.solutions/support/knowledgebase.php?article=46"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a>
 					<br /><pre>define('W3TC_DYNAMIC_SECURITY', 'adrotate');</pre>
 				</p>
 				<?php } ?>
@@ -61,7 +61,7 @@
 						<option <?php echo ($adrotate_config['w3caching'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['w3caching'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+					<br /><small><?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p><label for="adrotate_borlabscache">
@@ -69,7 +69,7 @@
 						<option <?php echo ($adrotate_config['borlabscache'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['borlabscache'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://support.ajdg.net/knowledgebase.php?article=67" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/knowledgebase.php?article=67" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p>

@@ -52,7 +52,7 @@
 	<tbody>
 		<tr>
 			<td>
-				<input tabindex="3" id="adrotate_folder" name="adrotate_folder" type="text" size="20" class="ajdg-inputfield" value="" autocomplete="off" /> <input tabindex="4" type="submit" name="adrotate_create_folder" class="button-secondary" value="<?php _e("Create folder", 'adrotate'); ?>" />
+				<input tabindex="3" id="adrotate_folder" name="adrotate_folder" type="text" size="20" class="ajdg-inputfield" value="" autocomplete="off" /> <input tabindex="4" type="submit" name="adrotate_create_folder" class="button action button-secondary" value="<?php _e("Create folder", 'adrotate'); ?>" />
 			</td>
 		</tr>
 
