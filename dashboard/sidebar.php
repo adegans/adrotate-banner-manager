@@ -31,11 +31,11 @@
 <?php } ?>
 
 <div class="ajdg-box">
-	<h2 class="ajdg-box-title"><?php _e("Blogs & updates", 'adrotate'); ?></h2>
+	<h2 class="ajdg-box-title"><?php _e("My Blog", 'adrotate'); ?></h2>
 	<div class="ajdg-box-content">
 
 		<p><?php echo adrotate_fetch_rss_feed(); ?></p>
-		<p><a href="https://ajdg.solutions/feed/" title="Subscribe to the AJdG Solutions blog!" class="button-primary"><i class="icn-rss"></i> ajdg.solutions</a>&nbsp;<a href="https://www.arnan.me/feed/page:feed.xml" title="Subscribe to Arnan's blog!" class="button-primary"><i class="icn-rss"></i> arnan.me</a></p>
+		<p><a href="https://www.arnan.me/feed" title="Subscribe to Arnan's blog!" class="button-primary"><i class="icn-rss"></i> arnan.me</a></p>
 
 	</div>
 </div>

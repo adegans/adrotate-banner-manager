@@ -28,16 +28,20 @@ function adrotate_rand($length = 8) {
  Name:      adrotate_fetch_rss_feed
  Purpose:   Load RSS feeds to show in the AdRotate dashboard.
 -------------------------------------------------------------*/
-function adrotate_fetch_rss_feed() {
-	$feeds = array("https://ajdg.solutions/feed/", "https://www.arnan.me/feed/page:feed.xml");
+function adrotate_fetch_rss_feed($count = 6) {
+	$feeds = array("https://www.arnan.me/feed");
 	$feed_items = array();
+	
+	// Determine how many items to download per feed
+	$count = $count / count($feeds);
+	if($count < 1) $count = 1;
 	
 	foreach($feeds as $k => $feed) {
 		// Get a feed
 		$rss = fetch_feed($feed);
 		if(!is_wp_error($rss)) {
 			if($rss->get_item_quantity()) {
-				foreach($rss->get_items(0, 3) as $item) {
+				foreach($rss->get_items(0, $count) as $item) {
 					$date = trim($item->get_date('U'));
 					$title = esc_html(trim(strip_tags($item->get_title())));	
 					$link = esc_url(trim(strip_tags($item->get_link())));

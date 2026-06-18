@@ -1,5 +1,9 @@
 # AdRotate Banner Manager changelog
 
+## 5.17.7 - June 18, 2026
+* Update - Blog widget
+* Update - Blog function
+
 ## 5.17.6 - June 7, 2026
 * Update - Support links
 * Update - Buttons to match the new WordPress 7 style
