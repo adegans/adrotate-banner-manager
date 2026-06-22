@@ -6,6 +6,7 @@ on:
       - main  # or master, depending on your primary branch
     paths:
       - '.wordpress-org/**'
+  workflow_dispatch:
 
 jobs:
   assets:
