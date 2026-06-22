@@ -22,5 +22,6 @@ jobs:
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SLUG: ${{ secrets.PLUGIN_SLUG }}
           # Optional: If you want to ensure it strictly ignores any other unintentional code changes
           IGNORE_OTHER_FILES: true
