@@ -1,6 +1,6 @@
 === AdRotate Banner Manager ===
 Contributors: adegans
-Stable tag: 5.17.7
+Stable tag: 5.17.8
 Requires at least: 4.9
 Tested up to: 7.0
 Requires PHP: 8.0
@@ -12,9 +12,9 @@ Easily manage, and schedule ads on your WordPress site with AdRotate. Support fo
 
 == Description ==
 
-Streamline your workflow with **AdRotate Banner Manager**, the ultimate tool for ad management.
+Streamline your workflow with **AdRotate Banner Manager**, the best tool for ad management!
 
-Whether you're using an ad network like **Google AdSense**, **Amazon Affiliates**, **Media.net**, or if you want to use banners from local businesses or affiliates, **AdRotate Banner Manager** handles them all with ease. The dashboard is designed for both beginners and pros alike. **AdRotate Banner Manager** packages powerful features into a user-friendly interface that puts you in full control of all of your ad campaigns.
+Whether you're create banners for local businesses or affiliates, or if you're using an ad network like **Google AdSense**, **Amazon Affiliates**, **Media.net**, or any other network, **AdRotate Banner Manager** handles them all with ease. The dashboard is designed for both beginners and pros alike. **AdRotate Banner Manager** comes with powerful features molded into a user-friendly interface which puts you in full control of all of your ad campaigns.
 
 With its stable and predictable features and dashboard it's no wonder that **AdRotate Banner Manager** is the trusted choice for tens of thousands of bloggers and businesses worldwide.
 
@@ -81,8 +81,8 @@ With its stable and predictable features and dashboard it's no wonder that **AdR
 * One-on-one ticket support, accessible directly from your dashboard.
 
 Available AdRotate Pro licenses: 
-* [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ Great for any blogger.
-* [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ The most popular with professionals and news blogs.
+* [1 site license](https://ajdg.solutions/product/adrotate-pro-single/) ~ Great for any webmaster with one website.
+* [2 sites license](https://ajdg.solutions/product/adrotate-pro-duo/) ~ Popular with professionals and people running two websites.
 * [20 sites license](https://ajdg.solutions/product/adrotate-pro-multi/) ~ The best choice for agencies and newspapers that operate multiple websites.
 
 == Installation ==
@@ -97,6 +97,9 @@ Installing AdRotate is super easy!
 For more detailed instructions check out the [installation steps](https://ajdg.solutions/support/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.17.8 - June 22, 2026**
+* Security - Prevent code injection through shortcodes
 
 **5.17.7 - June 15, 2026**
 * Update - Blog widget

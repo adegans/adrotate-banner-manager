@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AdRotate\n"
-"POT-Creation-Date: 2026-03-08 10:07-0700\n"
+"POT-Creation-Date: 2026-06-21 20:20-0700\n"
 "PO-Revision-Date: 2019-09-20 12:05-0500\n"
 "Last-Translator: Arnan de Gans <support@ajdg.solutions>\n"
 "Language-Team: Arnan de Gans\n"
@@ -11,230 +11,230 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adrotate-admin-functions.php:45
+#: adrotate-admin-functions.php:49
 msgid "Untitled"
 msgstr ""
 
-#: adrotate-admin-functions.php:438
+#: adrotate-admin-functions.php:442
 msgid "your attention:"
 msgstr ""
 
-#: adrotate-admin-functions.php:666 adrotate-admin-functions.php:669
-#: adrotate-admin-functions.php:673
+#: adrotate-admin-functions.php:670 adrotate-admin-functions.php:673
+#: adrotate-admin-functions.php:677
 msgid "Check adverts"
 msgstr ""
 
-#: adrotate-admin-functions.php:678
+#: adrotate-admin-functions.php:682
 msgid "You have enabled caching support but W3 Total Cache is not active on your site!"
 msgstr ""
 
-#: adrotate-admin-functions.php:678
+#: adrotate-admin-functions.php:682
 msgid "Disable W3 Total Cache Support"
 msgstr ""
 
-#: adrotate-admin-functions.php:681
+#: adrotate-admin-functions.php:685
 msgid "You have enable caching support but the W3TC_DYNAMIC_SECURITY definition is not set."
 msgstr ""
 
-#: adrotate-admin-functions.php:681
+#: adrotate-admin-functions.php:685
 msgid "How to configure W3 Total Cache"
 msgstr ""
 
-#: adrotate-admin-functions.php:684
+#: adrotate-admin-functions.php:688
 msgid "You have enable caching support but Borlabs Cache is not active on your site!"
 msgstr ""
 
-#: adrotate-admin-functions.php:684
+#: adrotate-admin-functions.php:688
 msgid "Disable Borlabs Cache Support"
 msgstr ""
 
-#: adrotate-admin-functions.php:689
+#: adrotate-admin-functions.php:693
 msgid "You have enabled Borlabs Cache support but Fragment caching is not enabled!"
 msgstr ""
 
-#: adrotate-admin-functions.php:689
+#: adrotate-admin-functions.php:693
 msgid "Enable Fragment Caching"
 msgstr ""
 
-#: adrotate-admin-functions.php:696
+#: adrotate-admin-functions.php:700
 msgid "Your AdRotate Banner folder is not writable or does not exist."
 msgstr ""
 
-#: adrotate-admin-functions.php:696
+#: adrotate-admin-functions.php:700
 msgid "Set up your banner folder"
 msgstr ""
 
-#: adrotate-admin-functions.php:699
+#: adrotate-admin-functions.php:703
 msgid "You have AdRotate Professional installed. Please switch to AdRotate Pro! You can delete this plugin after AdRotate Pro is activated."
 msgstr ""
 
-#: adrotate-admin-functions.php:699
+#: adrotate-admin-functions.php:703
 msgid "Switch plugins"
 msgstr ""
 
-#: adrotate-admin-functions.php:702
+#: adrotate-admin-functions.php:706
 msgid "Something is wrong with your installation of AdRotate. Either the plugin is installed twice or your current installation has the wrong folder name. Please install the plugin properly!"
 msgstr ""
 
-#: adrotate-admin-functions.php:702
+#: adrotate-admin-functions.php:706
 msgid "Installation instructions"
 msgstr ""
 
-#: adrotate-admin-functions.php:744
+#: adrotate-admin-functions.php:748
 msgid "Advert saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:748
+#: adrotate-admin-functions.php:752
 msgid "Group saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:752
+#: adrotate-admin-functions.php:756
 msgid "Banner image saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:756
+#: adrotate-admin-functions.php:760
 msgid "Ad(s) deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:760
+#: adrotate-admin-functions.php:764
 msgid "Group deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:764
+#: adrotate-admin-functions.php:768
 msgid "Asset(s) deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:768
+#: adrotate-admin-functions.php:772
 msgid "Something went wrong deleting the file or folder. Make sure your permissions are in order."
 msgstr ""
 
-#: adrotate-admin-functions.php:772
+#: adrotate-admin-functions.php:776
 msgid "Advert(s) statistics reset"
 msgstr ""
 
-#: adrotate-admin-functions.php:776
+#: adrotate-admin-functions.php:780
 msgid "Advert(s) renewed"
 msgstr ""
 
-#: adrotate-admin-functions.php:780
+#: adrotate-admin-functions.php:784
 msgid "Advert(s) deactivated"
 msgstr ""
 
-#: adrotate-admin-functions.php:784
+#: adrotate-admin-functions.php:788
 msgid "Advert(s) activated"
 msgstr ""
 
-#: adrotate-admin-functions.php:788
+#: adrotate-admin-functions.php:792
 msgid "Group including the Adverts in it deleted"
 msgstr ""
 
-#: adrotate-admin-functions.php:792
+#: adrotate-admin-functions.php:796
 msgid "Folder created"
 msgstr ""
 
-#: adrotate-admin-functions.php:796
+#: adrotate-admin-functions.php:800
 msgid "Advert HTML generated and placed in the AdCode field. Configure your advert below. Do not forget to check all settings and schedule the advert."
 msgstr ""
 
-#: adrotate-admin-functions.php:801
+#: adrotate-admin-functions.php:805
 msgid "Settings saved"
 msgstr ""
 
-#: adrotate-admin-functions.php:805
+#: adrotate-admin-functions.php:809
 msgid "Database optimized"
 msgstr ""
 
-#: adrotate-admin-functions.php:809
+#: adrotate-admin-functions.php:813
 msgid "Database repaired"
 msgstr ""
 
-#: adrotate-admin-functions.php:813
+#: adrotate-admin-functions.php:817
 msgid "Adverts evaluated and statuses have been corrected where required"
 msgstr ""
 
-#: adrotate-admin-functions.php:817
+#: adrotate-admin-functions.php:821
 msgid "Cleanup complete"
 msgstr ""
 
-#: adrotate-admin-functions.php:821
+#: adrotate-admin-functions.php:825
 msgid "Scheduled tasks reset"
 msgstr ""
 
-#: adrotate-admin-functions.php:825
+#: adrotate-admin-functions.php:829
 msgid "If there were any 3rd party plugins interfering with AdRotate they have been disabled"
 msgstr ""
 
-#: adrotate-admin-functions.php:829
+#: adrotate-admin-functions.php:833
 msgid "Database updated"
 msgstr ""
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:837
 msgid "Database and core settings updated"
 msgstr ""
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:837
 msgid "Thanks for updating AdRotate Banner Manager!"
 msgstr ""
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:837
 msgid "If you run into any issues with the new version please send a email through the support dashboard as soon as possible with any errors or symptoms you encounter."
 msgstr ""
 
-#: adrotate-admin-functions.php:838
+#: adrotate-admin-functions.php:842
 msgid "Action prohibited"
 msgstr ""
 
-#: adrotate-admin-functions.php:842
+#: adrotate-admin-functions.php:846
 msgid "The advert was saved but has an issue which might prevent it from working properly. Review the colored advert."
 msgstr ""
 
-#: adrotate-admin-functions.php:846
+#: adrotate-admin-functions.php:850
 msgid "No data found in selected time period"
 msgstr ""
 
-#: adrotate-admin-functions.php:850
+#: adrotate-admin-functions.php:854
 msgid "Database can only be optimized or cleaned once every hour"
 msgstr ""
 
-#: adrotate-admin-functions.php:854
+#: adrotate-admin-functions.php:858
 msgid "Form can not be (partially) empty!"
 msgstr ""
 
-#: adrotate-admin-functions.php:858
+#: adrotate-admin-functions.php:862
 msgid "No file uploaded."
 msgstr ""
 
-#: adrotate-admin-functions.php:862
+#: adrotate-admin-functions.php:866
 msgid "No adverts found."
 msgstr ""
 
-#: adrotate-admin-functions.php:866
+#: adrotate-admin-functions.php:870
 msgid "Wrong file type. No file uploaded."
 msgstr ""
 
-#: adrotate-admin-functions.php:870
+#: adrotate-admin-functions.php:874
 msgid "No file selected or file is too large."
 msgstr ""
 
-#: adrotate-admin-functions.php:874
+#: adrotate-admin-functions.php:878
 msgid "There was an error unzipping the file. Please try again later."
 msgstr ""
 
-#: adrotate-admin-functions.php:878
+#: adrotate-admin-functions.php:882
 msgid "The advert hash is not usable or is missing required data. Please copy the hash correctly and try again."
 msgstr ""
 
-#: adrotate-admin-functions.php:882
+#: adrotate-admin-functions.php:886
 msgid "The advert hash can not be used on the same site as it originated from or is not a valid hash for importing."
 msgstr ""
 
-#: adrotate-admin-functions.php:886
+#: adrotate-admin-functions.php:890
 msgid "Unexpected error"
 msgstr ""
 
@@ -2620,7 +2620,7 @@ msgid "More info & download"
 msgstr ""
 
 #: dashboard/sidebar.php:34
-msgid "Blogs & updates"
+msgid "My Blog"
 msgstr ""
 
 #: dashboard/support.php:17

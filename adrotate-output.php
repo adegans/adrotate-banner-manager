@@ -262,12 +262,16 @@ function adrotate_group_post_inject($group_id) {
 function adrotate_shortcode($atts, $content = null) {
 	global $adrotate_config;
 
-	$banner_id = (!empty($atts['banner'])) ? trim($atts['banner'], '\r\t ') : 0;
-	$group_ids = (!empty($atts['group'])) ? trim($atts['group'], '\r\t ') : 0;
+	$banner_id = (!empty($atts['banner'])) ? absint(trim($atts['banner'], '\r\t ')) : 0;
+	$group_ids = (!empty($atts['group'])) ? strval(trim($atts['group'], '\r\t ')) : 0;
 	if(!empty($atts['fallback'])) $fallback	= 0; // Not supported in free version
 	if(!empty($atts['weight']))	$weight	= 0; // Not supported in free version
 	if(!empty($atts['site'])) $site = 0; // Not supported in free version
 	if(!empty($atts['wrapper'])) $wrapper = 0; // Not supported in free version
+
+	if(!preg_match('/^\d+(,\d+)*$/', $group_ids)) {
+		$group_ids = intval(0);
+	}
 
 	$output = "";
 	if($adrotate_config['w3caching'] == 'Y') {

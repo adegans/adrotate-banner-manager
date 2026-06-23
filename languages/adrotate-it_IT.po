@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AdRotate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-08 10:07-0700\n"
-"PO-Revision-Date: 2026-03-08 10:08-0700\n"
+"POT-Creation-Date: 2026-06-21 20:20-0700\n"
+"PO-Revision-Date: 2026-06-21 20:22-0700\n"
 "Last-Translator: Arnan de Gans\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -14,24 +14,24 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adrotate-admin-functions.php:45
+#: adrotate-admin-functions.php:49
 msgid "Untitled"
 msgstr ""
 
-#: adrotate-admin-functions.php:438
+#: adrotate-admin-functions.php:442
 msgid "your attention:"
 msgstr "la vostra attenzione:"
 
-#: adrotate-admin-functions.php:666 adrotate-admin-functions.php:669
-#: adrotate-admin-functions.php:673
+#: adrotate-admin-functions.php:670 adrotate-admin-functions.php:673
+#: adrotate-admin-functions.php:677
 msgid "Check adverts"
 msgstr "Controllo inserzioni"
 
-#: adrotate-admin-functions.php:678
+#: adrotate-admin-functions.php:682
 msgid ""
 "You have enabled caching support but W3 Total Cache is not active on your "
 "site!"
@@ -39,11 +39,11 @@ msgstr ""
 "Hai abilitato il supporto della memorizzazione nella cache, ma W3 Total "
 "Cache non è attiva sul tuo sito!"
 
-#: adrotate-admin-functions.php:678
+#: adrotate-admin-functions.php:682
 msgid "Disable W3 Total Cache Support"
 msgstr "Disabilitare il supporto della W3 Total Cache"
 
-#: adrotate-admin-functions.php:681
+#: adrotate-admin-functions.php:685
 msgid ""
 "You have enable caching support but the W3TC_DYNAMIC_SECURITY definition is "
 "not set."
@@ -51,41 +51,41 @@ msgstr ""
 "Hai abilitato il supporto caching ma la definizione  W3TC_DYNAMIC_SECURITY "
 "non è impostata."
 
-#: adrotate-admin-functions.php:681
+#: adrotate-admin-functions.php:685
 msgid "How to configure W3 Total Cache"
 msgstr "Come configurare la W3 Total Cache"
 
-#: adrotate-admin-functions.php:684
+#: adrotate-admin-functions.php:688
 msgid ""
 "You have enable caching support but Borlabs Cache is not active on your site!"
 msgstr ""
 "Hai attivato il supporto della memorizzazione nella cache, ma Borlabs Cache "
 "non è attivo sul tuo sito!"
 
-#: adrotate-admin-functions.php:684
+#: adrotate-admin-functions.php:688
 msgid "Disable Borlabs Cache Support"
 msgstr "Disabilitare il supporto della Borlabs Cache"
 
-#: adrotate-admin-functions.php:689
+#: adrotate-admin-functions.php:693
 msgid ""
 "You have enabled Borlabs Cache support but Fragment caching is not enabled!"
 msgstr ""
 "È stato abilitato il supporto della cache di Borlabs, ma la memorizzazione "
 "nella cache dei frammenti non è abilitata!"
 
-#: adrotate-admin-functions.php:689
+#: adrotate-admin-functions.php:693
 msgid "Enable Fragment Caching"
 msgstr "Abilitare la Fragment Caching"
 
-#: adrotate-admin-functions.php:696
+#: adrotate-admin-functions.php:700
 msgid "Your AdRotate Banner folder is not writable or does not exist."
 msgstr "La tua cartella AdRotate Banner non è scrivibile o non esiste."
 
-#: adrotate-admin-functions.php:696
+#: adrotate-admin-functions.php:700
 msgid "Set up your banner folder"
 msgstr "Configurare la banner folder"
 
-#: adrotate-admin-functions.php:699
+#: adrotate-admin-functions.php:703
 msgid ""
 "You have AdRotate Professional installed. Please switch to AdRotate Pro! You "
 "can delete this plugin after AdRotate Pro is activated."
@@ -93,11 +93,11 @@ msgstr ""
 "AdRotate Professional è installato. Si prega di passare ad AdRotate Pro! "
 "Puoi eliminare questo plugin dopo l'attivazione di AdRotate Pro."
 
-#: adrotate-admin-functions.php:699
+#: adrotate-admin-functions.php:703
 msgid "Switch plugins"
 msgstr "Passare da un plug-in all'altro"
 
-#: adrotate-admin-functions.php:702
+#: adrotate-admin-functions.php:706
 msgid ""
 "Something is wrong with your installation of AdRotate. Either the plugin is "
 "installed twice or your current installation has the wrong folder name. "
@@ -107,35 +107,35 @@ msgstr ""
 "installato due volte o l'installazione corrente ha il nome della cartella "
 "errata. Si prega di installare il plugin correttamente!"
 
-#: adrotate-admin-functions.php:702
+#: adrotate-admin-functions.php:706
 msgid "Installation instructions"
 msgstr "Istruzioni per l'installazione"
 
-#: adrotate-admin-functions.php:744
+#: adrotate-admin-functions.php:748
 msgid "Advert saved"
 msgstr "Annuncio salvato"
 
-#: adrotate-admin-functions.php:748
+#: adrotate-admin-functions.php:752
 msgid "Group saved"
 msgstr "Gruppo salvato"
 
-#: adrotate-admin-functions.php:752
+#: adrotate-admin-functions.php:756
 msgid "Banner image saved"
 msgstr "Immagine banner salvata"
 
-#: adrotate-admin-functions.php:756
+#: adrotate-admin-functions.php:760
 msgid "Ad(s) deleted"
 msgstr "Annunci eliminati"
 
-#: adrotate-admin-functions.php:760
+#: adrotate-admin-functions.php:764
 msgid "Group deleted"
 msgstr "Gruppo eliminato"
 
-#: adrotate-admin-functions.php:764
+#: adrotate-admin-functions.php:768
 msgid "Asset(s) deleted"
 msgstr "Asset eliminati"
 
-#: adrotate-admin-functions.php:768
+#: adrotate-admin-functions.php:772
 msgid ""
 "Something went wrong deleting the file or folder. Make sure your permissions "
 "are in order."
@@ -143,31 +143,31 @@ msgstr ""
 "Si è verificato un problema durante l'eliminazione del file o della "
 "cartella. Assicurati che le tue autorizzazioni siano in ordine."
 
-#: adrotate-admin-functions.php:772
+#: adrotate-admin-functions.php:776
 msgid "Advert(s) statistics reset"
 msgstr "Reimpostazione delle statistiche degli annunci"
 
-#: adrotate-admin-functions.php:776
+#: adrotate-admin-functions.php:780
 msgid "Advert(s) renewed"
 msgstr "Annunci rinnovati"
 
-#: adrotate-admin-functions.php:780
+#: adrotate-admin-functions.php:784
 msgid "Advert(s) deactivated"
 msgstr "Annunci disattivati"
 
-#: adrotate-admin-functions.php:784
+#: adrotate-admin-functions.php:788
 msgid "Advert(s) activated"
 msgstr "Annunci attivati"
 
-#: adrotate-admin-functions.php:788
+#: adrotate-admin-functions.php:792
 msgid "Group including the Adverts in it deleted"
 msgstr "Gruppo che include le inserzioni in esso eliminate"
 
-#: adrotate-admin-functions.php:792
+#: adrotate-admin-functions.php:796
 msgid "Folder created"
 msgstr "Cartella creata"
 
-#: adrotate-admin-functions.php:796
+#: adrotate-admin-functions.php:800
 msgid ""
 "Advert HTML generated and placed in the AdCode field. Configure your advert "
 "below. Do not forget to check all settings and schedule the advert."
@@ -176,31 +176,31 @@ msgstr ""
 "inserzione qui sotto. Non dimenticare di controllare tutte le impostazioni e "
 "pianificare l'annuncio."
 
-#: adrotate-admin-functions.php:801
+#: adrotate-admin-functions.php:805
 msgid "Settings saved"
 msgstr "Impostazioni salvate"
 
-#: adrotate-admin-functions.php:805
+#: adrotate-admin-functions.php:809
 msgid "Database optimized"
 msgstr "Database ottimizzato"
 
-#: adrotate-admin-functions.php:809
+#: adrotate-admin-functions.php:813
 msgid "Database repaired"
 msgstr "Database riparato"
 
-#: adrotate-admin-functions.php:813
+#: adrotate-admin-functions.php:817
 msgid "Adverts evaluated and statuses have been corrected where required"
 msgstr "Le inserzioni valutate e gli stati sono stati corretti ove richiesto"
 
-#: adrotate-admin-functions.php:817
+#: adrotate-admin-functions.php:821
 msgid "Cleanup complete"
 msgstr "Pulitura completata"
 
-#: adrotate-admin-functions.php:821
+#: adrotate-admin-functions.php:825
 msgid "Scheduled tasks reset"
 msgstr "Reimpostazione delle attività pianificate"
 
-#: adrotate-admin-functions.php:825
+#: adrotate-admin-functions.php:829
 msgid ""
 "If there were any 3rd party plugins interfering with AdRotate they have been "
 "disabled"
@@ -208,19 +208,19 @@ msgstr ""
 "Se ci fossero plugin 3rd party che interferivano con AdRotate, sono stati "
 "disabilitati"
 
-#: adrotate-admin-functions.php:829
+#: adrotate-admin-functions.php:833
 msgid "Database updated"
 msgstr "Database aggiornato"
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:837
 msgid "Database and core settings updated"
 msgstr "Aggiornamento delle impostazioni di base e del database"
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:837
 msgid "Thanks for updating AdRotate Banner Manager!"
 msgstr "Grazie per aver aggiornato AdRotate Banner Manager!"
 
-#: adrotate-admin-functions.php:833
+#: adrotate-admin-functions.php:837
 msgid ""
 "If you run into any issues with the new version please send a email through "
 "the support dashboard as soon as possible with any errors or symptoms you "
@@ -230,11 +230,11 @@ msgstr ""
 "dashboard di supporto il prima possibile con eventuali errori o sintomi "
 "riscontrati."
 
-#: adrotate-admin-functions.php:838
+#: adrotate-admin-functions.php:842
 msgid "Action prohibited"
 msgstr "Azione vietata"
 
-#: adrotate-admin-functions.php:842
+#: adrotate-admin-functions.php:846
 msgid ""
 "The advert was saved but has an issue which might prevent it from working "
 "properly. Review the colored advert."
@@ -242,41 +242,41 @@ msgstr ""
 "L'annuncio è stato salvato ma ha un problema che potrebbe impedirgli di "
 "funzionare correttamente. Rivedi la pubblicità colorata."
 
-#: adrotate-admin-functions.php:846
+#: adrotate-admin-functions.php:850
 msgid "No data found in selected time period"
 msgstr "Nessun dato trovato nel periodo di tempo selezionato"
 
-#: adrotate-admin-functions.php:850
+#: adrotate-admin-functions.php:854
 msgid "Database can only be optimized or cleaned once every hour"
 msgstr "Il database può essere ottimizzato o pulito solo una volta ogni ora"
 
-#: adrotate-admin-functions.php:854
+#: adrotate-admin-functions.php:858
 msgid "Form can not be (partially) empty!"
 msgstr "Modulo non può essere (parzialmente) vuoto!"
 
-#: adrotate-admin-functions.php:858
+#: adrotate-admin-functions.php:862
 msgid "No file uploaded."
 msgstr "Nessun file scaricato."
 
-#: adrotate-admin-functions.php:862
+#: adrotate-admin-functions.php:866
 msgid "No adverts found."
 msgstr "Nessuna pubblicità trovata."
 
-#: adrotate-admin-functions.php:866
+#: adrotate-admin-functions.php:870
 msgid "Wrong file type. No file uploaded."
 msgstr "Tipo di file sbagliato. Nessun file è stato caricato."
 
-#: adrotate-admin-functions.php:870
+#: adrotate-admin-functions.php:874
 msgid "No file selected or file is too large."
 msgstr "Nessun file selezionato o file troppo grande."
 
-#: adrotate-admin-functions.php:874
+#: adrotate-admin-functions.php:878
 msgid "There was an error unzipping the file. Please try again later."
 msgstr ""
 "Si è verificato un errore durante la decompressione del file. Riprova più "
 "tardi."
 
-#: adrotate-admin-functions.php:878
+#: adrotate-admin-functions.php:882
 msgid ""
 "The advert hash is not usable or is missing required data. Please copy the "
 "hash correctly and try again."
@@ -284,7 +284,7 @@ msgstr ""
 "È stato abilitato il supporto della cache di Borlabs, ma la memorizzazione "
 "nella cache dei frammenti non è abilitata."
 
-#: adrotate-admin-functions.php:882
+#: adrotate-admin-functions.php:886
 msgid ""
 "The advert hash can not be used on the same site as it originated from or is "
 "not a valid hash for importing."
@@ -292,7 +292,7 @@ msgstr ""
 "L'hash dell'annuncio non può essere utilizzato sullo stesso sito da cui ha "
 "avuto origine o non è un hash valido per l'importazione."
 
-#: adrotate-admin-functions.php:886
+#: adrotate-admin-functions.php:890
 msgid "Unexpected error"
 msgstr "Errore inatteso"
 
@@ -608,13 +608,6 @@ msgid "Create responsive ads"
 msgstr "Creazione di annunci adattabili"
 
 #: dashboard/adrotatepro.php:80
-#, fuzzy
-#| msgid ""
-#| "Create adverts that fit any display, mobile, desktop or tablet. Select up "
-#| "to 4 images in different sizes in the Advert Generator and have AdRotate "
-#| "Pro generate the code for you. Or if you have correctly sized ads already "
-#| "you can place them along any other advert as you normally would and they "
-#| "will look nice on phones, tablets and computers."
 msgid ""
 "Design responsive ads for any screen—mobile, desktop, or tablet—with ease. "
 "Simply upload up to four images of different sizes into the Advert "
@@ -623,12 +616,6 @@ msgid ""
 "integrate them alongside your other campaigns; AdRotate Pro ensures they "
 "display perfectly across all devices."
 msgstr ""
-"Crea inserzioni che si adattino a qualsiasi display, dispositivo mobile, "
-"desktop o tablet. Seleziona fino a 4 immagini di diverse dimensioni nel "
-"Generatore di annunci e chiedi ad AdRotate Pro di generare il codice per te. "
-"Oppure, se hai già annunci di dimensioni corrette, puoi inserirli insieme a "
-"qualsiasi altro annuncio come faresti normalmente e avranno un bell'aspetto "
-"su telefoni, tablet e computer."
 
 #: dashboard/adrotatepro.php:86
 msgid "Advanced Schedules"
@@ -735,16 +722,10 @@ msgid ""
 msgstr ""
 
 #: dashboard/adrotatepro.php:222
-#, fuzzy
-#| msgid ""
-#| "All prices are shown in Euros, your bank will convert your currency to "
-#| "Euros for free."
 msgid ""
 "All prices are shown in Euros, your bank will convert your currency to Euros "
 "at no cost to you."
 msgstr ""
-"Tutti i prezzi sono indicati in Euro, la tua banca convertirà la tua valuta "
-"in Euro gratuitamente."
 
 #: dashboard/publisher/manage-adverts-disabled.php:15
 msgid "Disabled Adverts"
@@ -2764,9 +2745,8 @@ msgid ""
 msgstr ""
 
 #: dashboard/settings/notifications.php:37
-#, fuzzy
 msgid "Expired adverts:"
-msgstr "La licenza è ora disattivata"
+msgstr ""
 
 #: dashboard/settings/notifications.php:41
 msgid ""
@@ -3092,10 +3072,8 @@ msgid "Starting at only €49.00"
 msgstr ""
 
 #: dashboard/sidebar.php:7
-#, fuzzy
-#| msgid "Compare Licenses"
 msgid "Compare features & licenses"
-msgstr "Confronta le licenze"
+msgstr ""
 
 #: dashboard/sidebar.php:8
 msgid "Get a Single site License"
@@ -3133,13 +3111,11 @@ msgid "Get your updates straight from the source"
 msgstr ""
 
 #: dashboard/sidebar.php:27
-#, fuzzy
-#| msgid "More info"
 msgid "More info & download"
-msgstr "Più informazioni"
+msgstr ""
 
 #: dashboard/sidebar.php:34
-msgid "Blogs & updates"
+msgid "My Blog"
 msgstr ""
 
 #: dashboard/support.php:17

@@ -1,5 +1,8 @@
 # AdRotate Banner Manager changelog
 
+## 5.17.8 - June 22, 2026
+* Security - Prevent code injection through shortcodes
+
 ## 5.17.7 - June 18, 2026
 * Update - Blog widget
 * Update - Blog function
