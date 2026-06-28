@@ -34,9 +34,15 @@ function adrotate_advert_block($attr) {
 
 	$output = '';
 	if($adrotate_config['w3caching'] == 'Y') {
+/*
 		$output .= "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 		$output .= "echo adrotate_ad(".$attr['advert_id'].");";
 		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+*/
+
+		ob_start();
+		echo adrotate_ad($attr['advert_id']);
+		$output .= ob_get_clean();
 	} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
@@ -61,9 +67,15 @@ function adrotate_group_block($attr) {
 
 	$output = '';
 	if($adrotate_config['w3caching'] == "Y") {
+/*
 		$output .= "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 		$output .= "echo adrotate_group(".$attr['group_id'].");";
 		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+*/
+
+		ob_start();
+		echo adrotate_group($attr['group_id']);
+		$output .= ob_get_clean();
 	} else if($adrotate_config['borlabscache'] == "Y" AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();

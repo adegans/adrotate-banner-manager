@@ -1,6 +1,6 @@
 === AdRotate Banner Manager ===
 Contributors: adegans
-Stable tag: 5.17.8
+Stable tag: 5.18
 Requires at least: 4.9
 Tested up to: 7.0
 Requires PHP: 8.0
@@ -97,6 +97,12 @@ Installing AdRotate is super easy!
 For more detailed instructions check out the [installation steps](https://ajdg.solutions/support/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.18 - June 28, 2026**
+* Fix - Typos and wording related to caching features
+* Fix - Removed unused variables from advert and group widgets
+* Change - No longer rely on W3 Total Cache mfunc feature
+* i18n - Updated translation strings for all languages
 
 **5.17.8 - June 22, 2026**
 * Security - Prevent code injection through shortcodes

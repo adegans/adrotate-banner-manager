@@ -1,5 +1,11 @@
 # AdRotate Banner Manager changelog
 
+## 5.18 - June 28, 2026
+* Fix - Typos and wording related to caching features
+* Fix - Removed unused variables from advert and group widgets
+* Change - No longer rely on W3 Total Cache mfunc feature
+* i18n - Updated translation strings for all languages
+
 ## 5.17.8 - June 22, 2026
 * Security - Prevent code injection through shortcodes
 

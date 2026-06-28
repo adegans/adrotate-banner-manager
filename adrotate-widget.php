@@ -36,13 +36,12 @@ class adrotate_widgets extends WP_Widget {
 	 Purpose:   Display the widget
 	-------------------------------------------------------------*/
 	public function widget($args, $instance) {
-		global $adrotate_config, $blog_id;
+		global $adrotate_config;
 
 		extract($args);
-		if(empty($instance['adid'])) $instance['adid'] = 0;
-		if(empty($instance['siteid'])) $instance['siteid'] = $blog_id;
-		if(empty($instance['title'])) $instance['title'] = '';
 		if(empty($instance['type'])) $instance['type'] = 'single';
+		if(empty($instance['adid'])) $instance['adid'] = 0;
+		if(empty($instance['title'])) $instance['title'] = '';
 
         $title = apply_filters('widget_title', $instance['title']);
 
@@ -54,6 +53,7 @@ class adrotate_widgets extends WP_Widget {
 		if($adrotate_config['widgetalign'] == 'Y') echo '<ul><li>';
 
 		if($adrotate_config['w3caching'] == 'Y') {
+/*
 			echo "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 			if($instance['type'] == "single") {
 				echo "echo adrotate_ad(".$instance['adid'].", true);";
@@ -63,6 +63,17 @@ class adrotate_widgets extends WP_Widget {
 				echo "echo adrotate_group(".$instance['adid'].");";
 			}
 			echo "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+*/
+
+			ob_start();
+			if($instance['type'] == "single") {
+				echo adrotate_ad($instance['adid'], true);
+			}
+	
+			if($instance['type'] == "group") {
+				echo adrotate_group($instance['adid'], true);
+			}
+			echo ob_get_clean();
 		} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper') AND BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
 	
@@ -96,9 +107,8 @@ class adrotate_widgets extends WP_Widget {
 	 Purpose:   Save the widget options per instance
 	-------------------------------------------------------------*/
 	public function update($new_instance, $old_instance) {
-		$new_instance['title'] = sanitize_text_field($new_instance['title']);
 		$new_instance['type'] = sanitize_text_field($new_instance['type']);
-		$new_instance['siteid'] = sanitize_key($new_instance['siteid']);
+		$new_instance['title'] = sanitize_text_field($new_instance['title']);
 		
 		//Try and preserve pre-fix widget IDs
 		if(isset($new_instance['id']) AND $new_instance['adid'] < 1) {
@@ -116,8 +126,6 @@ class adrotate_widgets extends WP_Widget {
 	 Purpose:   Display the widget options for admins
 	-------------------------------------------------------------*/
 	public function form($instance) {
-		global $blog_id;
-
 		$defaults = array();
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		
@@ -146,7 +154,6 @@ class adrotate_widgets extends WP_Widget {
 			<br />
 			<small><?php _e( 'Fill in the ID of the type you want to display!', 'adrotate' ); ?></small>
 		</p>
-		<input id="<?php echo $this->get_field_id('siteid'); ?>" name="<?php echo $this->get_field_name('siteid'); ?>" type="hidden" value="<?php echo $blog_id; ?>" />
 <?php
 	}
 }

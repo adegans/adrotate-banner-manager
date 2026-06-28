@@ -275,6 +275,7 @@ function adrotate_shortcode($atts, $content = null) {
 
 	$output = "";
 	if($adrotate_config['w3caching'] == 'Y') {
+/*
 		$output .= "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 		if($banner_id > 0 AND ($group_ids == 0 OR $group_ids > 0)) { // Show one Ad
 			$output .= "echo adrotate_ad(".$banner_id.");";
@@ -283,6 +284,17 @@ function adrotate_shortcode($atts, $content = null) {
 			$output .= "echo adrotate_group(".$group_ids.");";
 		}
 		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+*/
+
+		ob_start();
+		if($banner_id > 0 AND empty($group_ids)) { // Show one Ad
+			echo adrotate_ad($banner_id);
+		}
+
+		if($banner_id == 0 AND !empty($group_ids)) { // Show group
+			echo adrotate_group($group_ids);
+		}
+		$output .= ob_get_clean();
 	} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
@@ -318,25 +330,31 @@ function adrotate_shortcode($atts, $content = null) {
 function adrotate_inject_posts_cache_wrapper($group_id) {
 	global $adrotate_config;
 
+	$output = '';
 	if($adrotate_config['w3caching'] == 'Y') {
-		$advert_output = "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
-		$advert_output .= "echo adrotate_group(".$group_id.");";
-		$advert_output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+/*
+		$output .= "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+		$output .= "echo adrotate_group(".$group_id.");";
+		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+*/
+		ob_start();
+		echo adrotate_group($group_id);
+		$output .= ob_get_clean();
 	} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
 
-			$advert_output = "<!--[borlabs cache start: ".$borlabsphrase."]-->";
-			$advert_output .= "echo adrotate_group(".$group_id.");";
-			$advert_output .= "<!--[borlabs cache end: ".$borlabsphrase."]-->";
+			$output = "<!--[borlabs cache start: ".$borlabsphrase."]-->";
+			$output .= "echo adrotate_group(".$group_id.");";
+			$output .= "<!--[borlabs cache end: ".$borlabsphrase."]-->";
 
 			unset($borlabsphrase);
 		}
 	} else {
-		$advert_output = adrotate_group($group_id);
+		$output = adrotate_group($group_id);
 	}
 
-	return $advert_output;
+	return $output;
 }
 
 /*-------------------------------------------------------------

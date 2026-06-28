@@ -27,7 +27,7 @@
 						<option <?php echo ($adrotate_config['widgetalign'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['widgetalign'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Enable this if your widgets do not align with your themes sidebar. (Some themes ignore this!)", 'adrotate'); ?></small>
+					<br /><small><?php _e("Enable this option if your widgets do not align with your themes sidebar. (Some themes ignore this!)", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_widgetpadding">
@@ -35,7 +35,7 @@
 						<option <?php echo ($adrotate_config['widgetpadding'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['widgetpadding'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Enable this to remove the padding (blank space) around ads in widgets. (Some themes prevent this!)", 'adrotate'); ?></small>
+					<br /><small><?php _e("Enable this option to remove the padding (blank space) around ads in widgets. (Some themes prevent this!)", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_hide_schedules">
@@ -46,22 +46,12 @@
 					<br /><small><?php _e("When editing adverts, hide schedules that are not in use by that advert.", 'adrotate'); ?></small>
 				</label></p>
 
-				<?php if($adrotate_config['w3caching'] == 'Y' AND !defined('W3TC_DYNAMIC_SECURITY')) { ?>
-				<p>
-					<strong><?php _e("NOTICE:", 'adrotate'); ?></strong> <?php _e("You have enabled W3 Total Caching support but not defined the security hash.", 'adrotate'); ?>
-				</p>
-				<p>
-					<?php _e("AdRotate has generated the following line for you to add to your wp-config.php around line 52 (below the WordPress nonces). If you do not know how to add this line, check out the following guide;", 'adrotate'); ?> <a href="https://ajdg.solutions/support/knowledgebase.php?article=46"><?php _e("Set up W3 Total Caching.", 'adrotate'); ?></a>
-					<br /><pre>define('W3TC_DYNAMIC_SECURITY', 'adrotate');</pre>
-				</p>
-				<?php } ?>
-
 				<p><label for="adrotate_w3caching">
 					<strong><?php _e("W3 Total Caching compatibility:", 'adrotate'); ?></strong> <span class="alignright"><select name="adrotate_w3caching" tabindex="40">
 						<option <?php echo ($adrotate_config['w3caching'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['w3caching'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Check this box if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+					<br /><small><?php _e("Enable this feature if you use W3 Total Caching on your site.", 'adrotate'); ?></small>
 				</label></p>
 
 				<p><label for="adrotate_borlabscache">
@@ -69,11 +59,11 @@
 						<option <?php echo ($adrotate_config['borlabscache'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['borlabscache'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Check this box if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/knowledgebase.php?article=67" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
+					<br /><small><?php _e("Enable this feature if you use Borlabs Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/knowledgebase.php?article=67" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p>
-					<em><?php _e("It may take a while for adverts to start rotating. The caching plugin needs to refresh/clear the cache. This can several days if not done manually.", 'adrotate'); ?> <?php _e("Caching support only works for [shortcodes] and the AdRotate Widget and Blocks. If you use a PHP Snippet you need to wrap your PHP in the exclusion code yourself.", 'adrotate'); ?></em>
+					<em><?php _e("It may take a while for adverts to start rotating. The caching plugin needs to refresh/clear the cache. This can take several days if not done manually.", 'adrotate'); ?> <?php _e("Caching support only works for [shortcodes] and the AdRotate Widget and Blocks. If you use a PHP Snippet you need to wrap your PHP in the exclusion code yourself.", 'adrotate'); ?></em>
 				</p>
 
 			</div>
