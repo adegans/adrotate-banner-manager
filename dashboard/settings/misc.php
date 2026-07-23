@@ -51,7 +51,7 @@
 						<option <?php echo ($adrotate_config['w3caching'] == 'N') ? 'selected' : '';  ?> value="N"><?php _e('No', 'adrotate'); ?></option>
 						<option <?php echo ($adrotate_config['w3caching'] == 'Y') ? 'selected' : '';  ?> value="Y"><?php _e('Yes', 'adrotate'); ?></option>
 					</select></span>
-					<br /><small><?php _e("Enable this feature if you use W3 Total Caching on your site.", 'adrotate'); ?></small>
+					<br /><small><?php _e("Enable this feature if you use W3 Total Caching on your site.", 'adrotate'); ?> - <a href="https://ajdg.solutions/support/knowledgebase.php?article=46" target="_blank"><?php _e("Setup guide.", 'adrotate'); ?></a></small>
 				</label></p>
 
 				<p><label for="adrotate_borlabscache">

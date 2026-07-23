@@ -40,9 +40,7 @@ function adrotate_advert_block($attr) {
 		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 */
 
-		ob_start();
-		echo adrotate_ad($attr['advert_id']);
-		$output .= ob_get_clean();
+		$output .= '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' call:adrotate_advert_block {"banner_id":'.$attr['advert_id'].'} --><!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
 	} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
@@ -73,9 +71,7 @@ function adrotate_group_block($attr) {
 		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 */
 
-		ob_start();
-		echo adrotate_group($attr['group_id']);
-		$output .= ob_get_clean();
+		$output .= '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' call:adrotate_group_block {"group_id":'.$attr['group_id'].'} --><!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
 	} else if($adrotate_config['borlabscache'] == "Y" AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();

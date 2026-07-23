@@ -52,8 +52,8 @@ class adrotate_widgets extends WP_Widget {
 		
 		if($adrotate_config['widgetalign'] == 'Y') echo '<ul><li>';
 
-		if($adrotate_config['w3caching'] == 'Y') {
 /*
+		if($adrotate_config['w3caching'] == 'Y') {
 			echo "<!-- mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 			if($instance['type'] == "single") {
 				echo "echo adrotate_ad(".$instance['adid'].", true);";
@@ -63,18 +63,9 @@ class adrotate_widgets extends WP_Widget {
 				echo "echo adrotate_group(".$instance['adid'].");";
 			}
 			echo "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
+		} else 
 */
-
-			ob_start();
-			if($instance['type'] == "single") {
-				echo adrotate_ad($instance['adid'], true);
-			}
-	
-			if($instance['type'] == "group") {
-				echo adrotate_group($instance['adid'], true);
-			}
-			echo ob_get_clean();
-		} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper') AND BorlabsCacheHelper()->willFragmentCachingPerform()) {
+		if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper') AND BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
 	
 			echo "<!--[borlabs cache start: ".$borlabsphrase."]-->";
