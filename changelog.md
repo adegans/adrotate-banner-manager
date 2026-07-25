@@ -1,5 +1,8 @@
 # AdRotate Banner Manager changelog
 
+## 5.19.1 - July 24, 2026
+* Fix - Typo in W3TC cache wrapper code
+
 ## 5.19 - July 22, 2026
 * Update - Blocks support for the mfunc feature in W3TC 2.10+
 * Update - Post Injection support for the mfunc feature in W3TC 2.10+

@@ -328,7 +328,7 @@ function adrotate_inject_posts_cache_wrapper($group_id) {
 		$output .= "echo adrotate_group(".$group_id.");";
 		$output .= "<!-- /mfunc ".W3TC_DYNAMIC_SECURITY." -->";
 */
-		$output .= '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' call:adrotate_inject_post {"group_id":"'.$group_id.'} --><!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
+		$output .= '<!-- mfunc '.W3TC_DYNAMIC_SECURITY.' call:adrotate_inject_post {"group_id":'.$group_id.'} --><!-- /mfunc '.W3TC_DYNAMIC_SECURITY.' -->';
 	} else if($adrotate_config['borlabscache'] == 'Y' AND function_exists('BorlabsCacheHelper')) {
 		if(BorlabsCacheHelper()->willFragmentCachingPerform()) {
 			$borlabsphrase = BorlabsCacheHelper()->getFragmentCachingPhrase();
