@@ -5,7 +5,7 @@ Plugin URI: https://ajdg.solutions/product/adrotate-banner-manager/
 Author: Arnan de Gans
 Author URI: https://www.arnan.me/
 Description: Everything you need to manage all your ads, banners and affiliate links while keeping things simple.
-Version: 5.19.1
+Version: 5.19.2
 License: GPLv3
 
 Text Domain: adrotate
@@ -68,35 +68,38 @@ if(!is_admin()) {
 	add_filter('the_content', 'adrotate_inject_posts', 12);
 }
 
-if(is_array($adrotate_config) AND $adrotate_config['stats'] == 1){
-	add_action('wp_ajax_adrotate_impression', 'adrotate_impression_callback');
-	add_action('wp_ajax_nopriv_adrotate_impression', 'adrotate_impression_callback');
-	add_action('wp_ajax_adrotate_click', 'adrotate_click_callback');
-	add_action('wp_ajax_nopriv_adrotate_click', 'adrotate_click_callback');
-}
-if(is_array($adrotate_config) AND $adrotate_config['w3caching'] == "Y") {
-	add_filter('w3tc_dynamic_callbacks', function ( $callbacks ) {
-		$callbacks['adrotate_inject_post'] = function ( $args, $kind ) {
-			return adrotate_group($args["group_id"]);
-		};
+if(is_array($adrotate_config)) {
+	if($adrotate_config['stats'] == 1) {
+		add_action('wp_ajax_adrotate_impression', 'adrotate_impression_callback');
+		add_action('wp_ajax_nopriv_adrotate_impression', 'adrotate_impression_callback');
+		add_action('wp_ajax_adrotate_click', 'adrotate_click_callback');
+		add_action('wp_ajax_nopriv_adrotate_click', 'adrotate_click_callback');
+	}
 
-		$callbacks['adrotate_block'] = function ( $args, $kind ) {
-			if($args["banner_id"] > 0 AND !isset($args["group_id"])) { // Show one Ad
-				return adrotate_ad($args['banner_id']);
-			}
+	if($adrotate_config['w3caching'] == "Y") {
+		add_filter('w3tc_dynamic_callbacks', function ( $callbacks ) {
+			$callbacks['adrotate_inject_post'] = function ( $args, $kind ) {
+				return adrotate_group($args["group_id"]);
+			};
 	
-			if($args["group_id"] > 0 AND !isset($args["banner_id"])) { // Show group
-				return adrotate_group($args['group_id']);
-			}
-		};
-
-		return $callbacks;
-	});
+			$callbacks['adrotate_block'] = function ( $args, $kind ) {
+				if($args["banner_id"] > 0 AND !isset($args["group_id"])) { // Show one Ad
+					return adrotate_ad($args['banner_id']);
+				}
+		
+				if($args["group_id"] > 0 AND !isset($args["banner_id"])) { // Show group
+					return adrotate_group($args['group_id']);
+				}
+			};
+	
+			return $callbacks;
+		});
+	}
 }
 /*-----------------------------------------------------------*/
 
 /*--- Back End ----------------------------------------------*/
-if(is_admin()) {
+if(is_admin() OR (defined('WP_CLI') AND WP_CLI)) {
 	include_once($adrotate_path.'/adrotate-setup.php');
 	include_once($adrotate_path.'/adrotate-admin-functions.php');
 	include_once($adrotate_path.'/adrotate-admin-manage.php');

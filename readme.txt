@@ -1,8 +1,8 @@
 === AdRotate Banner Manager ===
 Contributors: adegans
-Stable tag: 5.19.1
+Stable tag: 5.19.2
 Requires at least: 4.9
-Tested up to: 7.0.2
+Tested up to: 7.1
 Requires PHP: 8.0
 Donate link: https://www.arnan.me/donate/
 Tags: ads, ad manager, adsense, banner, monetize
@@ -97,6 +97,11 @@ Installing AdRotate is super easy!
 For more detailed instructions check out the [installation steps](https://ajdg.solutions/support/knowledgebase.php?article=5) on the AdRotate website.
 
 == Changelog ==
+
+**5.19.2 - August 24, 2026**
+* Change - Improved support for wp-cli
+* Update - Improved IP Address detection
+* Fix - Removed unused budget counter
 
 **5.19.1 - July 24, 2026**
 * Fix - Typo in W3TC cache wrapper code

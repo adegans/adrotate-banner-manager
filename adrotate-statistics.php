@@ -145,9 +145,6 @@ function adrotate_click_callback() {
 
 				$wpdb->insert($wpdb->prefix.'adrotate_tracker', array('ipaddress' => $remote_ip, 'timer' => $now, 'bannerid' => $ad_id, 'stat' => 'c'));
 			}
-
-			// Advertising budget
-			$wpdb->query("UPDATE `{$wpdb->prefix}adrotate` SET `budget` = `budget` - `crate` WHERE `id` = {$ad_id} AND `crate` > 0;");
 		}
 
 		unset($remote_ip, $track, $meta, $ad_id, $group_id, $remote, $banner);

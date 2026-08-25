@@ -1,5 +1,10 @@
 # AdRotate Banner Manager changelog
 
+## 5.19.2 - August 24, 2026
+* Change - Improved support for wp-cli
+* Update - Improved IP Address detection
+* Fix - Removed unused budget counter
+
 ## 5.19.1 - July 24, 2026
 * Fix - Typo in W3TC cache wrapper code
 

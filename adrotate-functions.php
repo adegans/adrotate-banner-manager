@@ -95,17 +95,35 @@ function adrotate_shuffle($array) {
  Purpose:   Get the remote IP from the visitor
 -------------------------------------------------------------*/
 function adrotate_get_remote_ip(){
-	if(empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-		$remote_ip = $_SERVER['REMOTE_ADDR'];
-	} else {
-		$remote_ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	$accepted_headers = array(
+		// Providers
+		'HTTP_CF_CONNECTING_IP', // Cloudflare
+		'HTTP_INCAP_CLIENT_IP', // Incapsula
+		'HTTP_X_CLUSTER_CLIENT_IP', // RackSpace
+		'HTTP_TRUE_CLIENT_IP', // Akamai
+		// Proxies
+		'HTTP_X_FORWARDED_FOR',
+		'HTTP_X_FORWARDED',
+		'HTTP_CLIENT_IP',
+		'HTTP_X_REAL_IP',
+		'HTTP_FORWARDED',
+		'HTTP_FORWARDED_FOR',
+		// Standard
+		'REMOTE_ADDR'
+	);
+
+	foreach($accepted_headers as $header) {
+		if(isset($_SERVER[$header]) AND is_string($_SERVER[$header])) {
+			$remote_ip = explode(',', $_SERVER[$header], 2);
+			$remote_ip = $remote_ip[0];
+
+			if(filter_var($remote_ip, FILTER_VALIDATE_IP)) {
+				return $remote_ip;
+			}
+		}
 	}
-	$buffer = explode(',', $remote_ip, 2);
 
-	// Sanitize
-    $buffer[0] = preg_replace('/[^0-9.]+/', '', $buffer[0]);
-
-	return $buffer[0];
+	return $_SERVER['REMOTE_ADDR'];
 }
 
 /*-------------------------------------------------------------
