@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AdRotate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 21:38-0700\n"
-"PO-Revision-Date: 2026-06-27 21:38-0700\n"
+"POT-Creation-Date: 2026-10-10 15:55-0700\n"
+"PO-Revision-Date: 2026-10-10 15:56-0700\n"
 "Last-Translator: Arnan de Gans\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -350,15 +350,15 @@ msgstr "Próximo"
 msgid "No data to show!"
 msgstr "Sem dados para mostrar!"
 
-#: adrotate-block.php:104
+#: adrotate-block.php:100
 msgid "AdRotate - Advertisements"
 msgstr "AdRotate - Anúncios"
 
-#: adrotate-output.php:647
+#: adrotate-output.php:636
 msgid "Oh no! Something went wrong!"
 msgstr "Oh, não! Algo deu errado!"
 
-#: adrotate-output.php:648
+#: adrotate-output.php:637
 msgid ""
 "WordPress was unable to verify the authenticity of the url you have clicked. "
 "Verify if the url used is valid or log in via your browser."
@@ -366,7 +366,7 @@ msgstr ""
 "O WordPress foi possível verificar a autenticidade da url que você clicou. "
 "Verifique se o url utilizado é válido fazer o login usando o seu browser."
 
-#: adrotate-output.php:649
+#: adrotate-output.php:638
 msgid ""
 "If you have received the url you want to visit via email, you are being "
 "tricked!"
@@ -374,11 +374,11 @@ msgstr ""
 "Se você tiver recebido o url que você deseja visitar, via e-mail, você está "
 "sendo enganado!"
 
-#: adrotate-output.php:650
+#: adrotate-output.php:639
 msgid "Contact support if the issue persists:"
 msgstr "Contato com o suporte se o problema persistir:"
 
-#: adrotate-output.php:661
+#: adrotate-output.php:650
 msgid ""
 "Error, Advert is not available at this time due to schedule/geolocation "
 "restrictions!"
@@ -386,26 +386,26 @@ msgstr ""
 "Erro, o Anúncio não está disponível neste momento devido às restrições de "
 "agendamento/geolocalização!"
 
-#: adrotate-output.php:666
+#: adrotate-output.php:655
 msgid ""
 "Either there are no banners, they are disabled or none qualified for this "
 "location!"
 msgstr ""
 "Há banners, eles são deficientes ou nenhum qualificado para este local!"
 
-#: adrotate-output.php:671
+#: adrotate-output.php:660
 msgid "Error, no Advert ID set! Check your syntax!"
 msgstr "Erro, sem conjunto de anúncios! Verifique sua sintaxe!"
 
-#: adrotate-output.php:677
+#: adrotate-output.php:666
 msgid "Error, no group ID set! Check your syntax!"
 msgstr "Erro, nenhum ID de grupo definido! Verifique sua sintaxe!"
 
-#: adrotate-output.php:682
+#: adrotate-output.php:671
 msgid "Error, group does not exist! Check your syntax!"
 msgstr "Erro, não existe o grupo! Verifique sua sintaxe!"
 
-#: adrotate-output.php:688
+#: adrotate-output.php:677
 msgid ""
 "There was an error locating the database tables for AdRotate. Please "
 "deactivate and re-activate AdRotate from the plugin page!!"
@@ -413,11 +413,11 @@ msgstr ""
 "Houve um erro ao localizar o banco de dados de tabelas para AdRotate. Por "
 "favor, desativar e reativar o AdRotate a partir da página do plugin!!"
 
-#: adrotate-output.php:688
+#: adrotate-output.php:677
 msgid "If this does not solve the issue please seek support on the"
 msgstr "Se isso não resolver o problema, por favor, procure apoio em"
 
-#: adrotate-output.php:694
+#: adrotate-output.php:683
 msgid ""
 "There was an error loading the page. Please try again by reloading the page "
 "via the menu on the left."
@@ -425,108 +425,108 @@ msgstr ""
 "Ocorreu um erro ao carregar a página. Por favor, tente novamente ao "
 "recarregar a página através do menu à esquerda."
 
-#: adrotate-output.php:694
+#: adrotate-output.php:683
 msgid "If the issue persists please seek help on the"
 msgstr "Se o assunto persistir, por favor, procure ajuda no"
 
-#: adrotate-output.php:700
+#: adrotate-output.php:689
 msgid "An unknown error occured."
 msgstr "Um erro desconhecido ocorreu."
 
-#: adrotate-widget.php:137
+#: adrotate-widget.php:128
 msgid "Title (optional):"
 msgstr "Título (opcional):"
 
-#: adrotate-widget.php:140
+#: adrotate-widget.php:131
 msgid "HTML will be stripped out."
 msgstr "HTML vai ser retirados."
 
-#: adrotate-widget.php:143
+#: adrotate-widget.php:134
 msgid "Type:"
 msgstr "Tipo:"
 
-#: adrotate-widget.php:145
+#: adrotate-widget.php:136
 msgid "Advert - Use Advert ID"
 msgstr "Anúncio de Uso Anúncio IDENTIFICAÇÃO"
 
-#: adrotate-widget.php:146
+#: adrotate-widget.php:137
 msgid "Group - Use group ID"
 msgstr "Grupo - Utilizar o ID do grupo"
 
-#: adrotate-widget.php:149
+#: adrotate-widget.php:140
 msgid "Choose what you want to use this widget for"
 msgstr "Escolha o que você quer usar esse widget para"
 
-#: adrotate-widget.php:152
+#: adrotate-widget.php:143
 msgid "ID:"
 msgstr "IDENTIFICAÇÃO:"
 
-#: adrotate-widget.php:155
+#: adrotate-widget.php:146
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Preencha o ID do tipo que você deseja exibir!"
 
-#: adrotate.php:110 adrotate.php:168
+#: adrotate.php:132 adrotate.php:190
 msgid "Manage Adverts"
 msgstr "Gerenciar Anúncios"
 
-#: adrotate.php:111 adrotate.php:228 dashboard/publisher/manage-groups.php:12
+#: adrotate.php:133 adrotate.php:250 dashboard/publisher/manage-groups.php:12
 msgid "Manage Groups"
 msgstr "Gerir Grupos"
 
-#: adrotate.php:112 adrotate.php:262
+#: adrotate.php:134 adrotate.php:284
 #: dashboard/publisher/manage-schedules.php:12
 msgid "Manage Schedules"
 msgstr "Gerenciar Agendas"
 
-#: adrotate.php:113
+#: adrotate.php:135
 msgid "Manage Media"
 msgstr "Gerenciar Mídia"
 
-#: adrotate.php:114 adrotate.php:418 dashboard/adrotatepro.php:150
+#: adrotate.php:136 adrotate.php:440 dashboard/adrotatepro.php:150
 #: dashboard/publisher/manage-adverts-edit.php:186
 #: dashboard/publisher/statistics-main.php:23
 #: dashboard/settings/statistics.php:17
 msgid "Statistics"
 msgstr "Estatísticas"
 
-#: adrotate.php:115 adrotate.php:179 adrotate.php:236
+#: adrotate.php:137 adrotate.php:201 adrotate.php:258
 msgid "Get AdRotate Pro"
 msgstr "Obter AdRotate Pro"
 
-#: adrotate.php:116
+#: adrotate.php:138
 msgid "Support"
 msgstr "Suporte"
 
-#: adrotate.php:117 dashboard/settings/general.php:23
+#: adrotate.php:139 dashboard/settings/general.php:23
 #: dashboard/settings/misc.php:22
 msgid "Settings"
 msgstr "Definições"
 
-#: adrotate.php:127
+#: adrotate.php:149
 msgid "Get AdRotate Professional"
 msgstr "Obter AdRotate Profissional"
 
-#: adrotate.php:176 adrotate.php:234
+#: adrotate.php:198 adrotate.php:256
 msgid "Manage"
 msgstr "Gerenciar"
 
-#: adrotate.php:177
+#: adrotate.php:199
 msgid "Advert Generator"
 msgstr "Gerador de anúncios"
 
-#: adrotate.php:178 dashboard/publisher/manage-adverts-edit.php:116
+#: adrotate.php:200 dashboard/publisher/manage-adverts-edit.php:116
 msgid "New Advert"
 msgstr "Novo Anúncio"
 
-#: adrotate.php:235
+#: adrotate.php:257
 msgid "Add New"
 msgstr "Adicionar Novo"
 
-#: adrotate.php:293
+#: adrotate.php:315
 msgid "Manage Media and Assets"
 msgstr "Gerenciar Mídia e Ativos"
 
-#: adrotate.php:297
+#: adrotate.php:319
 msgid ""
 "Upload images to the AdRotate Pro banners folder from here. This is useful "
 "if you have HTML5 adverts containing multiple files."
@@ -534,42 +534,42 @@ msgstr ""
 "Upload de imagens para o AdRotate Pro banners pasta a partir daqui. Isso é "
 "útil se você tiver HTML5 anúncios que contém vários arquivos."
 
-#: adrotate.php:333
+#: adrotate.php:355
 msgid "Advert Statistics"
 msgstr "Anúncio Estatísticas"
 
-#: adrotate.php:367
+#: adrotate.php:389
 msgid "AdRotate Support"
 msgstr "AdRotate Suporte"
 
-#: adrotate.php:411
+#: adrotate.php:433
 msgid "AdRotate Settings"
 msgstr "AdRotate Definições"
 
-#: adrotate.php:416 dashboard/publisher/statistics-main.php:28
+#: adrotate.php:438 dashboard/publisher/statistics-main.php:28
 msgid "General"
 msgstr "Geral"
 
-#: adrotate.php:417 dashboard/adrotatepro.php:160
+#: adrotate.php:439 dashboard/adrotatepro.php:160
 #: dashboard/settings/notifications.php:17
 msgid "Notifications"
 msgstr "Notificações"
 
-#: adrotate.php:419 dashboard/adrotatepro.php:120
+#: adrotate.php:441 dashboard/adrotatepro.php:120
 #: dashboard/publisher/manage-groups-edit.php:201
 #: dashboard/settings/geotargeting.php:17
 msgid "Geo Targeting"
 msgstr "Geo Targeting"
 
-#: adrotate.php:420 dashboard/settings/roles.php:17
+#: adrotate.php:442 dashboard/settings/roles.php:17
 msgid "Access Roles"
 msgstr "Funções De Acesso"
 
-#: adrotate.php:421 dashboard/settings/misc.php:16
+#: adrotate.php:443 dashboard/settings/misc.php:16
 msgid "Miscellaneous"
 msgstr "Diversos"
 
-#: adrotate.php:422 dashboard/settings/maintenance.php:17
+#: adrotate.php:444 dashboard/settings/maintenance.php:17
 #: dashboard/settings/maintenance.php:82
 msgid "Maintenance"
 msgstr "Manutenção"
@@ -594,12 +594,6 @@ msgid "Create responsive ads"
 msgstr "Criar anúncios responsivos"
 
 #: dashboard/adrotatepro.php:80
-#| msgid ""
-#| "Create adverts that fit any display, mobile, desktop or tablet. Select up "
-#| "to 4 images in different sizes in the Advert Generator and have AdRotate "
-#| "Pro generate the code for you. Or if you have correctly sized ads already "
-#| "you can place them along any other advert as you normally would and they "
-#| "will look nice on phones, tablets and computers."
 msgid ""
 "Design responsive ads for any screen—mobile, desktop, or tablet—with ease. "
 "Simply upload up to four images of different sizes into the Advert "
@@ -714,9 +708,6 @@ msgid ""
 msgstr ""
 
 #: dashboard/adrotatepro.php:222
-#| msgid ""
-#| "All prices are shown in Euros, your bank will convert your currency to "
-#| "Euros for free."
 msgid ""
 "All prices are shown in Euros, your bank will convert your currency to Euros "
 "at no cost to you."
@@ -1478,7 +1469,6 @@ msgstr ""
 "que o código faz."
 
 #: dashboard/publisher/manage-adverts-generator.php:138
-#| msgid "Advert hash"
 msgid "Advert Hash"
 msgstr ""
 
@@ -2649,8 +2639,11 @@ msgid "W3 Total Caching compatibility:"
 msgstr ""
 
 #: dashboard/settings/misc.php:54
-#| msgid "Check this box if you use W3 Total Caching on your site."
 msgid "Enable this feature if you use W3 Total Caching on your site."
+msgstr ""
+
+#: dashboard/settings/misc.php:54 dashboard/settings/misc.php:62
+msgid "Setup guide."
 msgstr ""
 
 #: dashboard/settings/misc.php:58
@@ -2658,12 +2651,7 @@ msgid "Borlabs Cache compatibility:"
 msgstr ""
 
 #: dashboard/settings/misc.php:62
-#| msgid "Check this box if you use Borlabs Caching on your site."
 msgid "Enable this feature if you use Borlabs Caching on your site."
-msgstr ""
-
-#: dashboard/settings/misc.php:62
-msgid "Setup guide."
 msgstr ""
 
 #: dashboard/settings/misc.php:66
@@ -3022,7 +3010,6 @@ msgid "Starting at only €49.00"
 msgstr ""
 
 #: dashboard/sidebar.php:7
-#| msgid "Compare Licenses"
 msgid "Compare features & licenses"
 msgstr ""
 
@@ -3062,7 +3049,6 @@ msgid "Get your updates straight from the source"
 msgstr ""
 
 #: dashboard/sidebar.php:27
-#| msgid "More info"
 msgid "More info & download"
 msgstr ""
 

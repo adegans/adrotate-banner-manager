@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AdRotate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 21:38-0700\n"
-"PO-Revision-Date: 2026-06-27 21:39-0700\n"
+"POT-Creation-Date: 2026-10-10 15:56-0700\n"
+"PO-Revision-Date: 2026-10-10 15:56-0700\n"
 "Last-Translator: Arnan de Gans\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -27,13 +27,46 @@ msgid "Untitled"
 msgstr ""
 
 #: adrotate-admin-functions.php:442
+msgid "one issue that requires"
+msgid_plural "several issues that require"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: adrotate-admin-functions.php:442
 msgid "your attention:"
 msgstr "twoją uwagę:"
+
+#: adrotate-admin-functions.php:670
+#, php-format
+msgid "One advert is expired."
+msgid_plural "%s adverts expired!"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: adrotate-admin-functions.php:670 adrotate-admin-functions.php:673
 #: adrotate-admin-functions.php:677
 msgid "Check adverts"
 msgstr "Sprawdź reklamy"
+
+#: adrotate-admin-functions.php:673
+#, fuzzy, php-format
+#| msgid "Expires soon"
+msgid "One advert expires soon."
+msgid_plural "%s adverts are almost expiring!"
+msgstr[0] "Wygasa wkrótce"
+msgstr[1] "Wygasa wkrótce"
+msgstr[2] "Wygasa wkrótce"
+
+#: adrotate-admin-functions.php:677
+#, fuzzy, php-format
+#| msgid "Check all adverts for configuration errors"
+msgid "One advert with configuration errors."
+msgid_plural "%s adverts have configuration errors!"
+msgstr[0] "Sprawdź wszystkie ogłoszenia pod kątem błędów konfiguracji"
+msgstr[1] "Sprawdź wszystkie ogłoszenia pod kątem błędów konfiguracji"
+msgstr[2] "Sprawdź wszystkie ogłoszenia pod kątem błędów konfiguracji"
 
 #: adrotate-admin-functions.php:682
 msgid ""
@@ -349,15 +382,15 @@ msgstr "Następny"
 msgid "No data to show!"
 msgstr "Brak danych do wyświetlenia!"
 
-#: adrotate-block.php:104
+#: adrotate-block.php:100
 msgid "AdRotate - Advertisements"
 msgstr "AdRotate - Ogłoszenia"
 
-#: adrotate-output.php:647
+#: adrotate-output.php:636
 msgid "Oh no! Something went wrong!"
 msgstr "Uwaga! Coś poszło nie tak!"
 
-#: adrotate-output.php:648
+#: adrotate-output.php:637
 msgid ""
 "WordPress was unable to verify the authenticity of the url you have clicked. "
 "Verify if the url used is valid or log in via your browser."
@@ -365,7 +398,7 @@ msgstr ""
 "Wordpress nie mógł sprawdzić poprawności klikniętego odnośnika. Sprawdź, czy "
 "odnośnik jest prawidłowy lub zaloguj się w przeglądarce."
 
-#: adrotate-output.php:649
+#: adrotate-output.php:638
 msgid ""
 "If you have received the url you want to visit via email, you are being "
 "tricked!"
@@ -373,11 +406,11 @@ msgstr ""
 "Jeśli otrzymałeś e-mail z odnośnikiem, który chciałeś odwiedzić, zostałeś "
 "oszukany!"
 
-#: adrotate-output.php:650
+#: adrotate-output.php:639
 msgid "Contact support if the issue persists:"
 msgstr "Skontaktuj się z pomocą techniczną, jeśli problem się powtórzy:"
 
-#: adrotate-output.php:661
+#: adrotate-output.php:650
 msgid ""
 "Error, Advert is not available at this time due to schedule/geolocation "
 "restrictions!"
@@ -385,25 +418,25 @@ msgstr ""
 "Błąd, ogłoszenie nie jest obecnie dostępne z powodu ograniczeń harmonogramu/"
 "geolokalizacji!"
 
-#: adrotate-output.php:666
+#: adrotate-output.php:655
 msgid ""
 "Either there are no banners, they are disabled or none qualified for this "
 "location!"
 msgstr "Brak banerów, są wyłączone lub brak ich tej lokalizacji!"
 
-#: adrotate-output.php:671
+#: adrotate-output.php:660
 msgid "Error, no Advert ID set! Check your syntax!"
 msgstr "Błąd, brak ustawionego identyfikatora reklamy! Sprawdź składnię!"
 
-#: adrotate-output.php:677
+#: adrotate-output.php:666
 msgid "Error, no group ID set! Check your syntax!"
 msgstr "Błąd, nie wybrano żadnego ID grupy! Sprawdź składnię!"
 
-#: adrotate-output.php:682
+#: adrotate-output.php:671
 msgid "Error, group does not exist! Check your syntax!"
 msgstr "Błąd, grupa nie istnieje! Sprawdź składnię!"
 
-#: adrotate-output.php:688
+#: adrotate-output.php:677
 msgid ""
 "There was an error locating the database tables for AdRotate. Please "
 "deactivate and re-activate AdRotate from the plugin page!!"
@@ -411,11 +444,11 @@ msgstr ""
 "Wystąpił błąd dostępu do tabel AdRotate w bazie danych. Wyłącz, a potem "
 "włącz AdRote w panelu wtyczek!"
 
-#: adrotate-output.php:688
+#: adrotate-output.php:677
 msgid "If this does not solve the issue please seek support on the"
 msgstr "Jeśli to nie rozwiąże problemu, poszukaj wsparcia na"
 
-#: adrotate-output.php:694
+#: adrotate-output.php:683
 msgid ""
 "There was an error loading the page. Please try again by reloading the page "
 "via the menu on the left."
@@ -423,108 +456,108 @@ msgstr ""
 "Problem podczas wczytywania strony. Proszę odświeżyć stronę za pomocą menu "
 "po lewej."
 
-#: adrotate-output.php:694
+#: adrotate-output.php:683
 msgid "If the issue persists please seek help on the"
 msgstr "Jeśli problem będzie się powtarzał, poszukaj pomocy na"
 
-#: adrotate-output.php:700
+#: adrotate-output.php:689
 msgid "An unknown error occured."
 msgstr "Wystąpił nieznany błąd."
 
-#: adrotate-widget.php:137
+#: adrotate-widget.php:128
 msgid "Title (optional):"
 msgstr "Tytuł (opcjonalnie):"
 
-#: adrotate-widget.php:140
+#: adrotate-widget.php:131
 msgid "HTML will be stripped out."
 msgstr "Znaczniki HTML zostaną usunięte."
 
-#: adrotate-widget.php:143
+#: adrotate-widget.php:134
 msgid "Type:"
 msgstr "Typ:"
 
-#: adrotate-widget.php:145
+#: adrotate-widget.php:136
 msgid "Advert - Use Advert ID"
 msgstr "Reklama - użyj ID reklamy"
 
-#: adrotate-widget.php:146
+#: adrotate-widget.php:137
 msgid "Group - Use group ID"
 msgstr "Grupa - użyj ID grupy"
 
-#: adrotate-widget.php:149
+#: adrotate-widget.php:140
 msgid "Choose what you want to use this widget for"
 msgstr "Wybierz przeznaczenie tego widżetu"
 
-#: adrotate-widget.php:152
+#: adrotate-widget.php:143
 msgid "ID:"
 msgstr "ID:"
 
-#: adrotate-widget.php:155
+#: adrotate-widget.php:146
 msgid "Fill in the ID of the type you want to display!"
 msgstr "Podaj identyfikator typu, który chcesz wyświetlić!"
 
-#: adrotate.php:110 adrotate.php:168
+#: adrotate.php:132 adrotate.php:190
 msgid "Manage Adverts"
 msgstr "Zarządzaj reklamami"
 
-#: adrotate.php:111 adrotate.php:228 dashboard/publisher/manage-groups.php:12
+#: adrotate.php:133 adrotate.php:250 dashboard/publisher/manage-groups.php:12
 msgid "Manage Groups"
 msgstr "Zarządzaj grupami"
 
-#: adrotate.php:112 adrotate.php:262
+#: adrotate.php:134 adrotate.php:284
 #: dashboard/publisher/manage-schedules.php:12
 msgid "Manage Schedules"
 msgstr "Zarządzaj harmonogramami"
 
-#: adrotate.php:113
+#: adrotate.php:135
 msgid "Manage Media"
 msgstr "Zarządzaj mediami"
 
-#: adrotate.php:114 adrotate.php:418 dashboard/adrotatepro.php:150
+#: adrotate.php:136 adrotate.php:440 dashboard/adrotatepro.php:150
 #: dashboard/publisher/manage-adverts-edit.php:186
 #: dashboard/publisher/statistics-main.php:23
 #: dashboard/settings/statistics.php:17
 msgid "Statistics"
 msgstr "Statystyka"
 
-#: adrotate.php:115 adrotate.php:179 adrotate.php:236
+#: adrotate.php:137 adrotate.php:201 adrotate.php:258
 msgid "Get AdRotate Pro"
 msgstr "Pobierz AdRotate Pro"
 
-#: adrotate.php:116
+#: adrotate.php:138
 msgid "Support"
 msgstr "Wsparcie"
 
-#: adrotate.php:117 dashboard/settings/general.php:23
+#: adrotate.php:139 dashboard/settings/general.php:23
 #: dashboard/settings/misc.php:22
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: adrotate.php:127
+#: adrotate.php:149
 msgid "Get AdRotate Professional"
 msgstr "Uzyskaj AdRotate Professional"
 
-#: adrotate.php:176 adrotate.php:234
+#: adrotate.php:198 adrotate.php:256
 msgid "Manage"
 msgstr "Zarządzaj"
 
-#: adrotate.php:177
+#: adrotate.php:199
 msgid "Advert Generator"
 msgstr "Generator reklam"
 
-#: adrotate.php:178 dashboard/publisher/manage-adverts-edit.php:116
+#: adrotate.php:200 dashboard/publisher/manage-adverts-edit.php:116
 msgid "New Advert"
 msgstr "Nowa reklama"
 
-#: adrotate.php:235
+#: adrotate.php:257
 msgid "Add New"
 msgstr "Dodaj nową"
 
-#: adrotate.php:293
+#: adrotate.php:315
 msgid "Manage Media and Assets"
 msgstr "Zarządzanie multimediami i zasobami"
 
-#: adrotate.php:297
+#: adrotate.php:319
 msgid ""
 "Upload images to the AdRotate Pro banners folder from here. This is useful "
 "if you have HTML5 adverts containing multiple files."
@@ -532,42 +565,42 @@ msgstr ""
 "Przesyłać obrazy do folderu banery AdRotate Pro stąd. Jest to przydatne, "
 "jeśli masz reklamy HTML5, zawierające wiele plików."
 
-#: adrotate.php:333
+#: adrotate.php:355
 msgid "Advert Statistics"
 msgstr "Statystyki reklam"
 
-#: adrotate.php:367
+#: adrotate.php:389
 msgid "AdRotate Support"
 msgstr "Pomoc techniczna adrotate"
 
-#: adrotate.php:411
+#: adrotate.php:433
 msgid "AdRotate Settings"
 msgstr "Ustawienia AdRotate"
 
-#: adrotate.php:416 dashboard/publisher/statistics-main.php:28
+#: adrotate.php:438 dashboard/publisher/statistics-main.php:28
 msgid "General"
 msgstr "Ogólne"
 
-#: adrotate.php:417 dashboard/adrotatepro.php:160
+#: adrotate.php:439 dashboard/adrotatepro.php:160
 #: dashboard/settings/notifications.php:17
 msgid "Notifications"
 msgstr "Powiadomienia"
 
-#: adrotate.php:419 dashboard/adrotatepro.php:120
+#: adrotate.php:441 dashboard/adrotatepro.php:120
 #: dashboard/publisher/manage-groups-edit.php:201
 #: dashboard/settings/geotargeting.php:17
 msgid "Geo Targeting"
 msgstr "Geolokalizacja"
 
-#: adrotate.php:420 dashboard/settings/roles.php:17
+#: adrotate.php:442 dashboard/settings/roles.php:17
 msgid "Access Roles"
 msgstr "Rola programu Access"
 
-#: adrotate.php:421 dashboard/settings/misc.php:16
+#: adrotate.php:443 dashboard/settings/misc.php:16
 msgid "Miscellaneous"
 msgstr "Różne"
 
-#: adrotate.php:422 dashboard/settings/maintenance.php:17
+#: adrotate.php:444 dashboard/settings/maintenance.php:17
 #: dashboard/settings/maintenance.php:82
 msgid "Maintenance"
 msgstr "Obsługa"
@@ -1064,7 +1097,7 @@ msgid ""
 "Time uses a 24 hour clock. When you're used to the AM/PM system keep this in "
 "mind: If the start or end time is after lunch, add 12 hours. 2PM is 14:00 "
 "hours. 6AM is 6:00 hours."
-msgstr "Zegar używa formatu 24 godzinnego."
+msgstr ""
 
 #: dashboard/publisher/manage-adverts-edit.php:211
 msgid "Start date"
@@ -2479,13 +2512,68 @@ msgstr "Wygasa wkrótce"
 msgid "Unknown"
 msgstr "Nieznany"
 
+#: dashboard/settings/maintenance.php:36
+msgid "Banners/assets Folder"
+msgstr "Folder reklam"
+
+#: dashboard/settings/maintenance.php:39 dashboard/settings/maintenance.php:47
+msgid "Exists and appears writable"
+msgstr "Istnieje i jest zapisywalny"
+
+#: dashboard/settings/maintenance.php:39 dashboard/settings/maintenance.php:47
+msgid "Not writable or does not exist"
+msgstr "Nie istnieje lub nie jest zapisywalny"
+
 #: dashboard/settings/maintenance.php:44
 msgid "Reports folder:"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:50
+msgid "Exists"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:50
+msgid "Not found (Required for security)"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:55
+msgid "Unfiltered HTML:"
+msgstr ""
+
+#: dashboard/settings/maintenance.php:58
+msgid ""
+"Excellent! Editors, Administrators and Superadmins can use unfiltered code."
+msgstr ""
+
+#: dashboard/settings/maintenance.php:60
+msgid ""
+"Your website's current setup does not allow for unfiltered code to be used "
+"in adverts."
+msgstr ""
+"Bieżąca konfiguracja Twojej witryny nie pozwala na używanie niefiltrowanego "
+"kodu w reklamach."
+
+#: dashboard/settings/maintenance.php:60
+msgid ""
+"This is required for javascript adverts to work. To enable this you need to "
+"set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-config.php "
+"file."
+msgstr ""
+"Jest to wymagane, aby reklamy javascript działały. Aby to włączyć, musisz "
+"ustawić definicję DISALLOW_UNFILTERED_HTML na \"false\" w pliku wp-"
+"config.php."
+
+#: dashboard/settings/maintenance.php:60
+msgid "How to enable unfiltered html"
 msgstr ""
 
 #: dashboard/settings/maintenance.php:69
 msgid "Background tasks"
 msgstr "Zadania w tle"
+
+#: dashboard/settings/maintenance.php:73
+msgid "Delete expired trackerdata:"
+msgstr ""
 
 #: dashboard/settings/maintenance.php:73
 msgid "Not scheduled!"
@@ -2613,8 +2701,11 @@ msgid "W3 Total Caching compatibility:"
 msgstr ""
 
 #: dashboard/settings/misc.php:54
-#| msgid "Check this box if you use W3 Total Caching on your site."
 msgid "Enable this feature if you use W3 Total Caching on your site."
+msgstr ""
+
+#: dashboard/settings/misc.php:54 dashboard/settings/misc.php:62
+msgid "Setup guide."
 msgstr ""
 
 #: dashboard/settings/misc.php:58
@@ -2622,12 +2713,7 @@ msgid "Borlabs Cache compatibility:"
 msgstr ""
 
 #: dashboard/settings/misc.php:62
-#| msgid "Check this box if you use Borlabs Caching on your site."
 msgid "Enable this feature if you use Borlabs Caching on your site."
-msgstr ""
-
-#: dashboard/settings/misc.php:62
-msgid "Setup guide."
 msgstr ""
 
 #: dashboard/settings/misc.php:66
@@ -3072,6 +3158,18 @@ msgstr ""
 msgid "More information"
 msgstr "Więcej informacji"
 
+#: dashboard/support.php:35
+msgid "WordPress support forum"
+msgstr ""
+
+#: dashboard/support.php:36
+msgid "Browse questions on the WordPress website or ask your own."
+msgstr ""
+
+#: dashboard/support.php:36
+msgid "Visit forum"
+msgstr ""
+
 #: dashboard/support.php:40
 msgid "Report security issues"
 msgstr "Zgłoś problemy z zabezpieczeniami"
@@ -3275,31 +3373,6 @@ msgstr ""
 
 #~ msgid "Set up W3 Total Caching."
 #~ msgstr "Włącz W3 Total Caching."
-
-#~ msgid "Banners/assets Folder"
-#~ msgstr "Folder reklam"
-
-#~ msgid "Exists and appears writable"
-#~ msgstr "Istnieje i jest zapisywalny"
-
-#~ msgid "Not writable or does not exist"
-#~ msgstr "Nie istnieje lub nie jest zapisywalny"
-
-#~ msgid ""
-#~ "Your website's current setup does not allow for unfiltered code to be "
-#~ "used in adverts."
-#~ msgstr ""
-#~ "Bieżąca konfiguracja Twojej witryny nie pozwala na używanie "
-#~ "niefiltrowanego kodu w reklamach."
-
-#~ msgid ""
-#~ "This is required for javascript adverts to work. To enable this you need "
-#~ "to set the DISALLOW_UNFILTERED_HTML definition to 'false' in your wp-"
-#~ "config.php file."
-#~ msgstr ""
-#~ "Jest to wymagane, aby reklamy javascript działały. Aby to włączyć, musisz "
-#~ "ustawić definicję DISALLOW_UNFILTERED_HTML na \"false\" w pliku wp-"
-#~ "config.php."
 
 #~ msgid "Get more features with AdRotate Professional"
 #~ msgstr "Uzyskaj więcej funkcji dzięki AdRotate Professional"
