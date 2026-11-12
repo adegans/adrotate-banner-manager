@@ -1,5 +1,8 @@
 # AdRotate Banner Manager changelog
 
+## 5.19.4 - November 12, 2026
+* Security - Image paths are now properly sanitized when outputting ads
+
 ## 5.19.3 - October 10, 2026
 * i18n - Updated language files
 

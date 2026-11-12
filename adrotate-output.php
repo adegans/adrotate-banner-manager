@@ -514,6 +514,7 @@ function adrotate_ad_output($ad_id, $group_id, $name, $bannercode, $tracker, $im
 		}
 	}
 
+	$image = esc_url($image);
 	$image = apply_filters('adrotate_apply_photon', $image);
 
 	$banner_output = str_replace('%title%', $name, $banner_output);

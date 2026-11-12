@@ -1,8 +1,8 @@
 === AdRotate Banner Manager ===
 Contributors: adegans
-Stable tag: 5.19.3
+Stable tag: 5.19.4
 Requires at least: 4.9
-Tested up to: 7.1.3
+Tested up to: 7.1.4
 Requires PHP: 8.0
 Donate link: https://www.arnan.me/donate/
 Tags: ads, ad manager, adsense, banner, monetize

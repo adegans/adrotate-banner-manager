@@ -101,9 +101,9 @@ function adrotate_insert_advert() {
 		// Advanced options
 		$image_field = $image_dropdown = $tracker = $show_everyone = '';
 		$advertiser = 0;
-		if(isset($_POST['adrotate_image'])) $image_field = strip_tags(trim($_POST['adrotate_image']));
-		if(isset($_POST['adrotate_image_dropdown'])) $image_dropdown = strip_tags(trim($_POST['adrotate_image_dropdown']));
-		if(isset($_POST['adrotate_tracker'])) $tracker = strip_tags(trim($_POST['adrotate_tracker']));
+		if(isset($_POST['adrotate_image'])) $image_field = sanitize_text_field(trim($_POST['adrotate_image']));
+		if(isset($_POST['adrotate_image_dropdown'])) $image_dropdown = sanitize_text_field(trim($_POST['adrotate_image_dropdown']));
+		if(isset($_POST['adrotate_tracker'])) $tracker = sanitize_key(trim($_POST['adrotate_tracker']));
 
 		// Misc variables
 		$type = '';
